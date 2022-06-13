@@ -12,16 +12,12 @@ jobs:
   release:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
       - name: Fetch Build
         uses: actions/cache@v3
         with:
           path: dist/
-          key: build-
+          key: build-${{ hashFiles('system.json', 'CHANGELOG.md', 'README.md', 'webpack.config.ts', 'packs/**/*', 'src/**/*', 'static/**/*', 'types/**/*') }}
 
       - name: Update Manifest
         run: |
