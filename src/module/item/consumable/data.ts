@@ -1,3 +1,4 @@
+import { ItemActivationSource } from "@item/physical/activation.ts";
 import type {
     BasePhysicalItemSource,
     PhysicalItemTraits,
@@ -15,7 +16,6 @@ interface ConsumableTraits extends PhysicalItemTraits<ConsumableTrait> {
 }
 
 interface ConsumableSystemSource extends PhysicalSystemSource {
-    apex?: never;
     traits: ConsumableTraits;
     category: ConsumableCategory;
     uses: ConsumableUses;
@@ -24,6 +24,8 @@ interface ConsumableSystemSource extends PhysicalSystemSource {
     spell: SpellSource | null;
     usage: { value: string };
     stackGroup: AmmoStackGroup | null;
+
+    apex?: never;
     subitems?: never;
 }
 
@@ -43,8 +45,10 @@ type ConsumableDamageHealing = {
 interface ConsumableSystemData
     extends Omit<ConsumableSystemSource, SourceOmission>,
         Omit<PhysicalSystemData, "subitems" | "traits"> {
-    apex?: never;
+    activations: ItemActivationSource[];
     stackGroup: AmmoStackGroup | null;
+
+    apex?: never;
 }
 
 type SourceOmission = "bulk" | "description" | "hp" | "identification" | "material" | "price" | "temporary" | "usage";

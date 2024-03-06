@@ -4,6 +4,7 @@ import type { SpellPF2e, WeaponPF2e } from "@item";
 import { ItemProxyPF2e, PhysicalItemPF2e } from "@item";
 import { processSanctification } from "@item/ability/helpers.ts";
 import { RawItemChatData } from "@item/base/data/index.ts";
+import { ItemActivation } from "@item/physical/activation.ts";
 import { TrickMagicItemEntry } from "@item/spellcasting-entry/trick.ts";
 import type { SpellcastingEntry } from "@item/spellcasting-entry/types.ts";
 import type { ValueAndMax } from "@module/data.ts";
@@ -17,12 +18,10 @@ import type { ConsumableCategory, ConsumableTrait, OtherConsumableTag } from "./
 import { DAMAGE_ONLY_CONSUMABLE_CATEGORIES, DAMAGE_OR_HEALING_CONSUMABLE_CATEGORIES } from "./values.ts";
 
 class ConsumablePF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends PhysicalItemPF2e<TParent> {
+    declare activations: Collection<ItemActivation>;
+
     static override get validTraits(): Record<ConsumableTrait, string> {
         return CONFIG.PF2E.consumableTraits;
-    }
-
-    get otherTags(): Set<OtherConsumableTag> {
-        return new Set(this.system.traits.otherTags);
     }
 
     get category(): ConsumableCategory {
@@ -31,6 +30,10 @@ class ConsumablePF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extend
 
     get isAmmo(): boolean {
         return this.category === "ammo";
+    }
+
+    get otherTags(): Set<OtherConsumableTag> {
+        return new Set(this.system.traits.otherTags);
     }
 
     get uses(): ValueAndMax {
@@ -57,6 +60,10 @@ class ConsumablePF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extend
     override prepareBaseData(): void {
         super.prepareBaseData();
 
+        this.system.activations ??= [];
+        this.activations = new Collection(
+            this.system.activations.map((a) => [a.slug, new ItemActivation(a, { parent: this })]),
+        );
         this.system.uses.max ||= 1;
 
         // Refuse to serve rule elements if this item is ammunition and has types that perform writes

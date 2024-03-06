@@ -9,10 +9,10 @@ import type { UserPF2e } from "@module/user/document.ts";
 import { ErrorPF2e, isObject, tupleHasValue } from "@util";
 import * as R from "remeda";
 import { getUnidentifiedPlaceholderImage } from "../identification.ts";
+import { ItemActivation } from "./activation.ts";
 import { Bulk } from "./bulk.ts";
 import type {
     IdentificationStatus,
-    ItemActivation,
     ItemCarryType,
     ItemMaterialData,
     MystifiedData,
@@ -206,21 +206,6 @@ abstract class PhysicalItemPF2e<TParent extends ActorPF2e | null = ActorPF2e | n
         return new Bulk(this.system.bulk.value)
             .convertToSize(this.size, actorSize ?? this.size)
             .times(bulkRelevantQuantity);
-    }
-
-    get activations(): (ItemActivation & { componentsLabel: string })[] {
-        return Object.values(this.system.activations ?? {}).map((action) => {
-            const components: string[] = [];
-            if (action.components.cast) components.push(game.i18n.localize("PF2E.Item.Activation.Cast"));
-            if (action.components.command) components.push(game.i18n.localize("PF2E.Item.Activation.Command"));
-            if (action.components.envision) components.push(game.i18n.localize("PF2E.Item.Activation.Envision"));
-            if (action.components.interact) components.push(game.i18n.localize("PF2E.Item.Activation.Interact"));
-
-            return {
-                componentsLabel: components.join(", "),
-                ...action,
-            };
-        });
     }
 
     /** Whether other items can be attached (or affixed, applied, etc.) to this item */
@@ -712,6 +697,16 @@ abstract class PhysicalItemPF2e<TParent extends ActorPF2e | null = ActorPF2e | n
             equipped.inSlot = isSlotted;
         } else if ("inSlot" in this._source.system.equipped) {
             equipped["-=inSlot"] = null;
+        }
+
+        // Normalize activation data
+        if (Array.isArray(changed.system.activations)) {
+            try {
+                const activations = changed.system.activations;
+                changed.system.activations = activations.map((a) => new ItemActivation(a, { parent: this }).toObject());
+            } catch {
+                changed.system.activations = [];
+            }
         }
 
         // Remove apex data if apex trait is no longer present

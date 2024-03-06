@@ -1,0 +1,92 @@
+<section class="tab activations" data-tab="activations">
+    <ul data-activations>
+        {{#each activations as |activation index|}}
+            <li data-index="{{index}}">
+                <div class="form-group">
+                    <input class="slug" type="text" name="system.activations.{{index}}.slug" value="{{activation.slug}}" />
+                </div>
+
+                <div class="form-group">
+                    <label>Label</label>
+                    <input type="text" name="system.activations.{{index}}.label" value="{{activation.label}}" />
+                </div>
+                <div class="form-group">
+                    <label>Action Cost/Time</label>
+                    <input
+                        type="number"
+                        name="system.activations.{{index}}.time.value"
+                        value="{{activation.time.value}}"
+                    />
+                    <select name="system.activations.{{index}}.time.unit">
+                        {{#select activation.time.unit}}
+                            <option value="actions">Action(s)</option>
+                            <option value="reaction">Reaction</option>
+                            <option value="minutes">Minute(s)</option>
+                            <option value="hours">Hour(s)</option>
+                        {{/select}}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Traits</label>
+                    <input
+                        type="text"
+                        name="system.activations.{{index}}.traits"
+                        value="{{json activation.traits}}"
+                        class="pf2e-tagify"
+                        data-traits
+                        data-dtype="JSON"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label>Frequency</label>
+
+                    <div class="form-fields">
+                        {{#unless activation.frequency}}
+                            <input
+                                type="hidden"
+                                name="system.activations.{{index}}.frequency"
+                                data-dtype="JSON"
+                                value="null"
+                            />
+                        {{/unless}}
+                        <input
+                            type="number"
+                            name="system.activations.{{index}}.frequency.value"
+                            value="{{activation.frequency.value}}"
+                            {{#unless activation.frequency}}disabled{{/unless}}
+                        />
+
+                        <span class="slash">/</span>
+
+                        <input
+                            type="number"
+                            name="system.activations.{{index}}.frequency.period.value"
+                            value="{{activation.frequency.period.value}}"
+                            {{#unless activation.frequency}}disabled{{/unless}}
+                        />
+
+                    <select
+                        name="system.activations.{{index}}.frequency.period.unit"
+                        {{#unless activation.frequency}}disabled{{/unless}}
+                    >
+                        {{#select activation.frequency.period.unit}}
+                            {{#unless activation.frequency}}<option></option>{{/unless}}
+                            <option value="rounds">Rounds(s)</option>
+                            <option value="minutes">Minute(s)</option>
+                            <option value="hours">Hour(s)</option>
+                            <option value="days">Day(s)</option>
+                            <option value="months">Month(s)</option>
+                            <option value="years">Year(s)</option>
+                        {{/select}}
+                    </select>
+
+                    </div>
+                </div>
+
+
+            </li>
+        {{/each}}
+    </ul>
+</section>

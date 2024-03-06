@@ -1,11 +1,11 @@
-import { ItemSheetOptions } from "@item/base/sheet/sheet.ts";
+import type { ItemSheetOptions } from "@item/base/sheet/sheet.ts";
 import { PhysicalItemSheetData, PhysicalItemSheetPF2e } from "@item/physical/index.ts";
 import { SheetOptions, createSheetTags } from "@module/sheet/helpers.ts";
-import { DamageType } from "@system/damage/index.ts";
+import type { DamageType } from "@system/damage/index.ts";
 import { sortStringRecord } from "@util";
 import * as R from "remeda";
 import type { ConsumablePF2e } from "./document.ts";
-import { ConsumableCategory } from "./types.ts";
+import type { ConsumableCategory } from "./types.ts";
 import { DAMAGE_OR_HEALING_CONSUMABLE_CATEGORIES } from "./values.ts";
 
 class ConsumableSheetPF2e extends PhysicalItemSheetPF2e<ConsumablePF2e> {

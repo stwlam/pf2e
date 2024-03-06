@@ -1,8 +1,9 @@
-import type { AbilityItemPF2e } from "@item/ability/document.ts";
+import { AbilityItemPF2e } from "@item/ability/document.ts";
 import { ItemSheetDataPF2e, ItemSheetOptions, ItemSheetPF2e } from "@item/base/sheet/sheet.ts";
 import * as R from "remeda";
 import { SelfEffectReference } from "./data.ts";
 import { activateActionSheetListeners, createSelfEffectSheetData, handleSelfEffectDrop } from "./helpers.ts";
+import { UserSelectableAbilityTrait } from "./types.ts";
 
 class AbilitySheetPF2e extends ItemSheetPF2e<AbilityItemPF2e> {
     static override get defaultOptions(): ItemSheetOptions {
@@ -13,8 +14,8 @@ class AbilitySheetPF2e extends ItemSheetPF2e<AbilityItemPF2e> {
         };
     }
 
-    protected override get validTraits(): Record<string, string> {
-        return R.omit(this.item.constructor.validTraits, [
+    protected override get validTraits(): Record<UserSelectableAbilityTrait, string> {
+        return R.omit(AbilityItemPF2e.validTraits, [
             ...R.keys.strict(CONFIG.PF2E.ancestryTraits),
             ...R.keys.strict(CONFIG.PF2E.classTraits),
             "archetype",
@@ -23,9 +24,10 @@ class AbilitySheetPF2e extends ItemSheetPF2e<AbilityItemPF2e> {
             "dedication",
             "focus",
             "general",
+            "multiclass",
             "skill",
             "summoned",
-        ] as const);
+        ]);
     }
 
     override async getData(options: Partial<ItemSheetOptions> = {}): Promise<ActionSheetData> {

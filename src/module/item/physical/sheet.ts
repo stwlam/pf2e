@@ -1,11 +1,13 @@
 import { AutomaticBonusProgression as ABP } from "@actor/character/automatic-bonus-progression.ts";
 import type { PhysicalItemPF2e } from "@item";
 import { ItemSheetDataPF2e, ItemSheetOptions, ItemSheetPF2e } from "@item/base/sheet/sheet.ts";
-import { SheetOptions, createSheetTags, getAdjustment } from "@module/sheet/helpers.ts";
-import { ErrorPF2e, htmlClosest, htmlQuery, localizer, tupleHasValue } from "@util";
+import { getAdjustment } from "@module/sheet/helpers.ts";
+import { restoreArrayFromFormData } from "@scripts/sheet-util.ts";
+import { ErrorPF2e, htmlClosest, htmlQuery, htmlQueryAll, localizer, tagify, tupleHasValue } from "@util";
 import * as R from "remeda";
+import { ItemActivation, ItemActivationSource } from "./activation.ts";
 import { detachSubitem } from "./helpers.ts";
-import { CoinsPF2e, ItemActivation, MaterialValuationData, PreciousMaterialGrade } from "./index.ts";
+import { CoinsPF2e, MaterialValuationData, PreciousMaterialGrade } from "./index.ts";
 import { PRECIOUS_MATERIAL_GRADES } from "./values.ts";
 
 class PhysicalItemSheetPF2e<TItem extends PhysicalItemPF2e> extends ItemSheetPF2e<TItem> {
@@ -18,7 +20,7 @@ class PhysicalItemSheetPF2e<TItem extends PhysicalItemPF2e> extends ItemSheetPF2
     /** Show the identified data for editing purposes */
     override async getData(options?: Partial<ItemSheetOptions>): Promise<PhysicalItemSheetData<TItem>> {
         const sheetData = await super.getData(options);
-        const { item } = this;
+        const item = this.item;
 
         const bulkAdjustment = getAdjustment(item.system.bulk.value, item._source.system.bulk.value, {
             better: "lower",
@@ -26,25 +28,12 @@ class PhysicalItemSheetPF2e<TItem extends PhysicalItemPF2e> extends ItemSheetPF2
         const basePrice = new CoinsPF2e(item._source.system.price.value);
         const priceAdjustment = getAdjustment(item.system.price.value.copperValue, basePrice.copperValue);
 
-        const { actionTraits } = CONFIG.PF2E;
-
         // Enrich content
         const rollData = { ...item.getRollData(), ...this.actor?.getRollData() };
         sheetData.enrichedContent.unidentifiedDescription = await TextEditor.enrichHTML(
             sheetData.item.system.identification.unidentified.data.description.value,
             { rollData, async: true },
         );
-        const activations: PhysicalItemSheetData<TItem>["activations"] = [];
-        for (const action of item.activations) {
-            const description = await TextEditor.enrichHTML(action.description.value, { rollData, async: true });
-            activations.push({
-                action,
-                id: action.id,
-                base: `system.activations.${action.id}`,
-                description,
-                traits: createSheetTags(actionTraits, action.traits ?? { value: [] }),
-            });
-        }
 
         const adjustedLevelHint = ((): string | null => {
             const hintText = ABP.isEnabled(this.actor)
@@ -94,6 +83,7 @@ class PhysicalItemSheetPF2e<TItem extends PhysicalItemPF2e> extends ItemSheetPF2
             adjustedLevelHint,
             basePrice,
             priceAdjustment,
+            activations: item.isOfType("consumable") ? item.activations.map((a) => a.toObject()) : [],
             adjustedPriceHint,
             attributes: CONFIG.PF2E.abilities,
             actionTypes: CONFIG.PF2E.actionTypes,
@@ -104,7 +94,6 @@ class PhysicalItemSheetPF2e<TItem extends PhysicalItemPF2e> extends ItemSheetPF2
             usages: CONFIG.PF2E.usages,
             isApex: tupleHasValue(item._source.system.traits.value, "apex"),
             isPhysical: true,
-            activations,
             // Do not let user set bulk if in a stack group because the group determines bulk
             bulkDisabled: !!sheetData.data?.stackGroup?.trim(),
         };
@@ -161,6 +150,18 @@ class PhysicalItemSheetPF2e<TItem extends PhysicalItemPF2e> extends ItemSheetPF2
         super.activateListeners($html);
         const html = $html[0];
 
+        const traitChoices = ItemActivation.schema.fields.traits.element.options.choices;
+        const traitsWhitelist = typeof traitChoices === "function" ? traitChoices() : null;
+        if (!R.isPlainObject(traitsWhitelist)) {
+            throw ErrorPF2e("Unexpected error retrieving traits whitelist");
+        }
+        for (const activationEl of htmlQueryAll(html, "ul[data-activations] > li")) {
+            const traitsInput = htmlQuery<HTMLInputElement>(activationEl, "input[data-traits]");
+            if (traitsInput) {
+                tagify(traitsInput, { whitelist: traitsWhitelist, maxTags: 6 });
+            }
+        }
+
         // Subitem management
         htmlQuery(html, "ul[data-subitems]")?.addEventListener("click", async (event) => {
             const anchor = htmlClosest(event.target, "a[data-action]");
@@ -207,6 +208,11 @@ class PhysicalItemSheetPF2e<TItem extends PhysicalItemPF2e> extends ItemSheetPF2
             formData["system.price.value"] = CoinsPF2e.fromString(String(formData["system.price.value"]));
         }
 
+        if (this.item.isOfType("consumable")) {
+            const activationsPath = "system.activations";
+            restoreArrayFromFormData(formData, activationsPath);
+        }
+
         return super._updateObject(event, formData);
     }
 }
@@ -216,6 +222,7 @@ interface PhysicalItemSheetData<TItem extends PhysicalItemPF2e> extends ItemShee
     isApex: boolean;
     isPhysical: true;
     bulkAdjustment: string | null;
+    activations: ItemActivationSource[];
     adjustedBulkHint?: string | null;
     adjustedLevelHint: string | null;
     basePrice: CoinsPF2e;
@@ -229,13 +236,6 @@ interface PhysicalItemSheetData<TItem extends PhysicalItemPF2e> extends ItemShee
     sizes: Omit<typeof CONFIG.PF2E.actorSizes, "sm">;
     usages: typeof CONFIG.PF2E.usages;
     bulkDisabled: boolean;
-    activations: {
-        action: ItemActivation;
-        id: string;
-        base: string;
-        description: string;
-        traits: SheetOptions;
-    }[];
 }
 
 interface MaterialSheetEntry {

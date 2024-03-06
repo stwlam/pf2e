@@ -42,8 +42,9 @@ export interface DataFieldOptions<
     validate?: (value: unknown) => DataModelValidationFailure | boolean | void;
     choices?:
         | readonly TSourceProp[]
-        | Record<string, string>
-        | (() => readonly TSourceProp[] | Record<string | number, string>);
+        | Record<string | number, string>
+        | (() => readonly TSourceProp[] | Record<string | number, string>)
+        | undefined;
     readonly?: boolean;
     label?: string;
     hint?: string;
@@ -95,7 +96,7 @@ export abstract class DataField<
     initial: this["options"]["initial"];
 
     /** The initially provided options which configure the data field */
-    options: DataFieldOptions<TSourceProp, TRequired, TNullable, THasInitial>;
+    options: Required<DataFieldOptions<TSourceProp, TRequired, TNullable, THasInitial>>;
 
     /**
      * The field name of this DataField instance.
@@ -429,14 +430,15 @@ export class NumberField<
 
 interface StringFieldOptions<
     TSourceProp extends string,
-    TRequired extends boolean,
-    TNullable extends boolean,
-    THasInitial extends boolean,
+    TRequired extends boolean = false,
+    TNullable extends boolean = false,
+    THasInitial extends boolean = boolean,
 > extends DataFieldOptions<TSourceProp, TRequired, TNullable, THasInitial> {
     choices?:
         | readonly TSourceProp[]
         | Record<TSourceProp, string>
-        | (() => readonly TSourceProp[] | Record<TSourceProp, string>);
+        | (() => readonly TSourceProp[] | Record<TSourceProp, string>)
+        | undefined;
     /** [blank=true] Is the string allowed to be blank (empty)? */
     blank?: boolean;
     /** [trim=true]  Should any provided string be trimmed as part of cleaning? */
@@ -449,7 +451,7 @@ export class StringField<
         TModelProp extends NonNullable<JSONValue> = TSourceProp,
         TRequired extends boolean = false,
         TNullable extends boolean = false,
-        THasInitial extends boolean = true,
+        THasInitial extends boolean = boolean,
     >
     extends DataField<TSourceProp, TModelProp, TRequired, TNullable, THasInitial>
     implements StringFieldOptions<TSourceProp, TRequired, TNullable, THasInitial>
@@ -496,7 +498,7 @@ export class ObjectField<
     override initialize(
         value: unknown,
         model?: ConstructorOf<abstract.DataModel>,
-        options?: ObjectFieldOptions<TSourceProp, TRequired, TNullable, THasInitial>,
+        options?: Record<string, unknown>,
     ): MaybeSchemaProp<TModelProp, TRequired, TNullable, THasInitial>;
 
     override toObject(value: TModelProp): MaybeSchemaProp<TSourceProp, TRequired, TNullable, THasInitial>;
@@ -861,7 +863,7 @@ export class FilePathField<
     TNullable extends boolean = true,
     THasInitial extends boolean = true,
 > extends StringField<TSourceProp, TModelProp, TRequired, TNullable, THasInitial> {
-    /** @param options  Options which configure the behavior of the field */
+    /** @param options Options which configure the behavior of the field */
     constructor(options?: FilePathFieldOptions<TSourceProp, TRequired, TNullable, THasInitial>);
 
     protected static override get _defaults(): FilePathFieldOptions<FilePath, boolean, boolean, boolean>;

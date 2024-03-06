@@ -266,7 +266,7 @@ interface SlugField<
     TNullable extends boolean = boolean,
     THasInitial extends boolean = boolean,
 > extends StrictStringField<string, string, TRequired, TNullable, THasInitial> {
-    options: SlugFieldOptions<TRequired, TNullable, THasInitial>;
+    options: Required<SlugFieldOptions<TRequired, TNullable, THasInitial>>;
 }
 
 interface SlugFieldOptions<TRequired extends boolean, TNullable extends boolean, THasInitial extends boolean>

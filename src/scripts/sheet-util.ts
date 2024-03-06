@@ -1,3 +1,5 @@
+import * as R from "remeda";
+
 /** Returns statistic dialog roll parameters based on held keys */
 type ParamsFromEvent = { skipDialog: boolean; rollMode?: RollMode | "roll" };
 
@@ -30,4 +32,16 @@ function eventToRollMode(event: Maybe<Event>): RollMode | "roll" {
     return game.user.isGM ? "gmroll" : "blindroll";
 }
 
-export { eventToRollMode, eventToRollParams };
+/** Re-shape form data from a `Record<"${arrayPath}.${number}", X>` back into a `X[]` */
+function restoreArrayFromFormData(formData: Record<string, unknown>, arrayPath: string): void {
+    const pathWithDot = `${arrayPath}.`;
+    const data = Object.fromEntries(Object.entries(formData).filter(([k]) => k.startsWith(pathWithDot)));
+    if (!R.isEmpty(data)) {
+        for (const key of Object.keys(data)) {
+            delete formData[key];
+        }
+        formData[arrayPath] = Object.values(fu.getProperty<Record<string, unknown>>(fu.expandObject(data), arrayPath));
+    }
+}
+
+export { eventToRollMode, eventToRollParams, restoreArrayFromFormData };

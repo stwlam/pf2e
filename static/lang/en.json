@@ -73,6 +73,9 @@
         "AccessoryPropertyRuneSpellBastion": "Spell-Bastion",
         "AccessoryPropertyRuneWindCatcher": "Wind-Catcher",
         "Action": {
+            "CastASpell": {
+                "Label": "Cast a Spell"
+            },
             "RestForTheNight": {
                 "Label": "Rest for the Night",
                 "Message": {
@@ -93,6 +96,7 @@
                 "Prompt": "Rest for the night?"
             },
             "Strike": {
+                "Label": "Strike",
                 "MeleeLabel": "Melee Strike: {weapon}",
                 "OutOfRange": "The target is out of range.",
                 "RangedLabel": "Ranged Strike: {weapon}"
@@ -1669,16 +1673,6 @@
                     "Reaction": "Reaction"
                 }
             },
-            "Activation": {
-                "Add": "Add Activation",
-                "Cast": "Cast a Spell",
-                "Command": "command",
-                "CommandSheetLabel": "Command",
-                "Envision": "envision",
-                "EnvisionSheetLabel": "Envision",
-                "Interact": "Interact",
-                "Label": "Activation"
-            },
             "Affliction": {
                 "AddStage": "Add Stage",
                 "Error": {
@@ -2282,6 +2276,9 @@
                 "Hint": "Additional tags beyond traits to help classify an item"
             },
             "Physical": {
+                "Activations": {
+                    "Tab": "Activations"
+                },
                 "Attach": {
                     "CraftingCheck": "Crafting Check",
                     "Detach": {

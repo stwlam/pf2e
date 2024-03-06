@@ -63,6 +63,9 @@
         <div class="tabs" data-tab-container="primary">
             <a class="list-row" data-tab="description">{{localize "Description"}}</a>
             <a class="list-row" data-tab="details">{{localize "PF2E.Details"}}</a>
+            {{#if (and isPhysical activations)}}
+                <a class="list-row" data-tab="activations">{{localize "PF2E.Item.Physical.Activations.Tab"}}</a>
+            {{/if}}
             {{#if (and isPhysical user.isGM (not item.parentItem))}}
                 <a class="list-row" data-tab="mystification">{{localize "PF2E.ItemMystification"}}</a>
             {{/if}}
@@ -117,12 +120,18 @@
                 </fieldset>
             </section>
 
-            {{#if (and isPhysical user.isGM)}}
-                <!-- Mystification Details -->
-                {{> "systems/pf2e/templates/items/mystify-panel.hbs"}}
+            {{#if item.activations}}
+                <section class="tag activations">
+                    {{> "systems/pf2e/templates/items/tabs/activations.hbs"}}
+                </section>
             {{/if}}
 
-            <!-- Rules Elements -->
+            {{#if (and isPhysical user.isGM)}}
+                {{!-- Physical-item mystification --}}
+                {{> "systems/pf2e/templates/items/tabs/mystification.hbs"}}
+            {{/if}}
+
+            {{!-- Rules Elements --}}
             {{#if (not isVariant)}}
                 <section class="tab rules" data-tab="rules" data-tooltip-direction="UP">
                     {{!-- Use ~ so that text areas don't add further indentation --}}
