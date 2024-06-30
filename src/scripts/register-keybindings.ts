@@ -34,8 +34,22 @@ export function registerKeybindings(): void {
         },
     });
 
-    // Defer to the Perfect Vision module if enabled
-    if (!game.modules.get("gm-vision")?.active && !game.modules.get("perfect-vision")?.active) {
+    game.keybindings.register("pf2e", "add-waypoint", {
+        name: "Add Waypoint",
+        hint: "Add a waypoint along a measured token path.",
+        editable: [{ key: "KeyX", modifiers: [] }],
+        onUp: (): boolean | null => {
+            if (canvas.controls.ruler?.isMeasuring) {
+                canvas.controls.ruler.saveWaypoint();
+                return null;
+            } else {
+                return false;
+            }
+        },
+    });
+
+    // Defer to the GM Vision module if enabled
+    if (!game.modules.get("gm-vision")?.active) {
         game.keybindings.register("pf2e", "gm-vision", {
             name: "PF2E.Keybinding.GMVision.Label",
             hint: "PF2E.Keybinding.GMVision.Hint",
