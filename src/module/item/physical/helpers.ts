@@ -193,15 +193,20 @@ function handleHPChange(item: PhysicalItemPF2e, changed: DeepPartial<PhysicalIte
     }
 }
 
-/** Add and adjust properties on an item's bulk data object */
+/**
+ * Add and adjust properties on an item's bulk data object
+ * @param item the item whose bulk is to be prepared
+ * @param [options.fromSource=true] Whether to fully rebuild bulk data from the item's `_source`
+ */
 function prepareBulkData<TItem extends PhysicalItemPF2e>(
     item: TItem,
+    options?: { fromSource?: boolean },
 ): TItem extends ContainerPF2e ? ContainerBulkData : BulkData;
-function prepareBulkData(item: PhysicalItemPF2e): BulkData | ContainerBulkData {
+function prepareBulkData(item: PhysicalItemPF2e, { fromSource = true } = {}): BulkData | ContainerBulkData {
     const stackData = STACK_DEFINITIONS[item.system.stackGroup ?? ""] ?? null;
     const per = stackData?.size ?? 1;
 
-    const sourceBulk = item._source.system.bulk;
+    const sourceBulk = fromSource ? item._source.system.bulk : item.system.bulk;
     const heldOrStowed = item.isOfType("armor")
         ? new Bulk(sourceBulk.value).increment().value
         : "heldOrStowed" in sourceBulk

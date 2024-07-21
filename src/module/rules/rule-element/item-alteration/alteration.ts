@@ -135,9 +135,13 @@ class ItemAlteration extends foundry.abstract.DataModel<RuleElementPF2e, ItemAlt
                 const validator = ITEM_ALTERATION_VALIDATORS[this.property];
                 data.alteration.value = Number(data.alteration.value) || 0;
                 if (!validator.isValid(data)) return;
-                data.item.system.bulk.value = data.alteration.value;
+
+                const value = data.alteration.value;
+                data.item.system.bulk = itemIsOfType(data.item, "backpack")
+                    ? { ...data.item.system.bulk, value }
+                    : { value };
                 if (data.item instanceof foundry.abstract.DataModel) {
-                    data.item.system.bulk = prepareBulkData(data.item);
+                    data.item.system.bulk = prepareBulkData(data.item, { fromSource: false });
                 }
                 return;
             }
