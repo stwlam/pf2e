@@ -279,7 +279,10 @@
             "type": "action"
         }
     ],
-    "name": "Abyssal Muckrager",
+    "name": "Demonic Muckrager",
+    "prototypeToken": {
+        "name": "Abyssal Muckrager"
+    },
     "system": {
         "abilities": {
             "cha": {
@@ -352,11 +355,11 @@
             ]
         },
         "details": {
-            "blurb": "earthen destrier",
+            "blurb": "Variant earthen destrier",
             "languages": {
                 "details": "",
                 "value": [
-                    "petran"
+                    "chthonian"
                 ]
             },
             "level": {
@@ -365,9 +368,9 @@
             "privateNotes": "",
             "publicNotes": "<p>This wave of dirt takes the crude likeness of the melded forequarters of a charging warhorse and a rocky knight wielding a rudimentary lance of gray stone.</p>",
             "publication": {
-                "license": "OGL",
-                "remaster": false,
-                "title": "Pathfinder #188: They Watched the Stars"
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Adventure Path: Gatewalkers"
             }
         },
         "initiative": {
@@ -413,10 +416,8 @@
                 "value": "lg"
             },
             "value": [
-                "chaotic",
                 "earth",
                 "elemental",
-                "evil",
                 "unholy"
             ]
         }

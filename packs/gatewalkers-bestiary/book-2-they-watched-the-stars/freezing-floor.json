@@ -142,15 +142,15 @@
         "creatureType": "",
         "details": {
             "description": "<p>The white brick floor radiates ice-cold air.</p>",
-            "disable": "<p>@Check[thievery|dc:24] (expert) to erase a rune, or @UUID[Compendium.pf2e.spells-srd.Item.Dispel Magic] (3rd level; counteract DC 24) to dispel a rune; all three runes must be erased or dispelled to disable the trap.</p>",
+            "disable": "<p>@Check[thievery|dc:24] (expert) to erase a rune, or @UUID[Compendium.pf2e.spells-srd.Item.Dispel Magic] (3rd rank; counteract DC 24) to dispel a rune; all three runes must be erased or dispelled to disable the trap.</p>",
             "isComplex": true,
             "level": {
                 "value": 8
             },
             "publication": {
-                "license": "OGL",
-                "remaster": false,
-                "title": "Pathfinder #188: They Watched the Stars"
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Adventure Path: Gatewalkers"
             },
             "reset": "<p>The trap deactivates and resets after 1 minute.</p>",
             "routine": "<p>(3 actions) With each action, the trap attempts a frost jet Strike against any creature standing on the white bricks. The trap loses 1 action per disabled or dispelled rune.</p>"

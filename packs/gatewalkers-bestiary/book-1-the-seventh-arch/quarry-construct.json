@@ -8,7 +8,7 @@
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rXt4629QSg7KDTgJ"
             },
-            "img": "systems/pf2e/icons/equipment/weapons/warhammer.webp",
+            "img": "icons/weapons/hammers/hammer-war-rounding.webp",
             "name": "Warhammer",
             "sort": 100000,
             "system": {
@@ -56,9 +56,9 @@
                     }
                 },
                 "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
                 },
                 "quantity": 1,
                 "range": null,
@@ -270,9 +270,9 @@
             "privateNotes": "",
             "publicNotes": "",
             "publication": {
-                "license": "OGL",
-                "remaster": false,
-                "title": "Pathfinder #187: The Seventh Arch"
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Adventure Path: Gatewalkers"
             }
         },
         "initiative": {

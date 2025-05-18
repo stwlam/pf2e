@@ -1,10 +1,10 @@
 {
     "_id": "lBpprC8VD4GRzTtg",
     "img": "icons/commodities/claws/claw-bear-brown-grey.webp",
-    "name": "Effect: Wild Shape (Oaksteward)",
+    "name": "Effect: Untamed Shift (Oaksteward)",
     "system": {
         "description": {
-            "value": "<p>The Oaksteward's hands transform into wild claws.</p>"
+            "value": "<p>The Oaksteward gains a claw strike.</p>"
         },
         "duration": {
             "expiry": "turn-start",
@@ -22,12 +22,14 @@
         },
         "rules": [
             {
+                "attackModifier": 7,
                 "category": "unarmed",
                 "damage": {
                     "base": {
                         "damageType": "slashing",
                         "dice": 1,
-                        "die": "d6"
+                        "die": "d6",
+                        "modifier": 2
                     }
                 },
                 "group": "brawling",
