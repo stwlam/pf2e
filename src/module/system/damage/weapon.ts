@@ -5,7 +5,7 @@ import type { MeleePF2e, WeaponPF2e } from "@item";
 import type { NPCAttackDamage } from "@item/melee/data.ts";
 import { RUNE_DATA, getPropertyRuneDamage, getPropertyRuneModifierAdjustments } from "@item/physical/runes.ts";
 import type { WeaponDamage } from "@item/weapon/data.ts";
-import type { ZeroToThree } from "@module/data.ts";
+import type { ZeroToFour } from "@module/data.ts";
 import { RollNotePF2e } from "@module/notes.ts";
 import {
     extractDamageAlterations,
@@ -180,50 +180,6 @@ class WeaponDamagePF2e {
                     }),
                 );
             }
-
-            // Bonus damage
-            const bonusDamage = Number(weapon.system.bonusDamage?.value);
-            if (bonusDamage > 0) {
-                modifiers.push(
-                    new ModifierPF2e({
-                        label: "PF2E.WeaponBonusDamageLabel",
-                        slug: "bonus",
-                        modifier: bonusDamage,
-                    }),
-                );
-            }
-
-            // Custom damage
-            const customDamage = weapon.system.property1;
-            const normalDice = customDamage.dice ?? 0;
-            if (normalDice > 0) {
-                const damageType = customDamage.damageType || null;
-                damageDice.push(
-                    new DamageDicePF2e({
-                        selector: `${weapon.id}-damage`,
-                        slug: "custom",
-                        label: "PF2E.WeaponCustomDamageLabel",
-                        diceNumber: normalDice,
-                        dieSize: customDamage.die,
-                        damageType,
-                    }),
-                );
-            }
-            const critDice = customDamage.critDice ?? 0;
-            if (critDice > 0) {
-                const damageType = customDamage.critDamageType || null;
-                damageDice.push(
-                    new DamageDicePF2e({
-                        selector: `${weapon.id}-damage`,
-                        slug: "custom-critical",
-                        label: "PF2E.WeaponCustomDamageLabel",
-                        diceNumber: critDice,
-                        dieSize: customDamage.critDie,
-                        damageType,
-                        critical: true,
-                    }),
-                );
-            }
         }
 
         // Potency rune
@@ -305,7 +261,7 @@ class WeaponDamagePF2e {
             weapon.system.runes.striking = Math.max(
                 weapon.system.runes.striking,
                 strikingSynthetic.bonus,
-            ) as ZeroToThree;
+            ) as ZeroToFour;
         }
 
         // Get striking dice: the number of damage dice from a striking rune (or ABP devastating strikes)

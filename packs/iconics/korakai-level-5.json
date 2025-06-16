@@ -1296,6 +1296,7 @@
                     "handsHeld": 1,
                     "invested": null
                 },
+                "expend": null,
                 "group": "club",
                 "hardness": 0,
                 "hp": {
@@ -1322,7 +1323,7 @@
                 "quantity": 1,
                 "range": null,
                 "reload": {
-                    "value": ""
+                    "value": null
                 },
                 "rules": [],
                 "runes": {
@@ -1384,6 +1385,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": 1,
                 "group": "sling",
                 "hardness": 0,
                 "hp": {
@@ -2059,7 +2061,6 @@
                         "value": 1
                     },
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "label": "PF2E.SpecificRule.LitTorch",
                         "option": "lit-torch",
@@ -3692,7 +3693,7 @@
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.YVtXlsEWb3NIkDyy"
             },
-            "img": "icons/commodities/treasure/broach-jewel-gold-blue.webp",
+            "img": "icons/commodities/treasure/brooch-jewel-gold-blue.webp",
             "name": "Shining Symbol",
             "sort": 0,
             "system": {
@@ -3778,7 +3779,7 @@
                                 "not": "self:effect:aura-shining-symbol"
                             }
                         ],
-                        "value": "icons/commodities/treasure/broach-jewel-gold-blue.webp"
+                        "value": "icons/commodities/treasure/brooch-jewel-gold-blue.webp"
                     },
                     {
                         "key": "ActiveEffectLike",

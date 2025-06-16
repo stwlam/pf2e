@@ -60,14 +60,12 @@ interface WeaponSystemSource extends Investable<PhysicalSystemSource> {
         value: number;
     };
     damage: WeaponDamage;
-    bonusDamage: {
-        value: number;
-    };
     splashDamage: {
         value: number;
     };
     range: WeaponRangeIncrement | null;
     maxRange?: number | null;
+    expend?: number | null;
     reload: {
         value: WeaponReloadTime | null;
     };
@@ -89,17 +87,6 @@ interface WeaponSystemSource extends Investable<PhysicalSystemSource> {
     /** Doubly-embedded adjustments, attachments, talismans etc. */
     subitems: PhysicalItemSource[];
 
-    // Refers to custom damage, *not* property runes
-    property1: {
-        value: string;
-        dice: number;
-        die: DamageDieSize;
-        damageType: DamageType | "";
-        critDice: number;
-        critDie: DamageDieSize;
-        critDamage: string;
-        critDamageType: DamageType | "";
-    };
     selectedAmmoId: string | null;
 }
 
@@ -155,6 +142,8 @@ interface WeaponSystemData
     baseItem: BaseWeaponType | null;
     material: WeaponMaterialData;
     maxRange: number | null;
+    /** The amount of ammunition used everytime this weapon is fired */
+    expend: number | null;
     reload: {
         value: WeaponReloadTime | null;
         /** Whether the ammunition (or the weapon itself, if thrown) should be consumed upon firing */

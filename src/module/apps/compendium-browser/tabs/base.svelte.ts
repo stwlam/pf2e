@@ -1,11 +1,13 @@
+import type { CompendiumIndexData } from "@client/documents/collections/compendium-collection.d.mts";
+import type { TableResultSource } from "@common/documents/table-result.d.mts";
 import { CompendiumDirectoryPF2e } from "@module/apps/sidebar/compendium-directory.ts";
 import { ErrorPF2e, htmlQuery, sluggify } from "@util";
 import MiniSearch from "minisearch";
 import * as R from "remeda";
-import type { TableResultSource } from "types/foundry/common/documents/table-result.d.ts";
 import { CompendiumBrowser, CompendiumBrowserOpenTabOptions } from "../browser.ts";
 import { BrowserTabs, ContentTabName } from "../data.ts";
 import type { BrowserFilter, CheckboxOptions, CompendiumBrowserIndexData, RangesInputData, TraitData } from "./data.ts";
+import ux = foundry.applications.ux;
 
 export abstract class CompendiumBrowserTab {
     /** A reference to the parent CompendiumBrowser */
@@ -16,7 +18,7 @@ export abstract class CompendiumBrowserTab {
     results: CompendiumBrowserIndexData[] = $derived.by(() => {
         if (!this.filterData) return [];
         this.browser.resetListElement();
-        const searchText = SearchFilter.cleanQuery(this.filterData.search.text);
+        const searchText = ux.SearchFilter.cleanQuery(this.filterData.search.text);
         if (searchText) {
             const searchResult = this.searchEngine.search(searchText);
             return this.sortResult(searchResult.filter(this.filterIndexData.bind(this)));
@@ -90,7 +92,7 @@ export abstract class CompendiumBrowserTab {
                 }
                 return Array.from(wordSegmenter.segment(term))
                     .map((t) =>
-                        SearchFilter.cleanQuery(t.segment.toLocaleLowerCase(game.i18n.lang)).replace(/['"]/g, ""),
+                        ux.SearchFilter.cleanQuery(t.segment.toLocaleLowerCase(game.i18n.lang)).replace(/['"]/g, ""),
                     )
                     .filter((t) => t.length > 1);
             },
@@ -274,23 +276,16 @@ export abstract class CompendiumBrowserTab {
         initial?: number;
         weight?: number;
     }): Partial<TableResultSource>[] {
-        return this.results
-            .map((e, i): Partial<TableResultSource> | null => {
-                const data = fromUuidSync(e.uuid);
-                if (!data?.pack || !data._id || !("name" in data)) return null;
-                const rangeMinMax = initial + i + 1;
-                return {
-                    text: data.name,
-                    type: CONST.TABLE_RESULT_TYPES.COMPENDIUM,
-                    documentCollection: data.pack,
-                    documentId: data._id,
-                    img: e.img,
-                    weight,
-                    range: [rangeMinMax, rangeMinMax],
-                    drawn: false,
-                };
-            })
-            .filter((r): r is Partial<TableResultSource> => !!r);
+        return this.results.map((entry, index): Partial<TableResultSource> => {
+            const rangeMinMax = initial + index + 1;
+            return {
+                type: "document",
+                documentUuid: entry.uuid,
+                weight,
+                range: [rangeMinMax, rangeMinMax],
+                drawn: false,
+            };
+        });
     }
 
     async createRollTable(): Promise<void> {
@@ -308,25 +303,29 @@ export abstract class CompendiumBrowserTab {
             return;
         }
 
-        const content = await renderTemplate("systems/pf2e/templates/compendium-browser/roll-table-dialog.hbs", {
-            count: this.results.length,
-        });
-        Dialog.confirm({
+        const templatePath = "systems/pf2e/templates/compendium-browser/roll-table-dialog.hbs";
+        const content = await fa.handlebars.renderTemplate(templatePath, { count: this.results.length });
+        foundry.applications.api.DialogV2.confirm({
             content,
-            title: game.i18n.localize("PF2E.CompendiumBrowser.RollTable.CreateLabel"),
-            yes: async ($html) => {
-                const html = $html[0];
-                const name =
-                    htmlQuery<HTMLInputElement>(html, "input[name=name]")?.value ||
-                    game.i18n.localize("PF2E.CompendiumBrowser.Title");
-                const weight = Number(htmlQuery<HTMLInputElement>(html, "input[name=weight]")?.value) || 1;
-                const results = this.#getRollTableResults({ weight });
-                const table = await RollTable.create({
-                    name,
-                    results,
-                    formula: `1d${results.length}`,
-                });
-                table?.sheet.render(true);
+            window: { title: "PF2E.CompendiumBrowser.RollTable.CreateLabel" },
+            yes: {
+                callback: (_event, _button, dialog) => {
+                    const dialogEl = dialog.element;
+                    const name =
+                        htmlQuery<HTMLInputElement>(dialogEl, "input[name=name]")?.value ||
+                        game.i18n.localize("PF2E.CompendiumBrowser.Title");
+                    const weight = Number(htmlQuery<HTMLInputElement>(dialogEl, "input[name=weight]")?.value) || 1;
+                    const results = this.#getRollTableResults({ weight });
+                    RollTable.create(
+                        {
+                            name,
+                            results,
+                            formula: `1d${results.length}`,
+                        },
+                        { renderSheet: true },
+                    );
+                },
+                default: true,
             },
         });
     }
@@ -346,24 +345,27 @@ export abstract class CompendiumBrowserTab {
             return;
         }
 
-        const content = await renderTemplate("systems/pf2e/templates/compendium-browser/roll-table-dialog.hbs", {
+        const templatePath = "systems/pf2e/templates/compendium-browser/roll-table-dialog.hbs";
+        const content = await fa.handlebars.renderTemplate(templatePath, {
             count: this.results.length,
             rollTables: game.tables.contents,
         });
-        Dialog.confirm({
-            title: game.i18n.localize("PF2E.CompendiumBrowser.RollTable.SelectTableTitle"),
+        fa.api.DialogV2.confirm({
+            window: { title: "PF2E.CompendiumBrowser.RollTable.SelectTableTitle" },
             content,
-            yes: async ($html) => {
-                const html = $html[0];
-                const option = htmlQuery<HTMLSelectElement>(html, "select[name=roll-table]")?.selectedOptions[0];
-                if (!option) return;
-                const weight = Number(htmlQuery<HTMLInputElement>(html, "input[name=weight]")?.value) || 1;
-                const table = game.tables.get(option.value, { strict: true });
-                await table.createEmbeddedDocuments(
-                    "TableResult",
-                    this.#getRollTableResults({ initial: table.results.size, weight }),
-                );
-                table?.sheet.render(true);
+            yes: {
+                callback: (_event, _button, dialog) => {
+                    const html = dialog.element;
+                    const option = htmlQuery<HTMLSelectElement>(html, "select[name=roll-table]")?.selectedOptions[0];
+                    if (!option) return;
+                    const weight = Number(htmlQuery<HTMLInputElement>(html, "input[name=weight]")?.value) || 1;
+                    const table = game.tables.get(option.value, { strict: true });
+                    table.createEmbeddedDocuments(
+                        "TableResult",
+                        this.#getRollTableResults({ initial: table.results.size, weight }),
+                    );
+                    table?.sheet?.render({ force: true });
+                },
             },
         });
     }

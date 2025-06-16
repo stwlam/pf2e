@@ -628,6 +628,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": 1,
                 "group": "bow",
                 "hardness": 0,
                 "hp": {
@@ -1157,7 +1158,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "drain-the-prey",
                         "toggleable": true

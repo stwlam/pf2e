@@ -1,3 +1,10 @@
+import type { SceneUpdateOptions } from "@client/documents/scene.d.mts";
+import type {
+    DatabaseDeleteOperation,
+    DatabaseUpdateOperation,
+    Document,
+    EmbeddedCollection,
+} from "@common/abstract/_module.d.mts";
 import { LightLevels, SceneFlagsPF2e } from "./data.ts";
 import { checkAuras } from "./helpers.ts";
 import type {
@@ -10,13 +17,15 @@ import { TokenDocumentPF2e } from "./index.ts";
 import type { SceneConfigPF2e } from "./sheet.ts";
 
 class ScenePF2e extends Scene {
-    /** Has this document completed `DataModel` initialization? */
-    declare initialized: boolean;
-
     /** Is the rules-based vision setting enabled? */
     get rulesBasedVision(): boolean {
         if (!this.tokenVision) return false;
         return this.flags.pf2e.rulesBasedVision ?? game.pf2e.settings.rbv;
+    }
+
+    /** Are auras supported on this scene? */
+    get canHaveAuras(): boolean {
+        return this.grid.type === CONST.GRID_TYPES.SQUARE;
     }
 
     get hearingRange(): number | null {
@@ -27,7 +36,7 @@ class ScenePF2e extends Scene {
     get darknessSyncedToTime(): boolean {
         return (
             this.flags.pf2e.syncDarkness === "enabled" ||
-            (this.flags.pf2e.syncDarkness === "default" && game.settings.get("pf2e", "worldClock.syncDarkness"))
+            (this.flags.pf2e.syncDarkness === "default" && game.pf2e.settings.worldClock.syncDarkness)
         );
     }
 
@@ -53,20 +62,11 @@ class ScenePF2e extends Scene {
         return (this.active && !soleUserIsGM) || (this.isView && soleUserIsGM);
     }
 
-    protected override _initialize(options?: Record<string, unknown>): void {
-        this.initialized = false;
-        super._initialize(options);
-    }
+    /** A map of `TokenDocument` IDs embedded in this scene long with new dimensions from actor size-category changes */
+    #sizeSyncBatch = new Map<string, { width: number; height: number }>();
 
-    /**
-     * Prevent double data preparation of child documents.
-     * @removeme in V13
-     */
     override prepareData(): void {
-        if (game.release.generation === 12 && this.initialized) return;
-        this.initialized = true;
         super.prepareData();
-
         Promise.resolve().then(() => {
             this.checkAuras();
         });
@@ -108,12 +108,28 @@ class ScenePF2e extends Scene {
         }
     }
 
+    /** Synchronize a token's dimensions with its actor's size category. */
+    syncTokenDimensions(tokenDoc: TokenDocumentPF2e, dimensions: { width: number; height: number }): void {
+        this.#sizeSyncBatch.set(tokenDoc.id, dimensions);
+        this.#processSyncBatch();
+    }
+
+    /** Retrieve size and clear size-sync batch, make updates. */
+    #processSyncBatch = foundry.utils.debounce((): void => {
+        const entries = this.#sizeSyncBatch
+            .entries()
+            .toArray()
+            .map(([_id, { width, height }]) => ({ _id, width, height }));
+        this.#sizeSyncBatch.clear();
+        this.updateEmbeddedDocuments("Token", entries, { animation: { movementSpeed: 1.5 } });
+    }, 0);
+
     /* -------------------------------------------- */
     /*  Event Handlers                              */
     /* -------------------------------------------- */
 
-    override _onUpdate(changed: DeepPartial<this["_source"]>, operation: SceneUpdateOperation, userId: string): void {
-        super._onUpdate(changed, operation, userId);
+    override _onUpdate(changed: DeepPartial<this["_source"]>, options: SceneUpdateOptions, userId: string): void {
+        super._onUpdate(changed, options, userId);
 
         const flagChanges = changed.flags?.pf2e ?? {};
         if (this.isView && ["rulesBasedVision", "hearingRange"].some((k) => flagChanges[k] !== undefined)) {
@@ -132,12 +148,12 @@ class ScenePF2e extends Scene {
         }
     }
 
-    protected override _onUpdateDescendantDocuments(
-        parent: this,
+    protected override _onUpdateDescendantDocuments<P extends Document>(
+        parent: P,
         collection: string,
-        documents: ClientDocument[],
-        changes: object[],
-        options: DatabaseUpdateOperation<this>,
+        documents: Document<P>[],
+        changes: Record<string, unknown>[],
+        options: DatabaseUpdateOperation<P>,
         userId: string,
     ): void {
         super._onUpdateDescendantDocuments(parent, collection, documents, changes, options, userId);
@@ -147,15 +163,15 @@ class ScenePF2e extends Scene {
         }
     }
 
-    protected override _onDeleteDescendantDocuments(
-        parent: this,
+    protected override _onDeleteDescendantDocuments<P extends Document>(
+        parent: P,
         collection: string,
-        documents: foundry.abstract.Document[],
+        documents: Document<P>[],
         ids: string[],
-        operation: DatabaseDeleteOperation<this>,
+        options: DatabaseDeleteOperation<P>,
         userId: string,
     ): void {
-        super._onDeleteDescendantDocuments(parent, collection, documents, ids, operation, userId);
+        super._onDeleteDescendantDocuments(parent, collection, documents, ids, options, userId);
 
         // Upstream will only refresh lighting if the delete token's source is emitting light: handle cases where
         // the token's prepared data light data was overridden from TokenLight REs.
@@ -177,11 +193,11 @@ interface ScenePF2e extends Scene {
     /** Check for auras containing newly-placed or moved tokens (added as a debounced method) */
     checkAuras(): void;
 
-    readonly lights: foundry.abstract.EmbeddedCollection<AmbientLightDocumentPF2e<this>>;
-    readonly regions: foundry.abstract.EmbeddedCollection<RegionDocumentPF2e<this>>;
-    readonly templates: foundry.abstract.EmbeddedCollection<MeasuredTemplateDocumentPF2e<this>>;
-    readonly tiles: foundry.abstract.EmbeddedCollection<TileDocumentPF2e<this>>;
-    readonly tokens: foundry.abstract.EmbeddedCollection<TokenDocumentPF2e<this>>;
+    readonly lights: EmbeddedCollection<AmbientLightDocumentPF2e<this>>;
+    readonly regions: EmbeddedCollection<RegionDocumentPF2e<this>>;
+    readonly templates: EmbeddedCollection<MeasuredTemplateDocumentPF2e<this>>;
+    readonly tiles: EmbeddedCollection<TileDocumentPF2e<this>>;
+    readonly tokens: EmbeddedCollection<TokenDocumentPF2e<this>>;
 
     get sheet(): SceneConfigPF2e<this>;
 }

@@ -26,14 +26,15 @@
             "type": null
         },
         "price": {
+            "per": 1,
             "value": {
                 "gp": 2750
             }
         },
         "publication": {
-            "license": "OGL",
-            "remaster": false,
-            "title": "Pathfinder Treasure Vault"
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
         },
         "quantity": 1,
         "rules": [],

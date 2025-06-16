@@ -37,6 +37,7 @@
                     "handsHeld": 2,
                     "invested": null
                 },
+                "expend": null,
                 "group": "spear",
                 "hardness": 0,
                 "hp": {
@@ -63,7 +64,7 @@
                 "quantity": 1,
                 "range": null,
                 "reload": {
-                    "value": ""
+                    "value": null
                 },
                 "rules": [],
                 "runes": {
@@ -122,6 +123,7 @@
                     "handsHeld": 1,
                     "invested": null
                 },
+                "expend": null,
                 "group": "knife",
                 "hardness": 0,
                 "hp": {
@@ -307,7 +309,7 @@
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI"
             },
-            "img": "icons/commodities/treasure/broach-jeweled-green.webp",
+            "img": "icons/commodities/treasure/brooch-jeweled-green.webp",
             "name": "Religious Symbol of Norgorber (Wooden)",
             "sort": 500000,
             "system": {

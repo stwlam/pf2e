@@ -23,6 +23,7 @@
         "description": {
             "value": "<p>The sukgung is an extremely efficient crossbow most common in the nation of Hwanggot. Capable of lethal shots at remarkable distances, the sukgung is well-balanced enough to be fired with one hand.</p>"
         },
+        "expend": 1,
         "group": "crossbow",
         "hardness": 0,
         "hp": {
@@ -42,9 +43,9 @@
             }
         },
         "publication": {
-            "license": "OGL",
-            "remaster": false,
-            "title": "Pathfinder Treasure Vault"
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
         },
         "quantity": 1,
         "range": 200,

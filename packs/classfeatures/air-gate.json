@@ -100,7 +100,6 @@
                 }
             },
             {
-                "domain": "all",
                 "key": "RollOption",
                 "option": "junction:air:impulse",
                 "predicate": [
@@ -325,7 +324,6 @@
                 "radius": "@actor.flags.pf2e.kineticist.auraRadius",
                 "slug": "kinetic-aura",
                 "traits": [
-                    "kineticist",
                     "primal"
                 ]
             }

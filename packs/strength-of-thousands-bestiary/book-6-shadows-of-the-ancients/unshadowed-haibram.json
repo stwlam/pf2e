@@ -783,12 +783,12 @@
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.spells-srd.Item.Gn5deIoobHpd3SiR"
             },
-            "img": "systems/pf2e/icons/spells/flame-vortex.webp",
+            "img": "icons/magic/fire/barrier-wall-explosion-orange.webp",
             "name": "Flame Vortex",
             "sort": 1000000,
             "system": {
                 "area": {
-                    "type": "emanation",
+                    "type": "cylinder",
                     "value": 5
                 },
                 "cost": {
@@ -2465,6 +2465,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "axe",
                 "hardness": 0,
                 "hp": {
@@ -2786,7 +2787,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "wind-touch",
                         "toggleable": true

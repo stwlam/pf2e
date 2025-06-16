@@ -37,6 +37,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "knife",
                 "hardness": 0,
                 "hp": {
@@ -126,6 +127,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": 1,
                 "group": "firearm",
                 "hardness": 0,
                 "hp": {
@@ -625,6 +627,7 @@
                         "toggleable": "totm"
                     },
                     {
+                        "category": "precision",
                         "diceNumber": 2,
                         "dieSize": "d6",
                         "key": "DamageDice",

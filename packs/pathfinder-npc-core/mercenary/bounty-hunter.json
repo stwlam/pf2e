@@ -37,6 +37,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": 1,
                 "group": "crossbow",
                 "hardness": 0,
                 "hp": {
@@ -120,6 +121,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "sword",
                 "hardness": 0,
                 "hp": {
@@ -146,7 +148,7 @@
                 "quantity": 1,
                 "range": null,
                 "reload": {
-                    "value": ""
+                    "value": null
                 },
                 "rules": [],
                 "runes": {
@@ -425,7 +427,7 @@
                 },
                 "damageRolls": {
                     "0": {
-                        "damage": "1d10+5",
+                        "damage": "1d8+3",
                         "damageType": "piercing"
                     }
                 },
@@ -462,7 +464,7 @@
                 },
                 "category": "offensive",
                 "description": {
-                    "value": "<p>The bounty hunter designates a single creature they can see and hear, or one they're Tracking or Gathering Information about, as their prey. The bounty hunter gains a +2 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Seek] the prey, to Survival checks to @UUID[Compendium.pf2e.actionspf2e.Item.Track] the prey, and to Diplomacy checks to Gather Information about the prey. This effect lasts until they use Hunt Prey again.</p>"
+                    "value": "<p>The bounty hunter designates a single creature they can see and hear, or one they're Tracking or Gathering Information about, as their prey. The bounty hunter gains a +2 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Seek] the prey, to Survival checks to @UUID[Compendium.pf2e.actionspf2e.Item.Track] the prey, and to Diplomacy checks to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information] about the prey. This effect lasts until they use Hunt Prey again.</p>"
                 },
                 "publication": {
                     "license": "ORC",
@@ -471,7 +473,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "label": "PF2E.SpecificRule.HuntPrey.TargetHuntedPrey",
                         "option": "hunted-prey",
@@ -572,7 +573,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "label": "PF2E.SpecificRule.Ranger.HuntersEdge.FirstAttack",
                         "option": "first-attack",

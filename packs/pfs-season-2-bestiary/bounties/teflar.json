@@ -1059,6 +1059,7 @@
                     "handsHeld": 1,
                     "invested": null
                 },
+                "expend": null,
                 "group": "brawling",
                 "hardness": 0,
                 "hp": {
@@ -1085,7 +1086,7 @@
                 "quantity": 1,
                 "range": null,
                 "reload": {
-                    "value": ""
+                    "value": null
                 },
                 "rules": [],
                 "runes": {
@@ -1183,7 +1184,7 @@
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI"
             },
-            "img": "icons/commodities/treasure/broach-jeweled-green.webp",
+            "img": "icons/commodities/treasure/brooch-jeweled-green.webp",
             "name": "Religious Symbol of Zon-Kuthon (Wooden)",
             "sort": 1500000,
             "system": {

@@ -23,7 +23,8 @@
         "description": {
             "value": "<p>This lance has a heavy grip with two parallel crossbow fixtures built into it, making it a useful weapon for combats who prefer to keep their distance at all times.</p>"
         },
-        "group": "crossbow",
+        "expend": 1,
+        "group": "bow",
         "hardness": 0,
         "hp": {
             "max": 0,
@@ -53,9 +54,9 @@
             }
         },
         "publication": {
-            "license": "OGL",
-            "remaster": false,
-            "title": "Pathfinder Treasure Vault"
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
         },
         "quantity": 1,
         "range": 60,
@@ -73,8 +74,9 @@
             "value": 0
         },
         "traits": {
-            "rarity": "common",
+            "rarity": "uncommon",
             "value": [
+                "capacity-2",
                 "combination"
             ]
         },

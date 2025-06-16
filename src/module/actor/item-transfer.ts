@@ -1,6 +1,8 @@
 import type { PhysicalItemPF2e } from "@item";
+import { ChatMessagePF2e } from "@module/chat-message/document.ts";
 import type { UserPF2e } from "@module/user/document.ts";
 import { SocketMessage } from "@scripts/socket.ts";
+import { TextEditorPF2e } from "@system/text-editor.ts";
 import { ErrorPF2e, getActionGlyph, localizer } from "@util";
 import type { ActorPF2e } from "./base.ts";
 import { TraitViewData } from "./data/base.ts";
@@ -118,8 +120,18 @@ export class ItemTransfer implements ItemTransferData {
         if ("items" in document) {
             // Use a special moniker for party actors
             if (document.isOfType("party")) return game.i18n.localize("PF2E.loot.PartyStash");
+
+            // check to see if the token name can be seen
+            const tokenSetsNameVisibility = game.pf2e.settings.tokens.nameVisibility;
+            const canSeeName = !tokenSetsNameVisibility || !document.token || document.token.playersCanSeeName;
+
             // Synthetic actor: use its token name or, failing that, actor name
-            if (document.token) return document.token.name;
+            // hide name if the token's name is not visible and the token is an NPC
+            if (document.token) {
+                return !canSeeName && document.isOfType("npc")
+                    ? game.i18n.localize("PF2E.loot.LootUnknownNPCMessage")
+                    : document.token.name;
+            }
 
             // Linked actor: use its token prototype name
             return document.prototypeToken?.name ?? document.name;
@@ -153,14 +165,14 @@ export class ItemTransfer implements ItemTransferData {
                 const message = localize("InsufficientFundsMessage");
                 // The buyer didn't have enough funds! No transaction.
 
-                const content = await renderTemplate(this.#templatePaths.content, {
+                const content = await fa.handlebars.renderTemplate(this.#templatePaths.content, {
                     imgPath: targetActor.img,
                     message: game.i18n.format(message, { buyer: targetActor.name }),
                 });
 
                 const flavor = await this.#messageFlavor(sourceActor, targetActor, localize("BuySubtitle"));
 
-                await ChatMessage.create({
+                await ChatMessagePF2e.create({
                     author: requester.id,
                     speaker: { alias: ItemTransfer.#tokenName(targetActor) },
                     style: CONST.CHAT_MESSAGE_STYLES.EMOTE,
@@ -311,17 +323,17 @@ export class ItemTransfer implements ItemTransferData {
         const formatProperties = formatArgs[1];
         if (!formatProperties) throw ErrorPF2e("Unexpected item-transfer failure");
         formatProperties.quantity = this.quantity;
-        formatProperties.item = await TextEditor.enrichHTML(item.link);
+        formatProperties.item = await TextEditorPF2e.enrichHTML(item.link);
 
         // Don't bother showing quantity if it's only 1:
-        const content = await renderTemplate(this.#templatePaths.content, {
+        const content = await fa.handlebars.renderTemplate(this.#templatePaths.content, {
             imgPath: item.img,
             message: game.i18n.format(...formatArgs).replace(/\b1 × /, ""),
         });
 
         const flavor = await this.#messageFlavor(sourceActor, targetActor, subtitle);
 
-        await ChatMessage.create({
+        await ChatMessagePF2e.create({
             author: requester.id,
             speaker: { alias: speaker },
             style: CONST.CHAT_MESSAGE_STYLES.EMOTE,
@@ -341,6 +353,6 @@ export class ItemTransfer implements ItemTransferData {
             },
         ];
 
-        return await renderTemplate(this.#templatePaths.flavor, { action, traits });
+        return await fa.handlebars.renderTemplate(this.#templatePaths.flavor, { action, traits });
     }
 }

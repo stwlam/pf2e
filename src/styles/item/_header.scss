@@ -8,6 +8,7 @@
         align-items: baseline;
         column-gap: 0.33rem;
         display: flex;
+        flex: 1;
         flex-wrap: wrap;
 
         input,
@@ -62,5 +63,6 @@
         flex-basis: 100%;
         margin-top: 0.125rem;
         padding: 0;
+        margin-bottom: 0;
     }
 }

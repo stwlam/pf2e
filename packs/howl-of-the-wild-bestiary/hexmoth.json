@@ -139,7 +139,6 @@
                 "rules": [
                     {
                         "alwaysActive": true,
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "advanced-arcanovore",
                         "suboptions": [
@@ -350,7 +349,7 @@
                 "value": 8
             },
             "privateNotes": "",
-            "publicNotes": "",
+            "publicNotes": "<p>A hexworm, upon consuming a sufficient quantity of magic, will spin a cocoon of magically infused silk, metamorphosing into its imago form.</p>",
             "publication": {
                 "license": "ORC",
                 "remaster": true,

@@ -36,6 +36,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": 1,
                 "group": "bow",
                 "hardness": 0,
                 "hp": {
@@ -66,7 +67,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "label": "Target is Oathbow's sworn target",
                         "option": "target:oathbow",
@@ -393,7 +393,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "label": "Target is Oathbow's sworn target",
                         "option": "target:oathbow",
@@ -560,7 +559,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "deadly-aim",
                         "toggleable": true

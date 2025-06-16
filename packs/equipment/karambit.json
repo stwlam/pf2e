@@ -21,8 +21,9 @@
             "die": "d4"
         },
         "description": {
-            "value": "<p>This small curved blade resembles a tiger's claw and is capable of delivering deep wounds.</p>"
+            "value": "<p>This small, curved blade resembles a tiger's claw and is capable of delivering deep wounds.</p>"
         },
+        "expend": null,
         "group": "knife",
         "hardness": 0,
         "hp": {
@@ -42,14 +43,14 @@
             }
         },
         "publication": {
-            "license": "OGL",
-            "remaster": false,
-            "title": "Pathfinder #166: Despair on Danger Island"
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
         },
         "quantity": 1,
         "range": null,
         "reload": {
-            "value": ""
+            "value": null
         },
         "rules": [],
         "runes": {

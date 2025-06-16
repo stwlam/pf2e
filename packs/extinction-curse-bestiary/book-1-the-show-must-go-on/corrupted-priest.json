@@ -1012,6 +1012,7 @@
                     "handsHeld": 1,
                     "invested": null
                 },
+                "expend": null,
                 "group": "spear",
                 "hardness": 0,
                 "hp": {
@@ -1136,7 +1137,7 @@
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI"
             },
-            "img": "icons/commodities/treasure/broach-jeweled-green.webp",
+            "img": "icons/commodities/treasure/brooch-jeweled-green.webp",
             "name": "Religious Symbol of Gozreh (Wooden, Defaced with Demonic Runes)",
             "sort": 1500000,
             "system": {
@@ -1178,7 +1179,6 @@
                 "quantity": 1,
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "has-religious-symbol",
                         "requiresEquipped": false

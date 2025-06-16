@@ -37,6 +37,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "hammer",
                 "hardness": 0,
                 "hp": {
@@ -124,6 +125,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "dart",
                 "hardness": 0,
                 "hp": {
@@ -288,7 +290,6 @@
                         "value": 1
                     },
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "label": "PF2E.SpecificRule.LitTorch",
                         "option": "lit-torch",

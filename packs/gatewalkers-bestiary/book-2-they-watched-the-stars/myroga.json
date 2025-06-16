@@ -345,7 +345,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "label": "PF2E.SkillVariant.LeyLine",
                         "option": "terrain:ley-line",
@@ -419,7 +418,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "ley-line-empowerment",
                         "toggleable": true

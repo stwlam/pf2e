@@ -23,6 +23,7 @@
         "description": {
             "value": "<p>This massive hammer's metal head is shaped or molded with heavy metal wedges along its primary striking surface, enabling it to tear through shields and armor with ease.</p>"
         },
+        "expend": null,
         "group": "hammer",
         "hardness": 0,
         "hp": {
@@ -42,14 +43,14 @@
             }
         },
         "publication": {
-            "license": "OGL",
-            "remaster": false,
-            "title": "Pathfinder Treasure Vault"
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
         },
         "quantity": 1,
         "range": null,
         "reload": {
-            "value": ""
+            "value": null
         },
         "rules": [],
         "runes": {

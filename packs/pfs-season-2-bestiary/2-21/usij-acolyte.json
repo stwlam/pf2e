@@ -466,6 +466,7 @@
                     "handsHeld": 1,
                     "invested": null
                 },
+                "expend": null,
                 "group": "knife",
                 "hardness": 0,
                 "hp": {
@@ -554,6 +555,7 @@
                     "handsHeld": 1,
                     "invested": null
                 },
+                "expend": null,
                 "group": "flail",
                 "hardness": 0,
                 "hp": {
@@ -580,7 +582,7 @@
                 "quantity": 1,
                 "range": null,
                 "reload": {
-                    "value": ""
+                    "value": null
                 },
                 "rules": [],
                 "runes": {
@@ -614,7 +616,7 @@
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI"
             },
-            "img": "icons/commodities/treasure/broach-jeweled-green.webp",
+            "img": "icons/commodities/treasure/brooch-jeweled-green.webp",
             "name": "Religious Symbol of Ahriman (Wooden)",
             "sort": 900000,
             "system": {

@@ -511,6 +511,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": 1,
                 "group": "crossbow",
                 "hardness": 0,
                 "hp": {
@@ -850,6 +851,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": 1,
                 "group": "bomb",
                 "hardness": 0,
                 "hp": {
@@ -1074,6 +1076,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": 1,
                 "group": "bomb",
                 "hardness": 0,
                 "hp": {
@@ -1242,7 +1245,6 @@
                         "value": 1
                     },
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "label": "PF2E.SpecificRule.LitTorch",
                         "option": "lit-torch",
@@ -1572,6 +1574,7 @@
                     "handsHeld": 1,
                     "invested": null
                 },
+                "expend": null,
                 "group": "sword",
                 "hardness": 0,
                 "hp": {
@@ -1598,7 +1601,7 @@
                 "quantity": 1,
                 "range": null,
                 "reload": {
-                    "value": ""
+                    "value": null
                 },
                 "rules": [],
                 "runes": {
@@ -2287,7 +2290,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "label": "PF2E.SpecificRule.Investigator.PursueALead.Label",
                         "option": "pursue-a-lead",
@@ -2606,7 +2608,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "target:mark:devise-a-stratagem",
                         "toggleable": "totm"

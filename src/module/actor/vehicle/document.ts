@@ -3,10 +3,9 @@ import { ModifierPF2e } from "@actor/modifiers.ts";
 import { ActorDimensions } from "@actor/types.ts";
 import { ItemType } from "@item/base/data/index.ts";
 import { extractModifierAdjustments, extractModifiers } from "@module/rules/helpers.ts";
-import type { UserPF2e } from "@module/user/index.ts";
 import { TokenDocumentPF2e } from "@scene/index.ts";
 import { ArmorStatistic, HitPointsStatistic, Statistic, StatisticDifficultyClass } from "@system/statistic/index.ts";
-import { ActorPF2e, HitPointsSummary } from "../base.ts";
+import { ActorPF2e, ActorUpdateCallbackOptions, HitPointsSummary } from "../base.ts";
 import { TokenDimensions, VehicleSource, VehicleSystemData } from "./data.ts";
 
 class VehiclePF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | null> extends ActorPF2e<TParent> {
@@ -48,10 +47,10 @@ class VehiclePF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e |
         super.prepareBaseData();
 
         // Set the dimensions of this vehicle in its size object
-        const { size } = this.system.traits;
-        const { dimensions } = this;
-        size.length = dimensions.length;
-        size.width = dimensions.width;
+        const size = this.system.traits.size;
+        const dimensions = this.dimensions;
+        size.long = dimensions.length;
+        size.wide = dimensions.width;
 
         // Set the prototype token's dimensions according to the vehicle dimensions
         if (this.prototypeToken.flags?.pf2e?.linkToActorSize) {
@@ -133,11 +132,11 @@ class VehiclePF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e |
     }
 
     protected override async _preUpdate(
-        changed: DeepPartial<VehicleSource>,
-        operation: DatabaseUpdateOperation<TParent>,
-        user: UserPF2e,
+        changed: DeepPartial<this["_source"]>,
+        options: ActorUpdateCallbackOptions,
+        user: fd.BaseUser,
     ): Promise<boolean | void> {
-        const result = await super._preUpdate(changed, operation, user);
+        const result = await super._preUpdate(changed, options, user);
         if (result === false) return result;
 
         if (this.prototypeToken.flags?.pf2e?.linkToActorSize) {
@@ -150,8 +149,8 @@ class VehiclePF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e |
             changed.prototypeToken = fu.mergeObject(changed.prototypeToken ?? {}, tokenDimensions);
 
             if (canvas.scene) {
-                const updates = this.getActiveTokens()
-                    .filter((token) => token.document.linkToActorSize)
+                const updates = this.getActiveTokens(true, true)
+                    .filter((token) => token.linkToActorSize)
                     .map((token) => ({ _id: token.id, ...tokenDimensions }));
                 await TokenDocumentPF2e.updateDocuments(updates, { parent: canvas.scene });
             }

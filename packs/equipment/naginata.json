@@ -23,6 +23,7 @@
         "description": {
             "value": "<p>This 6-foot staff has a 2-foot-long, slightly curved, swordlike blade attached at one end. The long pole helps keep the wielder out of reach of swords and shorter weapons.</p>"
         },
+        "expend": null,
         "group": "polearm",
         "hardness": 0,
         "hp": {
@@ -42,14 +43,14 @@
             }
         },
         "publication": {
-            "license": "OGL",
-            "remaster": false,
-            "title": "Pathfinder Lost Omens Gods & Magic"
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
         },
         "quantity": 1,
         "range": null,
         "reload": {
-            "value": ""
+            "value": null
         },
         "rules": [],
         "runes": {
@@ -59,7 +60,7 @@
         },
         "size": "med",
         "splashDamage": {
-            "value": null
+            "value": 0
         },
         "traits": {
             "rarity": "uncommon",

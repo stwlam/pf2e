@@ -1,12 +1,13 @@
-import { ActorPF2e } from "@actor";
-import { AttributeString } from "@actor/types.ts";
-import { PhysicalItemPF2e } from "@item/physical/index.ts";
-import { SpellPF2e } from "@item/spell/document.ts";
-import { MagicTradition } from "@item/spell/types.ts";
-import { OneToTen } from "@module/data.ts";
-import { Statistic, StatisticChatData } from "@system/statistic/index.ts";
-import { SpellCollection, SpellCollectionData, SpellSlotGroupId } from "./collection.ts";
-import { SpellcastingEntrySystemData } from "./data.ts";
+import type { ActorPF2e } from "@actor";
+import type { AttributeString } from "@actor/types.ts";
+import type { RollMode } from "@common/constants.d.mts";
+import type { PhysicalItemPF2e } from "@item/physical/index.ts";
+import type { SpellPF2e } from "@item/spell/document.ts";
+import type { MagicTradition } from "@item/spell/types.ts";
+import type { OneToTen } from "@module/data.ts";
+import type { Statistic, StatisticChatData } from "@system/statistic/index.ts";
+import type { SpellCollection, SpellCollectionData, SpellSlotGroupId } from "./collection.ts";
+import type { SpellcastingEntrySystemData } from "./data.ts";
 
 interface BaseSpellcastingEntry<TActor extends ActorPF2e | null = ActorPF2e | null> {
     id: string;
@@ -24,6 +25,12 @@ interface BaseSpellcastingEntry<TActor extends ActorPF2e | null = ActorPF2e | nu
     tradition: MagicTradition | null;
     spells: SpellCollection<NonNullable<TActor>> | null;
     system?: SpellcastingEntrySystemData;
+
+    /**
+     * If this spellcasting entry is a temporary wrapper over another, this points to the original.
+     * This is necessary when sending a spell to chat, since the temporary wrapper may no longer exist after.
+     */
+    original?: BaseSpellcastingEntry<TActor> | null;
 
     getSheetData(options?: GetSheetDataOptions<NonNullable<TActor>>): Promise<SpellcastingSheetData>;
     getRollOptions?(prefix: "spellcasting"): string[];
@@ -116,9 +123,9 @@ export type {
     ActiveSpell,
     BaseSpellcastingEntry,
     CastOptions,
-    SpellPrepEntry,
     SpellcastingCategory,
     SpellcastingEntry,
     SpellcastingSheetData,
     SpellcastingSlotGroup,
+    SpellPrepEntry,
 };

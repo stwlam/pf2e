@@ -2639,6 +2639,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "sword",
                 "hardness": 0,
                 "hp": {
@@ -2665,7 +2666,7 @@
                 "quantity": 1,
                 "range": null,
                 "reload": {
-                    "value": ""
+                    "value": null
                 },
                 "rules": [],
                 "runes": {
@@ -2762,7 +2763,7 @@
         },
         {
             "_id": "UZ4VlSGBzBXCEdfz",
-            "img": "icons/commodities/treasure/broach-gold-ruby.webp",
+            "img": "icons/commodities/treasure/brooch-gold-ruby.webp",
             "name": "Religious Symbol of Lamashtu (Gold)",
             "sort": 3800000,
             "system": {
@@ -3069,7 +3070,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "darivan"
                     }

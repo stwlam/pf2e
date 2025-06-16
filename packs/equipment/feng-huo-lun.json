@@ -23,6 +23,7 @@
         "description": {
             "value": "<p>Also known as wind and fire wheels, these large, flat steel rings feature several protruding blades typically stylized to resemble flames.</p>"
         },
+        "expend": null,
         "group": "knife",
         "hardness": 0,
         "hp": {
@@ -42,14 +43,14 @@
             }
         },
         "publication": {
-            "license": "OGL",
-            "remaster": false,
-            "title": "Pathfinder Treasure Vault"
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
         },
         "quantity": 1,
         "range": null,
         "reload": {
-            "value": ""
+            "value": null
         },
         "rules": [],
         "runes": {

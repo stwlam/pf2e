@@ -3,6 +3,7 @@ import { AutomaticBonusProgression as ABP } from "@actor/character/automatic-bon
 import { SIZE_TO_REACH } from "@actor/creature/values.ts";
 import type { AttributeString } from "@actor/types.ts";
 import { ATTRIBUTE_ABBREVIATIONS } from "@actor/values.ts";
+import type { DatabaseDeleteCallbackOptions, DatabaseUpdateCallbackOptions } from "@common/abstract/_types.d.mts";
 import type { ConsumablePF2e, MeleePF2e, ShieldPF2e } from "@item";
 import { ItemProxyPF2e, PhysicalItemPF2e } from "@item";
 import { createActionRangeLabel } from "@item/ability/helpers.ts";
@@ -15,8 +16,8 @@ import { IdentificationStatus, MystifiedData, RUNE_DATA, getPropertyRuneSlots } 
 import { MAGIC_TRADITIONS } from "@item/spell/values.ts";
 import type { RangeData } from "@item/types.ts";
 import type { StrikeRuleElement } from "@module/rules/rule-element/strike.ts";
-import type { UserPF2e } from "@module/user/document.ts";
 import { DamageCategorization } from "@system/damage/helpers.ts";
+import { EnrichmentOptionsPF2e } from "@system/text-editor.ts";
 import { ErrorPF2e, objectHasKey, setHasElement, sluggify, tupleHasValue } from "@util";
 import * as R from "remeda";
 import type { WeaponDamage, WeaponFlags, WeaponSource, WeaponSystemData } from "./data.ts";
@@ -177,15 +178,6 @@ class WeaponPF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends Ph
         );
     }
 
-    /** The number of units of ammunition required to attack with this weapon */
-    get ammoRequired(): number {
-        return this.isRanged && !this.isThrown && ![null, "-"].includes(this.reload)
-            ? this.system.traits.toggles.doubleBarrel.selected
-                ? 2
-                : 1
-            : 0;
-    }
-
     get ammo(): ConsumablePF2e<ActorPF2e> | WeaponPF2e<ActorPF2e> | null {
         const ammo = this.actor?.items.get(this.system.selectedAmmoId ?? "");
         return ammo?.isOfType("consumable", "weapon") ? ammo : null;
@@ -315,7 +307,6 @@ class WeaponPF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends Ph
         this.system.category ||= "simple";
         this.system.group ||= null;
         this.system.baseItem ||= null;
-        this.system.bonusDamage.value ||= 0;
         this.system.splashDamage.value ||= 0;
         this.system.graspingAppendage = ["fist", "claw"].includes(this.baseType ?? "")
             ? true
@@ -432,6 +423,15 @@ class WeaponPF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends Ph
         if (this.system.usage.canBeAmmo && !this.isThrowable) {
             this.system.usage.canBeAmmo = false;
         }
+
+        // Initialize expend value. Valid expend values depend on the reload value
+        if (this.isRanged && !this.isThrown && this.reload !== null) {
+            const isDoubleBarrel = this.system.traits.toggles.doubleBarrel.selected;
+            const minValue = isDoubleBarrel ? 2 : 1;
+            this.system.expend = Math.max(minValue, this.system.expend ?? 1);
+        } else {
+            this.system.expend = null;
+        }
     }
 
     /** Add the rule elements of this weapon's linked ammunition to its own list */
@@ -455,7 +455,7 @@ class WeaponPF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends Ph
 
     override async getChatData(
         this: WeaponPF2e<ActorPF2e>,
-        htmlOptions: EnrichmentOptions = {},
+        htmlOptions: EnrichmentOptionsPF2e = {},
     ): Promise<RawItemChatData> {
         const traits = this.traitChatData(CONFIG.PF2E.weaponTraits);
         const chatData = await super.getChatData();
@@ -511,13 +511,7 @@ class WeaponPF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends Ph
         return altUsages;
     }
 
-    override clone(
-        data: Record<string, unknown> | undefined,
-        context: Omit<WeaponCloneContext, "save"> & { save: true },
-    ): Promise<this>;
-    override clone(data?: Record<string, unknown>, context?: Omit<WeaponCloneContext, "save"> & { save?: false }): this;
-    override clone(data?: Record<string, unknown>, context?: WeaponCloneContext): this | Promise<this>;
-    override clone(data?: Record<string, unknown>, context?: WeaponCloneContext): this | Promise<this> {
+    override clone(data?: Record<string, unknown>, context?: WeaponCloneContext): this {
         const clone = super.clone(data, context);
         if (context?.altUsage && clone instanceof WeaponPF2e) {
             clone.altUsageType = context.altUsage;
@@ -742,8 +736,8 @@ class WeaponPF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends Ph
     /** Consume a unit of ammunition used by this weapon */
     async consumeAmmo(): Promise<void> {
         const ammo = this.ammo;
-        if (ammo?.isOfType("consumable")) {
-            return ammo.consume(this.ammoRequired);
+        if (this.system.expend && ammo?.isOfType("consumable")) {
+            return ammo.consume(this.system.expend);
         } else if (ammo?.isOfType("weapon")) {
             if (!ammo.system.usage.canBeAmmo) {
                 throw ErrorPF2e("attempted to consume weapon not usable as ammunition");
@@ -753,15 +747,15 @@ class WeaponPF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends Ph
     }
 
     /* -------------------------------------------- */
-    /*  Event Listeners and Handlers                */
+    /*  Event Handlers                              */
     /* -------------------------------------------- */
 
     protected override _preUpdate(
         changed: DeepPartial<this["_source"]>,
-        operation: DatabaseUpdateOperation<TParent>,
-        user: UserPF2e,
+        options: DatabaseUpdateCallbackOptions,
+        user: fd.BaseUser,
     ): Promise<boolean | void> {
-        if (!changed.system) return super._preUpdate(changed, operation, user);
+        if (!changed.system) return super._preUpdate(changed, options, user);
 
         const traits = changed.system.traits ?? {};
         if ("value" in traits && Array.isArray(traits.value)) {
@@ -786,12 +780,23 @@ class WeaponPF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends Ph
             }
         }
 
-        return super._preUpdate(changed, operation, user);
+        // Ensure expend stays a valid value (simpler once we have data models), and set it when swapping to a ranged weapon
+        const reload = changed.system.reload?.value ?? this._source.system.reload.value;
+        const isThrown = (traits?.value ?? this._source.system.traits.value)?.includes("thrown");
+        const isRanged =
+            setHasElement(MANDATORY_RANGED_GROUPS, changed.system.group ?? this.system.group) ||
+            !!("range" in changed.system ? changed.system.range : this._source.system.range);
+        const mustHaveExpend = isRanged && !isThrown && reload !== null;
+        changed.system.expend = mustHaveExpend
+            ? Math.max(1, changed.system.expend ?? this._source.system.expend ?? 1)
+            : null;
+
+        return super._preUpdate(changed, options, user);
     }
 
     /** Remove links to this weapon from NPC attacks */
-    protected override _onDelete(operation: DatabaseDeleteOperation<TParent>, userId: string): void {
-        super._onDelete(operation, userId);
+    protected override _onDelete(options: DatabaseDeleteCallbackOptions, userId: string): void {
+        super._onDelete(options, userId);
 
         if (game.user.id === userId) {
             const updates =

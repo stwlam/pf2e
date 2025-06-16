@@ -1,8 +1,10 @@
 import { ActorProxyPF2e, type ActorPF2e } from "@actor";
+import type { Rolled } from "@client/dice/_module.d.mts";
+import type { HexColorString } from "@common/constants.d.mts";
 import type { ItemPF2e, MeleePF2e, PhysicalItemPF2e, WeaponPF2e } from "@item";
-import { AbilityTrait } from "@item/ability/types.ts";
+import type { AbilityTrait } from "@item/ability/types.ts";
 import { getPropertyRuneStrikeAdjustments } from "@item/physical/runes.ts";
-import { ZeroToFour, ZeroToTwo } from "@module/data.ts";
+import type { ZeroToFour, ZeroToTwo } from "@module/data.ts";
 import { MigrationList, MigrationRunner } from "@module/migration/index.ts";
 import { MigrationRunnerBase } from "@module/migration/runner/base.ts";
 import {
@@ -20,31 +22,25 @@ import { CheckCheckContext, CheckPF2e, CheckRoll } from "@system/check/index.ts"
 import { DamageDamageContext, DamagePF2e } from "@system/damage/index.ts";
 import { DamageRoll } from "@system/damage/roll.ts";
 import { WeaponDamagePF2e } from "@system/damage/weapon.ts";
-import { AttackRollParams, DamageRollParams } from "@system/rolls.ts";
+import type { AttackRollParams, DamageRollParams } from "@system/rolls.ts";
 import { ErrorPF2e, getActionGlyph, signedInteger, sluggify } from "@util/misc.ts";
 import { traitSlugToObject } from "@util/tags.ts";
 import * as R from "remeda";
 import { AttackTraitHelpers } from "./creature/helpers.ts";
-import { DamageRollFunction } from "./data/base.ts";
-import { ActorSourcePF2e } from "./data/index.ts";
-import {
-    CheckModifier,
-    ModifierPF2e,
-    StatisticModifier,
-    adjustModifiers,
-    createAttributeModifier,
-} from "./modifiers.ts";
-import { NPCStrike } from "./npc/data.ts";
+import type { DamageRollFunction } from "./data/base.ts";
+import type { ActorSourcePF2e } from "./data/index.ts";
+import { CheckModifier, ModifierPF2e, StatisticModifier, createAttributeModifier } from "./modifiers.ts";
+import type { NPCStrike } from "./npc/data.ts";
 import { CheckContext } from "./roll-context/check.ts";
 import { DamageContext } from "./roll-context/damage.ts";
-import { ActorCommitData, AttributeString, AuraEffectData } from "./types.ts";
+import type { ActorGroupUpdate, AttributeString, AuraEffectData } from "./types.ts";
 
 /**
  * Reset and rerender a provided list of actors. Omit argument to reset all world and synthetic actors
- * @param [actors] A list of actors to refresh: if none are provided, all world and synthetic actors are retrieved
- * @param [options] Render options for actor sheets and tokens
- * @param [options.sheets=true] Render actor sheets
- * @param [options.tokens=false] Redraw tokens
+ * @param actors A list of actors to refresh: if none are provided, all world and synthetic actors are retrieved
+ * @param options Render options for actor sheets and tokens
+ * @param options.sheets Render actor sheets
+ * @param options.tokens Redraw tokens
  */
 async function resetActors(actors?: Iterable<ActorPF2e>, options: ResetActorsRenderOptions = {}): Promise<void> {
     actors ??= [
@@ -59,25 +55,6 @@ async function resetActors(actors?: Iterable<ActorPF2e>, options: ResetActorsRen
         if (options.sheets) actor.render();
     }
     game.pf2e.effectPanel.refresh();
-
-    // If expired effects are automatically removed, the actor update cycle will reinitialize vision
-    const refreshScenes =
-        game.settings.get("pf2e", "automation.effectExpiration") &&
-        !game.settings.get("pf2e", "automation.removeExpiredEffects");
-
-    if (refreshScenes) {
-        const scenes = R.unique(
-            Array.from(actors)
-                .flatMap((a) => a.getActiveTokens(false, true))
-                .flatMap((t) => t.scene),
-        );
-        for (const scene of scenes) {
-            scene.reset();
-            if (scene.isView) {
-                canvas.perception.update({ initializeVision: true }, true);
-            }
-        }
-    }
 
     if (options.tokens) {
         for (const token of R.unique(Array.from(actors).flatMap((a) => a.getActiveTokens(true, true)))) {
@@ -112,18 +89,11 @@ async function migrateActorSource(source: PreCreate<ActorSourcePF2e>): Promise<A
         source.system?._migration?.version ?? MigrationRunnerBase.LATEST_SCHEMA_VERSION,
         ...(source.items ?? []).map((i) => i?.system?._migration?.version ?? MigrationRunnerBase.LATEST_SCHEMA_VERSION),
     );
-    const tokenDefaults = fu.deepClone(game.settings.get("core", "defaultToken"));
 
-    // Clear any prototype token entries explicitly set to `undefined` by upstream
-    source.prototypeToken ??= {};
-    for (const [key, value] of R.entries(source.prototypeToken ?? {})) {
-        if (value === undefined) delete source.prototypeToken[key];
-    }
-
-    const actor = new ActorProxyPF2e(fu.mergeObject({ prototypeToken: tokenDefaults }, source));
+    const actor = new ActorProxyPF2e(fu.deepClone(source));
     await MigrationRunner.ensureSchemaVersion(actor, MigrationList.constructFromVersion(lowestSchemaVersion));
 
-    return actor.toObject();
+    return fu.deepClone(actor._source);
 }
 
 /** Review `removeOnExit` aura effects and remove any that no longer apply */
@@ -556,7 +526,7 @@ function strikeFromMeleeItem(item: MeleePF2e<ActorPF2e>): NPCStrike {
         `${game.i18n.localize("PF2E.WeaponStrikeLabel")} ${signedInteger(strike.totalModifier)}`,
         ...(["map1", "map2"] as const).map((prop) => {
             const modifier = createMapModifier(prop);
-            adjustModifiers([modifier], baseOptions);
+            modifier.applyAdjustments({ rollOptions: baseOptions });
             const penalty = modifier.ignored ? 0 : modifier.value;
             return game.i18n.format("PF2E.MAPAbbreviationValueLabel", {
                 value: signedInteger(strike.totalModifier + penalty),
@@ -831,16 +801,28 @@ async function transferItemsBetweenActors(
     }
 }
 
+/** Creates an empty actor group update with optional additional data */
+function createActorGroupUpdate(data: Partial<ActorGroupUpdate> = {}): ActorGroupUpdate {
+    return {
+        actorUpdates: {},
+        itemCreates: [],
+        itemUpdates: [],
+        itemDeletes: [],
+        ...data,
+    };
+}
+
 /** Applies multiple batched updates to the actor, delaying rendering till the end */
-async function applyActorUpdate<T extends ActorPF2e>(
-    actor: T,
-    data: Partial<ActorCommitData<T>>,
+async function applyActorGroupUpdate(
+    actor: ActorPF2e,
+    data: Partial<ActorGroupUpdate>,
     { render = true }: { render?: boolean } = {},
 ): Promise<void> {
     const itemCreates = data.itemCreates ?? [];
     const itemUpdates = data.itemUpdates ?? [];
+    const itemDeletes = data.itemDeletes ?? [];
 
-    if (data.actorUpdates) {
+    if (data.actorUpdates && !R.isEmpty(data.actorUpdates)) {
         await actor.update(data.actorUpdates, { render: false });
     }
     if (itemCreates.length > 0) {
@@ -849,19 +831,23 @@ async function applyActorUpdate<T extends ActorPF2e>(
     if (itemUpdates.length > 0) {
         await actor.updateEmbeddedDocuments("Item", itemUpdates, { render: false });
     }
+    if (itemDeletes.length > 0) {
+        await actor.deleteEmbeddedDocuments("Item", itemDeletes, { render: false });
+    }
 
-    const changed = data.actorUpdates || itemCreates.length || itemUpdates.length;
+    const changed = data.actorUpdates || itemCreates.length || itemUpdates.length || itemDeletes.length;
     if (render && changed) {
         actor.render();
     }
 }
 
 export {
-    applyActorUpdate,
+    applyActorGroupUpdate,
     auraAffectsActor,
     calculateMAPs,
     calculateRangePenalty,
     checkAreaEffects,
+    createActorGroupUpdate,
     createEncounterRollOptions,
     createEnvironmentRollOptions,
     getRangeIncrement,

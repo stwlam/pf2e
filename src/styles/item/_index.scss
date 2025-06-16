@@ -132,8 +132,6 @@
             > section.sidebar,
             > .sheet-body {
                 height: calc(100% - var(--space-10));
-                overflow-y: auto;
-                scrollbar-gutter: stable;
             }
 
             @import "sidebar";
@@ -172,6 +170,7 @@
                     // Allow editor scrolling to take over when editing
                     &.editing {
                         overflow: hidden;
+                        scrollbar-gutter: unset;
 
                         & > section {
                             flex: 1;
@@ -183,8 +182,8 @@
                         border: 1px dotted rgba(75, 74, 68, 0.5);
                         flex: 0 0 auto;
 
-                        .editor-content:not(.ProseMirror) {
-                            padding: 0 0.25em;
+                        .editor-content {
+                            padding: 0 var(--space-4);
                         }
 
                         &:not(.has-content) {
@@ -336,23 +335,6 @@
 
             & > * {
                 padding: var(--space-4);
-            }
-
-            & > header {
-                align-items: baseline;
-                background-color: var(--color-pf-secondary);
-                border-radius: 5px 5px 0 0;
-                color: var(--text-light);
-                display: flex;
-                justify-content: space-between;
-                margin: -1px -1px 0;
-                padding: 1px;
-
-                h3,
-                .item-controls {
-                    padding: 0.25rem;
-                    margin-bottom: 0;
-                }
             }
         }
 
@@ -597,4 +579,4 @@
     }
 }
 
-@import "item-attacher", "persistent-damage-dialog";
+@import "item-attacher", "persistent-damage-editor";

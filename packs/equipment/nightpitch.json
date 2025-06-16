@@ -1,6 +1,6 @@
 {
     "_id": "hH63OWEVoMEr4ypr",
-    "img": "systems/pf2e/icons/default-icons/consumable.svg",
+    "img": "icons/commodities/materials/orb-tassle-blue-yellow.webp",
     "name": "Nightpitch",
     "system": {
         "baseItem": null,
@@ -11,7 +11,7 @@
         "containerId": null,
         "damage": null,
         "description": {
-            "value": "<p><strong>Activate</strong> Cast a Spell</p>\n<p>A pellet of tar mixed with the fur of a nocturnal creature, such as a bat, nightpitch used to cast a @UUID[Compendium.pf2e.spells-srd.Item.Darkness] spell makes the area of the darkness difficult terrain.</p>"
+            "value": "<p><strong>Activate</strong> Cast a Spell</p><hr /><p>A pellet of tar mixed with the fur of a nocturnal creature, such as a bat, nightpitch used to cast a @UUID[Compendium.pf2e.spells-srd.Item.Darkness] spell makes the area of the darkness difficult terrain.</p>"
         },
         "hardness": 0,
         "hp": {
@@ -31,9 +31,9 @@
             }
         },
         "publication": {
-            "license": "OGL",
-            "remaster": false,
-            "title": "Pathfinder Treasure Vault"
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
         },
         "quantity": 1,
         "rules": [],

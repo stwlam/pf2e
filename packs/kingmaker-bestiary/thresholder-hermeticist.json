@@ -36,6 +36,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "knife",
                 "hardness": 0,
                 "hp": {
@@ -130,6 +131,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": 1,
                 "group": "bomb",
                 "hardness": 0,
                 "hp": {
@@ -316,7 +318,7 @@
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI"
             },
-            "img": "icons/commodities/treasure/broach-jeweled-green.webp",
+            "img": "icons/commodities/treasure/brooch-jeweled-green.webp",
             "name": "Religious Symbol of Yog-Sothoth",
             "sort": 500000,
             "system": {
@@ -358,7 +360,6 @@
                 "quantity": 1,
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "has-religious-symbol",
                         "requiresEquipped": false

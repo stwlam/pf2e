@@ -23,6 +23,7 @@
         "description": {
             "value": "<p>A bouquet of whiplike blades extends from the hilt of this sword, enabling deadly, sweeping attacks.</p>"
         },
+        "expend": null,
         "group": "flail",
         "hardness": 0,
         "hp": {
@@ -42,14 +43,14 @@
             }
         },
         "publication": {
-            "license": "OGL",
-            "remaster": false,
-            "title": "Pathfinder Treasure Vault"
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Treasure Vault (Remastered)"
         },
         "quantity": 1,
         "range": null,
         "reload": {
-            "value": ""
+            "value": null
         },
         "rules": [],
         "runes": {

@@ -36,6 +36,7 @@
                     "handsHeld": 2,
                     "invested": null
                 },
+                "expend": null,
                 "group": "axe",
                 "hardness": 0,
                 "hp": {
@@ -62,7 +63,7 @@
                 "quantity": 1,
                 "range": null,
                 "reload": {
-                    "value": ""
+                    "value": null
                 },
                 "rules": [],
                 "runes": {
@@ -121,6 +122,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "axe",
                 "hardness": 0,
                 "hp": {
@@ -514,7 +516,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "change-shape",
                         "suboptions": [
@@ -747,7 +748,7 @@
                 "value": 3
             },
             "privateNotes": "",
-            "publicNotes": "",
+            "publicNotes": "<p>Werecreatures are humanoids who transform into animals and animal-humanoid hybrids under the light of the full moon. The fate of these shapechanging creatures derives from an ancient primal curse that they can, in turn, transmit through their own bites. The stat blocks in this section reflect werecreatures in their hybrid forms.</p><hr /><p>A weremoose's tendencies toward stubbornness and a grumpy attitude make it difficult for them to get along with others. Most often, they live as hunters or hermits, taking in the peace of their natural surroundings. If their territory is invaded, they don't hide or retreat but are unlikely to attack. If someone else starts the fight, though, a weremoose retaliates without mercy.</p>",
             "publication": {
                 "license": "ORC",
                 "remaster": true,

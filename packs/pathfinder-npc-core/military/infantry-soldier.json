@@ -37,6 +37,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": 1,
                 "group": "crossbow",
                 "hardness": 0,
                 "hp": {
@@ -120,6 +121,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "sword",
                 "hardness": 0,
                 "hp": {
@@ -146,7 +148,7 @@
                 "quantity": 1,
                 "range": null,
                 "reload": {
-                    "value": ""
+                    "value": null
                 },
                 "rules": [],
                 "runes": {
@@ -192,7 +194,8 @@
                     "value": "<p>Though they come in a variety of shapes and sizes, the protection offered by wooden shields comes from the stoutness of their materials. While wooden shields are less expensive than steel shields, they break more easily.</p><table class=\"pf2e remaster\"><thead><tr><th>Hardness</th><th>HP</th><th>BT</th></tr></thead><tbody><tr><td>3</td><td>12</td><td>6</td></tr></tbody></table>"
                 },
                 "equipped": {
-                    "carryType": "worn"
+                    "carryType": "held",
+                    "handsHeld": 1
                 },
                 "hardness": 3,
                 "hp": {
@@ -385,7 +388,7 @@
                 },
                 "damageRolls": {
                     "o6P42JjVWJWA4o7P": {
-                        "damage": "1d6+5",
+                        "damage": "1d6+6",
                         "damageType": "piercing"
                     }
                 },
@@ -422,7 +425,6 @@
                 "traits": {
                     "value": [
                         "agile",
-                        "finesse",
                         "versatile-s"
                     ]
                 }
@@ -656,7 +658,7 @@
         },
         "attributes": {
             "ac": {
-                "details": "",
+                "details": "(20 with shield raised)",
                 "value": 18
             },
             "allSaves": {

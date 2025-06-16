@@ -737,14 +737,12 @@
                         "radius": 30,
                         "slug": "scintillating-aura",
                         "traits": [
-                            "concentrate",
                             "incapacitation",
                             "primal",
                             "visual"
                         ]
                     },
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "scintillating-aura-active",
                         "toggleable": true,

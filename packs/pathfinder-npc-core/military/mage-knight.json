@@ -1956,6 +1956,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "club",
                 "hardness": 0,
                 "hp": {
@@ -1982,7 +1983,7 @@
                 "quantity": 1,
                 "range": null,
                 "reload": {
-                    "value": ""
+                    "value": null
                 },
                 "rules": [],
                 "runes": {
@@ -2226,7 +2227,6 @@
                 "traits": {
                     "value": [
                         "agile",
-                        "finesse",
                         "nonlethal",
                         "unarmed"
                     ]
@@ -2375,7 +2375,7 @@
                     {
                         "key": "RollOption",
                         "option": "bespell-strikes",
-                        "selection": "acid",
+                        "selection": "force",
                         "suboptions": [
                             {
                                 "label": "PF2E.TraitAcid",
@@ -2449,6 +2449,16 @@
                             "bespell-strikes"
                         ],
                         "selector": "strike-damage"
+                    },
+                    {
+                        "itemType": "melee",
+                        "key": "ItemAlteration",
+                        "mode": "add",
+                        "predicate": [
+                            "bespell-strikes"
+                        ],
+                        "property": "traits",
+                        "value": "arcane"
                     }
                 ],
                 "slug": null,
@@ -2548,7 +2558,7 @@
                 "value": 29
             },
             "allSaves": {
-                "value": ""
+                "value": "(Reflex +16 against damaging effects)"
             },
             "hp": {
                 "details": "",

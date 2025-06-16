@@ -129,12 +129,10 @@
                             "auditory",
                             "emotion",
                             "mental",
-                            "occult",
-                            "concentrate"
+                            "occult"
                         ]
                     },
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "aura-of-sobs-active",
                         "toggleable": true,

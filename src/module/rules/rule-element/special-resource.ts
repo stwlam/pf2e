@@ -1,15 +1,22 @@
 import type { ActorType, CreaturePF2e } from "@actor";
 import type { CharacterResources } from "@actor/character/data.ts";
 import { CORE_RESOURCES } from "@actor/character/values.ts";
-import { applyActorUpdate } from "@actor/helpers.ts";
-import type { ActorCommitData } from "@actor/types.ts";
+import { applyActorGroupUpdate, createActorGroupUpdate } from "@actor/helpers.ts";
+import type { ActorGroupUpdate } from "@actor/types.ts";
+import type { ItemUUID } from "@client/documents/_module.d.mts";
+import type Document from "@common/abstract/document.d.mts";
 import { ItemProxyPF2e, PhysicalItemPF2e } from "@item";
 import type { PhysicalItemSource } from "@item/base/data/index.ts";
 import { AnyChoiceField } from "@system/schema-data-fields.ts";
 import { sluggify } from "@util";
 import { createBatchRuleElementUpdate } from "../helpers.ts";
 import { RuleElementPF2e, type RuleElementOptions } from "./base.ts";
-import { ResolvableValueField, type RuleElementSchema, type RuleElementSource } from "./data.ts";
+import {
+    ModelPropsFromRESchema,
+    ResolvableValueField,
+    type RuleElementSchema,
+    type RuleElementSource,
+} from "./data.ts";
 import fields = foundry.data.fields;
 
 const INVALID_RESOURCES: (keyof CharacterResources)[] = [...CORE_RESOURCES, "crafting", "infusedReagents"];
@@ -55,17 +62,13 @@ class SpecialResourceRuleElement extends RuleElementPF2e<SpecialResourceSchema> 
     }
 
     /** Updates the remaining number of this resource. Where it updates depends on the type */
-    async update(value: number, options: { save: false; checkLevel?: boolean }): Promise<ActorCommitData>;
+    async update(value: number, options: { save: false; checkLevel?: boolean }): Promise<ActorGroupUpdate>;
     async update(value: number, options?: { save?: true; render?: boolean; checkLevel?: boolean }): Promise<void>;
     async update(
         value: number,
         { save = true, render = true, checkLevel = false }: SpecialResourceUpdateOptions = {},
-    ): Promise<void | ActorCommitData> {
-        const data: ActorCommitData<CreaturePF2e> = {
-            actorUpdates: null,
-            itemCreates: [],
-            itemUpdates: [],
-        };
+    ): Promise<void | ActorGroupUpdate> {
+        const data = createActorGroupUpdate();
 
         if (this.itemUUID) {
             // Find an existing item to update or create a new one
@@ -97,18 +100,18 @@ class SpecialResourceRuleElement extends RuleElementPF2e<SpecialResourceSchema> 
         }
 
         if (save) {
-            await applyActorUpdate(this.actor, data, { render });
+            await applyActorGroupUpdate(this.actor, data, { render });
         } else {
             return data;
         }
     }
 
     /** Returns data that when applied updates this resources uses based on renewal rules */
-    async renewUses(duration: "turn" | "round" | "day"): Promise<ActorCommitData> {
+    async renewUses(duration: "turn" | "round" | "day"): Promise<ActorGroupUpdate> {
         if (duration === "day" && this.renew !== false) {
             return this.update(this.max, { save: false, checkLevel: true });
         }
-        return { actorUpdates: null, itemCreates: [], itemUpdates: [] };
+        return createActorGroupUpdate();
     }
 
     /** If an item uuid is specified, create it when this resource is first attached */
@@ -186,7 +189,7 @@ class SpecialResourceRuleElement extends RuleElementPF2e<SpecialResourceSchema> 
     }
 
     async #createItem(uuid: string, level: number | null): Promise<PhysicalItemSource | null> {
-        const grantedItem: ClientDocument | null = await (async () => {
+        const grantedItem: Document | null = await (async () => {
             try {
                 return (await fromUuid(uuid))?.clone() ?? null;
             } catch (error) {
@@ -213,7 +216,7 @@ class SpecialResourceRuleElement extends RuleElementPF2e<SpecialResourceSchema> 
 
 interface SpecialResourceRuleElement
     extends RuleElementPF2e<SpecialResourceSchema>,
-        Omit<ModelPropsFromSchema<SpecialResourceSchema>, "label"> {
+        ModelPropsFromRESchema<SpecialResourceSchema> {
     slug: string;
     max: number;
     get actor(): CreaturePF2e;

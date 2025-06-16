@@ -1,0 +1,115 @@
+{
+    "_id": "o8l0mvCHAnQUfD6o",
+    "img": "icons/commodities/cloth/cloth-patterned-green.webp",
+    "name": "Shawl of Seasons",
+    "system": {
+        "baseItem": null,
+        "bulk": {
+            "value": 0.1
+        },
+        "containerId": null,
+        "description": {
+            "value": "<p>This woven shawl changes its color, material, and abilities with the seasons. In its usual state, it reflects the current season of the environment the wearer is in. The handsome embroidery grants you a +2 item bonus to Diplomacy checks to @UUID[Compendium.pf2e.actionspf2e.Item.Make an Impression].</p>\n<p><strong>Activate—Change of Seasons</strong> 10 minutes (concentrate)</p>\n<p><strong>Frequency</strong> once per day</p><hr /><p><strong>Effect</strong> You arrange the shawl on your shoulders to gain the benefits of a season of your choice until your next daily preparations. If the season you choose is the current season, you also gain a +1 item bonus to Fortitude saving throws.</p><ul><li><strong>Spring</strong> The shawl becomes smooth silk covered in delicate flowers. You gain a +5-foot item bonus to your Speed.</li><li><strong>Summer</strong> The shawl becomes light cotton with the hues of fresh grass. You're protected from the effects of severe heat.</li><li><strong>Fall</strong> The shawl becomes thin leather with an ombre of red and orange leaves. You treat falls as 10 feet shorter.</li><li><strong>Winter</strong> The shawl becomes warm wool as white as snow. You're protected from the effects of severe cold.</li></ul>"
+        },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 5
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {
+                "gp": 150
+            }
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+        },
+        "quantity": 1,
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    "action:make-an-impression"
+                ],
+                "selector": "diplomacy",
+                "type": "item",
+                "value": 2
+            },
+            {
+                "key": "RollOption",
+                "label": "PF2E.SpecificRule.Equipment.ShawlOfSeasons.BenefitToggleLabel",
+                "option": "shawl-of-seasons:change-of-seasons",
+                "suboptions": [
+                    {
+                        "label": "PF2E.SpecificRule.Seasons.Spring",
+                        "value": "spring"
+                    },
+                    {
+                        "label": "PF2E.SpecificRule.Seasons.Summer",
+                        "value": "summer"
+                    },
+                    {
+                        "label": "PF2E.SpecificRule.Seasons.Fall",
+                        "value": "fall"
+                    },
+                    {
+                        "label": "PF2E.SpecificRule.Seasons.Winter",
+                        "value": "winter"
+                    }
+                ],
+                "toggleable": true
+            },
+            {
+                "disabledIf": [
+                    {
+                        "not": "shawl-of-seasons:change-of-seasons"
+                    }
+                ],
+                "disabledValue": false,
+                "key": "RollOption",
+                "label": "PF2E.SpecificRule.Equipment.ShawlOfSeasons.CurrentSeasonToggleLabel",
+                "option": "shawl-of-seasons:current-season",
+                "toggleable": true
+            },
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    "shawl-of-seasons:current-season"
+                ],
+                "selector": "fortitude",
+                "type": "item",
+                "value": 1
+            },
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    "shawl-of-seasons:change-of-seasons:spring"
+                ],
+                "selector": "land-speed",
+                "type": "item",
+                "value": 5
+            }
+        ],
+        "size": "med",
+        "traits": {
+            "rarity": "uncommon",
+            "value": [
+                "invested",
+                "magical"
+            ]
+        },
+        "usage": {
+            "value": "worn"
+        }
+    },
+    "type": "equipment"
+}

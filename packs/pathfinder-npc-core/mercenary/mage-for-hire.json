@@ -1127,6 +1127,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "club",
                 "hardness": 0,
                 "hp": {
@@ -1151,7 +1152,7 @@
                 "quantity": 1,
                 "range": null,
                 "reload": {
-                    "value": ""
+                    "value": null
                 },
                 "rules": [],
                 "runes": {
@@ -1377,7 +1378,7 @@
                     "value": []
                 },
                 "bonus": {
-                    "value": 12
+                    "value": 7
                 },
                 "damageRolls": {
                     "6uipj1F9Pa1U9liu": {
@@ -1423,7 +1424,7 @@
             "type": "melee"
         }
     ],
-    "name": "Mage For Hire",
+    "name": "Mage for Hire",
     "system": {
         "abilities": {
             "cha": {

@@ -1189,6 +1189,7 @@
                     "handsHeld": 0,
                     "invested": null
                 },
+                "expend": null,
                 "group": "knife",
                 "hardness": 0,
                 "hp": {
@@ -1261,7 +1262,7 @@
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.plplsXJsqrdqNQVI"
             },
-            "img": "icons/commodities/treasure/broach-jeweled-green.webp",
+            "img": "icons/commodities/treasure/brooch-jeweled-green.webp",
             "name": "Twisted Knot of Wood (Religious Symbol of Kugaptee)",
             "sort": 1400000,
             "system": {
@@ -1303,7 +1304,6 @@
                 "quantity": 1,
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "has-religious-symbol",
                         "requiresEquipped": false
@@ -1668,7 +1668,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "impersonate-shape",
                         "toggleable": true

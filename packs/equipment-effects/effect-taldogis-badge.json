@@ -1,0 +1,47 @@
+{
+    "_id": "bsumFksktyHssfrf",
+    "img": "icons/commodities/treasure/brooch-eye-silver-teal.webp",
+    "name": "Effect: Taldogis Badge",
+    "system": {
+        "description": {
+            "value": "<p>Granted by @UUID[Compendium.pf2e.equipment-srd.Item.Taldogis Badge]</p>\n<p>You gain a +2 circumstance bonus to Diplomacy checks against supporters of Eutropia.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 2
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    "eutropia-supporter"
+                ],
+                "selector": "diplomacy",
+                "type": "circumstance",
+                "value": 2
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

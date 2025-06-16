@@ -839,7 +839,6 @@
                 },
                 "rules": [
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "reflect-spell",
                         "toggleable": true
@@ -891,14 +890,12 @@
                         "radius": 30,
                         "slug": "scintillating-aura",
                         "traits": [
-                            "concentrate",
                             "incapacitation",
                             "primal",
                             "visual"
                         ]
                     },
                     {
-                        "domain": "all",
                         "key": "RollOption",
                         "option": "scintillating-aura-active",
                         "toggleable": true,
