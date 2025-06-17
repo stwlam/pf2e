@@ -600,11 +600,11 @@
                 "Identification": {
                     "Skills": {
                         "Label": "{skills}: DC {dc} ({adjustment})",
-                        "Tooltip": "\"The skill used to identify a creature usually depends on that creature's trait, as shown on the Creature Identification Skills table, but you have leeway on which skills apply.\" – Pathfinder GM Core pg. 54-55"
+                        "Tooltip": "\"The skill used to identify a creature usually depends on that creature's trait, as shown on the Creature Identification Skills table, but you have leeway on which skills apply.\" — Pathfinder GM Core pg. 54-55"
                     },
                     "Lore": {
                         "Label": "Applicable Lore: DC {dc1} ({adjustment1}) or DC {dc2} ({adjustment2})",
-                        "Tooltip": "\"Using the applicable Lore usually has an easy or very easy DC (before adjusting for rarity).\" – Pathfinder GM Core pg. 54"
+                        "Tooltip": "\"Using the applicable Lore usually has an easy or very easy DC (before adjusting for rarity).\" — Pathfinder GM Core pg. 54"
                     }
                 },
                 "LevelN": "Creature {level}",
@@ -1062,7 +1062,7 @@
             "Foundry": "Foundry",
             "FoundryOld": "0.7 or older",
             "Invalid": "Invalid",
-            "LockedTooltip": "Unable to migrate - compendium is locked",
+            "LockedTooltip": "Unable to migrate — compendium is locked",
             "MigrateCompendium": "Migrate Compendium",
             "Schema": "Schema",
             "Size": "Size",
@@ -2851,7 +2851,7 @@
         "Level9": "Level 9",
         "LevelLabel": "Level",
         "LevelN": "Level {level}",
-        "LevelRange": "Levels {minLevel} - {level}",
+        "LevelRange": "Levels {minLevel} — {level}",
         "LicenseViewer": {
             "Label": "Legal Notice",
             "LandingPageText": "Use the tabs above to read the legal information"
@@ -5285,7 +5285,7 @@
         },
         "UnitedPaizoWorkers": {
             "PFSNote": "Note for Pathfinder Society players: In support of UPW, merchandise purchased from the union store will count in the Online PFS region for the <span class=\"hover\" title=\"When you use a Hero Point to reroll a check, add a +1 circumstance bonus to the reroll\">Promotional Vestments</a> boon.",
-            "ReleaseIntro": "Redmond, WA (October 14th, 2021) — Today, the workers at Paizo, Inc - publisher of the Pathfinder and Starfinder roleplaying games - are announcing their formation of the United Paizo Workers union (UPW), with the Communication Workers of America's CODE-CWA project. This union is the first of its kind in the tabletop roleplaying games industry.",
+            "ReleaseIntro": "Redmond, WA (October 14th, 2021) — Today, the workers at Paizo, Inc — publisher of the Pathfinder and Starfinder roleplaying games — are announcing their formation of the United Paizo Workers union (UPW), with the Communication Workers of America's CODE-CWA project. This union is the first of its kind in the tabletop roleplaying games industry.",
             "Title": "Announcement: United Paizo Workers"
         },
         "UnprepareItemTitle": "Unprepare Item",
