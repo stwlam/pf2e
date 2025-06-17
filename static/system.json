@@ -659,6 +659,19 @@
             "flags": {}
         },
         {
+            "name": "myth-speaker-bestiary",
+            "label": "Myth-Speaker",
+            "path": "packs/myth-speaker-bestiary",
+            "type": "Actor",
+            "banner": "systems/pf2e/assets/compendium-banner/red.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
             "name": "night-of-the-gray-death-bestiary",
             "label": "Night of the Gray Death",
             "path": "packs/night-of-the-gray-death-bestiary",
@@ -1200,6 +1213,7 @@
                         "gatewalkers-bestiary",
                         "outlaws-of-alkenstar-bestiary",
                         "kingmaker-bestiary",
+                        "myth-speaker-bestiary",
                         "quest-for-the-frozen-flame-bestiary",
                         "season-of-ghosts-bestiary",
                         "seven-dooms-for-sandpoint-bestiary",

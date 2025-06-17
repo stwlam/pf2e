@@ -20,7 +20,7 @@
         "prerequisites": {
             "value": [
                 {
-                    "value": "You have a hand free and aren’t already wielding a spectral dagger."
+                    "value": "You have a hand free and aren't already wielding a spectral dagger."
                 }
             ]
         },
