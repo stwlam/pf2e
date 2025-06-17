@@ -8,7 +8,7 @@
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.rQWaJhI5Bko5x14Z"
             },
-            "img": "systems/pf2e/icons/equipment/weapons/dagger.webp",
+            "img": "icons/weapons/daggers/dagger-straight-blue.webp",
             "name": "Dagger",
             "sort": 100000,
             "system": {
@@ -34,7 +34,7 @@
                 },
                 "equipped": {
                     "carryType": "worn",
-                    "handsHeld": 1,
+                    "handsHeld": 0,
                     "invested": null
                 },
                 "expend": null,
@@ -57,9 +57,9 @@
                     }
                 },
                 "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
                 },
                 "quantity": 1,
                 "range": null,
@@ -87,6 +87,7 @@
                     ]
                 },
                 "usage": {
+                    "canBeAmmo": false,
                     "value": "held-in-one-hand"
                 }
             },
@@ -123,7 +124,7 @@
                 },
                 "equipped": {
                     "carryType": "worn",
-                    "handsHeld": 1,
+                    "handsHeld": 0,
                     "invested": null
                 },
                 "expend": 1,
@@ -146,9 +147,9 @@
                     }
                 },
                 "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
                 },
                 "quantity": 1,
                 "range": 60,
@@ -181,7 +182,7 @@
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.grmaV4GdoGD7sKbn"
             },
-            "img": "systems/pf2e/icons/equipment/weapons/scimitar.webp",
+            "img": "icons/weapons/swords/scimitar-worn-blue.webp",
             "name": "Scimitar",
             "sort": 300000,
             "system": {
@@ -230,9 +231,9 @@
                     }
                 },
                 "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
                 },
                 "quantity": 1,
                 "range": null,
@@ -242,7 +243,9 @@
                 "rules": [],
                 "runes": {
                     "potency": 1,
-                    "property": [],
+                    "property": {
+                        "0": ""
+                    },
                     "striking": 0
                 },
                 "size": "med",
@@ -317,9 +320,9 @@
                     }
                 },
                 "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
                 },
                 "quantity": 1,
                 "range": null,
@@ -376,6 +379,7 @@
                 "dexCap": 4,
                 "equipped": {
                     "carryType": "worn",
+                    "handsHeld": 0,
                     "inSlot": true,
                     "invested": null
                 },
@@ -398,9 +402,9 @@
                     }
                 },
                 "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
                 },
                 "quantity": 1,
                 "rules": [],
@@ -441,7 +445,7 @@
                 },
                 "equipped": {
                     "carryType": "worn",
-                    "handsHeld": 1
+                    "handsHeld": 0
                 },
                 "hardness": 0,
                 "hp": {
@@ -462,9 +466,9 @@
                     }
                 },
                 "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
                 },
                 "quantity": 10,
                 "rules": [],
@@ -721,7 +725,7 @@
                 },
                 "category": "offensive",
                 "description": {
-                    "value": "<p>The captain orders their shipmates to fight without mercy. All allied creatures of equal or lower level within 20 feet of the ship captain gain a+1 status bonus to attack rolls and damage rolls until the end of the ship captain's next turn.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.Effect: No Quarter!]</p>"
+                    "value": "<p>The captain orders their shipmates to fight without mercy. All allied creatures of equal or lower level within 20 feet of the ship captain gain a +1 status bonus to attack rolls and damage rolls until the end of the ship captain's next turn.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.Effect: No Quarter!]</p>"
                 },
                 "publication": {
                     "license": "OGL",
@@ -824,9 +828,9 @@
             "privateNotes": "",
             "publicNotes": "<p>The captain is the ultimate authority on a vessel, responsible for the livelihood and well-being of everyone on the ship.</p>\n<hr />\n<p>Adventurers may need passage on a swift vessel, or they might face danger from raiders at sea or in coastal settlements.</p>",
             "publication": {
-                "license": "OGL",
-                "remaster": false,
-                "title": "Pathfinder #188: They Watched the Stars"
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Adventure Path: Gatewalkers"
             }
         },
         "initiative": {
@@ -875,10 +879,8 @@
                 "value": "med"
             },
             "value": [
-                "evil",
                 "human",
-                "humanoid",
-                "lawful"
+                "humanoid"
             ]
         }
     },
