@@ -172,7 +172,7 @@
                     "value": 24
                 },
                 "damageRolls": {
-                    "5HLUsMlBYOyKlKAi": {
+                    "IpnZRA2HGHcuiEPm": {
                         "damage": "1d6",
                         "damageType": "fire"
                     },
@@ -216,10 +216,10 @@
                     "value": []
                 },
                 "bonus": {
-                    "value": 24
+                    "value": 25
                 },
                 "damageRolls": {
-                    "OenPxV0CmYUgvaWK": {
+                    "WETCKRauye6a4NsU": {
                         "damage": "1d6",
                         "damageType": "fire"
                     },
@@ -241,6 +241,7 @@
                 "traits": {
                     "value": [
                         "magical",
+                        "reach-10",
                         "sweep"
                     ]
                 }
@@ -257,7 +258,7 @@
                     "value": []
                 },
                 "bonus": {
-                    "value": 21
+                    "value": 22
                 },
                 "damageRolls": {
                     "i4ggn8pkplgq6191icks": {
