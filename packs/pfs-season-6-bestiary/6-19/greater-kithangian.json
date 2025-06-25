@@ -44,12 +44,13 @@
             "type": "spellcastingEntry"
         },
         {
-            "_id": "l9fwplJ6DXttNOJf",
+            "_id": "dQLvlaujFSqGYSg1",
             "_stats": {
-                "compendiumSource": "Compendium.pf2e.spells-srd.Item.b5sGjGlBf58f8jn0"
+                "compendiumSource": "Compendium.pf2e.spells-srd.Item.A2JfEKe6BZcTG1S8"
             },
-            "img": "icons/magic/water/wave-water-teal.webp",
-            "name": "Air Walk",
+            "folder": "7cyoYPoPYA01mErU",
+            "img": "icons/creatures/mammals/bats-movement-flying-black.webp",
+            "name": "Fly",
             "sort": 200000,
             "system": {
                 "area": null,
@@ -60,7 +61,7 @@
                 "damage": {},
                 "defense": null,
                 "description": {
-                    "value": "<p>The target can walk on air as if it were solid ground. It can ascend and descend in this way at a maximum of a 45-degree angle.</p>"
+                    "value": "<p>The target can soar through the air, gaining a fly Speed equal to its Speed or 20 feet, whichever is greater.</p>\n<p>@UUID[Compendium.pf2e.spell-effects.Item.Spell Effect: Fly]</p>\n<hr />\n<p><strong>Heightened (7th)</strong> The duration increases to 1 hour.</p>"
                 },
                 "duration": {
                     "sustained": false,
@@ -74,16 +75,16 @@
                     "value": "z2jiwgJuxRj0r1Bh"
                 },
                 "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
                 },
                 "range": {
                     "value": "touch"
                 },
                 "requirements": "",
                 "rules": [],
-                "slug": "air-walk",
+                "slug": "fly",
                 "target": {
                     "value": "1 creature"
                 },
@@ -93,11 +94,12 @@
                 "traits": {
                     "rarity": "common",
                     "traditions": [
+                        "arcane",
                         "divine",
+                        "occult",
                         "primal"
                     ],
                     "value": [
-                        "air",
                         "concentrate",
                         "manipulate"
                     ]

@@ -172,13 +172,13 @@
                     "value": 24
                 },
                 "damageRolls": {
-                    "IpnZRA2HGHcuiEPm": {
+                    "vH6H2BSLDQwZdIZ9": {
                         "damage": "1d6",
                         "damageType": "fire"
                     },
                     "wxdjhxlnpijsr5pf3g4c": {
-                        "damage": "2d12+15",
-                        "damageType": "slashing"
+                        "damage": "2d8+15",
+                        "damageType": "bludgeoning"
                     }
                 },
                 "description": {
@@ -337,7 +337,7 @@
                 },
                 "category": "offensive",
                 "description": {
-                    "value": "<p>The pitborn cavalry commands his mount to Stride twice directly toward a creature. The creature must attempt a @Check[will|dc:27] save. Regardless of the results of the save, the pitborn cavalry makes an axe Strike at the creature.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1} and @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to you until the start of your next turn.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} for 1 minute and off-guard to you until the start of your next turn.</p>"
+                    "value": "<p>The pitborn cavalry commands his mount to Stride twice directly toward a creature. The creature must attempt a @Check[will|dc:27] save. Regardless of the results of the save, the pitborn cavalry makes an axe Strike at the creature.</p><hr /><p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1} and @UUID[Compendium.pf2e.conditionitems.Item.Off-Guard] to the giant until the start of the giant's next turn.</p>\n<p><strong>Critical Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} for 1 minute and off-guard to the giant until the start of the giant's next turn.</p>"
                 },
                 "publication": {
                     "license": "OGL",
