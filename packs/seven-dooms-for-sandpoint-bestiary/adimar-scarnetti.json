@@ -473,7 +473,7 @@
                         "key": "RollOption",
                         "label": "PF2E.NPCAbility.ChangeShape.Label",
                         "option": "change-shape",
-                        "selection": "hybrid",
+                        "selection": "humanoid",
                         "suboptions": [
                             {
                                 "label": "PF2E.NPCAbility.ChangeShape.Form.Animal",
@@ -509,7 +509,8 @@
                         "slug": "claw",
                         "traits": [
                             "agile",
-                            "finesse"
+                            "finesse",
+                            "unarmed"
                         ]
                     },
                     {
@@ -529,7 +530,8 @@
                         ],
                         "slug": "jaws",
                         "traits": [
-                            "finesse"
+                            "finesse",
+                            "unarmed"
                         ]
                     },
                     {
@@ -547,7 +549,10 @@
                         "predicate": [
                             "change-shape:humanoid"
                         ],
-                        "slug": "fist"
+                        "slug": "fist",
+                        "traits": [
+                            "unarmed"
+                        ]
                     },
                     {
                         "key": "BaseSpeed",
@@ -564,6 +569,13 @@
                         ],
                         "selector": "climb",
                         "value": 10
+                    },
+                    {
+                        "key": "CreatureSize",
+                        "predicate": [
+                            "change-shape:animal"
+                        ],
+                        "value": "small"
                     }
                 ],
                 "slug": "werecreature-change-shape",
