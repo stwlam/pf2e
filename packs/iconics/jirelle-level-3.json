@@ -2230,7 +2230,7 @@
                         "predicate": [
                             "item:trait:bravado",
                             {
-                                "not": "panache"
+                                "not": "self:effect:panache"
                             }
                         ],
                         "selector": [
@@ -2248,7 +2248,7 @@
                         "predicate": [
                             "item:trait:bravado",
                             {
-                                "not": "panache"
+                                "not": "self:effect:panache"
                             }
                         ],
                         "selector": [
