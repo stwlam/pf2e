@@ -2417,6 +2417,9 @@
                     "PositiveDamage": "Vitality Damage",
                     "ToggleLabel": "Spirit Rage"
                 },
+                "SpiritsInterference": {
+                    "Note": "You must succeed at a @Check[flat|dc:5|showDC:all] or the attack misses with no effect."
+                },
                 "Superstition": {
                     "RagingResistance": {
                         "Prompt": "Select associated magical traditions.",
