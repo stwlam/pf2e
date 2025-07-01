@@ -2019,7 +2019,10 @@
             "Woodworking": "Woodworking"
         },
         "SpecificLore": {
-            "Herbalism": "Herbalism Lore"
+            "Architecture": "Architecture Lore",
+            "Demon": "Demon Lore",
+            "Herbalism": "Herbalism Lore",
+            "Warfare": "Warfare Lore"
         },
         "SpecificRule": {
             "Acrobat": {
