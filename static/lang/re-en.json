@@ -1919,6 +1919,7 @@
             "Impersonate": "To Impersonate",
             "ImpersonateCloakSheetRay": "To Impersonate a Cloak, Sheet, or Ray",
             "ImpersonateClothing": "To Impersonate Clothing",
+            "ImpersonateFriendform": "To Impersonate Friendform participant",
             "ImpersonateHumanVersion": "To Impersonate a Human Version of Themselves",
             "ImpersonateInanimate": "To Impersonate an Inanimate Object",
             "ImpersonateMound": "To Impersonate a Mound",
@@ -2171,7 +2172,14 @@
                 "OneHandedWeapon": "one-handed weapon"
             },
             "Anadi": {
-                "SpiderOrHybridForm": "In Spider or Hybrid Form"
+                "SpiderOrHybridForm": "In Spider or Hybrid Form",
+                "WebHunter": {
+                    "ToggleLabel": "Web Hunter — Increase tremorsense range"
+                },
+                "WebWalker": {
+                    "Others": "Against other snaring",
+                    "Webbing": "Against webbing"
+                }
             },
             "AncestralParagon": {
                 "Prompt": "Select a 1st-level ancestry feat."
