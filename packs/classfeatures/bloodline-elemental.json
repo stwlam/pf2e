@@ -327,6 +327,40 @@
                         "not": "parent:granter:slug:crossblooded-evolution"
                     }
                 ]
+            },
+            {
+                "itemType": "spell",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    {
+                        "or": [
+                            "item:slug:elemental-toss",
+                            "item:slug:elemental-blast",
+                            "item:slug:elemental-motion"
+                        ]
+                    }
+                ],
+                "property": "traits",
+                "value": "{item|flags.pf2e.rulesSelections.elementalBloodline.slug}"
+            },
+            {
+                "key": "DamageAlteration",
+                "mode": "override",
+                "predicate": [
+                    {
+                        "or": [
+                            "item:slug:elemental-toss",
+                            "item:slug:elemental-blast"
+                        ]
+                    }
+                ],
+                "property": "damage-type",
+                "selectors": [
+                    "spell-damage"
+                ],
+                "slug": "base",
+                "value": "{item|flags.pf2e.rulesSelections.elementalBloodline.damageType}"
             }
         ],
         "traits": {
