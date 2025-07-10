@@ -54,8 +54,15 @@
                         </div>
                     {{/if}}
                     {{#if (and data.area (not data.isAura))}}
-                        <div class="spell-button">
-                            <button type="button" data-action="spell-template" data-visibility="owner">
+                        <div class="spell-button" data-tooltip-class="pf2e">
+                            <button
+                                type="button"
+                                data-action="spell-template"
+                                data-visibility="owner"
+                                {{#if (or (eq data.area.type "cone") (eq data.area.type "line"))}}
+                                    data-tooltip="PF2E.Item.Spell.MeasuredTemplate.PlacementTooltip"
+                                {{/if}}
+                            >
                                 {{localize "PF2E.Item.Spell.MeasuredTemplate.Place" area=data.area.label}}
                             </button>
                             <button class="small hidden" type="button" data-action="spell-template-clear" data-visibility="owner" data-tooltip="{{localize "PF2E.Item.Spell.MeasuredTemplate.Clear"}}">

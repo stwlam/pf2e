@@ -325,6 +325,10 @@ class TextEditorPF2e extends foundry.applications.ux.TextEditor {
             html.setAttribute("data-pf2-distance", params.distance);
             if (params.traits !== "") html.setAttribute("data-pf2-traits", params.traits);
             if (params.type === "line") html.setAttribute("data-pf2-width", params.width ?? "5");
+            if (["cone", "line"].includes(params.type)) {
+                html.setAttribute("data-tooltip", "PF2E.Item.Spell.MeasuredTemplate.PlacementTooltip");
+                html.setAttribute("data-tooltip-class", "pf2e");
+            }
             if (params.itemUuid !== "") html.setAttribute("data-item-uuid", params.itemUuid);
             return html;
         }
