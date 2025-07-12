@@ -745,6 +745,7 @@
                 "PhysicalRangedAttacks": "physical ranged attacks",
                 "PhysicalWeaponsOnly": "physical (weapons only)",
                 "RangedWeaponAttacks": "ranged weapon attacks",
+                "SpellsFromAllTraditions": "spells from all traditions",
                 "Spirits": "spirits",
                 "Treerazer": "Treerazer",
                 "UnholyBludgeoningPiercingSlashing": "unholy bludgeoning, piercing and slashing damage",
@@ -3637,6 +3638,9 @@
                 },
                 "HumbugPocket": {
                     "ConcealAnObjectLabel": "Humbug Pocket (Conceal an Object in the Pocket)"
+                },
+                "InstinctCrown": {
+                    "QuickTemperedToggle": "Instinct Crown — Quick Tempered"
                 },
                 "LionsShield": {
                     "LionsBiteLabel": "Lion's Bite",
