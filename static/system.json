@@ -490,6 +490,19 @@
             "flags": {}
         },
         {
+            "name": "pfs-season-7-bestiary",
+            "label": "Season 7",
+            "path": "packs/pfs-season-7-bestiary",
+            "type": "Actor",
+            "banner": "systems/pf2e/assets/compendium-banner/red.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
             "name": "prey-for-death-bestiary",
             "label": "Prey for Death",
             "path": "packs/prey-for-death-bestiary",
@@ -506,6 +519,19 @@
             "name": "quest-for-the-frozen-flame-bestiary",
             "label": "Quest for the Frozen Flame",
             "path": "packs/quest-for-the-frozen-flame-bestiary",
+            "type": "Actor",
+            "banner": "systems/pf2e/assets/compendium-banner/red.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
+            "name": "revenge-of-the-runelords-bestiary",
+            "label": "Revenge of the Runelords",
+            "path": "packs/revenge-of-the-runelords-bestiary",
             "type": "Actor",
             "banner": "systems/pf2e/assets/compendium-banner/red.webp",
             "system": "pf2e",
@@ -1215,6 +1241,7 @@
                         "kingmaker-bestiary",
                         "myth-speaker-bestiary",
                         "quest-for-the-frozen-flame-bestiary",
+                        "revenge-of-the-runelords-bestiary",
                         "season-of-ghosts-bestiary",
                         "seven-dooms-for-sandpoint-bestiary",
                         "shades-of-blood-bestiary",
@@ -1274,7 +1301,8 @@
                         "pfs-season-3-bestiary",
                         "pfs-season-4-bestiary",
                         "pfs-season-5-bestiary",
-                        "pfs-season-6-bestiary"
+                        "pfs-season-6-bestiary",
+                        "pfs-season-7-bestiary"
                     ]
                 }
             ],
