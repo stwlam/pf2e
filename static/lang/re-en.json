@@ -850,6 +850,7 @@
                     "Cassisian": "Cassisian",
                     "CaveWorm": "Cave Worm",
                     "Cobra": "Cobra",
+                    "Coyote": "Coyote",
                     "Dog": "Dog",
                     "Dove": "Dove",
                     "Dragon": "Dragon",
@@ -934,6 +935,7 @@
                     "RajaKrodha": "Raja-Krodha",
                     "Raktavarna": "Raktavarna",
                     "Rat": "Rat",
+                    "Raven": "Raven",
                     "Scorpion": "Scorpion",
                     "SeaSerpent": "Sea Serpent",
                     "Shark": "Shark",
@@ -1087,6 +1089,12 @@
             "HobgoblinFormationArea": "Formation vs. Area Effects",
             "Hryngar": {
                 "AlchemicalGrenade": "Damage Type of Alchemical Grenade"
+            },
+            "ImmortalTrickster": {
+                "Attack": {
+                    "Pipe": "Pipe",
+                    "TelekineticManipulation": "Telekinetic Manipulation"
+                }
             },
             "Inizkar": {
                 "AlignTheStars": {
