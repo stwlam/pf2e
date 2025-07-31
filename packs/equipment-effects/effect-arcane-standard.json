@@ -1,0 +1,69 @@
+{
+    "_id": "bQZLdVsSrDhYkfrO",
+    "img": "icons/sundries/flags/banner-blue.webp",
+    "name": "Effect: Arcane Standard",
+    "system": {
+        "description": {
+            "value": "<p>One creature within the banner's aura that has taken acid, cold, electricity, fire, or sonic damage this turn gains weakness 5 to that damage type for 1 round.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 10
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+        },
+        "rules": [
+            {
+                "choices": [
+                    {
+                        "label": "PF2E.TraitAcid",
+                        "value": "acid"
+                    },
+                    {
+                        "label": "PF2E.TraitCold",
+                        "value": "cold"
+                    },
+                    {
+                        "label": "PF2E.TraitElectricity",
+                        "value": "electricity"
+                    },
+                    {
+                        "label": "PF2E.TraitFire",
+                        "value": "fire"
+                    },
+                    {
+                        "label": "PF2E.TraitSonic",
+                        "value": "sonic"
+                    }
+                ],
+                "flag": "damage",
+                "key": "ChoiceSet"
+            },
+            {
+                "key": "Weakness",
+                "type": "{item|flags.pf2e.rulesSelections.damage}",
+                "value": "ternary(gte(@item.origin.level, 20), 10, 5)"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

@@ -660,7 +660,6 @@
                 "property": "description",
                 "value": [
                     {
-                        "divider": true,
                         "text": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.Draconic",
                         "title": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicLabel.Draconic"
                     },
@@ -693,7 +692,6 @@
                 "property": "description",
                 "value": [
                     {
-                        "divider": true,
                         "text": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicDescription.Draconic",
                         "title": "PF2E.SpecificRule.Sorcerer.Bloodline.BloodMagicLabel.Draconic"
                     },

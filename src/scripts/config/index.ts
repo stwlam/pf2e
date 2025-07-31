@@ -441,6 +441,7 @@ export const PF2ECONFIG = {
     },
 
     usages: {
+        "affixed-or-held-in-one-hand": "PF2E.TraitAffixedOrHeldInOneHand",
         "affixed-to-a-creature": "PF2E.TraitAffixedToCreature",
         "affixed-to-a-magical-staff": "PF2E.TraitAffixedToMagicalStaff",
         "affixed-to-a-metal-weapon": "PF2E.TraitAffixedToAMetalWeapon",

@@ -1,0 +1,44 @@
+{
+    "_id": "pqXu9dJaIMw3yOdc",
+    "img": "icons/sundries/flags/banner-blue.webp",
+    "name": "Effect: Banner of the Restful",
+    "system": {
+        "description": {
+            "value": "<p>You gain a +1 item bonus to Perception DCs and protection from severe cold and heat.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 4
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "selector": "perception",
+                "type": "item",
+                "value": 1
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

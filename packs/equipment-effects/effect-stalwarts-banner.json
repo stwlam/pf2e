@@ -1,0 +1,62 @@
+{
+    "_id": "f2r7r0t8n7LKuj6C",
+    "img": "icons/sundries/flags/banner-blue.webp",
+    "name": "Effect: Stalwart's Banner",
+    "system": {
+        "description": {
+            "value": "<p>You gain 5 temporary Hit Points and a +1 status bonus to your Fortitude DC and Reflex DC against any effect that would move you or knock you @UUID[Compendium.pf2e.conditionitems.Item.Prone]. These effects last for 1 round.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 7
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+        },
+        "rules": [
+            {
+                "key": "TempHP",
+                "value": 5
+            },
+            {
+                "key": "FlatModifier",
+                "label": "Effect Would Move or Knock Prone",
+                "predicate": [
+                    {
+                        "or": [
+                            "action:trip",
+                            "action:reposition",
+                            "action:shove",
+                            "would-knock-prone"
+                        ]
+                    }
+                ],
+                "selector": [
+                    "fortitude",
+                    "reflex"
+                ],
+                "type": "status",
+                "value": 1
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

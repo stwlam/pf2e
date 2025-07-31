@@ -1,0 +1,42 @@
+{
+    "_id": "CV9YMSNtTV9gQJ3g",
+    "img": "icons/sundries/flags/banner-blue.webp",
+    "name": "Effect: Timepiece Standard",
+    "system": {
+        "description": {
+            "value": "<p>You gain 5 temporary Hit Points that last for 1 minute and then become immune to this effect for 10 minutes.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 10
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+        },
+        "rules": [
+            {
+                "key": "TempHP",
+                "value": 5
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

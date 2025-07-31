@@ -1,0 +1,51 @@
+{
+    "_id": "9VD3ngP8HzbEqm20",
+    "img": "icons/sundries/flags/banner-blue.webp",
+    "name": "Effect: Titan's Standard",
+    "system": {
+        "description": {
+            "value": "<p>You become Large for 1 round. Your equipment grows with you but returns to its natural size afterwards. While Large, you are @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1}, and your reach increases by 5 feet (or by 10 feet if you started out Tiny).</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 18
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+        },
+        "rules": [
+            {
+                "key": "CreatureSize",
+                "reach": {
+                    "override": "10"
+                },
+                "resizeEquipment": true,
+                "value": "large"
+            },
+            {
+                "inMemoryOnly": true,
+                "key": "GrantItem",
+                "uuid": "Compendium.pf2e.conditionitems.Item.Clumsy"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

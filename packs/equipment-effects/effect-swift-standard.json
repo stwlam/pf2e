@@ -1,0 +1,43 @@
+{
+    "_id": "EgAmT4WENb6UNSdJ",
+    "img": "icons/sundries/flags/banner-blue.webp",
+    "name": "Effect: Swift Standard",
+    "system": {
+        "description": {
+            "value": "<p>You gain a +5-foot status bonus to land Speeds for 1 round. This bonus is doubled while traveling.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 12
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Battlecry!"
+        },
+        "rules": [
+            {
+                "key": "BaseSpeed",
+                "selector": "land-speed",
+                "value": 5
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}
