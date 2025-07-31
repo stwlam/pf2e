@@ -1,6 +1,6 @@
 {
-    "_id": "hR4GWBc0kEukRxOP",
-    "folder": "eICr7D3fXAPMSn83",
+    "_id": "fEfEabn53bubYVVT",
+    "folder": "pCqf1zzdYxJ29gRS",
     "img": "icons/sundries/books/book-red-exclamation.webp",
     "name": "Improved Reflexive Shield",
     "system": {
@@ -38,6 +38,7 @@
         "traits": {
             "rarity": "common",
             "value": [
+                "fighter",
                 "guardian"
             ]
         }

@@ -4,7 +4,7 @@
     "name": "Effect: Arcane Standard",
     "system": {
         "description": {
-            "value": "<p>One creature within the banner's aura that has taken acid, cold, electricity, fire, or sonic damage this turn gains weakness 5 to that damage type for 1 round.</p>"
+            "value": "<p>Granted by @UUID[Compendium.pf2e.equipment-srd.Item.Arcane Standard], @UUID[Compendium.pf2e.equipment-srd.Item.Arcane Standard (Greater)]</p>\n<p>You gain weakness to acid, cold, electricity, fire, or sonic damage.</p>"
         },
         "duration": {
             "expiry": "turn-start",
@@ -22,6 +22,40 @@
             "title": "Pathfinder Battlecry!"
         },
         "rules": [
+            {
+                "adjustName": false,
+                "choices": [
+                    {
+                        "predicate": [
+                            {
+                                "or": [
+                                    "parent:origin:item:slug:arcane-standard",
+                                    {
+                                        "not": "parent:origin:item"
+                                    }
+                                ]
+                            }
+                        ],
+                        "value": "Compendium.pf2e.equipment-srd.Item.Arcane Standard"
+                    },
+                    {
+                        "predicate": [
+                            {
+                                "or": [
+                                    "parent:origin:item:slug:arcane-standard-greater",
+                                    {
+                                        "not": "parent:origin:item"
+                                    }
+                                ]
+                            }
+                        ],
+                        "value": "Compendium.pf2e.equipment-srd.Item.Arcane Standard (Greater)"
+                    }
+                ],
+                "key": "ChoiceSet",
+                "prompt": "PF2E.SpecificRule.Prompt.EquipmentVariety",
+                "rollOption": "arcane-standard"
+            },
             {
                 "choices": [
                     {
@@ -50,8 +84,19 @@
             },
             {
                 "key": "Weakness",
+                "predicate": [
+                    "arcane-standard:arcane-standard"
+                ],
                 "type": "{item|flags.pf2e.rulesSelections.damage}",
-                "value": "ternary(gte(@item.origin.level, 20), 10, 5)"
+                "value": 5
+            },
+            {
+                "key": "Weakness",
+                "predicate": [
+                    "arcane-standard:arcane-standard-greater"
+                ],
+                "type": "{item|flags.pf2e.rulesSelections.damage}",
+                "value": 10
             }
         ],
         "start": {
