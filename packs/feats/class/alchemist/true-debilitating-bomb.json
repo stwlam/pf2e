@@ -40,7 +40,7 @@
                     "debilitating-bomb"
                 ],
                 "selector": "alchemical-bomb-base-attack-roll",
-                "text": "PF2E.SpecificRule.Alchemist.DebilitatingBomb.TrueAttackRollNote\n@UUID[Compendium.pf2e.feat-effects.Item.Effect: Debilitating Bomb]",
+                "text": "PF2E.SpecificRule.Alchemist.DebilitatingBomb.TrueAttackRollNote",
                 "title": "{item|name}"
             },
             {
