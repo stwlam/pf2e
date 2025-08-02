@@ -1,6 +1,6 @@
 {
     "_id": "NDoHsLu2FYjafFRa",
-    "img": "icons/containers/ammunition/quiver-simple-brown.webp",
+    "img": "icons/sundries/survival/bedroll-pink.webp",
     "name": "Bedroll of Deep Slumber",
     "system": {
         "baseItem": null,
@@ -9,7 +9,7 @@
         },
         "containerId": null,
         "description": {
-            "value": "<p>his bedroll is made of especially fine cotton, stuffed with goose down, and the hem is inscribed with the sigils of the Dreamlands. If you fall asleep in the bedroll, you gain 5 temporary Hit Points that last while you sleep and for 1 minute after you wake up, as well as a +1 status bonus to saves against mental effects that occur while you are asleep, such as the @UUID[Compendium.pf2e.spells-srd.Item.Nightmare] spell.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.Item.Effect: Bedroll of Deep Slumber]</p>"
+            "value": "<p>This bedroll is made of especially fine cotton, stuffed with goose down, and the hem is inscribed with the sigils of the Dreamlands. If you fall asleep in the bedroll, you gain 5 temporary Hit Points that last while you sleep and for 1 minute after you wake up, as well as a +1 status bonus to saves against mental effects that occur while you are asleep, such as the @UUID[Compendium.pf2e.spells-srd.Item.Nightmare] spell.</p>\n<p>@UUID[Compendium.pf2e.equipment-effects.Item.Effect: Bedroll of Deep Slumber]</p>"
         },
         "hardness": 0,
         "hp": {

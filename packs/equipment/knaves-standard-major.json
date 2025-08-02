@@ -42,6 +42,13 @@
                 "effects": [
                     {
                         "affects": "allies",
+                        "alterations": [
+                            {
+                                "mode": "add",
+                                "property": "other-tags",
+                                "value": "major-knaves-standard"
+                            }
+                        ],
                         "uuid": "Compendium.pf2e.equipment-effects.Item.Effect: Knave's Standard"
                     }
                 ],
