@@ -149,9 +149,9 @@
                     "per": "round"
                 },
                 "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": ""
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Battlecry!"
                 },
                 "rules": [],
                 "slug": null,
