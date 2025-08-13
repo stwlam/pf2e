@@ -2,6 +2,7 @@ import type { ActorPF2e } from "@actor";
 import type { StrikeData } from "@actor/data/base.ts";
 import { iterateAllItems } from "@actor/helpers.ts";
 import type { InitiativeRollResult } from "@actor/initiative.ts";
+import type Tabs from "@client/applications/ux/tabs.d.mts";
 import type { AppV1RenderOptions } from "@client/appv1/api/application-v1.d.mts";
 import type { ActorSheetOptions } from "@client/appv1/sheets/actor-sheet.d.mts";
 import type { DropCanvasData } from "@client/helpers/hooks.d.mts";
@@ -14,11 +15,17 @@ import { createConsumableFromSpell } from "@item/consumable/spell-consumables.ts
 import { isContainerCycle } from "@item/container/helpers.ts";
 import { itemIsOfType } from "@item/helpers.ts";
 import type { Coins } from "@item/physical/data.ts";
-import { detachSubitem, sizeItemForActor } from "@item/physical/helpers.ts";
+import { sizeItemForActor } from "@item/physical/helpers.ts";
 import { DENOMINATIONS, PHYSICAL_ITEM_TYPES } from "@item/physical/values.ts";
 import { DropCanvasItemDataPF2e } from "@module/canvas/drop-canvas-data.ts";
 import { createUseActionMessage } from "@module/chat-message/helpers.ts";
-import { createSheetTags, eventToRollMode, eventToRollParams, maintainFocusInRender } from "@module/sheet/helpers.ts";
+import {
+    createSheetTags,
+    eventToRollMode,
+    eventToRollParams,
+    isControlDown,
+    maintainFocusInRender,
+} from "@module/sheet/helpers.ts";
 import { DamageRoll } from "@system/damage/roll.ts";
 import type { StatisticRollParameters } from "@system/statistic/statistic.ts";
 import {
@@ -119,7 +126,7 @@ abstract class ActorSheetPF2e<TActor extends ActorPF2e> extends fav1.sheets.Acto
 
         for (const item of [...actor.itemTypes.action, ...this.actor.itemTypes.feat]) {
             if (item.system.selfEffect) {
-                item.system.selfEffect.img ??= fromUuidSync(item.system.selfEffect.uuid)?.img ?? null;
+                item.system.selfEffect.img ??= fromUuidSync<ItemPF2e>(item.system.selfEffect.uuid)?.img ?? null;
             }
         }
 
@@ -707,7 +714,7 @@ abstract class ActorSheetPF2e<TActor extends ActorPF2e> extends fav1.sheets.Acto
             },
             "detach-subitem": (event) => {
                 const subitem = inventoryItemFromDOM(event);
-                return detachSubitem(subitem, event.ctrlKey);
+                return subitem.detach({ skipConfirm: isControlDown(event) });
             },
             "increase-quantity": (event) => {
                 const item = inventoryItemFromDOM(event);

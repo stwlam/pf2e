@@ -1,7 +1,8 @@
 import { TokenPlannedMovement } from "@client/_types.mjs";
 import { TokenDocument, User } from "@client/documents/_module.mjs";
+import { TokenUpdateCallbackOptions } from "@client/documents/token.mjs";
 import { ColorSource, Point } from "@common/_types.mjs";
-import { DatabaseCreateCallbackOptions, DatabaseUpdateCallbackOptions } from "@common/abstract/_types.mjs";
+import { DatabaseCreateCallbackOptions } from "@common/abstract/_types.mjs";
 import { TokenDisplayMode, WallRestrictionType } from "@common/constants.mjs";
 import Color from "@common/utils/color.mjs";
 import { CanvasAnimationAttribute, CanvasAnimationOptions } from "../animation/_types.mjs";
@@ -24,39 +25,19 @@ export default class Token<TDocument extends TokenDocument = TokenDocument> exte
     static override embeddedName: "Token";
 
     static override RENDER_FLAGS: {
-        redraw: { propagate: ["refresh"] };
+        redraw: { propagate: string[] };
         redrawEffects: object;
-        refresh: {
-            propagate: [
-                "refreshState",
-                "refreshTransform",
-                "refreshMesh",
-                "refreshNameplate",
-                "refreshElevation",
-                "refreshRingVisuals",
-            ];
-            alias: true;
-        };
-        refreshState: { propagate: ["refreshVisibility", "refreshTarget"] };
+        refresh: { propagate: string[]; alias: true };
+        refreshState: { propagate: string[] };
         refreshVisibility: object;
-        refreshTransform: { propagate: ["refreshPosition", "refreshRotation", "refreshSize"]; alias: true };
+        refreshTransform: { propagate: string[]; alias: true };
         refreshPosition: object;
         refreshRotation: object;
-        refreshSize: {
-            propagate: [
-                "refreshPosition",
-                "refreshShape",
-                "refreshBars",
-                "refreshEffects",
-                "refreshNameplate",
-                "refreshTarget",
-                "refreshTooltip",
-            ];
-        };
+        refreshSize: { propagate: string[] };
         refreshElevation: object;
-        refreshMesh: { propagate: ["refreshShader"] };
+        refreshMesh: { propagate: string[] };
         refreshShader: object;
-        refreshShape: { propagate: ["refreshVisibility", "refreshPosition", "refreshBorder", "refreshEffects"] };
+        refreshShape: { propagate: string[] };
         refreshBorder: object;
         refreshBars: object;
         refreshEffects: object;
@@ -650,7 +631,7 @@ export default class Token<TDocument extends TokenDocument = TokenDocument> exte
 
     override _onUpdate(
         changed: DeepPartial<TDocument["_source"]>,
-        options: DatabaseUpdateCallbackOptions,
+        options: TokenUpdateCallbackOptions,
         userId: string,
     ): void;
 

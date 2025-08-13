@@ -905,6 +905,7 @@
             "dropped": "Dropped",
             "held1": "Held 1H",
             "held2": "Held 2H",
+            "implanted": "Implanted",
             "stowed": "Stowed",
             "worn": "Worn",
             "worn-in-slot": "Worn (In Slot)"
@@ -1829,6 +1830,7 @@
                     "heavy-barding": "Heavy Barding",
                     "light-barding": "Light Barding"
                 },
+                "GradeOption": "{grade} (+{bonus}; resilient +{resilient})",
                 "Rune": {
                     "Resilient": {
                         "Label": "Resilient Rune"
@@ -2371,6 +2373,11 @@
                 "ShowTokenIcon": "Show token icon?",
                 "Unidentified": "Unidentified?"
             },
+            "Equipment": {
+                "Category": {
+                    "upgrade": "Upgrade"
+                }
+            },
             "FIELDS": {
                 "category": {
                     "label": "Category"
@@ -2459,6 +2466,11 @@
                 "Hint": "Additional tags beyond traits to help classify an item"
             },
             "Physical": {
+                "FIELDS": {
+                    "grade": {
+                        "label": "Grade"
+                    }
+                },
                 "Attach": {
                     "CraftingCheck": "Crafting Check",
                     "Detach": {
@@ -2495,6 +2507,11 @@
                     "NLight": "{light}L",
                     "WithLight": "{bulk}, {light}L"
                 },
+                "ChangeEquipmentSystem": {
+                    "Title": "Change System",
+                    "ToPathfinder": "Removing the {removedTrait} trait changes this {type} from Starfinder to Pathfinder. Your grade will be lost. Are you sure? Alternatively, you could swap it to {otherTrait}.",
+                    "ToStarfinder": "Adding the {newTrait} trait changes this {type} from Pathfinder to Starfinder. All runes will be lost. Are you sure?"
+                },
                 "Destroyed": "Destroyed",
                 "FromSpell": {
                     "CantripDeck5": "Cantrip Deck of {name} (5-pack)",
@@ -2510,6 +2527,8 @@
                     "Material": "{material} {base}",
                     "OneProperty": "{property1} {base}",
                     "OnePropertyMaterial": "{property1} {material} {base}",
+                    "Grade": "{grade} {base}",
+                    "GradeMaterial": "{grade} {material} {base}",
                     "Potency": "+{potency} {base}",
                     "PotencyFourProperties": "+{potency} {property1} {property2} {property3} {property4} {base}",
                     "PotencyFourPropertiesMaterial": "+{potency} {property1} {property2} {property3} {property4} {material} {base}",
@@ -2536,6 +2555,15 @@
                     "ThreePropertiesMaterial": "{property1} {property2} {property3} {material} {base}",
                     "TwoProperties": "{property1} {property2} {base}",
                     "TwoPropertiesMaterial": "{property1} {property2} {material} {base}"
+                },
+                "Grade": {
+                    "commercial": "Commercial",
+                    "tactical": "Tactical",
+                    "advanced": "Advanced",
+                    "superior": "Superior",
+                    "elite": "Elite",
+                    "ultimate": "Ultimate",
+                    "paragon": "Paragon"
                 },
                 "LevelLabel": "Item {level}",
                 "OtherTag": {
@@ -2747,6 +2775,7 @@
                 },
                 "FromABP": "Automatic bonus progression has adjusted this weapon's {property} to {value}.",
                 "FromMaterialAndRunes": "Precious materials and runes on this item have adjusted its {property} to {value}.",
+                "GradeOption": "{grade} (+{tracking}; {dice} damage dice)",
                 "HandsLabel": "Hands",
                 "MandatoryMelee": "This weapon has a trait that can only be used with melee weapons.",
                 "MaterialAndRunes": {
@@ -2817,6 +2846,10 @@
                 "Hint": "Place a waypoint while using drag measurement.",
                 "Label": "Place Waypoint (Drag Measurement)"
             },
+            "OpenCompendiumBrowser": {
+                "Hint": "Open or close the compendium browser.",
+                "Label": "Toggle Compendium Browser"
+            },
             "TogglePartySheet": {
                 "Hint": "Open or close the sheet of the active or (if a player) assigned party.",
                 "Label": "Toggle Party Sheet"
@@ -2826,6 +2859,10 @@
         "KitWorldItem": "This item is not found in a Compendium and will not work in other worlds",
         "LackCastConsumableCapability": "{actor} lacks the proficiency to use {spell} and does not have the Trick Magic Item feat.",
         "LanguagesAdditional": "Additional Languages",
+        "LegalNotice": {
+            "Title": "Legal Notice",
+            "Text": "This system for Foundry Virtual Tabletop uses trademarks and copyrights owned by Paizo Inc., used under Paizo's Community Use Policy (<a href=\"https://paizo.com/community/communityuse\" target=\"_blank\">paizo.com/communityuse</a>). We are expressly prohibited from charging you to use or access this content. This system for FoundryVTT is not published, endorsed, or specifically approved by Paizo. For more information about Paizo Inc. and Paizo products, visit <a href=\"https://paizo.com/\" target=\"_blank\">paizo.com</a>."
+        },
         "Level1": "Level 1",
         "Level10": "Level 10",
         "Level11": "Level 11",
@@ -2854,10 +2891,6 @@
         "LevelLabel": "Level",
         "LevelN": "Level {level}",
         "LevelRange": "Levels {minLevel} — {level}",
-        "LicenseViewer": {
-            "Label": "Legal Notice",
-            "LandingPageText": "Use the tabs above to read the legal information"
-        },
         "ListPartsAnd": {
             "end": "{first}, and {second}",
             "middle": "{first}, {second}",
@@ -3317,13 +3350,15 @@
             "KeepHigher": "Reroll and keep the higher result",
             "KeepNew": "Reroll and keep the new result",
             "KeepLower": "Reroll and keep the lower result",
-            "MessageHeroPoint": "Rerolled using a Hero Point",
+            "MessageHeroPoints": "Rerolled using a Hero Point",
             "MessageKeep": {
                 "higher": "Rerolled and kept the higher result",
                 "new": "Rerolled and kept the new result",
                 "lower": "Rerolled and kept the lower result"
             },
-            "WarnNoHeroPoint": "{name} has no Hero Points"
+            "MessageMythicPoints": "Rerolled using a Mythic Point",
+            "MythicPoint": "Reroll using a Mythic Point",
+            "WarnNoResource": "{name} has no {resource}"
         },
         "ResistancesLabel": "Resistances",
         "RestoreSpellTitle": "Restore Spell",
@@ -3942,6 +3977,7 @@
         "Token": {
             "ActorLinkForced": "{type} actors cannot be unlinked.",
             "Appearance": "Appearance",
+            "Distance": "Distance: {distance}ft",
             "Flanking": "Flanking",
             "SecretDisposition": {
                 "Label": "Secret Disposition",
@@ -3971,6 +4007,7 @@
         "TraitAdjustment": "Adjustment",
         "TraitAeon": "Aeon",
         "TraitAesir": "Aesir",
+        "TraitAffixedOrHeldInOneHand": "Affixed or Held in 1 Hand",
         "TraitAffixedToAMetalWeapon": "Affixed to a Metal Weapon",
         "TraitAffixedToAOneHandedFirearmOrHandCrossbow": "Affixed to a One-Handed Firearm or Hand Crossbow",
         "TraitAffixedToARangedWeapon": "Affixed to a Ranged Weapon",
@@ -4017,6 +4054,7 @@
         "TraitAmp": "Amp",
         "TraitAmphibious": "Amphibious",
         "TraitAnadi": "Anadi",
+        "TraitAnalog": "Analog",
         "TraitAndroid": "Android",
         "TraitAngel": "Angel",
         "TraitAnimal": "Animal",
@@ -4084,6 +4122,7 @@
         "TraitBonded": "Bonded",
         "TraitBottledBreath": "Bottled Breath",
         "TraitBrace": "Brace",
+        "TraitBrandish": "Brandish",
         "TraitBravado": "Bravado",
         "TraitBrutal": "Brutal",
         "TraitBugbear": "Bugbear",
@@ -4115,6 +4154,7 @@
         "TraitCoda": "Coda",
         "TraitCold": "Cold",
         "TraitColdiron": "Cold Iron",
+        "TraitCommander": "Commander",
         "TraitCombination": "Combination",
         "TraitComfort": "Comfort",
         "TraitCommon": "Common",
@@ -4181,6 +4221,7 @@
         "TraitDescriptionAmp": "An amp is a special thoughtform that modifies the properties of your psi cantrips. Psi cantrips each have their own amp, and feats with the amp trait provide different amps you can apply to psi cantrips in place of their normal amps.",
         "TraitDescriptionAmphibious": "An amphibious creature can breathe in water and in air, even outside of its preferred environment, usually indefinitely but at least for hours. These creatures often have a swim Speed. Their bludgeoning and slashing unarmed Strikes don't take the usual –2 penalty for being underwater.",
         "TraitDescriptionAnadi": "A reclusive people from Garund who resemble spiders and can assume human forms.",
+        "TraitDescriptionAnalog": "This weapon eschews advanced electronics, computers systems, and electric power sources, but was manufactured and calibrated using advanced technology. This weapon is immune to abilities that target technology. Weapon runes don't function on this weapon unless this weapon also has the archaic trait.",
         "TraitDescriptionAndroid": "A synthetic humanoid ancestry created by artificial means. Most common in Numeria.",
         "TraitDescriptionAngel": "This family of celestials are messengers and warriors. Most angels are holy, have darkvision, and have a weakness to unholy.",
         "TraitDescriptionAnimal": "An animal is a creature with a relatively low intelligence. It typically doesn't have an Intelligence attribute modifier over –4, can't speak languages, and can't be trained in Intelligence-based skills.",
@@ -4201,7 +4242,7 @@
         "TraitDescriptionAttached": "An attached weapon must be combined with another piece of gear to be used. The trait lists what type of item the weapon must be attached to. You must be wielding or wearing the item the weapon is attached to in order to attack with it. For example, shield spikes are attached to a shield, allowing you to attack with the spikes instead of a shield bash, but only if you're wielding the shield. An attached weapon is usually bolted onto or built into the item it's attached to, and typically an item can have only one weapon attached to it. An attached weapon can be affixed to an item with 10 minutes of work and a successful @Check[crafting|dc:10] check; this includes the time needed to remove the weapon from a previous item, if necessary. If an item is destroyed, its attached weapon can usually be salvaged.",
         "TraitDescriptionAttack": "An ability with this trait involves an attack. For each attack you make beyond the first on your turn, you take a multiple attack penalty.",
         "TraitDescriptionAuditory": "Auditory actions and effects rely on sound. An action with the auditory trait can be successfully performed only if the creature using the action can speak or otherwise produce the required sounds. A spell or effect with the auditory trait has its effect only if the target can hear it. This applies only to sound-based parts of the effect, as determined by the GM. This is different from a sonic effect, which still affects targets who can't hear it (such as deaf targets) as long as the effect itself makes sound.",
-        "TraitDescriptionAura": "An aura is an emanation that continually ebbs out from you, affecting creatures within a certain radius. Aura can also refer to the magical signature of an item or a creature with a strong alignment.",
+        "TraitDescriptionAura": "An aura is an emanation that continually ebbs out from you, affecting creatures within a certain radius. Aura can also refer to the magical signature of an item.",
         "TraitDescriptionAutomaton": "A creature with this trait is a member of the automaton ancestry.",
         "TraitDescriptionAwakenedAnimal": "Awakened animals were once normal creatures before they gained sapience.",
         "TraitDescriptionAzarketi": "Amphibious humanoids who live among the seas of the Inner Sea region, said to have descended from the people of Azlant. Sometimes known as gillmen or Low Azlanti. Azarketi are an offshoot of humans adapted to live in aquatic communities. They have gills, webbed digits, and small fins, and they can survive in or out of water.",
@@ -4270,7 +4311,7 @@
         "TraitDescriptionDarvakka": "Entropic undead creatures twisted by the Netherworld and the Void.",
         "TraitDescriptionDeadly": "On a critical hit, the weapon adds a weapon damage die of the listed size. Roll this after doubling the weapon's damage. This increases to two dice if the weapon has a greater striking rune and three dice if the weapon has a major striking rune. For instance, a rapier with a greater striking rune deals 2d8 extra piercing damage on a critical hit. An ability that changes the size of the weapon's normal damage dice doesn't change the size of its deadly die.",
         "TraitDescriptionDeath": "An effect with the death trait kills you immediately if it reduces you to 0 HP. Some death effects can bring you closer to death or slay you outright without reducing you to 0 HP.",
-        "TraitDescriptionDedication": "You must select a feat with this trait to apply an archetype to your character.",
+        "TraitDescriptionDedication": "Each archetype's dedication feat represents your character's dedicated effort learning a new set of abilities, making it impossible to split your focus and pursue another archetype at the same time. Once you take a dedication feat, you can't select a different dedication feat until you complete your dedication by taking two other feats from your current archetype. You can't retrain a dedication feat as long as you have any other feats from that archetype.",
         "TraitDescriptionDeflecting": "This shield is designed to block or divert certain types of attacks or weapons. Increase the shield's Hardness against the listed type of attack by 2.",
         "TraitDescriptionDemon": "A family of fiends, demons hail from or trace their origins to the Outer Rifts. Most are irredeemably unholy and have darkvision and weaknesses to cold iron and holy.",
         "TraitDescriptionDero": "This family of humanoids are the descendants of fey creatures that fell into darkness and confusion after being abandoned in the Darklands. They are immune to confusion and vulnerable to sunlight.",
@@ -4569,7 +4610,7 @@
         "TraitDescriptionTattoo": "A tattoo is a type of item that is drawn or cut into a creature's skin and usually takes the form of images or symbols.",
         "TraitDescriptionTea": "<p>Magic tea is a type of potion. It activates when you drink it, which uses it up. Magic tea has the potion and tea traits. When you craft a dose of magic tea, the raw materials you supply are in the form of unusual and costly tea leaves. The process of crafting magic tea includes infusing the leaves with magical reagents, purifying the water, and steeping the tea in the water, resulting in what's essentially a particularly delicious-tasting potion. You can activate magic tea with an Interact action as you drink it or feed it to another creature, as if it were a potion. You can also activate magic tea with a 10-minute activity that requires sterling tea ware (these artisan's tools can be shared by up to four people who take this activity simultaneously) to prepare the tea and then consume it or present it to someone during a short tea ceremony, after which the magic tea's effects begin; activating magic tea in this way enhances its effect, as detailed in each entry's Tea Ceremony.</p><p>Once you drink a dose of magic tea, you're temporarily immune to that particular type of magic tea for 24 hours.</p>",
         "TraitDescriptionTearing": "This weapon is edged with curved teeth that leave bleeding wounds. When you hit a creature with this weapon, it deals an additional 1 persistent bleed damage. This increases to 2 persistent bleed damage if the weapon has a greater striking rune.",
-        "TraitDescriptionTech": "Items with this trait are associated with the technology of Numeria.",
+        "TraitDescriptionTech": "Items with the tech trait can be crafted by anyone, but if they also have the magical trait, they are hybrid items and require the Machine Magic feat to craft.",
         "TraitDescriptionTelepathy": "A creature with telepathy can communicate mentally with creatures. This doesn't give any special access to their thoughts, and communicates no more information than normal speech would.",
         "TraitDescriptionTeleportation": "Teleportation effects allow you to instantaneously move from one point in space to another. Teleportation does not usually trigger reactions based on movement.",
         "TraitDescriptionTengu": "A creature with this trait is a member of the tengu ancestry. Tengus are humanoids who resemble crows. An ability with this trait can be used or selected only by tengus. An item with this trait is created and used by tengus.",
@@ -4612,6 +4653,7 @@
         "TraitDescriptionWater": "Effects with the water trait either manipulate or conjure water. Those that manipulate water have no effect in an area without water. Creatures with this trait consist primarily of water or have a connection to magical water.",
         "TraitDescriptionWayang": "Small people native to the Netherworld. Immigrated to Golarion after Earthfall.",
         "TraitDescriptionWerecreature": "These shapechanging creatures can shift between animal, humanoid, and hybrid forms.",
+        "TraitDescriptionWhetstone": "A whetstone is a magically enhanced consumable item designed to increase a weapon's effectiveness",
         "TraitDescriptionWight": "A wight is an undead creature that drains life and stands vigil over a burial site.",
         "TraitDescriptionWildHunt": "Creatures with the wild hunt trait are never below 14th level. They possess greater darkvision, greensight, planar acclimation, wild gaze, instinctive cooperation, weakness to cold iron, the ability to speak with plants and animals, and their own specific wild hunt link.",
         "TraitDescriptionWitch": "This indicates abilities from the witch class.",
@@ -4724,6 +4766,7 @@
         "TraitGhoul": "Ghoul",
         "TraitGhul": "Ghul",
         "TraitGiant": "Giant",
+        "TraitGigas": "Gigas",
         "TraitGnoll": "Kholo",
         "TraitGnome": "Gnome",
         "TraitGoblin": "Goblin",
@@ -4736,6 +4779,7 @@
         "TraitGrimoire": "Grimoire",
         "TraitGrioth": "Grioth",
         "TraitGrippli": "Tripkee",
+        "TraitGuardian": "Guardian",
         "TraitGunslinger": "Gunslinger",
         "TraitHag": "Hag",
         "TraitHalcyon": "Halcyon",
@@ -4767,6 +4811,17 @@
         "TraitIkon": "Ikon",
         "TraitIllusion": "Illusion",
         "TraitImplanted": "Implanted",
+        "TraitInstalledInAGrenadeLauncherOrTwoHandedWeaponWithAnUndermoundedGrenadeLauncher": "Installed in a grenade launcher or two-handed weapon with an undermounted grenade launcher",
+        "TraitInstalledInArmor": "Installed in armor",
+        "TraitInstalledInArmorWithTheEnergyShieldingUpgrade": "Installed in armor with the energy shielding upgrade",
+        "TraitInstalledInArmorWithTheExposedTrait": "Installed in armor with the exposed trait",
+        "TraitInstalledInAWeapon": "Installed in a weapon",
+        "TraitInstalledInAWeaponSight": "Installed in a weapon (sight)",
+        "TraitInstalledInAWeaponWithTheKickbackTrait": "Installed in a weapon with the kickback trait",
+        "TraitInstalledInOneHandedWeaponGrip": "Installed in one-handed weapon (grip)",
+        "TraitInstalledInRangedWeaponWithoutALoudener": "Installed in ranged weapon without a loudener",
+        "TraitInstalledInTwoHandedWeapon": "Installed in two-handed weapon",
+        "TraitInstalledOnAWeaponWithoutASilencer": "Installed on a weapon without a silencer",
         "TraitImpulse": "Impulse",
         "TraitIncapacitation": "Incapacitation",
         "TraitIncarnate": "Incarnate",
@@ -4788,6 +4843,7 @@
         "TraitInventor": "Inventor",
         "TraitInvested": "Invested",
         "TraitInvestigator": "Investigator",
+        "TraitJotunborn": "Jotunborn",
         "TraitJousting": "Jousting",
         "TraitJoustingD4": "Jousting d4",
         "TraitJoustingD6": "Jousting d6",
@@ -5077,6 +5133,7 @@
         "TraitSwashbuckler": "Swashbuckler",
         "TraitSweep": "Sweep",
         "TraitSylph": "Sylph",
+        "TraitTactic": "Tactic",
         "TraitTalisman": "Talisman",
         "TraitTalos": "Talos",
         "TraitTandem": "Tandem",
@@ -5170,6 +5227,7 @@
         "TraitWayang": "Wayang",
         "TraitWeapons": "Weapons",
         "TraitWerecreature": "Werecreature",
+        "TraitWhetstone": "Whetstone",
         "TraitWight": "Wight",
         "TraitWildHunt": "Wild Hunt",
         "TraitWitch": "Witch",
@@ -5329,6 +5387,7 @@
                 "bladed-gauntlet": "Bladed Gauntlet",
                 "bladed-hoop": "Bladed Hoop",
                 "bladed-scarf": "Bladed Scarf",
+                "bladesweeper": "Bladesweeper",
                 "blowgun": "Blowgun",
                 "blowgun-darts": "Blowgun Darts",
                 "blunderbuss": "Blunderbuss",
@@ -5474,6 +5533,7 @@
                 "main-gauche": "Main-Gauche",
                 "mambele": "Mambele",
                 "maul": "Maul",
+                "maul-spade": "Maul-Spade",
                 "meteor-hammer": "Meteor Hammer",
                 "mikazuki": "Mikazuki",
                 "mithral-tree": "Dawnsilver Tree",
@@ -6145,13 +6205,13 @@
             },
             "concealed": {
                 "name": "Concealed",
-                "rules": "<p>While you are concealed from a creature, such as in a thick fog, you are difficult for that creature to see. You can still be observed, but you're tougher to target. A creature that you're concealed from must succeed at a @Check[flat|dc:5] when targeting you with an attack, spell, or other effect.</p>\n<p>Area effects aren't subject to this flat check. If the check fails, the attack, spell, or effect doesn't affect you.</p>",
+                "rules": "<p>While you are concealed from a creature, such as in a thick fog, you are difficult for that creature to see. You can still be observed, but you're tougher to target. A creature that you're concealed from must succeed at a @Check[flat|dc:5|name:Concealed|showDC:all] when targeting you with an attack, spell, or other effect.</p>\n<p>Area effects aren't subject to this flat check. If the check fails, the attack, spell, or effect doesn't affect you.</p>",
                 "summary": "Fog or similar obscuration makes you difficult to see and target."
             },
             "confused": {
                 "name": "Confused",
-                "note": "Each time you take damage from an attack or spell, you can attempt a @Check[flat|showDC:all|dc:11] to recover from your confusion and end the condition.",
-                "rules": "<p>You don't have your wits about you, and you attack wildly. You are off-guard, you don't treat anyone as your ally (though they might still treat you as theirs), and you can't Delay, Ready, or use reactions.<p></p>You use all your actions to Strike or cast offensive cantrips, though the GM can have you use other actions to facilitate attack, such as draw a weapon, move so that a target is in reach, and so forth. Your targets are determined randomly by the GM. If you have no other viable targets, you target yourself, automatically hitting but not scoring a critical hit. If it's impossible for you to attack or cast spells, you babble incoherently, wasting your actions.</p>\n<p>Each time you take damage from an attack or spell, you can attempt a @Check[flat|dc:11] to recover from your confusion and end the condition.</p>",
+                "note": "Each time you take damage from an attack or spell, you can attempt a @Check[flat|dc:11|name:Confused|showDC:all] to recover from your confusion and end the condition.",
+                "rules": "<p>You don't have your wits about you, and you attack wildly. You are off-guard, you don't treat anyone as your ally (though they might still treat you as theirs), and you can't Delay, Ready, or use reactions.<p></p>You use all your actions to Strike or cast offensive cantrips, though the GM can have you use other actions to facilitate attack, such as draw a weapon, move so that a target is in reach, and so forth. Your targets are determined randomly by the GM. If you have no other viable targets, you target yourself, automatically hitting but not scoring a critical hit. If it's impossible for you to attack or cast spells, you babble incoherently, wasting your actions.</p>\n<p>Each time you take damage from an attack or spell, you can attempt a @Check[flat|dc:11|name:Confusion Recovery|showDC:all] to recover from your confusion and end the condition.</p>",
                 "summary": "You attack indiscriminately."
             },
             "controlled": {
@@ -6166,8 +6226,8 @@
             },
             "deafened": {
                 "name": "Deafened",
-                "note": "If you perform an action that has the auditory trait, you must succeed at a @Check[flat|dc:5|showDC:all] or the action is lost.",
-                "rules": "<p>You can't hear. You automatically critically fail Perception checks that require you to be able to hear. You take a -2 status penalty to Perception checks for initiative and checks that involve sound but also rely on other senses. If you perform an action with the auditory trait, you must succeed at a @Check[flat|dc:5] or the action is lost; attempt the check after spending the action but before any effects are applied. You are immune to auditory effects.</p>",
+                "note": "If you perform an action that has the auditory trait, you must succeed at a @Check[flat|dc:5|name:Deafened|showDC:all] or the action is lost.",
+                "rules": "<p>You can't hear. You automatically critically fail Perception checks that require you to be able to hear. You take a -2 status penalty to Perception checks for initiative and checks that involve sound but also rely on other senses. If you perform an action with the auditory trait, you must succeed at a @Check[flat|dc:5|name:Deafened|showDC:all] or the action is lost; attempt the check after spending the action but before any effects are applied. You are immune to auditory effects.</p>",
                 "summary": "You're unable to hear."
             },
             "doomed": {
@@ -6227,8 +6287,8 @@
             },
             "grabbed": {
                 "name": "Grabbed",
-                "note": "If you attempt a manipulate action while grabbed, you must succeed at a @Check[flat|dc:5|showDC:all] or it is lost.",
-                "rules": "<p>You're held in place by another creature, giving you the off-guard and immobilized conditions. If you attempt a manipulate action while grabbed, you must succeed at a @Check[flat|dc:5] or it is lost; roll the check after spending the action, but before any effects are applied.</p>",
+                "note": "If you attempt a manipulate action while grabbed, you must succeed at a @Check[flat|dc:5|name:Grabbed|showDC:all] or it is lost.",
+                "rules": "<p>You're held in place by another creature, giving you the off-guard and immobilized conditions. If you attempt a manipulate action while grabbed, you must succeed at a @Check[flat|dc:5|name:Grabbed|showDC:all] or it is lost; roll the check after spending the action, but before any effects are applied.</p>",
                 "summary": "A creature, object, or magic holds you in place."
             },
             "group": {
@@ -6244,7 +6304,7 @@
             },
             "hidden": {
                 "name": "Hidden",
-                "rules": "<p>While you're hidden from a creature, that creature knows the space you're in but can't tell precisely where you are. You typically become hidden by using Stealth to Hide. When Seeking a creature using only imprecise senses, it remains hidden, rather than observed. A creature you're hidden from is off-guard to you, and it must succeed at a @Check[flat|dc:11] when targeting you with an attack, spell, or other effect or it fails affect you. Area effects aren't subject to this flat check.</p>\n<p>A creature might be able to use the Seek action to try to observe you.</p>",
+                "rules": "<p>While you're hidden from a creature, that creature knows the space you're in but can't tell precisely where you are. You typically become hidden by using Stealth to Hide. When Seeking a creature using only imprecise senses, it remains hidden, rather than observed. A creature you're hidden from is off-guard to you, and it must succeed at a @Check[flat|dc:11|name:Hidden|showDC:all] when targeting you with an attack, spell, or other effect or it fails affect you. Area effects aren't subject to this flat check.</p>\n<p>A creature might be able to use the Seek action to try to observe you.</p>",
                 "summary": "A creature you're hidden from knows your location but can't see you."
             },
             "hostile": {
@@ -6321,7 +6381,7 @@
             },
             "stupefied": {
                 "name": "Stupefied",
-                "note": "Any time you attempt to @UUID[Compendium.pf2e.actionspf2e.Item.aBQ8ajvEBByv45yz]{Cast a Spell} while stupefied, the spell is disrupted unless you succeed at a @Check[flat|showDC:all|dc:resolve(5+@actor.conditions.stupefied.value)].",
+                "note": "Any time you attempt to @UUID[Compendium.pf2e.actionspf2e.Item.aBQ8ajvEBByv45yz]{Cast a Spell} while stupefied, the spell is disrupted unless you succeed at a @Check[flat|dc:resolve(5+@actor.conditions.stupefied.value)|name:Stupefied|showDC:all].",
                 "rules": "<p>Your thoughts and instincts are clouded. Stupefied always includes a value. You take a status penalty equal to this value on Intelligence-, Wisdom-, and Charisma-based checks and DCs, including Will saving throws, spell attack rolls, spell DCs, and skill checks that use these attribute modifiers. Any time you attempt to Cast a Spell while stupefied, the spell is disrupted unless you succeed at a flat check with a DC equal to 5 + your stupefied value.</p>",
                 "summary": "You can't access your full mental faculties, and you have trouble casting spells."
             },
@@ -6332,7 +6392,7 @@
             },
             "undetected": {
                 "name": "Undetected",
-                "rules": "<p>When you are undetected by a creature, that creature cannot see you at all, has no idea what space you occupy, and can't target you, though you still can be affected by abilities that target an area. When you're undetected by a creature, that creature is off-guard to you.</p>\n<p>A creature you're undetected by can guess which square you're in to try targeting you. It must pick a square and attempt an attack. This works like targeting a hidden creature (requiring a @Check[flat|dc:11]), but the flat check and attack roll are rolled in secret by the GM, who doesn't reveal whether the attack missed due to failing the flat check, failing the attack roll, or choosing the wrong square.</p>\n<p>A creature can use the Seek action to try to find you.</p>",
+                "rules": "<p>When you are undetected by a creature, that creature cannot see you at all, has no idea what space you occupy, and can't target you, though you still can be affected by abilities that target an area. When you're undetected by a creature, that creature is off-guard to you.</p>\n<p>A creature you're undetected by can guess which square you're in to try targeting you. It must pick a square and attempt an attack. This works like targeting a hidden creature (requiring a @Check[flat|dc:11|name:Undetected|traits:secret|showDC:all]), but the flat check and attack roll are rolled in secret by the GM, who doesn't reveal whether the attack missed due to failing the flat check, failing the attack roll, or choosing the wrong square.</p>\n<p>A creature can use the Seek action to try to find you.</p>",
                 "summary": "A creature you're undetected by doesn't know where you are."
             },
             "unfriendly": {

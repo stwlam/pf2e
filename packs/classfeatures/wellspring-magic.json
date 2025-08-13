@@ -161,10 +161,7 @@
         ],
         "traits": {
             "otherTags": [
-                "bard-muse",
-                "class-archetype",
-                "oracle-mystery",
-                "sorcerer-bloodline"
+                "class-archetype"
             ],
             "rarity": "common",
             "value": []

@@ -19,8 +19,13 @@ import { CanvasAnimationAttribute } from "./canvas/animation/_types.mjs";
 import ChatBubbles from "./canvas/animation/chat-bubbles.mjs";
 import { DoorControl, ParticleEffect } from "./canvas/containers/_module.mjs";
 import ClockwiseSweepPolygon from "./canvas/geometry/clockwise-sweep.mjs";
-import EffectsCanvasGroup from "./canvas/groups/effects.mjs";
-import InterfaceCanvasGroup from "./canvas/groups/interface.mjs";
+import {
+    EffectsCanvasGroup,
+    EnvironmentCanvasGroup,
+    HiddenCanvasGroup,
+    InterfaceCanvasGroup,
+    PrimaryCanvasGroup,
+} from "./canvas/groups/_module.mjs";
 import { AlertPing, ArrowPing, ChevronPing, PulsePing, Ruler } from "./canvas/interaction/_module.mjs";
 import * as layers from "./canvas/layers/_module.mjs";
 import * as perception from "./canvas/perception/_module.mjs";
@@ -74,16 +79,13 @@ export interface TextEditorEnricherConfig {
 /**
  * A light source animation configuration object.
  */
-export type LightSourceAnimationConfig = Record<
-    string,
-    {
-        label: string;
-        animation: Function;
-        backgroundShader?: typeof AdaptiveBackgroundShader;
-        illuminationShader?: typeof AdaptiveIlluminationShader;
-        colorationShader: typeof AdaptiveColorationShader;
-    }
->;
+export interface LightSourceAnimationConfig {
+    label: string;
+    animation: Function;
+    backgroundShader?: typeof AdaptiveBackgroundShader;
+    illuminationShader?: typeof AdaptiveIlluminationShader;
+    colorationShader: typeof AdaptiveColorationShader;
+}
 
 /**
  * Available Weather Effects implementations
@@ -481,11 +483,11 @@ export default interface Config<
         lightSourceClass: typeof PointLightSource;
         globalLightSourceClass: typeof GlobalLightSource;
         rulerClass: typeof Ruler;
-        visionSourceClass: typeof PointVisionSource;
+        visionSourceClass: ConstructorOf<PointVisionSource<NonNullable<TTokenDocument["object"]>>>;
         soundSourceClass: typeof PointSoundSource;
         groups: {
             hidden: {
-                groupClass: typeof PIXI.Container;
+                groupClass: typeof HiddenCanvasGroup;
                 parent: "stage";
             };
             rendered: {
@@ -493,11 +495,11 @@ export default interface Config<
                 parent: "stage";
             };
             environment: {
-                groupClass: typeof PIXI.Container;
+                groupClass: typeof EnvironmentCanvasGroup;
                 parent: "rendered";
             };
             primary: {
-                groupClass: typeof PIXI.Container;
+                groupClass: typeof PrimaryCanvasGroup;
                 parent: "environment";
             };
             effects: {
