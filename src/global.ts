@@ -23,12 +23,12 @@ import type {
     CompendiumBrowserSources,
 } from "@module/apps/compendium-browser/browser.ts";
 import type { EffectsPanel } from "@module/apps/effects-panel.ts";
-import type { LicenseViewer } from "@module/apps/license-viewer/app.ts";
 import type {
     ActorDirectoryPF2e,
     ChatLogPF2e,
     CompendiumDirectoryPF2e,
     EncounterTracker,
+    ItemDirectoryPF2e,
 } from "@module/apps/sidebar/index.ts";
 import type { WorldClock } from "@module/apps/world-clock/app.ts";
 import type { CanvasPF2e, EffectsCanvasGroupPF2e } from "@module/canvas/index.ts";
@@ -169,7 +169,6 @@ interface GamePF2e
         // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
         actions: Record<string, Function> & Collection<string, Action>;
         compendiumBrowser: CompendiumBrowser;
-        licenseViewer: LicenseViewer;
         worldClock: WorldClock;
         effectPanel: EffectsPanel;
         effectTracker: EffectTracker;
@@ -327,14 +326,15 @@ declare global {
 
         const ui: FoundryUI<
             ActorDirectoryPF2e,
-            fa.sidebar.tabs.ItemDirectory<ItemPF2e<null>>,
+            ItemDirectoryPF2e,
             ChatLogPF2e,
             CompendiumDirectoryPF2e,
             EncounterTracker<EncounterPF2e | null>,
             Hotbar<MacroPF2e>
         >;
 
-        const AutomaticBonusProgression: typeof ABP;
+        // eslint-disable-next-line no-var
+        var AutomaticBonusProgression: typeof ABP;
 
         // Add functions to the `Math` namespace for use in `Roll` formulas
         interface Math {

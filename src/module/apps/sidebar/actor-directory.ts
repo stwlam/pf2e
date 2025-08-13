@@ -12,7 +12,7 @@ import * as R from "remeda";
 
 /** Extend ActorDirectory to show more information */
 class ActorDirectoryPF2e extends fa.sidebar.tabs.ActorDirectory<ActorPF2e<null>> {
-    static override DEFAULT_OPTIONS: Partial<fa.sidebar.DocumentDirectoryConfiguration> = {
+    static override DEFAULT_OPTIONS: DeepPartial<fa.sidebar.DocumentDirectoryConfiguration> = {
         actions: {
             togglePartyFolder: ActorDirectoryPF2e.#togglePartyFolder,
             openPartySheet: ActorDirectoryPF2e.#openPartySheet,
@@ -97,6 +97,16 @@ class ActorDirectoryPF2e extends fa.sidebar.tabs.ActorDirectory<ActorPF2e<null>>
 
     async saveActivePartyFolderState(): Promise<void> {
         game.settings.set("pf2e", "activePartyFolderState", this.#extraFolders[game.actors.party?.id ?? ""] ?? true);
+    }
+
+    override render(options: Partial<HandlebarsRenderOptions> = {}): Promise<this> {
+        // Ensure the entire directory gets re-rendered when the parties are
+        // This prevents drag/drop events from breaking on party only re-renders such as changing the active one
+        if (options.parts && options.parts.includes("parties") && !options.parts.includes("directory")) {
+            options.parts.push("directory");
+        }
+
+        return super.render(options);
     }
 
     override async _onRender(context: object, options: HandlebarsRenderOptions): Promise<void> {

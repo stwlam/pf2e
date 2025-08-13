@@ -21,7 +21,7 @@ export interface ItemOriginFlag {
     uuid: string;
     castRank?: number;
     messageId?: string;
-    variant?: { overlays: string[] };
+    variant?: { overlays: string[] } | null;
     rollOptions?: string[];
 }
 
@@ -33,7 +33,7 @@ type ChatMessageFlagsPF2e = ChatMessageFlags & {
         casting?: { id: string; tradition: MagicTradition; embeddedSpell?: SpellSource } | null;
         modifiers?: RawModifier[];
         dice?: RawDamageDice[];
-        journalEntry?: DocumentUUID;
+        journalEntry?: DocumentUUID | null;
         appliedDamage?: AppliedDamageFlag | null;
         treatWoundsMacroFlag?: { bonus: number };
         [key: string]: unknown;

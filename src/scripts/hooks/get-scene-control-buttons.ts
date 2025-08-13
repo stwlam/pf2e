@@ -9,6 +9,11 @@ export const GetSceneControlButtons = {
             // World Clock
             const tokenTools = controls.tokens?.tools;
             if (tokenTools) {
+                // Side adventure: flip the default of "Unconstrained Movement"
+                if (game.user.isGM && tokenTools.unconstrainedMovement) {
+                    tokenTools.unconstrainedMovement.active = true;
+                }
+
                 const settings = game.pf2e.settings.worldClock;
                 tokenTools.worldClock = {
                     name: "worldClock",
@@ -19,9 +24,9 @@ export const GetSceneControlButtons = {
                     visible: settings.showClockButton && (game.user.isGM || settings.playersCanView),
                     onChange: () => {
                         if (game.pf2e.worldClock.rendered) {
-                            game.pf2e.worldClock.close({ force: true });
+                            game.pf2e.worldClock.close();
                         } else {
-                            game.pf2e.worldClock.render(true);
+                            game.pf2e.worldClock.render({ force: true });
                         }
                     },
                 };
