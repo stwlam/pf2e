@@ -170,7 +170,9 @@
                 "Wrap": "Wrap"
             },
             "CosmicForm": {
+                "Moon": "Moon",
                 "MoonNote": "The target is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} for 1 round.",
+                "Sun": "Sun",
                 "SunNote": "The target is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round."
             },
             "DaemonForm": {
