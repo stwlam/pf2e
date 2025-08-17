@@ -1,10 +1,10 @@
 {
-    "_id": "uXCU8GgriUjuj5FV",
+    "_id": "4UNQfMrwfWirdwoV",
     "img": "icons/skills/melee/strike-polearm-light-orange.webp",
-    "name": "Effect: Hunter's Edge, Flurry",
+    "name": "Effect: Share Hunter's Edge (Flurry, Masterful)",
     "system": {
         "description": {
-            "value": "<p>Granted when a ranger shares their @UUID[Compendium.pf2e.classfeatures.Item.Flurry] edge with you.</p>\n<p>Your multiple attack penalty for attacks against your hunted prey is -3 (-2 with an agile weapon) on your second attack of the turn instead of -5, and -6 (-4 with an agile weapon) on your third or subsequent attack of the turn, instead of -10.</p>"
+            "value": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.Animal Companion (Ranger)] with @UUID[Compendium.pf2e.feats-srd.Item.Masterful Companion]</p>\n<p>Your multiple attack penalty for attacks against the marked creature is –2 (–1 with an agile attack) on your second attack of the turn instead of –5, and –4 (–2 with an agile attack) on your third or subsequent attack of the turn, instead of –10.</p>"
         },
         "duration": {
             "expiry": null,
@@ -13,7 +13,7 @@
             "value": -1
         },
         "level": {
-            "value": 1
+            "value": 18
         },
         "publication": {
             "license": "ORC",
@@ -22,52 +22,60 @@
         },
         "rules": [
             {
-                "key": "RollOption",
-                "label": "PF2E.SpecificRule.HuntPrey.TargetHuntedPrey",
-                "option": "hunted-prey",
-                "toggleable": true
+                "key": "TokenMark",
+                "slug": "share-hunters-edge"
             },
             {
                 "key": "FlatModifier",
                 "label": "PF2E.SpecificRule.HuntPrey.SeekHuntedPrey",
                 "predicate": [
                     "action:seek",
-                    "hunted-prey"
+                    "target:mark:share-hunters-edge"
                 ],
                 "selector": "perception",
                 "type": "circumstance",
-                "value": 2
+                "value": 4
             },
             {
                 "key": "FlatModifier",
                 "label": "PF2E.SpecificRule.HuntPrey.TrackHuntedPrey",
                 "predicate": [
                     "action:track",
-                    "hunted-prey"
+                    "target:mark:share-hunters-edge"
                 ],
                 "selector": "survival",
                 "type": "circumstance",
-                "value": 2
+                "value": 4
+            },
+            {
+                "domain": "ranged-attack-roll",
+                "key": "RollOption",
+                "option": "ignore-range-penalty:3",
+                "predicate": [
+                    "target:mark:share-hunters-edge"
+                ]
             },
             {
                 "key": "MultipleAttackPenalty",
+                "label": "PF2E.SpecificRule.Ranger.HuntersEdge.Flurry.Label",
                 "predicate": [
-                    "agile",
-                    "hunted-prey"
+                    "item:trait:agile",
+                    "target:mark:share-hunters-edge"
                 ],
                 "selector": "attack",
-                "value": -2
+                "value": -1
             },
             {
                 "key": "MultipleAttackPenalty",
+                "label": "PF2E.SpecificRule.Ranger.HuntersEdge.Flurry.Label",
                 "predicate": [
-                    "hunted-prey",
+                    "target:mark:share-hunters-edge",
                     {
-                        "not": "agile"
+                        "not": "item:trait:agile"
                     }
                 ],
                 "selector": "attack",
-                "value": -3
+                "value": -2
             }
         ],
         "start": {

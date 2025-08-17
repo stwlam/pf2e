@@ -1,10 +1,10 @@
 {
     "_id": "ltIvO9ZQlmqGD89Y",
     "img": "icons/creatures/invertebrates/spider-web-black.webp",
-    "name": "Effect: Hunter's Edge, Outwit",
+    "name": "Effect: Share Hunter's Edge (Outwit)",
     "system": {
         "description": {
-            "value": "<p>Granted when a ranger shares their @UUID[Compendium.pf2e.classfeatures.Item.Outwit] edge with you.</p>\n<p>You gain a +2 circumstance bonus to Deception checks, Intimidation checks, Stealth checks, and any checks to Recall Knowledge about the prey, and a +1 circumstance bonus to AC against your prey's attacks.</p>"
+            "value": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.Animal Companion (Ranger)], @UUID[Compendium.pf2e.feats-srd.Item.Shared Prey], @UUID[Compendium.pf2e.feats-srd.Item.Triple Threat], @UUID[Compendium.pf2e.feats-srd.Item.Warden's Boon]</p>\n<p>You gain a +2 circumstance bonus to Deception checks, Intimidation checks, Stealth checks, and any checks to Recall Knowledge about the marked creature, and a +1 circumstance bonus to AC against the marked creature's attacks.</p>"
         },
         "duration": {
             "expiry": null,
@@ -23,20 +23,14 @@
         "rules": [
             {
                 "key": "TokenMark",
-                "slug": "hunted-prey"
-            },
-            {
-                "key": "RollOption",
-                "label": "PF2E.SpecificRule.HuntPrey.TargetHuntedPrey",
-                "option": "target:mark:hunted-prey",
-                "toggleable": true
+                "slug": "share-hunters-edge"
             },
             {
                 "key": "FlatModifier",
                 "label": "PF2E.SpecificRule.HuntPrey.SeekHuntedPrey",
                 "predicate": [
                     "action:seek",
-                    "target:mark:hunted-prey"
+                    "target:mark:share-hunters-edge"
                 ],
                 "selector": "perception",
                 "type": "circumstance",
@@ -47,46 +41,47 @@
                 "label": "PF2E.SpecificRule.HuntPrey.TrackHuntedPrey",
                 "predicate": [
                     "action:track",
-                    "target:mark:hunted-prey"
+                    "target:mark:share-hunters-edge"
                 ],
                 "selector": "survival",
                 "type": "circumstance",
                 "value": 2
             },
             {
-                "key": "FlatModifier",
-                "label": "Vs. hunted prey",
+                "domain": "ranged-attack-roll",
+                "key": "RollOption",
+                "option": "ignore-range-penalty:2",
                 "predicate": [
-                    "target:mark:hunted-prey"
-                ],
-                "selector": [
-                    "deception",
-                    "intimidation",
-                    "stealth"
-                ],
-                "type": "circumstance",
-                "value": 2
+                    "target:mark:share-hunters-edge"
+                ]
             },
             {
                 "key": "FlatModifier",
-                "label": "Recall knowledge on hunted prey",
+                "label": "PF2E.SpecificRule.Ranger.HuntersEdge.Outwit.Label",
                 "predicate": [
-                    "action:recall-knowledge",
-                    "target:mark:hunted-prey"
-                ],
-                "selector": "skill-check",
-                "type": "circumstance",
-                "value": 2
-            },
-            {
-                "key": "FlatModifier",
-                "label": "Vs. attacks from hunted prey",
-                "predicate": [
-                    "target:mark:hunted-prey"
+                    "origin:mark:share-hunters-edge"
                 ],
                 "selector": "ac",
                 "type": "circumstance",
                 "value": 1
+            },
+            {
+                "key": "FlatModifier",
+                "label": "PF2E.SpecificRule.Ranger.HuntersEdge.Outwit.Label",
+                "predicate": [
+                    {
+                        "or": [
+                            "check:statistic:deception",
+                            "check:statistic:intimidation",
+                            "check:statistic:stealth",
+                            "action:recall-knowledge"
+                        ]
+                    },
+                    "target:mark:share-hunters-edge"
+                ],
+                "selector": "skill-check",
+                "type": "circumstance",
+                "value": 2
             }
         ],
         "start": {

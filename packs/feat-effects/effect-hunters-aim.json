@@ -1,10 +1,10 @@
 {
-    "_id": "MeXyXqWY9qN42bSQ",
-    "img": "icons/creatures/eyes/humanoid-single-red-brown.webp",
-    "name": "Effect: Hunt Prey",
+    "_id": "1TsRE7J3BZrcyogi",
+    "img": "icons/skills/ranged/target-bullseye-arrow-glowing.webp",
+    "name": "Effect: Hunter's Aim",
     "system": {
         "description": {
-            "value": "<p>Granted by @UUID[Compendium.pf2e.actionspf2e.Item.Hunt Prey]</p>\n<p>You mark a creature as your prey.</p>"
+            "value": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.Hunter's Aim] via Ephemeral Effect</p>\n<p>Your lesser cover is ignored by the origin's ranged attack roll.</p>"
         },
         "duration": {
             "expiry": null,
@@ -12,8 +12,9 @@
             "unit": "unlimited",
             "value": -1
         },
+        "fromSpell": false,
         "level": {
-            "value": 1
+            "value": 2
         },
         "publication": {
             "license": "ORC",
@@ -22,8 +23,10 @@
         },
         "rules": [
             {
-                "key": "TokenMark",
-                "slug": "hunted-prey"
+                "key": "AdjustModifier",
+                "selector": "ac",
+                "slug": "cover",
+                "suppress": true
             }
         ],
         "start": {
