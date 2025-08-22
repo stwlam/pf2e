@@ -6753,6 +6753,9 @@
             "WarriorOfLegend": {
                 "CursedWeakness": {
                     "Prompt": "Select a cursed weakness."
+                },
+                "GriefsFury": {
+                    "Toggle": "Grief's Fury — Target dealt damage to your bonded partner"
                 }
             },
             "Wayang": {

@@ -503,6 +503,19 @@
             "flags": {}
         },
         {
+            "name": "pfs-season-7-bestiary",
+            "label": "Season 7",
+            "path": "packs/pfs-season-7-bestiary",
+            "type": "Actor",
+            "banner": "systems/pf2e/assets/compendium-banner/red.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
             "name": "prey-for-death-bestiary",
             "label": "Prey for Death",
             "path": "packs/prey-for-death-bestiary",
@@ -1288,7 +1301,8 @@
                         "pfs-season-3-bestiary",
                         "pfs-season-4-bestiary",
                         "pfs-season-5-bestiary",
-                        "pfs-season-6-bestiary"
+                        "pfs-season-6-bestiary",
+                        "pfs-season-7-bestiary"
                     ]
                 }
             ],
