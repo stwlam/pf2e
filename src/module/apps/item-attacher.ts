@@ -1,4 +1,5 @@
-import type { PhysicalItemPF2e } from "@item";
+import { iterateAllItems } from "@actor/helpers.ts";
+import type { ItemPF2e, PhysicalItemPF2e } from "@item";
 import { PickAThingPrompt, PickableThing, PromptTemplateData } from "@module/apps/pick-a-thing-prompt.ts";
 import { RollNotePF2e } from "@module/notes.ts";
 import { StatisticRollParameters } from "@system/statistic/statistic.ts";
@@ -21,10 +22,10 @@ class ItemAttacher<TItem extends PhysicalItemPF2e> extends PickAThingPrompt<TIte
         if (!item.isAttachable) {
             throw ErrorPF2e("Not an attachable item");
         }
-        const collection =
-            item.actor?.inventory.contents ??
-            game.items.filter((i): i is PhysicalItemPF2e<null> => i.isOfType("physical"));
+        const actor = item.actor;
+        const collection: ItemPF2e[] = actor ? [...iterateAllItems(actor)] : game.items.contents;
         const choices = collection
+            .filter((i): i is PhysicalItemPF2e => i.isOfType("physical"))
             .filter((i) => i.quantity > 0 && i.acceptsSubitem(item))
             .map((i) => ({ value: i, img: i.img, label: i.name }))
             .sort((a, b) => a.label.localeCompare(b.label, game.i18n.lang));
@@ -36,7 +37,7 @@ class ItemAttacher<TItem extends PhysicalItemPF2e> extends PickAThingPrompt<TIte
         return game.i18n.format("PF2E.Item.Physical.Attach.PromptTitle", { item: this.item.name });
     }
 
-    protected override getSelection(event: MouseEvent): PickableThing<PhysicalItemPF2e> | null {
+    protected override getSelection(event: PointerEvent): PickableThing<PhysicalItemPF2e> | null {
         const selection = super.getSelection(event);
         if (selection) this.#attach(selection.value);
         return selection;

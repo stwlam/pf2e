@@ -1,4 +1,4 @@
-import type { TokenAnimationOptions, TokenResourceData, TokenShape } from "@client/canvas/placeables/token.d.mts";
+import type { TokenResourceData, TokenShape } from "@client/canvas/placeables/token.d.mts";
 import type { TokenUpdateCallbackOptions } from "@client/documents/token.d.mts";
 import type { Point } from "@common/_types.d.mts";
 import type { GridOffset2D } from "@common/grid/_types.d.mts";
@@ -99,7 +99,7 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
     }
 
     /** A reference to an animation that is currently in progress for this Token, if any */
-    get animation(): Promise<boolean> | null {
+    get animation(): Promise<void> | null {
         return (
             this.animationContexts.get(this.animationName)?.promise ??
             this.animationContexts.get(this.movementAnimationName)?.promise ??
@@ -151,8 +151,7 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
     /** Can the current user see the distance of this token from a controlled token? */
     get #canSeeDistance(): boolean {
         if (!this.visible || this.isPreview || this.document.isSecret || this.controlled) return false;
-        const isHover = this.hover || this.layer.highlightObjects;
-        return isHover && canvas.tokens.controlled.length === 1;
+        return this.hover && (canvas.tokens.controlled.length === 1 || !!game.user.character?.getActiveTokens().length);
     }
 
     isAdjacentTo(token: TokenPF2e): boolean {
@@ -252,8 +251,8 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
             flanking.canGangUp.includes("animal-companion") &&
             flankingBuddies.some((b) => {
                 if (!b.actor?.isOfType("character")) return false;
-                const traits = b.actor.traits;
-                return traits.has("minion") && !traits.has("construct") && b.isAdjacentTo(flankee);
+                const traits = b.actor.system.traits.value;
+                return traits.includes("minion") && !traits.includes("construct") && b.isAdjacentTo(flankee);
             });
         if (sideBySide) return true;
 
@@ -263,8 +262,8 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
             flanking.canGangUp.includes("eidolon") &&
             flankingBuddies.some((b) => {
                 if (!b.actor?.isOfType("character")) return false;
-                const traits = b.actor.traits;
-                return traits.has("eidolon") && b.isAdjacentTo(flankee);
+                const traits = b.actor.system.traits.value;
+                return traits.includes("eidolon") && b.isAdjacentTo(flankee);
             });
         if (kindredFlank) return true;
 
@@ -307,9 +306,12 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
 
     #refreshDistanceText(): void {
         if (!this.#canSeeDistance) return;
-        const controlledToken = canvas.tokens.controlled[0];
+        const controlledToken = canvas.tokens.controlled[0] ?? game.user.character?.getActiveTokens()[0];
+        if (!controlledToken) return;
         const distanceText = this.#distanceText;
-        distanceText.text = game.i18n.format("PF2E.Token.Distance", { distance: controlledToken.distanceTo(this) });
+        const unit = canvas.scene?.grid.units ?? "";
+        const formatArgs = { distance: controlledToken.distanceTo(this), unit };
+        distanceText.text = game.i18n.format("PF2E.Token.Distance", formatArgs).trim();
         const nameplate = this.nameplate;
         const nameOffset = nameplate.visible ? nameplate.position.y + nameplate.height - 2 : nameplate.position.y;
         this.#distanceText.position.set(nameplate.position.x, nameOffset);
@@ -352,7 +354,6 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
 
         const numBars = temp > 0 ? 2 : 1;
         const barHeight = h / numBars;
-
         bar.clear();
 
         // Draw background
@@ -384,10 +385,7 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
     override async _drawEffects(): Promise<void> {
         await super._drawEffects();
         await this.animation;
-
-        if (this.auras.size === 0) {
-            return this.auras.reset();
-        }
+        if (this.auras.size === 0) return this.auras.reset();
 
         // Determine whether a redraw is warranted by comparing current and updated radius/appearance data
         const changedAndDeletedAuraSlugs = Array.from(this.auras.entries())
@@ -409,7 +407,7 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
     }
 
     /** Emulate a pointer hover ("pointerover") event */
-    emitHoverIn(nativeEvent: MouseEvent | PointerEvent): void {
+    emitHoverIn(nativeEvent: MouseEvent): void {
         const event = new PIXI.FederatedPointerEvent(new PIXI.EventBoundary(this));
         event.type = "pointerover";
         event.nativeEvent = nativeEvent;
@@ -417,7 +415,7 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
     }
 
     /** Emulate a pointer hover ("pointerout") event */
-    emitHoverOut(nativeEvent: MouseEvent | PointerEvent): void {
+    emitHoverOut(nativeEvent: MouseEvent): void {
         const event = new PIXI.FederatedPointerEvent(new PIXI.EventBoundary(this));
         event.type = "pointerout";
         event.nativeEvent = nativeEvent;
@@ -531,7 +529,7 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
                 { x: this.x, y: this.y, elevation: selfElevation },
                 { x: target.x, y: target.y, elevation: targetElevation },
             ];
-            return canvas.grid.measurePath(waypoints).distance;
+            return Math.round(canvas.grid.measurePath(waypoints).distance);
         }
 
         const targetBounds = target.mechanicalBounds ?? squareAtPoint(target);
@@ -539,30 +537,6 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
             return measureDistanceCuboid(this.mechanicalBounds, targetBounds, { reach });
         }
         return measureDistanceCuboid(this.mechanicalBounds, targetBounds, { reach, token: this, target });
-    }
-
-    override async animate(updateData: Record<string, unknown>, options?: TokenAnimationOptionsPF2e): Promise<void> {
-        // Handle system "spin" animation option
-        if (options?.spin) {
-            let attributeAdded = false;
-            const currentRotation = this.document.rotation;
-            const rotationAngle = this.x <= this.document.x ? 360 : -360;
-            options.ontick = (_frame, data) => {
-                if (!attributeAdded && data.attributes.length > 0) {
-                    const duration = (data.duration ?? 1000) / 1000;
-                    data.attributes.push({
-                        attribute: "rotation",
-                        parent: data.attributes[0].parent,
-                        from: currentRotation,
-                        to: currentRotation + duration * rotationAngle,
-                        delta: data.attributes[0].delta,
-                    });
-                    attributeAdded = true;
-                }
-            };
-        }
-
-        await super.animate(updateData, options);
     }
 
     /** Obscure the token's sprite if a hearing or tremorsense detection filter is applied to it */
@@ -623,7 +597,6 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
     /** Handle system-specific status effects (upstream handles invisible and blinded) */
     override _onApplyStatusEffect(statusId: string, active: boolean): void {
         super._onApplyStatusEffect(statusId, active);
-
         if (["undetected", "unnoticed"].includes(statusId)) {
             canvas.perception.update({ refreshVision: true, refreshLighting: true });
         }
@@ -642,6 +615,34 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
         return super._onHoverOut(event);
     }
 
+    /** Require that a loot actor or dead creature is in reach for a player to view its sheet. */
+    protected override _onClickLeft2(event: PIXI.FederatedPointerEvent): void {
+        const actor = this.actor;
+        const requiresReach = game.pf2e.settings.automation.reachEnforcement.has(
+            actor?.isOfType("loot") ? (actor.isLoot ? "loot" : "merchants") : "corpses",
+        );
+        if (!requiresReach || this.document.isOwner || !actor?.isLootableBy(game.user) || !canvas.grid.isSquare) {
+            return super._onClickLeft2(event);
+        }
+        const isInReach = R.unique(
+            [canvas.tokens.controlled, game.user.character?.getActiveTokens(true, false) ?? []].flat(),
+        ).some(
+            (t) =>
+                t.actor?.isOwner &&
+                t.actor.isOfType("creature", "party") &&
+                t.distanceTo(this) <= t.actor.system.attributes.reach.manipulate,
+        );
+        if (isInReach) {
+            return super._onClickLeft2(event);
+        } else {
+            const thisIsCreature = actor.isOfType("creature");
+            const name = this.document.playersCanSeeName
+                ? this.document.name
+                : game.i18n.localize(`PF2E.Token.Mystified.The${thisIsCreature ? "Creature" : "Object"}`);
+            ui.notifications.warn("PF2E.Token.OutOfReach", { format: { token: name } });
+        }
+    }
+
     /** Reset aura renders when token size or GM hidden changes. */
     override _onUpdate(
         changed: DeepPartial<TDocument["_source"]>,
@@ -649,7 +650,6 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
         userId: string,
     ): void {
         super._onUpdate(changed, options, userId);
-
         if (changed.width || "hidden" in changed) {
             if (this.animation) {
                 this.animation.then(() => {
@@ -673,10 +673,6 @@ type ShowFloatyEffectParams =
     | { update: NumericFloatyEffect }
     | { delete: NumericFloatyEffect };
 
-interface TokenAnimationOptionsPF2e extends TokenAnimationOptions {
-    spin?: boolean;
-}
-
 type TokenOrPoint =
     | TokenPF2e
     | (Point & {
@@ -686,4 +682,4 @@ type TokenOrPoint =
       });
 
 export { TokenPF2e };
-export type { ShowFloatyEffectParams, TokenAnimationOptionsPF2e };
+export type { ShowFloatyEffectParams };
