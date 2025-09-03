@@ -329,6 +329,7 @@ abstract class PhysicalItemPF2e<TParent extends ActorPF2e | null = ActorPF2e | n
         }
 
         this.system.bulk = prepareBulkData(this);
+        this.system.temporary ??= false;
 
         // Normalize apex data
         if (this.system.apex) {
@@ -506,7 +507,7 @@ abstract class PhysicalItemPF2e<TParent extends ActorPF2e | null = ActorPF2e | n
         // Calculate new quantity for the existing item, and apply updates
         const newQuantity = item.quantity - quantity;
         const actor = this.actor;
-        if (actor && actor.uuid === item.actor?.uuid && this.id) {
+        if (actor && actor.uuid === item.actor?.uuid && this.id && !this.parentItem) {
             // Do an update that minimizes updates and rerendering if its all the same actor
             const updates = createActorGroupUpdate({
                 itemUpdates: [{ _id: this.id, "system.subitems": subitems }],
@@ -834,7 +835,7 @@ abstract class PhysicalItemPF2e<TParent extends ActorPF2e | null = ActorPF2e | n
 
     /** Set to unequipped upon acquiring */
     protected override async _preCreate(
-        data: this["_source"],
+        data: DeepPartial<this["_source"]>,
         options: DatabaseCreateCallbackOptions,
         user: fd.BaseUser,
     ): Promise<boolean | void> {

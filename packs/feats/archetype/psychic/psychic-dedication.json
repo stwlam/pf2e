@@ -58,7 +58,7 @@
             },
             {
                 "key": "GrantItem",
-                "uuid": "Compendium.pf2e.classfeatures.Item.Conscious Mind"
+                "uuid": "{item|flags.pf2e.rulesSelections.consciousMind}"
             },
             {
                 "key": "RollOption",
