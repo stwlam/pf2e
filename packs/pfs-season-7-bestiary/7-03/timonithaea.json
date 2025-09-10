@@ -1,5 +1,6 @@
 {
-    "_id": "H8lGFF3PKUv2yRL2",
+    "_id": "UG5iXBqsLxRifjSW",
+    "folder": "84vygvtBit90EG6B",
     "img": "systems/pf2e/icons/default-icons/npc.svg",
     "items": [
         {
@@ -27,9 +28,6 @@
                     "title": ""
                 },
                 "rules": [],
-                "showSlotlessLevels": {
-                    "value": false
-                },
                 "slots": {
                     "slot0": {
                         "max": 5,
@@ -101,6 +99,20 @@
                             },
                             {
                                 "id": "Y42w44Dsi0ecuzGU"
+                            },
+                            {
+                                "id": "hL5bNB4uhZrOcVWN"
+                            }
+                        ]
+                    },
+                    "slot5": {
+                        "max": 2,
+                        "prepared": [
+                            {
+                                "id": "oBOgO4AYHKFB8MMT"
+                            },
+                            {
+                                "id": "QR3EGTv0d5clkGrl"
                             }
                         ]
                     }
@@ -1514,7 +1526,7 @@
                 "compendiumSource": "Compendium.pf2e.spells-srd.Item.iAnpxrLaBU4V6Sej"
             },
             "img": "systems/pf2e/icons/spells/tidal-surge.webp",
-            "name": "Tidal Surge",
+            "name": "Tidal Surge (At Will)",
             "sort": 2100000,
             "system": {
                 "area": null,
@@ -1579,11 +1591,7 @@
             "name": "Aqueous Fist",
             "sort": 2200000,
             "system": {
-                "attack": {
-                    "value": ""
-                },
                 "attackEffects": {
-                    "custom": "",
                     "value": []
                 },
                 "bonus": {
@@ -1606,16 +1614,12 @@
                 "rules": [],
                 "slug": null,
                 "traits": {
-                    "rarity": "common",
                     "value": [
                         "agile",
                         "finesse",
                         "magical",
                         "water"
                     ]
-                },
-                "weaponType": {
-                    "value": "melee"
                 }
             },
             "type": "melee"
@@ -1626,9 +1630,6 @@
             "name": "Water Orb",
             "sort": 2300000,
             "system": {
-                "attack": {
-                    "value": ""
-                },
                 "attackEffects": {
                     "value": []
                 },
@@ -1657,9 +1658,6 @@
                         "range-60",
                         "water"
                     ]
-                },
-                "weaponType": {
-                    "value": "ranged"
                 }
             },
             "type": "melee"
@@ -1688,7 +1686,6 @@
                 "rules": [],
                 "slug": null,
                 "traits": {
-                    "rarity": "common",
                     "value": []
                 }
             },
@@ -1711,7 +1708,7 @@
                 },
                 "category": "interaction",
                 "description": {
-                    "value": "<p>The queen is tied to a body of water or area with a great deal of water features.</p>\n<hr />\n<p>A nymph queen is intrinsically tied to a specific region. As long as the queen is healthy, the environment is exceptionally resilient, allowing the nymph queen to automatically attempt to counteract any spell that would harm the environment (such as the @UUID[Compendium.pf2e.spells-srd.Item.Blight] ritual), using her spell DC with a counteract rank equal to the highest-rank druid spell she can cast.</p>\n<p>When the nymph queen becomes physically or psychologically unhealthy, however, her warded region eventually becomes twisted or unhealthy as well. In that case, restoring the nymph queen swiftly heals the entire region.</p>"
+                    "value": "<p>Timonithaea is tied to a body of water or area with a great deal of water features.</p><hr /><p>A nymph queen is intrinsically tied to a specific region. As long as the queen is healthy, the environment is exceptionally resilient, allowing the nymph queen to automatically attempt to counteract any spell that would harm the environment (such as the @UUID[Compendium.pf2e.spells-srd.Item.Blight] ritual), using her spell DC with a counteract rank equal to the highest-rank druid spell she can cast.</p>\n<p>When the nymph queen becomes physically or psychologically unhealthy, however, her warded region eventually becomes twisted or unhealthy as well. In that case, restoring the nymph queen swiftly heals the entire region.</p>"
                 },
                 "publication": {
                     "license": "ORC",
@@ -1721,7 +1718,35 @@
                 "rules": [],
                 "slug": "nymph-queen-tied-to-the-land",
                 "traits": {
-                    "rarity": "common",
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "YJMvSGcOCT86q7GC",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Timonithaea's Calling",
+            "sort": 2600000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "interaction",
+                "description": {
+                    "value": "<p>Timonithaea channels magical energy into the Enoménos crown to telepathically communicate with creatures who are beneath the water within 20 miles of Naós tou Neroú.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
                     "value": []
                 }
             },
@@ -1734,7 +1759,7 @@
             },
             "img": "systems/pf2e/icons/actions/Passive.webp",
             "name": "Constant Spells",
-            "sort": 2600000,
+            "sort": 2700000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1754,7 +1779,6 @@
                 "rules": [],
                 "slug": "constant-spells",
                 "traits": {
-                    "rarity": "common",
                     "value": []
                 }
             },
@@ -1767,7 +1791,7 @@
             },
             "img": "systems/pf2e/icons/actions/Passive.webp",
             "name": "Nymph's Beauty",
-            "sort": 2700000,
+            "sort": 2800000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1777,7 +1801,7 @@
                 },
                 "category": "defensive",
                 "description": {
-                    "value": "<p>30 feet.</p>\n<hr />\n<p>A creature that fails its save is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} and becomes stunned 1 each time it starts its turn within the aura for the next 24 hours, even if it can't see the naiad queen.</p>\n<hr />\n<p>Creatures that start their turn in the aura must succeed at a @Check[will|dc:23] save or suffer an effect described in the nymph queen's entry.</p>"
+                    "value": "<p>30 feet @Check[will|dc:23] save.</p><hr /><p>A creature that fails its save is @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 1} and becomes stunned 1 each time it starts its turn within the aura for the next 24 hours, even if it can't see Timonithaea.</p>"
                 },
                 "publication": {
                     "license": "ORC",
@@ -1799,7 +1823,6 @@
                 ],
                 "slug": "nymph-queen-nymphs-beauty",
                 "traits": {
-                    "rarity": "common",
                     "value": [
                         "aura",
                         "emotion",
@@ -1813,9 +1836,9 @@
         },
         {
             "_id": "z1Wnid4gCPgKMoV8",
-            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "img": "systems/pf2e/icons/actions/TwoActions.webp",
             "name": "Water Healing",
-            "sort": 2800000,
+            "sort": 2900000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1835,7 +1858,6 @@
                 "rules": [],
                 "slug": null,
                 "traits": {
-                    "rarity": "common",
                     "value": [
                         "healing",
                         "primal",
@@ -1852,7 +1874,7 @@
             },
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Change Shape",
-            "sort": 2900000,
+            "sort": 3000000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1903,7 +1925,6 @@
                 ],
                 "slug": "nymph-queen-change-shape",
                 "traits": {
-                    "rarity": "common",
                     "value": [
                         "polymorph",
                         "primal"
@@ -1919,7 +1940,7 @@
             },
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Focus Beauty",
-            "sort": 3000000,
+            "sort": 3100000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1929,7 +1950,7 @@
                 },
                 "category": "offensive",
                 "description": {
-                    "value": "<p>If a target already affected by nymph's beauty fails its save, the image of the queen sears into the creature's mind, effectively blinding the creature until its vision is restored with sound body or a similar effect.</p>\n<p>The naiad queen can Dismiss the effect.</p>\n<hr />\n<p>The nymph queen focuses her beauty upon a target, who must attempt a save against her nymph's beauty aura (@Check[will|dc:23] save). If the creature fails and was already affected by the aura, it takes a greater effect described in the nymph queen's entry.</p>\n<p>A nymph queen can Focus Beauty on a given creature only once per turn.</p>"
+                    "value": "<p>If a target already affected by nymph's beauty fails its save, the image of the queen sears into the creature's mind, effectively blinding the creature until its vision is restored with sound body or a similar effect.</p>\n<p>The naiad queen can Dismiss the effect.</p><hr /><p>The nymph queen focuses her beauty upon a target, who must attempt a save against her nymph's beauty aura (@Check[will|dc:23] save). If the creature fails and was already affected by the aura, it takes a greater effect described in the nymph queen's entry.</p>\n<p>A nymph queen can Focus Beauty on a given creature only once per turn.</p>"
                 },
                 "publication": {
                     "license": "ORC",
@@ -1939,7 +1960,6 @@
                 "rules": [],
                 "slug": "nymph-queen-focus-beauty",
                 "traits": {
-                    "rarity": "common",
                     "value": [
                         "emotion",
                         "mental",
@@ -1957,7 +1977,7 @@
             },
             "img": "systems/pf2e/icons/actions/ThreeActions.webp",
             "name": "Inspiration",
-            "sort": 3100000,
+            "sort": 3200000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1977,7 +1997,6 @@
                 "rules": [],
                 "slug": "nymph-queen-inspiration",
                 "traits": {
-                    "rarity": "common",
                     "value": [
                         "emotion",
                         "mental",
@@ -1988,7 +2007,7 @@
             "type": "action"
         }
     ],
-    "name": "Naiad Queen",
+    "name": "Timonithaea",
     "system": {
         "abilities": {
             "cha": {
@@ -2026,8 +2045,10 @@
             },
             "resistances": [
                 {
+                    "doubleVs": [],
+                    "exceptions": [],
                     "type": "fire",
-                    "value": 10
+                    "value": 12
                 }
             ],
             "speed": {
@@ -2041,13 +2062,14 @@
             },
             "weaknesses": [
                 {
+                    "exceptions": [],
                     "type": "cold-iron",
-                    "value": 10
+                    "value": 12
                 }
             ]
         },
         "details": {
-            "blurb": "",
+            "blurb": "Variant naiad queen",
             "languages": {
                 "details": "",
                 "value": [
@@ -2065,7 +2087,7 @@
             "publication": {
                 "license": "ORC",
                 "remaster": true,
-                "title": "Pathfinder Monster Core"
+                "title": "Pathfnder Society Scenario #7-03: A Foot in the Door"
             }
         },
         "initiative": {
@@ -2102,7 +2124,8 @@
         },
         "skills": {
             "acrobatics": {
-                "base": 16
+                "base": 16,
+                "special": []
             },
             "athletics": {
                 "base": 9,
@@ -2117,26 +2140,32 @@
                 ]
             },
             "diplomacy": {
-                "base": 20
+                "base": 20,
+                "special": []
             },
             "medicine": {
-                "base": 15
+                "base": 15,
+                "special": []
             },
             "nature": {
-                "base": 15
+                "base": 15,
+                "special": []
             },
             "performance": {
-                "base": 20
+                "base": 20,
+                "special": []
             },
             "stealth": {
-                "base": 14
+                "base": 14,
+                "special": []
             },
             "survival": {
-                "base": 15
+                "base": 15,
+                "special": []
             }
         },
         "traits": {
-            "rarity": "uncommon",
+            "rarity": "unique",
             "size": {
                 "value": "med"
             },
