@@ -193,7 +193,7 @@
                 },
                 "category": "offensive",
                 "description": {
-                    "value": "<p>The naiad ship hunter designates a single creature they can see and hear, or one they're Tracking or Gathering Information about, as their prey. The naiad ship hunter gains a +2 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Seek] the prey, to Survival checks to @UUID[Compendium.pf2e.actionspf2e.Item.Track] the prey, and to Diplomacy checks to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information] about the prey. This efect lasts until they use Hunt Prey again.</p>"
+                    "value": "<p>The naiad ship hunter designates a single creature they can see and hear, or one they're Tracking or Gathering Information about, as their prey. The naiad ship hunter gains a +2 circumstance bonus to Perception checks to @UUID[Compendium.pf2e.actionspf2e.Item.Seek] the prey, to Survival checks to @UUID[Compendium.pf2e.actionspf2e.Item.Track] the prey, and to Diplomacy checks to @UUID[Compendium.pf2e.actionspf2e.Item.Gather Information] about the prey. This effect lasts until they use Hunt Prey again.</p>"
                 },
                 "publication": {
                     "license": "ORC",
