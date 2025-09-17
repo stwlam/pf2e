@@ -7,10 +7,10 @@
             "value": "<p>You gain a +1 status bonus to attack and damage rolls.</p>"
         },
         "duration": {
-            "expiry": null,
+            "expiry": "turn-start",
             "sustained": false,
-            "unit": "unlimited",
-            "value": -1
+            "unit": "rounds",
+            "value": 1
         },
         "fromSpell": false,
         "level": {
