@@ -364,6 +364,10 @@
                 },
                 "location": {
                     "heightenedLevel": 6,
+                    "uses": {
+                        "max": 3,
+                        "value": 3
+                    },
                     "value": "5eooJCzgS8ehnFUd"
                 },
                 "publication": {
@@ -1407,6 +1411,10 @@
                 },
                 "location": {
                     "heightenedLevel": 6,
+                    "uses": {
+                        "max": 3,
+                        "value": 3
+                    },
                     "value": "5eooJCzgS8ehnFUd"
                 },
                 "publication": {
@@ -1840,7 +1848,7 @@
             },
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/illusory-disguise.webp",
-            "name": "Illusory Disguise",
+            "name": "Illusory Disguise (At Will)",
             "sort": 2600000,
             "system": {
                 "area": null,
@@ -1904,7 +1912,7 @@
             },
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/illusory-object.webp",
-            "name": "Illusory Object",
+            "name": "Illusory Object (At Will)",
             "sort": 2700000,
             "system": {
                 "area": {
@@ -2374,7 +2382,7 @@
             },
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "icons/magic/control/control-influence-puppet.webp",
-            "name": "Ventriloquism",
+            "name": "Ventriloquism (At Will)",
             "sort": 3300000,
             "system": {
                 "area": null,
@@ -2883,7 +2891,7 @@
             "type": "action"
         }
     ],
-    "name": "Lamia Matriarch",
+    "name": "Vesinra",
     "system": {
         "abilities": {
             "cha": {
@@ -3025,7 +3033,8 @@
             },
             "value": [
                 "beast",
-                "humanoid"
+                "humanoid",
+                "mythic"
             ]
         }
     },

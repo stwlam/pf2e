@@ -28,9 +28,6 @@
                     "title": ""
                 },
                 "rules": [],
-                "showSlotlessLevels": {
-                    "value": false
-                },
                 "slots": {
                     "slot0": {
                         "max": 5,
@@ -121,6 +118,17 @@
                                 "id": "x2JQshUoThubGmFM"
                             }
                         ]
+                    },
+                    "slot6": {
+                        "max": 2,
+                        "prepared": [
+                            {
+                                "id": "sXz6ZbeKVFqEBvl1"
+                            },
+                            {
+                                "id": "CNczD4zv3KdOx1pT"
+                            }
+                        ]
                     }
                 },
                 "slug": null,
@@ -136,6 +144,153 @@
             "type": "spellcastingEntry"
         },
         {
+            "_id": "sXz6ZbeKVFqEBvl1",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.spells-srd.Item.TDNlDWbYb58Y55Da"
+            },
+            "folder": "zDlxATrLAlbYA2Mv",
+            "img": "systems/pf2e/icons/spells/chain-lightning.webp",
+            "name": "Chain Lightning",
+            "sort": 200000,
+            "system": {
+                "area": null,
+                "cost": {
+                    "value": ""
+                },
+                "counteraction": false,
+                "damage": {
+                    "0": {
+                        "applyMod": false,
+                        "category": null,
+                        "formula": "8d12",
+                        "kinds": [
+                            "damage"
+                        ],
+                        "materials": [],
+                        "type": "electricity"
+                    }
+                },
+                "defense": {
+                    "save": {
+                        "basic": true,
+                        "statistic": "reflex"
+                    }
+                },
+                "description": {
+                    "value": "<p>You discharge a powerful bolt of lightning at the target, dealing 8d12 electricity damage. The target must attempt a basic Reflex save. The electricity arcs to another creature within 30 feet of the first target, jumps to another creature within 30 feet of that target, and so on. You can end the chain at any point. You can't target the same creature more than once, and you must have line of effect to all targets. Roll the damage only once, and apply it to each target (halving or doubling as appropriate for its saving throw outcome). The chain ends if any one of the targets critically succeeds at its save.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 1d12.</p>"
+                },
+                "duration": {
+                    "sustained": false,
+                    "value": ""
+                },
+                "heightening": {
+                    "damage": {
+                        "0": "1d12"
+                    },
+                    "interval": 1,
+                    "type": "interval"
+                },
+                "level": {
+                    "value": 6
+                },
+                "location": {
+                    "value": "R8E7YuPf510km8MI"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "range": {
+                    "value": "500 feet"
+                },
+                "requirements": "",
+                "rules": [],
+                "slug": "chain-lightning",
+                "target": {
+                    "value": "1 creature, plus any number of additional creatures"
+                },
+                "time": {
+                    "value": "2"
+                },
+                "traits": {
+                    "rarity": "common",
+                    "traditions": [
+                        "arcane",
+                        "primal"
+                    ],
+                    "value": [
+                        "concentrate",
+                        "electricity",
+                        "manipulate"
+                    ]
+                }
+            },
+            "type": "spell"
+        },
+        {
+            "_id": "CNczD4zv3KdOx1pT",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.spells-srd.Item.7Iela4GgVeO3LfAo"
+            },
+            "folder": "zDlxATrLAlbYA2Mv",
+            "img": "systems/pf2e/icons/spells/wall-of-force.webp",
+            "name": "Wall of Force",
+            "sort": 300000,
+            "system": {
+                "area": null,
+                "cost": {
+                    "value": ""
+                },
+                "counteraction": false,
+                "damage": {},
+                "defense": null,
+                "description": {
+                    "value": "<p>You form an @UUID[Compendium.pf2e.conditionitems.Item.Invisible] wall of pure magical force up to 50 feet long and up to 20 feet high. The wall has no discernible thickness. You must create the wall in an unbroken open space so its edges don't pass through any creatures or objects, or the spell is lost. The wall has AC 10, Hardness 30, and 60 Hit Points, and it's immune to critical hits and precision damage. The wall blocks physical effects from passing through it, and because it's made of force, it blocks incorporeal and ethereal creatures as well. Teleportation effects can pass through the barrier, as can visual effects (since the wall is invisible). Wall of force is immune to counteracting effects of its level or lower, but the wall is automatically destroyed by a @UUID[Compendium.pf2e.spells-srd.Item.Disintegrate] spell of any rank.</p><hr /><p><strong>Heightened (+2)</strong> The Hit Points of the wall increase by 20.</p>"
+                },
+                "duration": {
+                    "sustained": false,
+                    "value": "1 minute"
+                },
+                "level": {
+                    "value": 6
+                },
+                "location": {
+                    "value": "R8E7YuPf510km8MI"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "range": {
+                    "value": "30 feet"
+                },
+                "requirements": "",
+                "rules": [],
+                "slug": "wall-of-force",
+                "target": {
+                    "value": ""
+                },
+                "time": {
+                    "value": "3"
+                },
+                "traits": {
+                    "rarity": "common",
+                    "traditions": [
+                        "arcane",
+                        "occult"
+                    ],
+                    "value": [
+                        "concentrate",
+                        "force",
+                        "manipulate"
+                    ]
+                }
+            },
+            "type": "spell"
+        },
+        {
             "_id": "j8zTxdIBffEw19fm",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.spells-srd.Item.xxWhyl81w3ckslAU"
@@ -143,7 +298,7 @@
             "folder": "iDjm2cXyRAe4VZ35",
             "img": "icons/magic/water/vortex-water-whirlpool.webp",
             "name": "Howling Blizzard",
-            "sort": 200000,
+            "sort": 400000,
             "system": {
                 "area": {
                     "type": "cone",
@@ -258,7 +413,7 @@
             "folder": "iDjm2cXyRAe4VZ35",
             "img": "icons/magic/water/barrier-ice-crystal-wall-jagged-blue.webp",
             "name": "Wall of Ice",
-            "sort": 300000,
+            "sort": 500000,
             "system": {
                 "area": null,
                 "cost": {
@@ -339,7 +494,7 @@
             "folder": "7cyoYPoPYA01mErU",
             "img": "icons/magic/fire/flame-burning-campfire-rocks.webp",
             "name": "Wall of Fire",
-            "sort": 400000,
+            "sort": 600000,
             "system": {
                 "area": null,
                 "cost": {
@@ -419,7 +574,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "icons/magic/fire/projectile-fireball-orange-yellow.webp",
             "name": "Fireball",
-            "sort": 500000,
+            "sort": 700000,
             "system": {
                 "area": {
                     "type": "burst",
@@ -507,7 +662,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "systems/pf2e/icons/spells/haste.webp",
             "name": "Haste",
-            "sort": 600000,
+            "sort": 800000,
             "system": {
                 "area": null,
                 "cost": {
@@ -579,7 +734,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "icons/magic/lightning/bolt-strike-sparks-blue.webp",
             "name": "Lightning Bolt",
-            "sort": 700000,
+            "sort": 900000,
             "system": {
                 "area": {
                     "type": "line",
@@ -667,7 +822,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "icons/magic/air/fog-gas-smoke-swirling-white.webp",
             "name": "Wall of Wind",
-            "sort": 800000,
+            "sort": 1000000,
             "system": {
                 "area": null,
                 "cost": {
@@ -734,7 +889,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "icons/magic/fire/projectile-fireball-smoke-orange.webp",
             "name": "Blazing Bolt",
-            "sort": 900000,
+            "sort": 1100000,
             "system": {
                 "area": null,
                 "cost": {
@@ -857,7 +1012,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "icons/magic/fire/orb-vortex.webp",
             "name": "Noise Blast",
-            "sort": 1000000,
+            "sort": 1200000,
             "system": {
                 "area": {
                     "type": "burst",
@@ -947,7 +1102,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "icons/skills/melee/strike-weapon-polearm-ice-blue.webp",
             "name": "Telekinetic Maneuver",
-            "sort": 1100000,
+            "sort": 1300000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1010,7 +1165,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/dragon-breath.webp",
             "name": "Breathe Fire",
-            "sort": 1200000,
+            "sort": 1400000,
             "system": {
                 "area": {
                     "type": "cone",
@@ -1098,7 +1253,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "icons/magic/acid/orb-bubble-smoke-drip.webp",
             "name": "Caustic Blast",
-            "sort": 1300000,
+            "sort": 1500000,
             "system": {
                 "area": {
                     "type": "burst",
@@ -1187,7 +1342,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "icons/magic/lightning/bolt-strike-forked-blue.webp",
             "name": "Electric Arc",
-            "sort": 1400000,
+            "sort": 1600000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1273,7 +1428,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/magic-missile.webp",
             "name": "Force Barrage",
-            "sort": 1500000,
+            "sort": 1700000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1347,7 +1502,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/gust-of-wind.webp",
             "name": "Gust of Wind",
-            "sort": 1600000,
+            "sort": 1800000,
             "system": {
                 "area": {
                     "type": "line",
@@ -1428,7 +1583,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "icons/magic/fire/explosion-embers-evade-silhouette.webp",
             "name": "Ignition",
-            "sort": 1700000,
+            "sort": 1900000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1539,7 +1694,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "systems/pf2e/icons/spells/light.webp",
             "name": "Light",
-            "sort": 1800000,
+            "sort": 2000000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1604,7 +1759,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/longstrider.webp",
             "name": "Tailwind",
-            "sort": 1900000,
+            "sort": 2100000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1666,7 +1821,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "icons/skills/ranged/bullets-triple-ball-yellow.webp",
             "name": "Telekinetic Projectile",
-            "sort": 2000000,
+            "sort": 2200000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1791,7 +1946,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/shocking-grasp.webp",
             "name": "Thunderstrike",
-            "sort": 2100000,
+            "sort": 2300000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1884,7 +2039,7 @@
             "_id": "kuBU5UfKp0xpH0IN",
             "img": "systems/pf2e/icons/default-icons/melee.svg",
             "name": "Runelord's Polearm",
-            "sort": 2200000,
+            "sort": 2400000,
             "system": {
                 "attackEffects": {
                     "value": []
@@ -1925,7 +2080,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Remove a Condition",
-            "sort": 2300000,
+            "sort": 2500000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1956,7 +2111,7 @@
             "_id": "FPr7PTLJpqmzY994",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Beyond Life",
-            "sort": 2400000,
+            "sort": 2600000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1982,10 +2137,51 @@
             "type": "action"
         },
         {
+            "_id": "do6bYXDHHw5fHXIC",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.0zvUNv8hRTdwXmhF"
+            },
+            "folder": "63FzE1sSn3PK5yy4",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "name": "Mythic Resilience (Will)",
+            "sort": 2700000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p>The creature treats its saving throws with the associated save as one degree of success better than it rolled. This is not cumulative with other effects that change their degree of success, like the incapacitation trait (except for rolling a natural 1 or 20). Each time the monster gains mythic resilience, choose one save. The ability should apply to the creature's highest saves first.</p>"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder War of Immortals"
+                },
+                "rules": [
+                    {
+                        "adjustment": {
+                            "all": "one-degree-better"
+                        },
+                        "key": "AdjustDegreeOfSuccess",
+                        "selector": "will"
+                    }
+                ],
+                "slug": "mythic-mythic-resilience",
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
             "_id": "y7cynF6yL9QBQG85",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Vanishing Death",
-            "sort": 2500000,
+            "sort": 2800000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -2018,7 +2214,7 @@
             "_id": "0gGpGNd5NNIl0TXk",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Manifest Runelord's Polearm",
-            "sort": 2600000,
+            "sort": 2900000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -2053,7 +2249,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/Passive.webp",
             "name": "Mythic Power",
-            "sort": 2700000,
+            "sort": 3000000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -2082,7 +2278,7 @@
             "_id": "URcGZAgwgFGiU9cQ",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Quickened Casting",
-            "sort": 2800000,
+            "sort": 3100000,
             "system": {
                 "actionType": {
                     "value": "free"
@@ -2118,7 +2314,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Recharge",
-            "sort": 2900000,
+            "sort": 3200000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -2149,7 +2345,7 @@
             "_id": "Arxws8TsMP4QUFJc",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Steady Spellcasting",
-            "sort": 3000000,
+            "sort": 3300000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -2276,22 +2472,31 @@
         },
         "skills": {
             "arcana": {
-                "base": 26
+                "base": 26,
+                "special": []
             },
             "crafting": {
-                "base": 22
+                "base": 22,
+                "special": []
             },
             "deception": {
-                "base": 22
+                "base": 22,
+                "special": []
             },
             "intimidation": {
-                "base": 22
+                "base": 22,
+                "special": []
+            },
+            "occultism": {
+                "base": 24,
+                "special": []
             },
             "occultism +24": {
                 "base": null
             },
             "society": {
-                "base": 22
+                "base": 22,
+                "special": []
             }
         },
         "traits": {

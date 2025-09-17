@@ -252,13 +252,13 @@
                     "value": 23
                 },
                 "damageRolls": {
-                    "1LQ65Ekhh2612r7z": {
-                        "damage": "1d6",
-                        "damageType": "fire"
-                    },
                     "Pe7Oo3l6R3fkA8IT": {
                         "damage": "2d8+12",
                         "damageType": "slashing"
+                    },
+                    "o15arZlrfgQPPGnQ": {
+                        "damage": "1d6",
+                        "damageType": "fire"
                     }
                 },
                 "description": {

@@ -125,7 +125,7 @@
             },
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/Passive.webp",
-            "name": "Mythic Resilience",
+            "name": "Mythic Resilience (Reflex)",
             "sort": 400000,
             "system": {
                 "actionType": {
@@ -149,21 +149,7 @@
                             "all": "one-degree-better"
                         },
                         "key": "AdjustDegreeOfSuccess",
-                        "selector": "fortitude"
-                    },
-                    {
-                        "adjustment": {
-                            "all": "one-degree-better"
-                        },
-                        "key": "AdjustDegreeOfSuccess",
                         "selector": "reflex"
-                    },
-                    {
-                        "adjustment": {
-                            "all": "one-degree-better"
-                        },
-                        "key": "AdjustDegreeOfSuccess",
-                        "selector": "will"
                     }
                 ],
                 "slug": "mythic-mythic-resilience",
