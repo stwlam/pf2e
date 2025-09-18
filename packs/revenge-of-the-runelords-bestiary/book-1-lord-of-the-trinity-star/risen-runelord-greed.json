@@ -28,9 +28,6 @@
                     "title": ""
                 },
                 "rules": [],
-                "showSlotlessLevels": {
-                    "value": false
-                },
                 "slots": {
                     "slot0": {
                         "max": 5,
@@ -121,6 +118,17 @@
                                 "id": "hmOuQwJg9E07kn4l"
                             }
                         ]
+                    },
+                    "slot6": {
+                        "max": 2,
+                        "prepared": [
+                            {
+                                "id": "2w7cEXEpwqIfpTrv"
+                            },
+                            {
+                                "id": "tT69wVpeMYkHmVb9"
+                            }
+                        ]
                     }
                 },
                 "slug": null,
@@ -136,6 +144,160 @@
             "type": "spellcastingEntry"
         },
         {
+            "_id": "2w7cEXEpwqIfpTrv",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.spells-srd.Item.dN8QBNuTiaBHCKUe"
+            },
+            "folder": "zDlxATrLAlbYA2Mv",
+            "img": "icons/creatures/amphibians/frog-confused-green-blue.webp",
+            "name": "Cursed Metamorphosis",
+            "sort": 200000,
+            "system": {
+                "area": null,
+                "cost": {
+                    "value": ""
+                },
+                "counteraction": false,
+                "damage": {},
+                "defense": {
+                    "save": {
+                        "basic": false,
+                        "statistic": "fortitude"
+                    }
+                },
+                "description": {
+                    "value": "<p>You transform the target creature into a harmless animal appropriate to the area, with effects based on its Fortitude save.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target's body gains minor features of the harmless animal. Its insides churn as they partially transform, causing it to be @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 1}. When it recovers from the sickened condition, its features revert to normal.</p>\n<p><strong>Failure</strong> The target transforms for 1 minute but keeps its mind. If it spends all its actions on its turn concentrating on its original form, it can attempt a @Check[will] save to end the effect immediately.</p>\n<p><strong>Critical Failure</strong> The target is transformed into the chosen harmless animal, body and mind, for an unlimited duration.</p>"
+                },
+                "duration": {
+                    "sustained": false,
+                    "value": "varies"
+                },
+                "level": {
+                    "value": 6
+                },
+                "location": {
+                    "value": "R8E7YuPf510km8MI"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "range": {
+                    "value": "30 feet"
+                },
+                "requirements": "",
+                "rules": [],
+                "slug": "cursed-metamorphosis",
+                "target": {
+                    "value": "1 creature"
+                },
+                "time": {
+                    "value": "2"
+                },
+                "traits": {
+                    "rarity": "common",
+                    "traditions": [
+                        "arcane",
+                        "occult",
+                        "primal"
+                    ],
+                    "value": [
+                        "concentrate",
+                        "curse",
+                        "incapacitation",
+                        "manipulate",
+                        "polymorph"
+                    ]
+                }
+            },
+            "type": "spell"
+        },
+        {
+            "_id": "tT69wVpeMYkHmVb9",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.spells-srd.Item.r7ihOgKv19eJQnik"
+            },
+            "folder": "zDlxATrLAlbYA2Mv",
+            "img": "systems/pf2e/icons/spells/disintegrate.webp",
+            "name": "Disintegrate",
+            "sort": 300000,
+            "system": {
+                "area": null,
+                "cost": {
+                    "value": ""
+                },
+                "counteraction": false,
+                "damage": {
+                    "0": {
+                        "applyMod": false,
+                        "category": null,
+                        "formula": "12d10",
+                        "kinds": [
+                            "damage"
+                        ],
+                        "materials": [],
+                        "type": "untyped"
+                    }
+                },
+                "defense": {
+                    "save": {
+                        "basic": true,
+                        "statistic": "fortitude"
+                    }
+                },
+                "description": {
+                    "value": "<p>A black tracer bolt flies toward your target, and upon making contact intensifies into a powerful destructive beam. Make a spell attack against the target. If you hit an object or force construct (such as a wall of force), it's destroyed with no save unless it's an artifact or similarly powerful. A single casting can destroy no more than a 10-foot cube of matter. If you hit a creature, it takes 12d10 damage (no damage type) with a basic Fortitude save. If you critically hit, the target gets a result one degree of success worse than the outcome of its Fortitude save. A creature reduced to 0 HP is blasted to fine powder; its gear remains.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d10.</p>"
+                },
+                "duration": {
+                    "sustained": false,
+                    "value": ""
+                },
+                "heightening": {
+                    "damage": {
+                        "0": "2d10"
+                    },
+                    "interval": 1,
+                    "type": "interval"
+                },
+                "level": {
+                    "value": 6
+                },
+                "location": {
+                    "value": "R8E7YuPf510km8MI"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "range": {
+                    "value": "120 feet"
+                },
+                "requirements": "",
+                "rules": [],
+                "slug": "disintegrate",
+                "target": {
+                    "value": "1 creature, unattended object, or force construct"
+                },
+                "time": {
+                    "value": "2"
+                },
+                "traits": {
+                    "rarity": "common",
+                    "traditions": [
+                        "arcane"
+                    ],
+                    "value": [
+                        "attack",
+                        "concentrate",
+                        "manipulate"
+                    ]
+                }
+            },
+            "type": "spell"
+        },
+        {
             "_id": "O4oOehY3PkTUkfSL",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.spells-srd.Item.1K6AYGisvo9gqdhs"
@@ -143,7 +305,7 @@
             "folder": "iDjm2cXyRAe4VZ35",
             "img": "systems/pf2e/icons/spells/elemental-form.webp",
             "name": "Elemental Form",
-            "sort": 200000,
+            "sort": 400000,
             "system": {
                 "area": null,
                 "cost": {
@@ -205,7 +367,7 @@
             "folder": "iDjm2cXyRAe4VZ35",
             "img": "systems/pf2e/icons/spells/impaling-spike.webp",
             "name": "Impaling Spike",
-            "sort": 300000,
+            "sort": 500000,
             "system": {
                 "area": null,
                 "cost": {
@@ -292,7 +454,7 @@
             "folder": "iDjm2cXyRAe4VZ35",
             "img": "icons/commodities/stone/paver-brick-brown.webp",
             "name": "Wall of Stone",
-            "sort": 400000,
+            "sort": 600000,
             "system": {
                 "area": null,
                 "cost": {
@@ -354,7 +516,7 @@
             "folder": "7cyoYPoPYA01mErU",
             "img": "icons/creatures/birds/corvid-call-sound-glowing.webp",
             "name": "Aerial Form",
-            "sort": 500000,
+            "sort": 700000,
             "system": {
                 "area": null,
                 "cost": {
@@ -416,7 +578,7 @@
             "folder": "7cyoYPoPYA01mErU",
             "img": "icons/commodities/wood/log-cut-cherry-brown.webp",
             "name": "Creation",
-            "sort": 600000,
+            "sort": 800000,
             "system": {
                 "area": null,
                 "cost": {
@@ -477,7 +639,7 @@
             "folder": "7cyoYPoPYA01mErU",
             "img": "icons/creatures/mammals/bats-movement-flying-black.webp",
             "name": "Fly",
-            "sort": 700000,
+            "sort": 900000,
             "system": {
                 "area": null,
                 "cost": {
@@ -540,7 +702,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "icons/creatures/invertebrates/spider-mandibles-brown.webp",
             "name": "Insect Form",
-            "sort": 800000,
+            "sort": 1000000,
             "system": {
                 "area": null,
                 "cost": {
@@ -601,7 +763,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "icons/magic/earth/strike-fist-stone-light.webp",
             "name": "One with Stone",
-            "sort": 900000,
+            "sort": 1100000,
             "system": {
                 "area": null,
                 "cost": {
@@ -664,7 +826,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "icons/magic/nature/root-vine-entangled-humanoid.webp",
             "name": "Wall of Thorns",
-            "sort": 1000000,
+            "sort": 1200000,
             "system": {
                 "area": null,
                 "cost": {
@@ -745,7 +907,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "icons/magic/unholy/silhouette-evil-horned-giant.webp",
             "name": "Enlarge",
-            "sort": 1100000,
+            "sort": 1300000,
             "system": {
                 "area": null,
                 "cost": {
@@ -817,7 +979,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "systems/pf2e/icons/spells/humanoid-form.webp",
             "name": "Humanoid Form",
-            "sort": 1200000,
+            "sort": 1400000,
             "system": {
                 "area": null,
                 "cost": {
@@ -880,7 +1042,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "icons/magic/unholy/strike-body-life-soul-purple.webp",
             "name": "Shrink",
-            "sort": 1300000,
+            "sort": 1500000,
             "system": {
                 "area": null,
                 "cost": {
@@ -952,7 +1114,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "icons/skills/movement/feet-winged-sandals-tan.webp",
             "name": "Fleet Step",
-            "sort": 1400000,
+            "sort": 1600000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1013,7 +1175,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "icons/creatures/claws/claw-hooked-curved.webp",
             "name": "Gouging Claw",
-            "sort": 1500000,
+            "sort": 1700000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1136,7 +1298,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "systems/pf2e/icons/spells/light.webp",
             "name": "Light",
-            "sort": 1600000,
+            "sort": 1800000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1201,7 +1363,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/mending.webp",
             "name": "Mending",
-            "sort": 1700000,
+            "sort": 1900000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1279,7 +1441,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/pest-form.webp",
             "name": "Pest Form",
-            "sort": 1800000,
+            "sort": 2000000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1341,7 +1503,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
             "name": "Read Aura",
-            "sort": 1900000,
+            "sort": 2100000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1421,7 +1583,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "systems/pf2e/icons/spells/shield.webp",
             "name": "Shield",
-            "sort": 2000000,
+            "sort": 2200000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1484,7 +1646,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "icons/skills/ranged/bullets-triple-ball-yellow.webp",
             "name": "Telekinetic Projectile",
-            "sort": 2100000,
+            "sort": 2300000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1605,7 +1767,7 @@
             "_id": "kuBU5UfKp0xpH0IN",
             "img": "systems/pf2e/icons/default-icons/melee.svg",
             "name": "Runelord's Polearm",
-            "sort": 2200000,
+            "sort": 2400000,
             "system": {
                 "attackEffects": {
                     "value": []
@@ -1646,7 +1808,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Remove a Condition",
-            "sort": 2300000,
+            "sort": 2500000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1677,7 +1839,7 @@
             "_id": "FPr7PTLJpqmzY994",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Beyond Life",
-            "sort": 2400000,
+            "sort": 2600000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1703,10 +1865,51 @@
             "type": "action"
         },
         {
+            "_id": "GeTfKtz6bnCslj5V",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.0zvUNv8hRTdwXmhF"
+            },
+            "folder": "63FzE1sSn3PK5yy4",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "name": "Mythic Resilience (Will)",
+            "sort": 2700000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p>The creature treats its saving throws with the associated save as one degree of success better than it rolled. This is not cumulative with other effects that change their degree of success, like the incapacitation trait (except for rolling a natural 1 or 20). Each time the monster gains mythic resilience, choose one save. The ability should apply to the creature's highest saves first.</p>"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder War of Immortals"
+                },
+                "rules": [
+                    {
+                        "adjustment": {
+                            "all": "one-degree-better"
+                        },
+                        "key": "AdjustDegreeOfSuccess",
+                        "selector": "will"
+                    }
+                ],
+                "slug": "mythic-mythic-resilience",
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
             "_id": "y7cynF6yL9QBQG85",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Vanishing Death",
-            "sort": 2500000,
+            "sort": 2800000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1739,7 +1942,7 @@
             "_id": "0gGpGNd5NNIl0TXk",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Manifest Runelord's Polearm",
-            "sort": 2600000,
+            "sort": 2900000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1774,7 +1977,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/Passive.webp",
             "name": "Mythic Power",
-            "sort": 2700000,
+            "sort": 3000000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1803,7 +2006,7 @@
             "_id": "URcGZAgwgFGiU9cQ",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Quickened Casting",
-            "sort": 2800000,
+            "sort": 3100000,
             "system": {
                 "actionType": {
                     "value": "free"
@@ -1839,7 +2042,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Recharge",
-            "sort": 2900000,
+            "sort": 3200000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1870,7 +2073,7 @@
             "_id": "Arxws8TsMP4QUFJc",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Steady Spellcasting",
-            "sort": 3000000,
+            "sort": 3300000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1997,22 +2200,31 @@
         },
         "skills": {
             "arcana": {
-                "base": 26
+                "base": 26,
+                "special": []
             },
             "crafting": {
-                "base": 22
+                "base": 22,
+                "special": []
             },
             "deception": {
-                "base": 22
+                "base": 22,
+                "special": []
             },
             "intimidation": {
-                "base": 22
+                "base": 22,
+                "special": []
+            },
+            "occultism": {
+                "base": 24,
+                "special": []
             },
             "occultism +24": {
                 "base": null
             },
             "society": {
-                "base": 22
+                "base": 22,
+                "special": []
             }
         },
         "traits": {

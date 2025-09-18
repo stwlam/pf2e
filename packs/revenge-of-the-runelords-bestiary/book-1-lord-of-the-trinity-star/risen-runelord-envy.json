@@ -118,6 +118,17 @@
                                 "id": "ddUkPdTnTV27bmja"
                             }
                         ]
+                    },
+                    "slot6": {
+                        "max": 2,
+                        "prepared": [
+                            {
+                                "id": "o4fAHMJTAQznlWay"
+                            },
+                            {
+                                "id": "yTs3VHt8nj8pYZOF"
+                            }
+                        ]
                     }
                 },
                 "slug": null,
@@ -133,6 +144,75 @@
             "type": "spellcastingEntry"
         },
         {
+            "_id": "yTs3VHt8nj8pYZOF",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.spells-srd.Item.yrZA4k2VAqEP8xx7"
+            },
+            "folder": "zDlxATrLAlbYA2Mv",
+            "img": "icons/magic/air/wind-vortex-swirl-blue-purple.webp",
+            "name": "Repulsion",
+            "sort": 200000,
+            "system": {
+                "area": null,
+                "cost": {
+                    "value": ""
+                },
+                "counteraction": false,
+                "damage": {},
+                "defense": {
+                    "save": {
+                        "basic": false,
+                        "statistic": "will"
+                    }
+                },
+                "description": {
+                    "value": "<p>You manifest an aura that prevents creatures from approaching you. When casting the spell, you can make the area any radius you choose, up to 40 feet. A creature must attempt a Will save if it's within the area when you Cast the Spell or as soon as it enters the area while the spell is in effect. Once a creature has attempted the save, it uses the same result for that casting of <em>repulsion</em>. Any restrictions on a creature's movement apply only if it voluntarily moves toward you. For example, if you move closer to a creature, it doesn't then need to move away.</p>\n<hr />\n<p><strong>Critical Success</strong> The creature's movement is not restricted.</p>\n<p><strong>Success</strong> The creature treats each square in the area as difficult terrain when moving closer to you.</p>\n<p><strong>Failure</strong> The creature can't move closer to you within the area.</p>"
+                },
+                "duration": {
+                    "sustained": false,
+                    "value": "1 minute"
+                },
+                "level": {
+                    "value": 6
+                },
+                "location": {
+                    "value": "R8E7YuPf510km8MI"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "range": {
+                    "value": "emanation up to 40-feet"
+                },
+                "requirements": "",
+                "rules": [],
+                "slug": "repulsion",
+                "target": {
+                    "value": ""
+                },
+                "time": {
+                    "value": "2"
+                },
+                "traits": {
+                    "rarity": "common",
+                    "traditions": [
+                        "arcane",
+                        "divine",
+                        "occult"
+                    ],
+                    "value": [
+                        "aura",
+                        "concentrate",
+                        "manipulate",
+                        "mental"
+                    ]
+                }
+            },
+            "type": "spell"
+        },
+        {
             "_id": "BnsvhFVBRblDs5Kl",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.spells-srd.Item.bay4AfSu2iIozNNW"
@@ -140,7 +220,7 @@
             "folder": "iDjm2cXyRAe4VZ35",
             "img": "systems/pf2e/icons/spells/banishment.webp",
             "name": "Banishment",
-            "sort": 200000,
+            "sort": 300000,
             "system": {
                 "area": null,
                 "cost": {
@@ -212,6 +292,71 @@
             "type": "spell"
         },
         {
+            "_id": "o4fAHMJTAQznlWay",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.spells-srd.Item.JOdOpbPDl7nqvJUm"
+            },
+            "folder": "7cyoYPoPYA01mErU",
+            "img": "systems/pf2e/icons/spells/globe-of-invulnerability.webp",
+            "name": "Dispelling Globe",
+            "sort": 400000,
+            "system": {
+                "area": {
+                    "type": "burst",
+                    "value": 10
+                },
+                "cost": {
+                    "value": ""
+                },
+                "counteraction": true,
+                "damage": {},
+                "defense": null,
+                "description": {
+                    "value": "<p>You create an immobile globe around yourself that attempts to counteract any spell from outside the globe whose area or targets enter into the globe, as if the globe were a @UUID[Compendium.pf2e.spells-srd.Item.Dispel Magic] spell 1 rank lower than its actual spell rank.</p>\n<p>If the counteract attempt succeeds, it prevents only the portion of the spell that would have entered the globe (so if the spell also has targets outside the globe, or part of its area is beyond the globe, those targets or that area is affected normally).</p>\n<p>You must form the sphere in an unbroken open space, so its edges don't pass through any creatures or objects, or the spell is lost (though creatures can enter the globe after the spell is cast).</p>"
+                },
+                "duration": {
+                    "sustained": false,
+                    "value": "10 minutes"
+                },
+                "level": {
+                    "value": 4
+                },
+                "location": {
+                    "value": "R8E7YuPf510km8MI"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "range": {
+                    "value": ""
+                },
+                "requirements": "",
+                "rules": [],
+                "slug": "dispelling-globe",
+                "target": {
+                    "value": ""
+                },
+                "time": {
+                    "value": "2"
+                },
+                "traits": {
+                    "rarity": "uncommon",
+                    "traditions": [
+                        "arcane",
+                        "divine",
+                        "occult"
+                    ],
+                    "value": [
+                        "concentrate",
+                        "manipulate"
+                    ]
+                }
+            },
+            "type": "spell"
+        },
+        {
             "_id": "boIuzeptqFbLPxQd",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.spells-srd.Item.ksLCg62cLOojw3gN"
@@ -219,7 +364,7 @@
             "folder": "7cyoYPoPYA01mErU",
             "img": "icons/equipment/shield/heater-steel-segmented-purple.webp",
             "name": "Planar Tether",
-            "sort": 300000,
+            "sort": 500000,
             "system": {
                 "area": null,
                 "cost": {
@@ -286,7 +431,7 @@
             "folder": "7cyoYPoPYA01mErU",
             "img": "icons/equipment/feet/boots-leather-laced-brown.webp",
             "name": "Unfettered Movement",
-            "sort": 400000,
+            "sort": 600000,
             "system": {
                 "area": null,
                 "cost": {
@@ -348,7 +493,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "icons/magic/light/orb-hand-green.webp",
             "name": "Clairaudience",
-            "sort": 500000,
+            "sort": 700000,
             "system": {
                 "area": null,
                 "cost": {
@@ -410,7 +555,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "icons/magic/light/projectile-stars-blue.webp",
             "name": "Levitate",
-            "sort": 600000,
+            "sort": 800000,
             "system": {
                 "area": null,
                 "cost": {
@@ -471,7 +616,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "icons/magic/time/hourglass-tilted-gray.webp",
             "name": "Slow",
-            "sort": 700000,
+            "sort": 900000,
             "system": {
                 "area": null,
                 "cost": {
@@ -548,7 +693,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "icons/environment/settlement/lighthouse-rock-red.webp",
             "name": "Veil of Privacy",
-            "sort": 800000,
+            "sort": 1000000,
             "system": {
                 "area": null,
                 "cost": {
@@ -610,7 +755,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "systems/pf2e/icons/spells/blur.webp",
             "name": "Blur",
-            "sort": 900000,
+            "sort": 1100000,
             "system": {
                 "area": null,
                 "cost": {
@@ -673,7 +818,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "systems/pf2e/icons/spells/dispel-magic.webp",
             "name": "Dispel Magic",
-            "sort": 1000000,
+            "sort": 1200000,
             "system": {
                 "area": null,
                 "cost": {
@@ -736,7 +881,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "systems/pf2e/icons/spells/endure-elements.webp",
             "name": "Environmental Endurance",
-            "sort": 1100000,
+            "sort": 1300000,
             "system": {
                 "area": null,
                 "cost": {
@@ -798,7 +943,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "icons/magic/defensive/shield-barrier-deflect-teal.webp",
             "name": "Resist Energy",
-            "sort": 1200000,
+            "sort": 1400000,
             "system": {
                 "area": null,
                 "cost": {
@@ -876,7 +1021,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "systems/pf2e/icons/spells/see-invisibility.webp",
             "name": "See the Unseen",
-            "sort": 1300000,
+            "sort": 1500000,
             "system": {
                 "area": null,
                 "cost": {
@@ -939,7 +1084,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/charm.webp",
             "name": "Charm",
-            "sort": 1400000,
+            "sort": 1600000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1020,7 +1165,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/command.webp",
             "name": "Command",
-            "sort": 1500000,
+            "sort": 1700000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1100,7 +1245,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "systems/pf2e/icons/spells/daze.webp",
             "name": "Daze",
-            "sort": 1600000,
+            "sort": 1800000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1188,7 +1333,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/fear.webp",
             "name": "Fear",
-            "sort": 1700000,
+            "sort": 1900000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1269,7 +1414,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "systems/pf2e/icons/spells/ghost-sound.webp",
             "name": "Figment",
-            "sort": 1800000,
+            "sort": 2000000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1333,7 +1478,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "systems/pf2e/icons/spells/light.webp",
             "name": "Light",
-            "sort": 1900000,
+            "sort": 2100000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1398,7 +1543,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "icons/magic/light/explosion-star-glow-silhouette.webp",
             "name": "Read Aura",
-            "sort": 2000000,
+            "sort": 2200000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1478,7 +1623,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "systems/pf2e/icons/spells/shield.webp",
             "name": "Shield",
-            "sort": 2100000,
+            "sort": 2300000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1537,7 +1682,7 @@
             "_id": "kuBU5UfKp0xpH0IN",
             "img": "systems/pf2e/icons/default-icons/melee.svg",
             "name": "Runelord's Polearm",
-            "sort": 2200000,
+            "sort": 2400000,
             "system": {
                 "attackEffects": {
                     "value": []
@@ -1578,7 +1723,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Remove a Condition",
-            "sort": 2300000,
+            "sort": 2500000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1609,7 +1754,7 @@
             "_id": "FPr7PTLJpqmzY994",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Beyond Life",
-            "sort": 2400000,
+            "sort": 2600000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1635,10 +1780,51 @@
             "type": "action"
         },
         {
+            "_id": "Pip3HkcEG7gwj77V",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.0zvUNv8hRTdwXmhF"
+            },
+            "folder": "63FzE1sSn3PK5yy4",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "name": "Mythic Resilience (Will)",
+            "sort": 2700000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p>The creature treats its saving throws with the associated save as one degree of success better than it rolled. This is not cumulative with other effects that change their degree of success, like the incapacitation trait (except for rolling a natural 1 or 20). Each time the monster gains mythic resilience, choose one save. The ability should apply to the creature's highest saves first.</p>"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder War of Immortals"
+                },
+                "rules": [
+                    {
+                        "adjustment": {
+                            "all": "one-degree-better"
+                        },
+                        "key": "AdjustDegreeOfSuccess",
+                        "selector": "will"
+                    }
+                ],
+                "slug": "mythic-mythic-resilience",
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
             "_id": "y7cynF6yL9QBQG85",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Vanishing Death",
-            "sort": 2500000,
+            "sort": 2800000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1671,7 +1857,7 @@
             "_id": "0gGpGNd5NNIl0TXk",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Manifest Runelord's Polearm",
-            "sort": 2600000,
+            "sort": 2900000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1706,7 +1892,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/Passive.webp",
             "name": "Mythic Power",
-            "sort": 2700000,
+            "sort": 3000000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1735,7 +1921,7 @@
             "_id": "URcGZAgwgFGiU9cQ",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Quickened Casting",
-            "sort": 2800000,
+            "sort": 3100000,
             "system": {
                 "actionType": {
                     "value": "free"
@@ -1771,7 +1957,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Recharge",
-            "sort": 2900000,
+            "sort": 3200000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1802,7 +1988,7 @@
             "_id": "Arxws8TsMP4QUFJc",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Steady Spellcasting",
-            "sort": 3000000,
+            "sort": 3300000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1929,22 +2115,31 @@
         },
         "skills": {
             "arcana": {
-                "base": 26
+                "base": 26,
+                "special": []
             },
             "crafting": {
-                "base": 22
+                "base": 22,
+                "special": []
             },
             "deception": {
-                "base": 22
+                "base": 22,
+                "special": []
             },
             "intimidation": {
-                "base": 22
+                "base": 22,
+                "special": []
+            },
+            "occultism": {
+                "base": 24,
+                "special": []
             },
             "occultism +24": {
                 "base": null
             },
             "society": {
-                "base": 22
+                "base": 22,
+                "special": []
             }
         },
         "traits": {

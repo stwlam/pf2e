@@ -660,8 +660,9 @@
                 },
                 "rules": [
                     {
+                        "effects": [],
                         "key": "Aura",
-                        "radius": 0,
+                        "radius": 90,
                         "slug": "frightful-presence",
                         "traits": [
                             "emotion",
@@ -683,10 +684,51 @@
             "type": "action"
         },
         {
+            "_id": "6jGxaecE6QXtTjPn",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.0zvUNv8hRTdwXmhF"
+            },
+            "folder": "63FzE1sSn3PK5yy4",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "name": "Mythic Resilience (Fortitude)",
+            "sort": 1400000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p>The creature treats its saving throws with the associated save as one degree of success better than it rolled. This is not cumulative with other effects that change their degree of success, like the incapacitation trait (except for rolling a natural 1 or 20). Each time the monster gains mythic resilience, choose one save. The ability should apply to the creature's highest saves first.</p>"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder War of Immortals"
+                },
+                "rules": [
+                    {
+                        "adjustment": {
+                            "all": "one-degree-better"
+                        },
+                        "key": "AdjustDegreeOfSuccess",
+                        "selector": "fortitude"
+                    }
+                ],
+                "slug": "mythic-mythic-resilience",
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
             "_id": "SeDwEvPEsh74UJFj",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Reactive Beak",
-            "sort": 1400000,
+            "sort": 1500000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -718,7 +760,7 @@
             },
             "img": "systems/pf2e/icons/actions/Reaction.webp",
             "name": "Reactive Strike (Beak Only)",
-            "sort": 1500000,
+            "sort": 1600000,
             "system": {
                 "actionType": {
                     "value": "reaction"
@@ -751,7 +793,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/Passive.webp",
             "name": "Mythic Power",
-            "sort": 1600000,
+            "sort": 1700000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -784,7 +826,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/FreeAction.webp",
             "name": "Mythic Skill",
-            "sort": 1700000,
+            "sort": 1800000,
             "system": {
                 "actionType": {
                     "value": "free"
@@ -813,7 +855,7 @@
             "_id": "nrpLGnps0UNl59zd",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Snatch Prize",
-            "sort": 1800000,
+            "sort": 1900000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -844,7 +886,7 @@
             "_id": "SKEOea8tbmnPcpBP",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Unbalancing Rip",
-            "sort": 1900000,
+            "sort": 2000000,
             "system": {
                 "actionType": {
                     "value": "free"

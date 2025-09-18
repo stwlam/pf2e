@@ -1066,6 +1066,9 @@ const armorTraits = {
     plant: "PF2E.TraitPlant",
     ponderous: "PF2E.TraitPonderous",
     relic: "PF2E.TraitRelic",
+    "resilient-1": "PF2E.TraitResilient1",
+    "resilient-2": "PF2E.TraitResilient2",
+    "resilient-3": "PF2E.TraitResilient3",
     tech: "PF2E.TraitTech",
 };
 

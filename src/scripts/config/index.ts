@@ -2,7 +2,6 @@ import { ArmyPF2e, CharacterPF2e, FamiliarPF2e, HazardPF2e, LootPF2e, NPCPF2e, P
 import { SenseAcuity } from "@actor/creature/types.ts";
 import { LANGUAGES, SENSE_TYPES } from "@actor/creature/values.ts";
 import type { ActorType, AttributeString, SkillSlug } from "@actor/types.ts";
-import { MOVEMENT_TYPES } from "@actor/values.ts";
 import {
     AbilityItemPF2e,
     AfflictionPF2e,
@@ -36,8 +35,9 @@ import { DeityDomain } from "@item/deity/types.ts";
 import { FeatOrFeatureCategory } from "@item/feat/index.ts";
 import { PreciousMaterialGrade } from "@item/physical/types.ts";
 import { MeleeWeaponGroup, WeaponCategory, WeaponGroup, WeaponReloadTime } from "@item/weapon/types.ts";
-import { Size } from "@module/data.ts";
+import { Size, ZeroToThree } from "@module/data.ts";
 import { JournalSheetPF2e } from "@module/journal-entry/sheet.ts";
+import { RuleElementPF2e, RuleElements } from "@module/rules/index.ts";
 import { configFromLocalization, sluggify } from "@util";
 import * as R from "remeda";
 import {
@@ -241,11 +241,6 @@ const sizeTypes: Record<Size, string> = {
     grg: "PF2E.ActorSizeGargantuan",
 };
 
-const speedTypes = R.mapToObj(MOVEMENT_TYPES, (t) => [
-    t,
-    `PF2E.Actor.Speed.Type.${sluggify(t, { camel: "bactrian" })}`,
-]);
-
 const featCategories: Record<FeatOrFeatureCategory, string> = {
     ancestry: "PF2E.Item.Feat.Category.Ancestry",
     ancestryfeature: "PF2E.Item.Feat.Category.AncestryFeature",
@@ -306,6 +301,16 @@ const weaponReload: Record<WeaponReloadTime, string> = {
     2: "2",
     3: "3",
     10: "PF2E.Item.Weapon.Reload.OneMinute",
+};
+
+const grades = {
+    commercial: "PF2E.Item.Physical.Grade.commercial",
+    tactical: "PF2E.Item.Physical.Grade.tactical",
+    advanced: "PF2E.Item.Physical.Grade.advanced",
+    superior: "PF2E.Item.Physical.Grade.superior",
+    elite: "PF2E.Item.Physical.Grade.elite",
+    ultimate: "PF2E.Item.Physical.Grade.ultimate",
+    paragon: "PF2E.Item.Physical.Grade.paragon",
 };
 
 export const PF2ECONFIG = {
@@ -517,16 +522,7 @@ export const PF2ECONFIG = {
         5: "-5/-10",
     },
 
-    grades: {
-        commercial: "PF2E.Item.Physical.Grade.commercial",
-        tactical: "PF2E.Item.Physical.Grade.tactical",
-        advanced: "PF2E.Item.Physical.Grade.advanced",
-        superior: "PF2E.Item.Physical.Grade.superior",
-        elite: "PF2E.Item.Physical.Grade.elite",
-        ultimate: "PF2E.Item.Physical.Grade.ultimate",
-        paragon: "PF2E.Item.Physical.Grade.paragon",
-    },
-
+    grades,
     weaponImprovements: {
         commercial: { level: 0, tracking: 0, dice: 1, credits: 0 },
         tactical: { level: 2, tracking: 1, dice: 1, credits: 350 },
@@ -535,8 +531,7 @@ export const PF2ECONFIG = {
         elite: { level: 12, tracking: 2, dice: 3, credits: 20000 },
         ultimate: { level: 16, tracking: 3, dice: 3, credits: 100000 },
         paragon: { level: 19, tracking: 3, dice: 4, credits: 400000 },
-    },
-
+    } satisfies Record<keyof typeof grades, { level: number; tracking: ZeroToThree; dice: number; credits: number }>,
     armorImprovements: {
         commercial: { level: 0, bonus: 0, resilient: 0, credits: 0 },
         tactical: { level: 5, bonus: 1, resilient: 0, credits: 1600 },
@@ -545,7 +540,7 @@ export const PF2ECONFIG = {
         elite: { level: 14, bonus: 2, resilient: 2, credits: 45000 },
         ultimate: { level: 18, bonus: 3, resilient: 2, credits: 240000 },
         paragon: { level: 20, bonus: 3, resilient: 3, credits: 700000 },
-    },
+    } satisfies Record<keyof typeof grades, { level: number; bonus: number; resilient: ZeroToThree; credits: number }>,
 
     shieldImprovements: {
         commercial: { level: 0, hardness: 0, maxHP: 0, credits: 0 },
@@ -666,8 +661,6 @@ export const PF2ECONFIG = {
     actorSizes: sizeTypes,
 
     actorTypes,
-
-    speedTypes,
 
     prerequisitePlaceholders: {
         prerequisite1: "PF2E.Prerequisite1",
@@ -811,4 +804,12 @@ export const PF2ECONFIG = {
             gmVision: 0xd1ccff,
         },
     },
+
+    RuleElement: RuleElementPF2e,
+    RuleElements,
 };
+
+Object.defineProperties(PF2ECONFIG, {
+    RuleElement: { configurable: false, writable: false },
+    RuleElements: { configurable: false },
+});

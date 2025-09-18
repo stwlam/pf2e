@@ -5,6 +5,7 @@ import type { GridOffset2D } from "@common/grid/_types.d.mts";
 import { EffectPF2e } from "@item";
 import type { UserPF2e } from "@module/user/document.ts";
 import type { TokenDocumentPF2e } from "@scene";
+import { ErrorPF2e } from "@util";
 import * as R from "remeda";
 import type { CanvasPF2e, TokenLayerPF2e } from "../index.ts";
 import { measureDistanceCuboid, squareAtPoint } from "../index.ts";
@@ -19,8 +20,8 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
     }
 
     static override RENDER_FLAGS = (() => {
-        const flags = Object.assign(super.RENDER_FLAGS, { refreshDistanceText: {} });
-        flags.refreshState.propagate.push("refreshDistanceText");
+        const flags = Object.assign(super.RENDER_FLAGS, { refreshDistanceLabel: {} });
+        flags.refreshState.propagate.push("refreshDistanceLabel");
         return flags;
     })();
 
@@ -29,13 +30,6 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
 
     /** Visual rendering of lines from token to flanking buddy tokens on highlight */
     readonly flankingHighlight = new FlankingHighlightRenderer(this);
-
-    /** A text plate showing the distance from a controlled token to this one */
-    readonly #distanceText = new fc.containers.PreciseText();
-
-    get isTiny(): boolean {
-        return this.document.height < 1 || this.document.width < 1;
-    }
 
     /** This token's shape at its canvas position */
     get localShape(): TokenShape {
@@ -60,7 +54,7 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
 
     /** The grid offsets representing this token's shape */
     get footprint(): GridOffset2D[] {
-        const shape = this.isTiny ? this.mechanicalBounds : this.localShape;
+        const shape = this.document.isTiny ? this.mechanicalBounds : this.localShape;
         const seen = new Set<number>();
         const offsets: GridOffset2D[] = [];
         const [i0, j0, i1, j1] = canvas.grid.getOffsetRange(this.mechanicalBounds);
@@ -135,7 +129,7 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
     /** Bounds used for mechanics, such as flanking and drawing auras */
     get mechanicalBounds(): PIXI.Rectangle {
         const bounds = this.bounds;
-        if (this.isTiny) {
+        if (this.document.isTiny) {
             const position = canvas.grid.getTopLeftPoint(bounds);
             return new PIXI.Rectangle(
                 position.x,
@@ -150,12 +144,14 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
 
     /** Can the current user see the distance of this token from a controlled token? */
     get #canSeeDistance(): boolean {
-        if (!this.visible || this.isPreview || this.document.isSecret || this.controlled) return false;
-        return this.hover && (canvas.tokens.controlled.length === 1 || !!game.user.character?.getActiveTokens().length);
+        if (!this.visible || this.isPreview || this.document.isSecret || this.controlled || this.animation) {
+            return false;
+        }
+        return this.hover && (this.layer.controlled.length === 1 || !!game.user.character?.getActiveTokens().length);
     }
 
     isAdjacentTo(token: TokenPF2e): boolean {
-        return this.distanceTo(token) === 5;
+        return this.distanceTo(token) === canvas.grid.distance;
     }
 
     /** Publicly expose `Token#_canControl` for use in `TokenLayerPF2e`. */
@@ -228,7 +224,7 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
 
         // Finds all possible allies that are allowed to flank, to test their positioning later
         // A linked actor can flank with another token of itself (ex: a Thaumaturge with a mirror implement)
-        const flankingBuddies = canvas.tokens.placeables.filter(
+        const flankingBuddies = this.layer.placeables.filter(
             (t) =>
                 (t.actor?.isAllyOf(thisActor) ||
                     (this.document.isLinked && t.actor === thisActor && t.id !== this.id)) &&
@@ -280,16 +276,16 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
     buddiesFlanking(flankee: TokenPF2e, context: { reach?: number; ignoreFlankable?: boolean } = {}): TokenPF2e[] {
         if (!this.canFlank(flankee, context)) return [];
         const ignoreFlankable = !!context.ignoreFlankable;
-        return canvas.tokens.placeables
-            .filter((t) => t !== this && t.canFlank(flankee, { ignoreFlankable }))
-            .filter((b) => this.onOppositeSides(this, b, flankee));
+        return this.layer.placeables.filter(
+            (t) => t !== this && t.canFlank(flankee, { ignoreFlankable }) && this.onOppositeSides(this, t, flankee),
+        );
     }
 
     /** Reposition aura textures after this token has moved. */
     protected override _applyRenderFlags(flags: Record<string, boolean>): void {
         super._applyRenderFlags(flags);
         if (flags.refreshPosition) this.auras.refreshPositions();
-        if (flags.refreshDistanceText) this.#refreshDistanceText();
+        if (flags.refreshDistanceLabel) this.#refreshDistanceLabel();
     }
 
     /** Draw auras and flanking highlight lines if certain conditions are met */
@@ -301,32 +297,35 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
 
     protected override _refreshState(): void {
         super._refreshState();
-        this.#distanceText.visible = this.#canSeeDistance;
+        const distanceLabelEl = document.getElementById("token-hover-distance");
+        if (distanceLabelEl) distanceLabelEl.hidden = !this.#canSeeDistance;
     }
 
-    #refreshDistanceText(): void {
-        if (!this.#canSeeDistance) return;
-        const controlledToken = canvas.tokens.controlled[0] ?? game.user.character?.getActiveTokens()[0];
-        if (!controlledToken) return;
-        const distanceText = this.#distanceText;
-        const unit = canvas.scene?.grid.units ?? "";
-        const formatArgs = { distance: controlledToken.distanceTo(this), unit };
-        distanceText.text = game.i18n.format("PF2E.Token.Distance", formatArgs).trim();
-        const nameplate = this.nameplate;
-        const nameOffset = nameplate.visible ? nameplate.position.y + nameplate.height - 2 : nameplate.position.y;
-        this.#distanceText.position.set(nameplate.position.x, nameOffset);
-    }
-
-    /** Set the basic, unchanging visual parameters of the distance `PreciseText`. */
-    #drawDistanceText(): void {
-        const uiScale = canvas.dimensions.uiScale;
-        const text = this.#distanceText;
-        text.anchor.set(0.5, 0);
-        text.scale.set(uiScale, uiScale);
-        text.style = this._getTextStyle();
-        text.style.fontSize = 20;
-        text.style.fill = "#f0f0f0";
-        this.addChild(text);
+    /**
+     * Render a label showing the distance between a controlled token and a hovered (this) token. Also draw a line
+     * between the two.
+     */
+    #refreshDistanceLabel(): void {
+        this.layer.clearDistanceLine();
+        const labelEl = document.getElementById("token-hover-distance");
+        if (!this.#canSeeDistance || !labelEl) {
+            if (labelEl) labelEl.hidden = true;
+            return;
+        }
+        const controlledToken = this.layer.controlled[0] ?? game.user.character?.getActiveTokens()[0];
+        if (!controlledToken || controlledToken.isPreview || controlledToken.animation) return;
+        const totalEl = labelEl.querySelector(".total-measurement");
+        if (!totalEl) throw ErrorPF2e("Unexpected failure to retrieve measurement HTML element");
+        const distance = controlledToken.distanceTo(this);
+        if (distance < canvas.grid.distance) return;
+        const label = [distance, canvas.scene?.grid.units ?? ""].join(" ").trim();
+        totalEl.textContent = label;
+        const center = this.center;
+        labelEl.dataset.tokenId = this.document.id;
+        labelEl.style.setProperty("--position-y", `${this.y}px`);
+        labelEl.style.setProperty("--position-x", `${center.x}px`);
+        labelEl.hidden = false;
+        this.layer.renderDistanceLine(controlledToken, this);
     }
 
     /** Overrides _drawBar(k) to also draw pf2e variants of normal resource bars (such as temp health) */
@@ -562,11 +561,6 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
         this.flankingHighlight.destroy();
     }
 
-    protected override async _draw(options?: object): Promise<void> {
-        await super._draw(options);
-        this.#drawDistanceText();
-    }
-
     /* -------------------------------------------- */
     /*  Event Handlers                              */
     /* -------------------------------------------- */
@@ -606,12 +600,12 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
         event: PIXI.FederatedPointerEvent,
         options?: { hoverOutOthers?: boolean },
     ): boolean | void {
-        this.renderFlags.set({ refreshDistanceText: true });
+        this.renderFlags.set({ refreshDistanceLabel: true });
         return super._onHoverIn(event, options);
     }
 
     protected override _onHoverOut(event: PIXI.FederatedPointerEvent): boolean | void {
-        this.renderFlags.set({ refreshDistanceText: true });
+        this.renderFlags.set({ refreshDistanceLabel: true });
         return super._onHoverOut(event);
     }
 
@@ -625,9 +619,9 @@ class TokenPF2e<TDocument extends TokenDocumentPF2e = TokenDocumentPF2e> extends
             return super._onClickLeft2(event);
         }
         const isInReach = R.unique(
-            [canvas.tokens.controlled, game.user.character?.getActiveTokens(true, false) ?? []].flat(),
+            [this.layer.controlled, game.user.character?.getActiveTokens(true, false) ?? []].flat(),
         ).some(
-            (t) =>
+            (t: TokenPF2e) =>
                 t.actor?.isOwner &&
                 t.actor.isOfType("creature", "party") &&
                 t.distanceTo(this) <= t.actor.system.attributes.reach.manipulate,

@@ -108,7 +108,7 @@
         {
             "_id": "c8B74JQQQei0DDnE",
             "img": "systems/pf2e/icons/default-icons/spellcastingEntry.svg",
-            "name": "Divine Focus Spells",
+            "name": "Sorcerer Bloodline Spells",
             "sort": 300000,
             "system": {
                 "autoHeightenLevel": {

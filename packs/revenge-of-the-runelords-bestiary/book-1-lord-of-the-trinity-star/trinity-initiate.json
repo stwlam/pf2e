@@ -1435,11 +1435,11 @@
                     "value": []
                 },
                 "bonus": {
-                    "value": 19
+                    "value": 16
                 },
                 "damageRolls": {
                     "XPT4Rap8yCmMBhgd": {
-                        "damage": "3d8+6",
+                        "damage": "2d8+5",
                         "damageType": "piercing"
                     }
                 },

@@ -4,6 +4,7 @@ import type { ItemSourcePF2e, ItemType } from "@item/base/data/index.ts";
 import { PersistentDamageValueSchema } from "@item/condition/data.ts";
 import { addOrUpgradeTrait, itemIsOfType, removeTrait } from "@item/helpers.ts";
 import { prepareBulkData } from "@item/physical/helpers.ts";
+import { Grade } from "@item/physical/types.ts";
 import { PHYSICAL_ITEM_TYPES, PRECIOUS_MATERIAL_TYPES } from "@item/physical/values.ts";
 import { WeaponRangeIncrement } from "@item/weapon/types.ts";
 import { MANDATORY_RANGED_GROUPS } from "@item/weapon/values.ts";
@@ -56,10 +57,12 @@ class ItemAlterationHandler<TSchema extends AlterationSchema> extends fields.Sch
     isValid(data: {
         item: ItemPF2e | ItemSourcePF2e;
         rule: RuleElementPF2e;
+        fromEquipment: boolean;
         alteration: MaybeAlterationData;
     }): data is {
         item: ItemOrSource<fields.SourceFromSchema<TSchema>["itemType"]>;
         rule: RuleElementPF2e;
+        fromEquipment: boolean;
         alteration: fields.SourceFromSchema<TSchema>;
     } {
         const alteration = (data.alteration = fu.mergeObject(this.getInitialValue(), data.alteration));
@@ -92,6 +95,7 @@ type MaybeAlterationData = { mode: string; itemType: string; value: unknown };
 interface AlterationApplicationData {
     item: ItemPF2e | ItemSourcePF2e;
     rule: RuleElementPF2e;
+    fromEquipment: boolean;
     alteration: MaybeAlterationData;
 }
 
@@ -474,6 +478,55 @@ const ITEM_ALTERATION_HANDLERS = {
             data.item.system.cast.focusPoints = (Math.clamp(newValue, 0, 3) || 0) as ZeroToThree;
         },
     }),
+    grade: new ItemAlterationHandler({
+        fields: {
+            itemType: new fields.StringField({ required: true, choices: ["armor", "weapon", "shield"] }),
+            mode: new fields.StringField({ required: true, choices: ["override", "upgrade"] }),
+            value: new fields.StringField<Grade, Grade, true, false>({
+                required: true,
+                nullable: false,
+                choices: () => CONFIG.PF2E.grades,
+            }),
+        },
+        handle: function (data: AlterationApplicationData) {
+            const abpEnabled = game.pf2e.variantRules.AutomaticBonusProgression.isEnabled(data.rule.actor);
+            if ((abpEnabled && data.fromEquipment) || !this.isValid(data)) return;
+
+            const item = data.item;
+            const previousGrade = item.system.grade;
+            if (!previousGrade) return; // do nothing on non-tech weapons without erroring
+
+            // Get item, and exit early if there isn't a grade change.
+            const mode = data.alteration.mode;
+            const isGradeBetter =
+                CONFIG.PF2E.weaponImprovements[data.alteration.value].level >
+                CONFIG.PF2E.weaponImprovements[previousGrade].level;
+            if (mode === "upgrade" && !isGradeBetter) return;
+
+            item.system.grade = data.alteration.value;
+            if (item instanceof ItemPF2e) {
+                if (item.isOfType("weapon")) {
+                    const { tracking, dice } = CONFIG.PF2E.weaponImprovements[data.alteration.value];
+                    if (tracking) addOrUpgradeTrait(item.system.traits, `tracking-${tracking}`, { mode });
+                    item.system.damage.dice = dice;
+                } else if (item.isOfType("armor")) {
+                    const { bonus: previousBonus } = CONFIG.PF2E.armorImprovements[previousGrade];
+                    const { bonus, resilient } = CONFIG.PF2E.armorImprovements[data.alteration.value];
+                    if (resilient) addOrUpgradeTrait(item.system.traits, `resilient-${resilient}`, { mode });
+                    item.system.acBonus = Math.max(0, item.system.acBonus + bonus - previousBonus);
+                } else if (item.isOfType("shield")) {
+                    const { hardness: prevHardness, maxHP: prevMaxHP } = CONFIG.PF2E.shieldImprovements[previousGrade];
+                    const { hardness, maxHP } = CONFIG.PF2E.shieldImprovements[data.alteration.value];
+                    item.system.hardness = Math.max(0, item.system.hardness + hardness - prevHardness);
+                    item.system.hp.max = Math.max(1, item.system.hp.max + maxHP - prevMaxHP);
+                    item.system.hp.brokenThreshold = Math.floor(item.system.hp.max / 2);
+                    adjustCreatureShieldData(item);
+                }
+
+                data.item.name = game.pf2e.system.generateItemName(item);
+            }
+        },
+    }),
     group: new ItemAlterationHandler({
         fields: {
             itemType: new fields.StringField({ required: true, choices: ["armor", "weapon"] }),
@@ -830,7 +883,7 @@ const ITEM_ALTERATION_HANDLERS = {
         },
         handle: function (data: AlterationApplicationData) {
             const abpEnabled = game.pf2e.variantRules.AutomaticBonusProgression.isEnabled(data.rule.actor);
-            if (abpEnabled || !this.isValid(data)) return;
+            if ((abpEnabled && data.fromEquipment) || !this.isValid(data)) return;
 
             const mode = data.alteration.mode;
             const runes = data.item.system.runes;
@@ -864,7 +917,7 @@ const ITEM_ALTERATION_HANDLERS = {
         },
         handle: function (data: AlterationApplicationData) {
             const abpEnabled = game.pf2e.variantRules.AutomaticBonusProgression.isEnabled(data.rule.actor);
-            if (abpEnabled || !this.isValid(data)) return;
+            if ((abpEnabled && data.fromEquipment) || !this.isValid(data)) return;
 
             const previousValue = data.item.system.runes.resilient;
             data.item.system.runes.resilient = Math.clamp(
@@ -944,7 +997,7 @@ const ITEM_ALTERATION_HANDLERS = {
         },
         handle: function (data: AlterationApplicationData) {
             const abpEnabled = game.pf2e.variantRules.AutomaticBonusProgression.isEnabled(data.rule.actor);
-            if (abpEnabled || !this.isValid(data)) return;
+            if ((abpEnabled && data.fromEquipment) || !this.isValid(data)) return;
 
             const previousValue = data.item.system.runes.striking;
             data.item.system.runes.striking = Math.clamp(

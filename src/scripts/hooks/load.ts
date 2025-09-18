@@ -1,4 +1,4 @@
-import { ActorProxyPF2e } from "@actor";
+import { ActorPF2e, ActorProxyPF2e } from "@actor";
 import { ArmySystemData } from "@actor/army/data.ts";
 import { AutomaticBonusProgression } from "@actor/character/automatic-bonus-progression.ts";
 import { FamiliarSystemData } from "@actor/familiar/data.ts";
@@ -28,6 +28,7 @@ import {
     LightingLayerPF2e,
     MeasuredTemplatePF2e,
     RegionPF2e,
+    RulerPF2e,
     TemplateLayerPF2e,
     TokenPF2e,
 } from "@module/canvas/index.ts";
@@ -53,6 +54,7 @@ import {
 } from "@scene/index.ts";
 import { DifficultTerrainBehaviorType } from "@scene/region-behavior/difficult-terrain.ts";
 import { PrototypeTokenConfigPF2e } from "@scene/token-document/index.ts";
+import { PF2ECONFIG } from "@scripts/config/index.ts";
 import { monkeyPatchFoundry } from "@scripts/🐵🩹.ts";
 import { CheckRoll, StrikeAttackRoll } from "@system/check/roll.ts";
 import { ClientDatabaseBackendPF2e } from "@system/client-backend.ts";
@@ -62,8 +64,10 @@ import { HTMLTagifyTagsElement } from "@system/html-elements/tagify-tags.ts";
 import * as R from "remeda";
 
 /** Not an actual hook listener but rather things to run on initial load */
-export const Load = {
-    listen(): void {
+export class Load {
+    static listen(): void {
+        CONFIG.PF2E = PF2ECONFIG;
+
         // Assign database backend to handle migrations
         CONFIG.DatabaseBackend = new ClientDatabaseBackendPF2e();
 
@@ -102,10 +106,7 @@ export const Load = {
         CONFIG.Token.objectClass = TokenPF2e;
         CONFIG.Token.prototypeSheetClass = PrototypeTokenConfigPF2e;
         CONFIG.Token.rulerClass = TokenRulerPF2e;
-        const movementActions = CONFIG.Token.movement.actions;
-        for (const key of ["crawl", "climb", "jump"]) {
-            delete movementActions[key]?.getCostFunction;
-        }
+        Load.#configureMovement();
 
         CONFIG.User.documentClass = UserPF2e;
 
@@ -139,6 +140,7 @@ export const Load = {
         CONFIG.Canvas.layers.lighting.layerClass = LightingLayerPF2e;
         CONFIG.Canvas.layers.templates.layerClass = TemplateLayerPF2e;
         CONFIG.Canvas.layers.tokens.layerClass = TokenLayerPF2e;
+        CONFIG.Canvas.rulerClass = RulerPF2e;
         CONFIG.Canvas.visionSourceClass = PointVisionSourcePF2e;
 
         CONFIG.Dice.rolls.push(CheckRoll, StrikeAttackRoll, DamageRoll, DamageInstance);
@@ -204,6 +206,95 @@ export const Load = {
             }
         });
 
+        this.#initializeHotReload();
+    }
+
+    static #configureMovement(): void {
+        const movementActions = CONFIG.Token.movement.actions;
+        for (const key of ["crawl", "climb", "jump"]) {
+            delete movementActions[key]?.getCostFunction;
+        }
+
+        // Default action for creatures unless prone
+        movementActions.walk.canSelect = (token) => {
+            const actor = token.actor as ActorPF2e | null;
+            return !!actor?.isOfType("creature") && !actor.hasCondition("prone");
+        };
+        movementActions.walk.img = null;
+
+        // Default action for creatures when prone
+        movementActions.crawl.canSelect = (token) => {
+            const actor = token.actor as ActorPF2e | null;
+            return !!actor?.isOfType("creature") && actor.hasCondition("prone");
+        };
+
+        // Default action for vehicles
+        movementActions.drive = {
+            label: "TOKEN.MOVEMENT.ACTIONS.drive.label",
+            icon: "fa-solid fa-car-side",
+            order: 0,
+            canSelect: (t) => t.actor?.type === "vhiecle",
+            deriveTerrainDifficulty: () => 1,
+        };
+
+        // Default action for armies
+        movementActions.deploy = {
+            label: "TOKEN.MOVEMENT.ACTIONS.deploy.label",
+            icon: "fa-solid fa-person-military-pointing fa-flip-horizontal",
+            order: 0,
+            canSelect: (t) => t.actor?.type === "army",
+        };
+
+        movementActions.jump.order = 1;
+        movementActions.jump.canSelect = (tokenDoc) => {
+            const actor = tokenDoc.actor as ActorPF2e | null;
+            return !!(actor?.isOfType("creature") && !actor.hasCondition("prone"));
+        };
+        movementActions.jump.deriveTerrainDifficulty = () => 1;
+
+        movementActions.fly.order = 2;
+        movementActions.fly.canSelect = (tokenDoc) => {
+            const actor = tokenDoc.actor as ActorPF2e | null;
+            return !!(actor?.isOfType("creature") && actor.system.movement.speeds.fly);
+        };
+
+        movementActions.burrow.order = 3;
+        movementActions.burrow.canSelect = (tokenDoc) => {
+            const actor = tokenDoc.actor as ActorPF2e | null;
+            return !!(actor?.isOfType("creature") && actor.system.movement.speeds.burrow);
+        };
+
+        movementActions.climb.order = 4;
+        movementActions.climb.canSelect = (tokenDoc) => {
+            const actor = tokenDoc.actor as ActorPF2e | null;
+            return !!actor?.isOfType("creature");
+        };
+        movementActions.climb.deriveTerrainDifficulty = () => 1;
+
+        movementActions.swim.order = 5;
+        movementActions.swim.canSelect = (tokenDoc) => {
+            const actor = tokenDoc.actor as ActorPF2e | null;
+            return !!actor?.isOfType("creature");
+        };
+
+        movementActions.travel = {
+            order: 0,
+            icon: "fa-solid fa-person-hiking",
+            label: "TOKEN.MOVEMENT.ACTIONS.travel.label",
+            canSelect: (tokenDoc) => {
+                const actor = tokenDoc.actor as ActorPF2e | null;
+                if (!actor) return false;
+                return actor.isOfType("party") || (actor.isOfType("creature") && !actor.inCombat);
+            },
+        };
+
+        movementActions.blink.order = 6;
+    }
+
+    /** Hot reload for localization and template files */
+    static #initializeHotReload(): void {
+        if (!import.meta.hot) return;
+
         function rerenderApps(path: string): void {
             const apps = [...Object.values(ui.windows), ...foundry.applications.instances.values()];
             for (const app of apps) {
@@ -216,37 +307,34 @@ export const Load = {
             if (path.includes("system/effects")) game.pf2e.effectPanel.render();
         }
 
-        // HMR for localization and template files
-        if (import.meta.hot) {
-            import.meta.hot.on("lang-update", async ({ path }: { path: string }): Promise<void> => {
-                const lang = await fu.fetchJsonWithTimeout(path);
-                if (!R.isPlainObject(lang)) {
-                    ui.notifications.error(`Failed to load ${path}`);
-                    return;
-                }
-                const apply = (): void => {
-                    fu.mergeObject(game.i18n.translations, lang);
-                    rerenderApps(path);
-                };
-                if (game.ready) {
-                    apply();
-                } else {
-                    Hooks.once("ready", apply);
-                }
-            });
+        import.meta.hot.on("lang-update", async ({ path }: { path: string }): Promise<void> => {
+            const lang = await fu.fetchJsonWithTimeout(path);
+            if (!R.isPlainObject(lang)) {
+                ui.notifications.error(`Failed to load ${path}`);
+                return;
+            }
+            const apply = (): void => {
+                fu.mergeObject(game.i18n.translations, lang);
+                rerenderApps(path);
+            };
+            if (game.ready) {
+                apply();
+            } else {
+                Hooks.once("ready", apply);
+            }
+        });
 
-            import.meta.hot.on("template-update", async ({ path }: { path: string }): Promise<void> => {
-                const apply = async (): Promise<void> => {
-                    delete Handlebars.partials[path];
-                    await fa.handlebars.getTemplate(path);
-                    rerenderApps(path);
-                };
-                if (game.ready) {
-                    apply();
-                } else {
-                    Hooks.once("ready", apply);
-                }
-            });
-        }
-    },
-};
+        import.meta.hot.on("template-update", async ({ path }: { path: string }): Promise<void> => {
+            const apply = async (): Promise<void> => {
+                delete Handlebars.partials[path];
+                await fa.handlebars.getTemplate(path);
+                rerenderApps(path);
+            };
+            if (game.ready) {
+                apply();
+            } else {
+                Hooks.once("ready", apply);
+            }
+        });
+    }
+}

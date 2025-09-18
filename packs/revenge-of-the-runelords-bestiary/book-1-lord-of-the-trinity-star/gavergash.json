@@ -2038,6 +2038,7 @@
                     "carryType": "worn",
                     "invested": null
                 },
+                "grade": null,
                 "group": "cloth",
                 "hardness": 0,
                 "hp": {
@@ -2331,10 +2332,51 @@
             "type": "action"
         },
         {
+            "_id": "h6ASC6EGnm2yCgLm",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.0zvUNv8hRTdwXmhF"
+            },
+            "folder": "63FzE1sSn3PK5yy4",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "name": "Mythic Resilience (Will)",
+            "sort": 3300000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p>The creature treats its saving throws with the associated save as one degree of success better than it rolled. This is not cumulative with other effects that change their degree of success, like the incapacitation trait (except for rolling a natural 1 or 20). Each time the monster gains mythic resilience, choose one save. The ability should apply to the creature's highest saves first.</p>"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder War of Immortals"
+                },
+                "rules": [
+                    {
+                        "adjustment": {
+                            "all": "one-degree-better"
+                        },
+                        "key": "AdjustDegreeOfSuccess",
+                        "selector": "will"
+                    }
+                ],
+                "slug": "mythic-mythic-resilience",
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
             "_id": "HSpquZGOvwr5J0Fr",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Awaken Totem",
-            "sort": 3300000,
+            "sort": 3400000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -2371,7 +2413,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/Passive.webp",
             "name": "Mythic Power",
-            "sort": 3400000,
+            "sort": 3500000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -2400,7 +2442,7 @@
             "_id": "3wMfK5zZSqFhhTgs",
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Primordial Roar",
-            "sort": 3500000,
+            "sort": 3600000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -2438,7 +2480,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Recharge",
-            "sort": 3600000,
+            "sort": 3700000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -2497,7 +2539,7 @@
                 "value": ""
             },
             "hp": {
-                "details": "regeneration 30 (deactivated by acid or fire)",
+                "details": "regeneration 25 (deactivated by electricity or fire)",
                 "max": 320,
                 "temp": 0,
                 "value": 320

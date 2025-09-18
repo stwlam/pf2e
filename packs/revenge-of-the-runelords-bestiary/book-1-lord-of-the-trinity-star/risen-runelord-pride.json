@@ -28,9 +28,6 @@
                     "title": ""
                 },
                 "rules": [],
-                "showSlotlessLevels": {
-                    "value": false
-                },
                 "slots": {
                     "slot0": {
                         "max": 5,
@@ -121,6 +118,17 @@
                                 "id": "gfV70a4ulWwzx3cA"
                             }
                         ]
+                    },
+                    "slot6": {
+                        "max": 2,
+                        "prepared": [
+                            {
+                                "id": "QYR1hgayuGiMHwuc"
+                            },
+                            {
+                                "id": "gGGj17QEwdTIfiSJ"
+                            }
+                        ]
                     }
                 },
                 "slug": null,
@@ -136,6 +144,96 @@
             "type": "spellcastingEntry"
         },
         {
+            "_id": "gGGj17QEwdTIfiSJ",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.spells-srd.Item.0XP2XOxT9VSiXFDr"
+            },
+            "folder": "zDlxATrLAlbYA2Mv",
+            "img": "icons/magic/earth/explosion-lava-stone-red.webp",
+            "name": "Phantasmal Calamity",
+            "sort": 200000,
+            "system": {
+                "area": {
+                    "type": "burst",
+                    "value": 30
+                },
+                "cost": {
+                    "value": ""
+                },
+                "counteraction": false,
+                "damage": {
+                    "0": {
+                        "applyMod": false,
+                        "category": null,
+                        "formula": "11d6",
+                        "kinds": [
+                            "damage"
+                        ],
+                        "materials": [],
+                        "type": "mental"
+                    }
+                },
+                "defense": {
+                    "save": {
+                        "basic": true,
+                        "statistic": "will"
+                    }
+                },
+                "description": {
+                    "value": "<p>A vision of apocalyptic destruction fills the mind of each creature in the area. The vision deals 11d6 mental damage (basic Will save). On a critical failure, the creature must also succeed at a Reflex save or believe it's trapped (stuck in a fissure, adrift at sea, or some other fate in keeping with its vision). If it fails the second save, it's also @UUID[Compendium.pf2e.conditionitems.Item.Stunned] for 1 minute. It can attempt a new Will save at the end of each of its turns, and on a success, it disbelieves the illusion and recovers from the Stunned condition.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage increases by 2d6.</p>"
+                },
+                "duration": {
+                    "sustained": false,
+                    "value": ""
+                },
+                "heightening": {
+                    "area": 0,
+                    "damage": {
+                        "0": "2d6"
+                    },
+                    "interval": 1,
+                    "type": "interval"
+                },
+                "level": {
+                    "value": 6
+                },
+                "location": {
+                    "value": "R8E7YuPf510km8MI"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "range": {
+                    "value": "500 feet"
+                },
+                "requirements": "",
+                "rules": [],
+                "slug": "phantasmal-calamity",
+                "target": {
+                    "value": ""
+                },
+                "time": {
+                    "value": "2"
+                },
+                "traits": {
+                    "rarity": "common",
+                    "traditions": [
+                        "arcane",
+                        "occult"
+                    ],
+                    "value": [
+                        "concentrate",
+                        "illusion",
+                        "manipulate",
+                        "mental"
+                    ]
+                }
+            },
+            "type": "spell"
+        },
+        {
             "_id": "0WTpLeEjvjO7SGeo",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.spells-srd.Item.U58aQWJ47VrI36yP"
@@ -143,7 +241,7 @@
             "folder": "iDjm2cXyRAe4VZ35",
             "img": "systems/pf2e/icons/spells/hallucination.webp",
             "name": "Hallucination",
-            "sort": 200000,
+            "sort": 300000,
             "system": {
                 "area": null,
                 "cost": {
@@ -227,7 +325,7 @@
             "folder": "iDjm2cXyRAe4VZ35",
             "img": "icons/environment/wilderness/cave-entrance-vulcano.webp",
             "name": "Illusory Scene",
-            "sort": 300000,
+            "sort": 400000,
             "system": {
                 "area": {
                     "type": "burst",
@@ -295,7 +393,7 @@
             "folder": "7cyoYPoPYA01mErU",
             "img": "icons/environment/wilderness/cave-entrance-vulcano.webp",
             "name": "Mirage",
-            "sort": 400000,
+            "sort": 500000,
             "system": {
                 "area": {
                     "type": "burst",
@@ -361,7 +459,7 @@
             "folder": "7cyoYPoPYA01mErU",
             "img": "systems/pf2e/icons/spells/phantasmal-killer.webp",
             "name": "Vision of Death",
-            "sort": 500000,
+            "sort": 600000,
             "system": {
                 "area": null,
                 "cost": {
@@ -449,7 +547,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "systems/pf2e/icons/spells/hypnotic-pattern.webp",
             "name": "Hypnotize",
-            "sort": 600000,
+            "sort": 700000,
             "system": {
                 "area": {
                     "type": "burst",
@@ -520,7 +618,7 @@
             "folder": "4fJHnYFqH0VjZXPv",
             "img": "systems/pf2e/icons/spells/paralyze.webp",
             "name": "Paralyze",
-            "sort": 700000,
+            "sort": 800000,
             "system": {
                 "area": null,
                 "cost": {
@@ -598,7 +696,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "systems/pf2e/icons/spells/blur.webp",
             "name": "Blur",
-            "sort": 800000,
+            "sort": 900000,
             "system": {
                 "area": null,
                 "cost": {
@@ -661,7 +759,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "systems/pf2e/icons/spells/darkness.webp",
             "name": "Darkness",
-            "sort": 900000,
+            "sort": 1000000,
             "system": {
                 "area": {
                     "type": "burst",
@@ -721,6 +819,71 @@
             "type": "spell"
         },
         {
+            "_id": "QYR1hgayuGiMHwuc",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.spells-srd.Item.f8SBoXiXQjlCKqly"
+            },
+            "folder": "lPzcDrjGDFbzuF2r",
+            "img": "icons/creatures/magical/spirit-undead-winged-ghost.webp",
+            "name": "Illusory Creature",
+            "sort": 1100000,
+            "system": {
+                "area": null,
+                "cost": {
+                    "value": ""
+                },
+                "counteraction": false,
+                "damage": {},
+                "defense": null,
+                "description": {
+                    "value": "<p>You create an illusory image of a Large or smaller creature. It generates the appropriate sounds, smells, and feels believable to the touch. If you and the image are ever farther than 500 feet apart, the spell ends.</p>\n<p>The image can't speak, but you can use your actions to speak through the creature, with the spell disguising your voice as appropriate. You might need to attempt a Deception or Performance check to mimic the creature, as determined by the GM. This is especially likely if you're trying to imitate a specific person and engage with someone that person knows.</p>\n<p>In combat, the illusion can use 2 actions per turn, which it uses when you Sustain the spell. It uses your spell attack modifier for attack rolls and your spell DC for its AC. Its saving throw modifiers are equal to your spell DC – 10. It is substantial enough that it can flank other creatures. If the image is hit by an attack or fails a save, the spell ends.</p>\n<p>The illusion can cause damage by making the target believe the illusion's attacks are real, but it cannot otherwise directly affect the physical world. If the illusory creature hits with a Strike, the target takes @Damage[3d4[mental]] damage. The illusion's Strikes are nonlethal. If the damage doesn't correspond to the image of the monster—for example, if an illusory Large dragon deals only 5 damage—the GM might allow the target to attempt an immediate Perception check to disbelieve the spell. Any relevant resistances and weaknesses apply if the target thinks they do, as judged by the GM. For example, if the illusion wields a warhammer and attacks a creature resistant to bludgeoning damage, the creature would take less mental damage. However, illusory damage does not deactivate regeneration or trigger other effects that require a certain damage type. The GM should track illusory damage dealt by the illusion.</p>\n<p>Any creature that touches the image or uses the @UUID[Compendium.pf2e.actionspf2e.Item.Seek] action to examine it can attempt to disbelieve your illusion. When a creature disbelieves the illusion, it recovers from half the damage it had taken from it (if any) and doesn't take any further damage from it.</p>\n<hr />\n<p><strong>Heightened (+1)</strong> The damage of the image's Strikes increases by 1d4, and the maximum size of creature you can create increases by one (to a maximum of Gargantuan).</p>"
+                },
+                "duration": {
+                    "sustained": true,
+                    "value": ""
+                },
+                "level": {
+                    "value": 2
+                },
+                "location": {
+                    "value": "R8E7YuPf510km8MI"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "range": {
+                    "value": "500 feet"
+                },
+                "requirements": "",
+                "rules": [],
+                "slug": "illusory-creature",
+                "target": {
+                    "value": ""
+                },
+                "time": {
+                    "value": "2"
+                },
+                "traits": {
+                    "rarity": "common",
+                    "traditions": [
+                        "arcane",
+                        "occult"
+                    ],
+                    "value": [
+                        "auditory",
+                        "concentrate",
+                        "illusion",
+                        "manipulate",
+                        "olfactory",
+                        "visual"
+                    ]
+                }
+            },
+            "type": "spell"
+        },
+        {
             "_id": "IE2nODf3kBQjfUXs",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.spells-srd.Item.XXqE1eY3w3z6xJCB"
@@ -728,7 +891,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "icons/creatures/magical/construct-stone-earth-gray.webp",
             "name": "Invisibility",
-            "sort": 1000000,
+            "sort": 1200000,
             "system": {
                 "area": null,
                 "cost": {
@@ -790,7 +953,7 @@
             "folder": "lPzcDrjGDFbzuF2r",
             "img": "systems/pf2e/icons/spells/glitterdust.webp",
             "name": "Revealing Light",
-            "sort": 1100000,
+            "sort": 1300000,
             "system": {
                 "area": {
                     "type": "burst",
@@ -862,7 +1025,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "systems/pf2e/icons/spells/daze.webp",
             "name": "Daze",
-            "sort": 1200000,
+            "sort": 1400000,
             "system": {
                 "area": null,
                 "cost": {
@@ -950,7 +1113,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/magic-aura.webp",
             "name": "Disguise Magic",
-            "sort": 1300000,
+            "sort": 1500000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1016,7 +1179,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "icons/magic/control/buff-luck-fortune-rainbow.webp",
             "name": "Dizzying Colors",
-            "sort": 1400000,
+            "sort": 1600000,
             "system": {
                 "area": {
                     "type": "cone",
@@ -1088,7 +1251,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "systems/pf2e/icons/spells/ghost-sound.webp",
             "name": "Figment",
-            "sort": 1500000,
+            "sort": 1700000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1152,7 +1315,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/illusory-disguise.webp",
             "name": "Illusory Disguise",
-            "sort": 1600000,
+            "sort": 1800000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1215,7 +1378,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "systems/pf2e/icons/spells/illusory-object.webp",
             "name": "Illusory Object",
-            "sort": 1700000,
+            "sort": 1900000,
             "system": {
                 "area": {
                     "type": "burst",
@@ -1281,7 +1444,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "systems/pf2e/icons/spells/light.webp",
             "name": "Light",
-            "sort": 1800000,
+            "sort": 2000000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1346,7 +1509,7 @@
             "folder": "T8AzYUgNIAgTJ9Iz",
             "img": "icons/magic/control/silhouette-hold-change-blue.webp",
             "name": "Phantasmal Minion",
-            "sort": 1900000,
+            "sort": 2100000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1408,7 +1571,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "icons/magic/symbols/runes-triangle-blue.webp",
             "name": "Prestidigitation",
-            "sort": 2000000,
+            "sort": 2200000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1472,7 +1635,7 @@
             "folder": "D7UVaOiB40wTR6kv",
             "img": "systems/pf2e/icons/spells/sigil.webp",
             "name": "Sigil",
-            "sort": 2100000,
+            "sort": 2300000,
             "system": {
                 "area": null,
                 "cost": {
@@ -1532,7 +1695,7 @@
             "_id": "kuBU5UfKp0xpH0IN",
             "img": "systems/pf2e/icons/default-icons/melee.svg",
             "name": "Runelord's Polearm",
-            "sort": 2200000,
+            "sort": 2400000,
             "system": {
                 "attackEffects": {
                     "value": []
@@ -1573,7 +1736,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Remove a Condition",
-            "sort": 2300000,
+            "sort": 2500000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1604,7 +1767,7 @@
             "_id": "FPr7PTLJpqmzY994",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Beyond Life",
-            "sort": 2400000,
+            "sort": 2600000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1630,10 +1793,51 @@
             "type": "action"
         },
         {
+            "_id": "hOyeflI1PdPgXIv8",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.bestiary-family-ability-glossary.Item.0zvUNv8hRTdwXmhF"
+            },
+            "folder": "63FzE1sSn3PK5yy4",
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "name": "Mythic Resilience (Will)",
+            "sort": 2700000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p>The creature treats its saving throws with the associated save as one degree of success better than it rolled. This is not cumulative with other effects that change their degree of success, like the incapacitation trait (except for rolling a natural 1 or 20). Each time the monster gains mythic resilience, choose one save. The ability should apply to the creature's highest saves first.</p>"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder War of Immortals"
+                },
+                "rules": [
+                    {
+                        "adjustment": {
+                            "all": "one-degree-better"
+                        },
+                        "key": "AdjustDegreeOfSuccess",
+                        "selector": "will"
+                    }
+                ],
+                "slug": "mythic-mythic-resilience",
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
             "_id": "y7cynF6yL9QBQG85",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Vanishing Death",
-            "sort": 2500000,
+            "sort": 2800000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1666,7 +1870,7 @@
             "_id": "0gGpGNd5NNIl0TXk",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Manifest Runelord's Polearm",
-            "sort": 2600000,
+            "sort": 2900000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1701,7 +1905,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/Passive.webp",
             "name": "Mythic Power",
-            "sort": 2700000,
+            "sort": 3000000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1730,7 +1934,7 @@
             "_id": "URcGZAgwgFGiU9cQ",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Quickened Casting",
-            "sort": 2800000,
+            "sort": 3100000,
             "system": {
                 "actionType": {
                     "value": "free"
@@ -1766,7 +1970,7 @@
             "folder": "63FzE1sSn3PK5yy4",
             "img": "systems/pf2e/icons/actions/OneAction.webp",
             "name": "Recharge",
-            "sort": 2900000,
+            "sort": 3200000,
             "system": {
                 "actionType": {
                     "value": "action"
@@ -1797,7 +2001,7 @@
             "_id": "Arxws8TsMP4QUFJc",
             "img": "systems/pf2e/icons/default-icons/action.svg",
             "name": "Steady Spellcasting",
-            "sort": 3000000,
+            "sort": 3300000,
             "system": {
                 "actionType": {
                     "value": "passive"
@@ -1924,22 +2128,31 @@
         },
         "skills": {
             "arcana": {
-                "base": 26
+                "base": 26,
+                "special": []
             },
             "crafting": {
-                "base": 22
+                "base": 22,
+                "special": []
             },
             "deception": {
-                "base": 22
+                "base": 22,
+                "special": []
             },
             "intimidation": {
-                "base": 22
+                "base": 22,
+                "special": []
+            },
+            "occultism": {
+                "base": 24,
+                "special": []
             },
             "occultism +24": {
                 "base": null
             },
             "society": {
-                "base": 22
+                "base": 22,
+                "special": []
             }
         },
         "traits": {
