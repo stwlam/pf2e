@@ -12,6 +12,7 @@ import type {
 } from "@common/abstract/_types.d.mts";
 import type Document from "@common/abstract/document.d.mts";
 import type { ImageFilePath, TokenDisplayMode, VideoFilePath } from "@common/constants.d.mts";
+import type { GridMeasurePathResult } from "@common/grid/_types.d.mts";
 import type { TokenPF2e } from "@module/canvas/index.ts";
 import { ChatMessagePF2e } from "@module/chat-message/document.ts";
 import type { CombatantPF2e, EncounterPF2e } from "@module/encounter/index.ts";
@@ -104,6 +105,10 @@ class TokenDocumentPF2e<TParent extends ScenePF2e | null = ScenePF2e | null> ext
         return bounds;
     }
 
+    get isTiny(): boolean {
+        return this.height < 1 || this.width < 1;
+    }
+
     /** The pixel-coordinate pair constituting this token's center */
     get center(): Point {
         const bounds = this.bounds;
@@ -194,6 +199,38 @@ class TokenDocumentPF2e<TParent extends ScenePF2e | null = ScenePF2e | null> ext
         return super.getTrackedAttributeChoices(attributes);
     }
 
+    /** Synchronize the token image with the actor image if the token does not currently have an image */
+    static assignDefaultImage(token: TokenDocumentPF2e | PrototypeTokenPF2e<ActorPF2e>): void {
+        const actor = token.actor;
+        if (!actor) return;
+
+        // Always override token images if in Nath mode
+        if (game.pf2e.settings.tokens.nathMode && isDefaultTokenImage(token)) {
+            token.texture.src = ((): ImageFilePath | VideoFilePath => {
+                switch (actor.alliance) {
+                    case "party":
+                        return "systems/pf2e/icons/default-icons/alternatives/nath/ally.webp";
+                    case "opposition":
+                        return "systems/pf2e/icons/default-icons/alternatives/nath/enemy.webp";
+                    default:
+                        return token.texture.src ?? CONST.DEFAULT_TOKEN;
+                }
+            })();
+        } else if (isDefaultTokenImage(token)) {
+            token.texture.src = actor._source.img;
+        }
+    }
+
+    /** Set a TokenData instance's dimensions from actor data. Static so actors can use for their prototypes */
+    static prepareScale(token: TokenDocumentPF2e | PrototypeTokenPF2e<ActorPF2e>): void {
+        if (!token.flags.pf2e.autoscale) return;
+        const absoluteScale = token.actor?.size === "sm" ? 0.8 : 1;
+        const mirrorX = token.texture.scaleX < 0 ? -1 : 1;
+        token.texture.scaleX = mirrorX * absoluteScale;
+        const mirrorY = token.texture.scaleY < 0 ? -1 : 1;
+        token.texture.scaleY = mirrorY * absoluteScale;
+    }
+
     /** Make stamina, resolve, and shield HP editable despite not being present in template.json */
     override getBarAttribute(barName: string, options?: { alternative?: string }): TokenResourceData | null {
         const attribute = super.getBarAttribute(barName, options);
@@ -209,6 +246,23 @@ class TokenDocumentPF2e<TParent extends ScenePF2e | null = ScenePF2e | null> ext
         }
 
         return attribute;
+    }
+
+    /** Recalculate measurements of tiny-token movement to avoid upstream's partial square calculations. */
+    override measureMovementPath(
+        waypoints: fd.TokenMeasureMovementPathWaypoint[],
+        options?: { cost?: fd.TokenMovementCostFunction },
+    ): GridMeasurePathResult {
+        if (!canvas.grid.isSquare) return super.measureMovementPath(waypoints, options);
+        const normalized = this.isTiny
+            ? waypoints.map((p) => ({
+                  ...p,
+                  ...canvas.grid.getTopLeftPoint({ x: p.x ?? 0, y: p.y ?? 0 }),
+                  width: 1,
+                  height: 1,
+              }))
+            : waypoints;
+        return super.measureMovementPath(normalized, options);
     }
 
     protected override _initialize(options?: Record<string, unknown>): void {
@@ -328,36 +382,22 @@ class TokenDocumentPF2e<TParent extends ScenePF2e | null = ScenePF2e | null> ext
         }
     }
 
-    /** Synchronize the token image with the actor image if the token does not currently have an image */
-    static assignDefaultImage(token: TokenDocumentPF2e | PrototypeTokenPF2e<ActorPF2e>): void {
-        const actor = token.actor;
-        if (!actor) return;
-
-        // Always override token images if in Nath mode
-        if (game.pf2e.settings.tokens.nathMode && isDefaultTokenImage(token)) {
-            token.texture.src = ((): ImageFilePath | VideoFilePath => {
-                switch (actor.alliance) {
-                    case "party":
-                        return "systems/pf2e/icons/default-icons/alternatives/nath/ally.webp";
-                    case "opposition":
-                        return "systems/pf2e/icons/default-icons/alternatives/nath/enemy.webp";
-                    default:
-                        return token.texture.src ?? CONST.DEFAULT_TOKEN;
-                }
-            })();
-        } else if (isDefaultTokenImage(token)) {
-            token.texture.src = actor._source.img;
+    protected override _inferMovementAction(): string {
+        const actor = this.actor;
+        switch (actor?.type) {
+            case "character":
+            case "npc":
+            case "familiar":
+                return !actor.inCombat ? "travel" : actor.hasCondition("prone") ? "crawl" : "walk";
+            case "army":
+                return "deploy";
+            case "vehicle":
+                return "drive";
+            case "party":
+                return "travel";
+            default:
+                return "displace";
         }
-    }
-
-    /** Set a TokenData instance's dimensions from actor data. Static so actors can use for their prototypes */
-    static prepareScale(token: TokenDocumentPF2e | PrototypeTokenPF2e<ActorPF2e>): void {
-        if (!token.flags.pf2e.autoscale) return;
-        const absoluteScale = token.actor?.size === "sm" ? 0.8 : 1;
-        const mirrorX = token.texture.scaleX < 0 ? -1 : 1;
-        token.texture.scaleX = mirrorX * absoluteScale;
-        const mirrorY = token.texture.scaleY < 0 ? -1 : 1;
-        token.texture.scaleY = mirrorY * absoluteScale;
     }
 
     /** Set a token's initiative on the current encounter, creating a combatant if necessary */

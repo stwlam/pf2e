@@ -1,7 +1,7 @@
 {
     "_id": "pUXV4sks4p9Jc8Wb",
     "img": "icons/sundries/flags/banner-sword-blue.webp",
-    "name": "Effect: A Challenge for Heroes",
+    "name": "Effect: A Challenge for Heroes (Enemy)",
     "system": {
         "description": {
             "value": "<p>Granted by @UUID[Compendium.pf2e.actionspf2e.Item.A Challenge for Heroes]</p>\n<p>You deal an additional 10 spirit damage to the exemplar with each successful Strike.</p>"
@@ -13,7 +13,7 @@
             "value": 1
         },
         "level": {
-            "value": 1
+            "value": 16
         },
         "publication": {
             "license": "ORC",

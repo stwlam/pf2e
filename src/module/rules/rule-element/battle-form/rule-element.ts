@@ -8,7 +8,8 @@ import { WeaponPF2e } from "@item";
 import { RollNotePF2e } from "@module/notes.ts";
 import { Predicate } from "@system/predication.ts";
 import { RecordField } from "@system/schema-data-fields.ts";
-import { ErrorPF2e, isObject, objectHasKey, setHasElement, sluggify, tupleHasValue } from "@util";
+import { LandSpeedStatisticTraceData, SpeedStatistic } from "@system/statistic/speed.ts";
+import { isObject, objectHasKey, setHasElement, sluggify, tupleHasValue } from "@util";
 import * as R from "remeda";
 import { RuleElementOptions, RuleElementPF2e } from "../base.ts";
 import { CreatureSizeRuleElement } from "../creature-size.ts";
@@ -47,71 +48,49 @@ class BattleFormRuleElement extends RuleElementPF2e<BattleFormRuleSchema> {
         return {
             ...super.defineSchema(),
             value: new ResolvableValueField({ required: false, initial: undefined }),
-            overrides: new fields.SchemaField(
-                {
-                    traits: new fields.ArrayField(new fields.StringField()),
-                    armorClass: new fields.SchemaField(
-                        {
-                            modifier: new ResolvableValueField({
-                                required: false,
-                                nullable: false,
-                                initial: 0,
-                            }),
-                            ignoreCheckPenalty: new fields.BooleanField({
-                                required: false,
-                                nullable: false,
-                                initial: true,
-                            }),
-                            ignoreSpeedPenalty: new fields.BooleanField({
-                                required: false,
-                                nullable: false,
-                                initial: true,
-                            }),
-                            ownIfHigher: new fields.BooleanField({
-                                required: false,
-                                nullable: false,
-                                initial: false,
-                            }),
-                        },
-                        { required: false },
-                    ),
-                    tempHP: new ResolvableValueField({ required: false, nullable: true, initial: null }),
-                    senses: new RecordField(
-                        new fields.StringField({
-                            required: true,
+            overrides: new fields.SchemaField({
+                traits: new fields.ArrayField(new fields.StringField()),
+                armorClass: new fields.SchemaField({
+                    modifier: new ResolvableValueField({ required: false, nullable: false, initial: 0 }),
+                    ignoreCheckPenalty: new fields.BooleanField({ initial: true }),
+                    ignoreSpeedPenalty: new fields.BooleanField({ initial: true }),
+                    ownIfHigher: new fields.BooleanField(),
+                }),
+                tempHP: new ResolvableValueField({ required: false, nullable: true, initial: null }),
+                senses: new RecordField(
+                    new fields.StringField({
+                        required: true,
+                        blank: false,
+                        choices: () => ({
+                            ...CONFIG.PF2E.senses,
+                            ...R.mapKeys(CONFIG.PF2E.senses, (k) => sluggify(k, { camel: "dromedary" })),
+                        }),
+                    }),
+                    new fields.SchemaField({
+                        acuity: new fields.StringField({
+                            choices: () => CONFIG.PF2E.senseAcuities,
+                            required: false,
                             blank: false,
-                            choices: () => ({
-                                ...CONFIG.PF2E.senses,
-                                ...R.mapKeys(CONFIG.PF2E.senses, (k) => sluggify(k, { camel: "dromedary" })),
-                            }),
+                            initial: undefined,
                         }),
-                        new fields.SchemaField({
-                            acuity: new fields.StringField({
-                                choices: () => CONFIG.PF2E.senseAcuities,
-                                required: false,
-                                blank: false,
-                                initial: undefined,
-                            }),
-                            range: new fields.NumberField({
-                                required: false,
-                                nullable: true,
-                                positive: true,
-                                integer: true,
-                                initial: undefined,
-                            }),
+                        range: new fields.NumberField({
+                            required: false,
+                            nullable: true,
+                            positive: true,
+                            integer: true,
+                            initial: undefined,
                         }),
-                        { required: false, initial: () => ({}) },
-                    ),
-                    size: new fields.StringField({ required: false, blank: false, initial: undefined }),
-                    speeds: new fields.ObjectField({ required: false, initial: () => ({}) }),
-                    skills: new fields.ObjectField({ required: false, initial: () => ({}) }),
-                    strikes: new fields.ObjectField({ required: false, initial: () => ({}) }),
-                    immunities: new fields.ArrayField(new fields.ObjectField()),
-                    weaknesses: new fields.ArrayField(new fields.ObjectField()),
-                    resistances: new fields.ArrayField(new fields.ObjectField()),
-                },
-                { required: true, nullable: false },
-            ),
+                    }),
+                    { required: false, initial: () => ({}) },
+                ),
+                size: new fields.StringField({ required: false, blank: false, initial: undefined }),
+                speeds: new fields.ObjectField({ required: false, initial: () => ({}) }),
+                skills: new fields.ObjectField({ required: false, initial: () => ({}) }),
+                strikes: new fields.ObjectField({ required: false, initial: () => ({}) }),
+                immunities: new fields.ArrayField(new fields.ObjectField()),
+                weaknesses: new fields.ArrayField(new fields.ObjectField()),
+                resistances: new fields.ArrayField(new fields.ObjectField()),
+            }),
             ownUnarmed: new fields.BooleanField({ required: false, nullable: false, initial: false }),
             canCast: new fields.BooleanField({ required: false, nullable: false, initial: false }),
             canSpeak: new fields.BooleanField({ required: false, nullable: false, initial: false }),
@@ -276,34 +255,6 @@ class BattleFormRuleElement extends RuleElementPF2e<BattleFormRuleSchema> {
         new CreatureSizeRuleElement(ruleData, { parent: this.item }).beforePrepareData();
     }
 
-    /** Add, replace and/or adjust non-land speeds */
-    #prepareSpeeds(): void {
-        const actor = this.actor;
-        const attributes = actor.attributes;
-        const currentSpeeds = attributes.speed;
-
-        for (const movementType of MOVEMENT_TYPES) {
-            const speedOverride = this.overrides.speeds[movementType];
-            if (typeof speedOverride !== "number") continue;
-
-            if (movementType === "land") {
-                this.#suppressModifiers(attributes.speed);
-                attributes.speed.value = speedOverride;
-            } else {
-                const otherSpeeds = currentSpeeds.otherSpeeds;
-                const label = game.i18n.localize(CONFIG.PF2E.speedTypes[movementType]);
-                otherSpeeds.findSplice((s) => s.type === movementType);
-                otherSpeeds.push({ type: movementType, label, value: speedOverride });
-                const newSpeed = actor.prepareSpeed(movementType);
-                if (!newSpeed) throw ErrorPF2e("Unexpected failure retrieving movement type");
-                this.#suppressModifiers(newSpeed);
-
-                otherSpeeds.findSplice((s) => s.type === movementType);
-                otherSpeeds.push(newSpeed);
-            }
-        }
-    }
-
     #prepareSkills(): void {
         const actor = this.actor;
         for (const [key, newSkill] of Object.entries(this.overrides.skills)) {
@@ -427,6 +378,20 @@ class BattleFormRuleElement extends RuleElementPF2e<BattleFormRuleSchema> {
         for (const resistance of this.overrides.resistances) {
             const args = { key: "Resistance", ...resistance, override: true };
             new ResistanceRuleElement(args, { parent: this.item }).afterPrepareData();
+        }
+    }
+
+    /** Add, replace and/or adjust non-land speeds */
+    #prepareSpeeds(): void {
+        const actor = this.actor;
+        for (const type of MOVEMENT_TYPES) {
+            const speedOverride = this.overrides.speeds[type];
+            if (typeof speedOverride !== "number") continue;
+            actor.synthetics.movementTypes[type] = [];
+            const statistic = new SpeedStatistic(actor, { type, base: speedOverride });
+            this.#suppressModifiers(statistic);
+            const traceData = statistic.getTraceData() as LandSpeedStatisticTraceData;
+            actor.system.movement.speeds[type] = traceData;
         }
     }
 

@@ -165,6 +165,19 @@
             "flags": {}
         },
         {
+            "name": "dawn-of-the-frogs",
+            "label": "Dawn of the Frogs",
+            "path": "packs/standalone-adventures",
+            "type": "Actor",
+            "banner": "systems/pf2e/assets/compendium-banner/red.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
             "name": "extinction-curse-bestiary",
             "label": "Extinction Curse",
             "path": "packs/extinction-curse-bestiary",
@@ -1291,6 +1304,7 @@
                     "packs": [
                         "claws-of-the-tyrant-bestiary",
                         "crown-of-the-kobold-king-bestiary",
+                        "dawn-of-the-frogs",
                         "fall-of-plaguestone-bestiary",
                         "malevolence-bestiary",
                         "menace-under-otari-bestiary",
