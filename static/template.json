@@ -2,13 +2,7 @@
     "Actor": {
         "types": [
             "character",
-            "npc",
-            "hazard",
-            "loot",
-            "familiar",
-            "party",
-            "vehicle",
-            "army"
+            "npc"
         ],
         "templates": {
             "common": {
@@ -16,10 +10,6 @@
                     "hp": {
                         "value": 0,
                         "temp": 0
-                    },
-                    "speed": {
-                        "value": 25,
-                        "otherSpeeds": []
                     }
                 },
                 "initiative": {
@@ -48,7 +38,6 @@
             "details.biography.allies",
             "details.biography.enemies",
             "details.biography.organizations",
-            "details.description",
             "details.privateNotes",
             "details.publicNotes"
         ],
@@ -86,8 +75,7 @@
                 "xp": {
                     "value": 0,
                     "min": 0,
-                    "max": 1000,
-                    "pct": 0
+                    "max": 1000
                 },
                 "age": {
                     "value": ""
@@ -170,6 +158,8 @@
                     "value": ""
                 },
                 "speed": {
+                    "value": 25,
+                    "otherSpeeds": [],
                     "details": ""
                 }
             },

@@ -2,6 +2,7 @@ import type { ActorPF2e } from "@actor/base.ts";
 import type { DialogV2Configuration } from "@client/applications/api/dialog.d.mts";
 import type { DocumentHTMLEmbedConfig } from "@client/applications/ux/text-editor.d.mts";
 import type { ItemUUID } from "@client/documents/_module.d.mts";
+import type { ToCompendiumOptions } from "@client/documents/abstract/_module.d.mts";
 import type { DropCanvasData } from "@client/helpers/hooks.d.mts";
 import type { DocumentConstructionContext } from "@common/_types.d.mts";
 import type {
@@ -21,7 +22,7 @@ import { ChatMessagePF2e } from "@module/chat-message/document.ts";
 import { preImportJSON } from "@module/doc-helpers.ts";
 import { MigrationList, MigrationRunner } from "@module/migration/index.ts";
 import { MigrationRunnerBase } from "@module/migration/runner/base.ts";
-import { RuleElementOptions, RuleElementPF2e, RuleElementSource, RuleElements } from "@module/rules/index.ts";
+import { RuleElement, RuleElementOptions, RuleElementSource, RuleElements } from "@module/rules/index.ts";
 import { processGrantDeletions } from "@module/rules/rule-element/grant-item/helpers.ts";
 import { eventToRollMode } from "@module/sheet/helpers.ts";
 import { type EnrichmentOptionsPF2e, type RollDataPF2e, TextEditorPF2e } from "@system/text-editor.ts";
@@ -29,7 +30,6 @@ import {
     ErrorPF2e,
     createHTMLElement,
     htmlClosest,
-    isObject,
     localizer,
     objectHasKey,
     setHasElement,
@@ -74,7 +74,7 @@ class ItemPF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends Item
     }
 
     /** Prepared rule elements from this item */
-    declare rules: RuleElementPF2e[];
+    declare rules: RuleElement[];
 
     /** The sluggified name of the item **/
     get slug(): string | null {
@@ -295,19 +295,19 @@ class ItemPF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends Item
         // Set item grant default values: pre-migration values will be strings, so temporarily check for objectness
         const flags = this.flags;
         flags.pf2e = fu.mergeObject(flags.pf2e ?? {}, { rulesSelections: {} });
-        if (isObject(flags.pf2e.grantedBy)) {
+        if (R.isPlainObject(flags.pf2e.grantedBy)) {
             flags.pf2e.grantedBy.onDelete ??= this.isOfType("physical") ? "detach" : "cascade";
         }
         const grants = (flags.pf2e.itemGrants ??= {});
         for (const grant of Object.values(grants)) {
-            if (isObject(grant)) {
+            if (R.isPlainObject(grant)) {
                 grant.onDelete ??= "detach";
             }
         }
         this.grantedBy = this.actor?.items.get(this.flags.pf2e.grantedBy?.id ?? "") ?? null;
     }
 
-    prepareRuleElements(options: Omit<RuleElementOptions, "parent"> = {}): RuleElementPF2e[] {
+    prepareRuleElements(options: Omit<RuleElementOptions, "parent"> = {}): RuleElement[] {
         if (!this.actor) throw ErrorPF2e("Rule elements may only be prepared from embedded items");
         return (this.rules = this.actor.canHostRuleElements
             ? RuleElements.fromOwnedItem({ ...options, parent: this as ItemPF2e<NonNullable<TParent>> })
@@ -427,6 +427,11 @@ class ItemPF2e<TParent extends ActorPF2e | null = ActorPF2e | null> extends Item
         if (options.notify) ui.notifications.info(localize("Success", { item: this.name }));
 
         return this;
+    }
+
+    override exportToJSON(options: ToCompendiumOptions = {}): void {
+        options.clearSource ??= false;
+        super.exportToJSON(options);
     }
 
     getOriginData(): ItemOriginFlag {

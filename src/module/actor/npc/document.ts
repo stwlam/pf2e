@@ -4,8 +4,8 @@ import type { CreatureUpdateCallbackOptions } from "@actor/creature/index.ts";
 import { ActorSizePF2e } from "@actor/data/size.ts";
 import { setHitPointsRollOptions, strikeFromMeleeItem } from "@actor/helpers.ts";
 import { ActorInitiative } from "@actor/initiative.ts";
-import { ModifierPF2e, StatisticModifier } from "@actor/modifiers.ts";
-import type { SaveType } from "@actor/types.ts";
+import { Modifier, StatisticModifier } from "@actor/modifiers.ts";
+import type { MovementType, SaveType } from "@actor/types.ts";
 import { SAVE_TYPES } from "@actor/values.ts";
 import type { UserAction } from "@common/constants.d.mts";
 import type { ItemPF2e, MeleePF2e } from "@item";
@@ -81,19 +81,16 @@ class NPCPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | nul
         super.prepareBaseData();
 
         this.flags.pf2e.lootable ??= false;
-
         this.system.actions = [];
         for (const key of SAVE_TYPES) {
             this.system.saves[key].attribute = CONFIG.PF2E.savingThrowDefaultAttributes[key];
         }
-
         const { attributes, details } = this.system;
-
         if (details.alliance === undefined) {
             details.alliance = this.hasPlayerOwner ? "party" : "opposition";
         }
 
-        // Ensure undead have negative healing
+        // Ensure undead have void healing
         attributes.hp.negativeHealing = this.system.traits.value.includes("undead");
 
         // Exclude troops from being flankable
@@ -132,6 +129,15 @@ class NPCPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | nul
             value: resources.mythicPoints?.value ?? 3,
             max: this.system.traits.value.includes("mythic") ? 3 : 0,
         };
+
+        // Base movement data
+        const speeds: Record<MovementType, { value: number; base: number } | null> = this.system.movement.speeds;
+        const sourceSpeeds = this._source.system.attributes.speed;
+        speeds.land = { value: sourceSpeeds.value, base: sourceSpeeds.value };
+        const otherSpeeds = sourceSpeeds.otherSpeeds;
+        for (const speed of otherSpeeds) {
+            speeds[speed.type] = { value: speed.value, base: speed.value };
+        }
     }
 
     override prepareDerivedData(): void {
@@ -150,11 +156,7 @@ class NPCPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | nul
             });
             synthetics.modifiers.hp.push(
                 () =>
-                    new ModifierPF2e(
-                        "PF2E.NPC.Adjustment.EliteLabel",
-                        this.getHpAdjustment(baseLevel, "elite"),
-                        "untyped",
-                    ),
+                    new Modifier("PF2E.NPC.Adjustment.EliteLabel", this.getHpAdjustment(baseLevel, "elite"), "untyped"),
             );
         } else if (this.isWeak) {
             modifierAdjustments.all.push({
@@ -164,7 +166,7 @@ class NPCPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | nul
             });
             synthetics.modifiers.hp.push(
                 () =>
-                    new ModifierPF2e(
+                    new Modifier(
                         "PF2E.NPC.Adjustment.WeakLabel",
                         this.getHpAdjustment(baseLevel, "weak") * -1,
                         "untyped",
@@ -180,7 +182,7 @@ class NPCPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | nul
         // Hit Points
         {
             const base = system.attributes.hp.max;
-            const modifiers: ModifierPF2e[] = [
+            const modifiers: Modifier[] = [
                 extractModifiers(synthetics, ["hp"], { test: this.getRollOptions(["hp"]) }),
                 extractModifiers(synthetics, ["hp-per-level"], {
                     test: this.getRollOptions(["hp-per-level"]),
@@ -204,14 +206,12 @@ class NPCPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | nul
             setHitPointsRollOptions(this);
         }
 
-        // Speeds
-        const speeds = (system.attributes.speed = this.prepareSpeed("land"));
-        speeds.otherSpeeds = (["burrow", "climb", "fly", "swim"] as const).flatMap((m) => this.prepareSpeed(m) ?? []);
+        this.prepareMovementData();
 
         // Armor Class
         const armorStatistic = new ArmorStatistic(this, {
             modifiers: [
-                new ModifierPF2e({
+                new Modifier({
                     slug: "base",
                     label: "PF2E.ModifierTitle",
                     modifier: system.attributes.ac.value - 10,
@@ -236,7 +236,7 @@ class NPCPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | nul
                 attribute: "wis",
                 domains,
                 modifiers: [
-                    new ModifierPF2e({
+                    new Modifier({
                         slug: "base",
                         label: "PF2E.ModifierTitle",
                         modifier: system.perception.mod,
@@ -293,7 +293,7 @@ class NPCPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | nul
                 label: saveName,
                 domains: domains,
                 modifiers: [
-                    new ModifierPF2e({
+                    new Modifier({
                         slug: "base",
                         label: "PF2E.ModifierTitle",
                         modifier: base,
@@ -327,7 +327,7 @@ class NPCPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | nul
                     ?.filter((v) => v.predicate?.length)
                     .map(
                         (special) =>
-                            new ModifierPF2e({
+                            new Modifier({
                                 slug: "variant",
                                 label: special.label,
                                 modifier: special.base - skill.base,
@@ -343,7 +343,7 @@ class NPCPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | nul
                 attribute,
                 domains,
                 modifiers: [
-                    new ModifierPF2e({
+                    new Modifier({
                         slug: "base",
                         label: "PF2E.ModifierTitle",
                         modifier: skill?.base ?? this.system.abilities[attribute].mod,
@@ -371,7 +371,7 @@ class NPCPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | nul
                 attribute: "int",
                 domains,
                 modifiers: [
-                    new ModifierPF2e({
+                    new Modifier({
                         slug: "base",
                         label: "PF2E.ModifierTitle",
                         modifier: loreItem.system.mod.value,

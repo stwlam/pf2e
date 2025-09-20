@@ -1,6 +1,6 @@
 import { ActorSizePF2e } from "@actor/data/size.ts";
 import { setHitPointsRollOptions } from "@actor/helpers.ts";
-import { ModifierPF2e } from "@actor/modifiers.ts";
+import { Modifier } from "@actor/modifiers.ts";
 import { ActorDimensions } from "@actor/types.ts";
 import { ItemType } from "@item/base/data/index.ts";
 import { extractModifierAdjustments, extractModifiers } from "@module/rules/helpers.ts";
@@ -40,15 +40,9 @@ class VehiclePF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e |
     override prepareBaseData(): void {
         super.prepareBaseData();
 
-        // Set the dimensions of this vehicle in its size object
-        const size = this.system.traits.size;
-        const dimensions = this.dimensions;
-        size.long = dimensions.length;
-        size.wide = dimensions.width;
-
         // Set the prototype token's dimensions according to the vehicle dimensions
         if (this.prototypeToken.flags?.pf2e?.linkToActorSize) {
-            const { width, height } = size.tokenDimensions;
+            const { width, height } = this.system.traits.size.tokenDimensions;
             this.prototypeToken.width = width;
             this.prototypeToken.height = height;
         }
@@ -62,7 +56,7 @@ class VehiclePF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e |
         if (this.hasCondition("broken")) {
             for (const selector of ["ac", "saving-throw"]) {
                 const modifiers = (this.synthetics.modifiers[selector] ??= []);
-                const brokenModifier = new ModifierPF2e({
+                const brokenModifier = new Modifier({
                     slug: "broken",
                     label: "PF2E.ConditionTypeBroken",
                     modifier: -2,
@@ -82,7 +76,7 @@ class VehiclePF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e |
         // Prepare AC
         const armorStatistic = new ArmorStatistic(this, {
             modifiers: [
-                new ModifierPF2e({
+                new Modifier({
                     slug: "base",
                     label: "PF2E.ModifierTitle",
                     modifier: this.system.attributes.ac.value - 10,
@@ -102,7 +96,7 @@ class VehiclePF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e |
         const slug = "fortitude";
         const domains = [slug, "saving-throw", "all"];
         const modifiers = [
-            new ModifierPF2e({
+            new Modifier({
                 label: "PF2E.ModifierTitle",
                 slug,
                 type: "untyped",
