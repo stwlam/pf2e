@@ -399,11 +399,10 @@
                         "craftableItems": [
                             "item:trait:snare"
                         ],
-                        "isDailyPrep": false,
                         "isPrepared": true,
                         "key": "CraftingAbility",
                         "label": "Snare Crafting",
-                        "prepared": [],
+                        "priority": 60,
                         "slug": "snare-crafting"
                     },
                     {
