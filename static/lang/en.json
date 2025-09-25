@@ -1977,6 +1977,10 @@
                     "wand": "Wand"
                 },
                 "Plural": "Consumables",
+                "Spell": {
+                    "Empty": "Empty",
+                    "Label": "Embedded Spell"
+                },
                 "Uses": {
                     "AutoDestroy": "Destroy on Use",
                     "Label": "Uses",
