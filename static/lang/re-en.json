@@ -3201,6 +3201,9 @@
             },
             "Cleric": {
                 "BattleHarbinger": {
+                    "BattleFont": {
+                        "Label": "Battle Font"
+                    },
                     "DivineFont": "Instead of preparing @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal} or @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz]{Harm} spells with your divine font, you instead gain the battle font, which allows you to prepare battle aura spells. You gain 4 additional spell slots each day at your highest rank of cleric spell slots. You can prepare only @UUID[Compendium.pf2e.spells-srd.Item.7ZinJNzxq0XF0oMx]{Bane} or @UUID[Compendium.pf2e.spells-srd.Item.XSujb7EsSwKl19Uu]{Bless} in these slots. Any feats and effects that refer to a battle aura refers to these spells, regardless of whether they were cast with your standard spell slots or your divine font spell slots. At 5th level, the number of additional slots increases to 5, and at 15th level, the total number of additional slots increases to 6. Your battle auras use your class DC instead of your spell DC."
                 },
                 "CastigatingWeapon": {
