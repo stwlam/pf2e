@@ -5551,6 +5551,9 @@
                     },
                     "WhisperingSteps": "Choose one enemy who is a target of the spell. If that enemy fails its save or the spell hits it, you whisper in the creature's mind, forcing it to Step in a direction of your choosing; as this is forced movement, you can't force the creature to Step into hazardous terrain, off a ledge, or the like. After it Steps, the creature becomes temporarily immune to this amp for 24 hours."
                 },
+                "Mindshift": {
+                    "Addendum": "You replace any save this action requires with a @Check[will|against:occult] save."
+                },
                 "OscillatingWave": {
                     "AddEnergy": "Add Energy",
                     "ConservationOfEnergyLabel": "Conservation of Energy",
