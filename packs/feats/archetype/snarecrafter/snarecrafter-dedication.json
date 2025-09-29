@@ -57,6 +57,15 @@
                     "class:ranger"
                 ],
                 "value": "max(4,2*@actor.system.skills.survival.rank)"
+            },
+            {
+                "key": "AdjustModifier",
+                "mode": "upgrade",
+                "predicate": [
+                    "item:category:snare"
+                ],
+                "selector": "inline-dc",
+                "value": "@actor.system.attributes.classDC.totalModifier"
             }
         ],
         "traits": {
