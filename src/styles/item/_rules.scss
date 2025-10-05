@@ -319,23 +319,25 @@
             }
         }
 
-        .validation-failures {
+        ul.validation-failures {
             background: rgba(214, 150, 0, 0.5);
             border-radius: 3px;
+            gap: var(--space-8);
+            list-style: "\f071" inside;
+            margin: var(--space-8) 0 0;
+            padding: var(--space-8) 0;
 
-            ul {
-                list-style: "\f071" outside;
-                padding: 0.25em 0.25em 0.25em 1.5em;
-
-                li {
-                    font-weight: 900;
+            li {
+                font-weight: normal;
+                font-family: var(--font-primary);
+                padding-left: var(--space-8);
+                &::before {
+                    content: "";
+                    margin-left: var(--space-8);
+                }
+                &::marker {
                     font-family: var(--font-awesome);
-
-                    > span {
-                        margin-left: 0.25em;
-                        font-weight: normal;
-                        font-family: var(--font-primary);
-                    }
+                    font-weight: 900;
                 }
             }
         }
@@ -610,14 +612,14 @@
             gap: 2px;
 
             code-mirror {
-                max-height: 200px;
-                min-height: 60px;
-                overflow: hidden scroll;
+                min-height: auto;
+                max-height: 6em;
+                height: unset;
+                &:has(.cm-content:focus)::after {
+                    display: inline;
+                }
                 .cm-editor {
-                    min-height: inherit;
-                    .cm-scroller {
-                        flex: 1;
-                    }
+                    max-height: inherit;
                 }
             }
         }

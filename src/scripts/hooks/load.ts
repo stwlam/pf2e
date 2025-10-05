@@ -146,7 +146,7 @@ export class Load {
             CONFIG.Dice.termTypes[TermCls.name] = TermCls;
         }
 
-        Math.btwn = (v, lte, gte) => v <= lte && v >= gte;
+        Math.btwn = (v, gte, lte) => v >= gte && v <= lte;
         Math.eq = (a, b) => a === b;
         Math.gt = (a, b) => a > b;
         Math.gte = (a, b) => a >= b;

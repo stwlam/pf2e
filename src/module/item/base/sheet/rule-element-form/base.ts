@@ -254,10 +254,10 @@ class RuleElementForm<
                 this.rule = JSON.parse(source);
             } catch (error) {
                 if (error instanceof Error) {
-                    ui.notifications.error(
-                        game.i18n.format("PF2E.ErrorMessage.RuleElementSyntax", { message: error.message }),
-                    );
-                    console.warn("Syntax error in rule element definition.", error.message, source);
+                    ui.notifications.error("PF2E.ErrorMessage.RuleElementSyntax", {
+                        console: false,
+                        format: { message: error.message },
+                    });
                     throw error; // prevent update, to give the user a chance to correct, and prevent bad data
                 }
             }
@@ -319,9 +319,7 @@ function cleanDataUsingSchema(schema: Record<string, DataField>, data: Record<st
                 // Recursively clean schema fields inside an array
                 for (const data of value) {
                     if (R.isPlainObject(data)) {
-                        if (data.predicate) {
-                            cleanPredicate(data);
-                        }
+                        if (data.predicate) cleanPredicate(data);
                         cleanDataUsingSchema(field.element.fields, data);
                     }
                 }
@@ -349,11 +347,12 @@ function cleanPredicate(source: { predicate?: unknown }) {
                 source.predicate = JSON.parse(predicateValue);
             } catch (error) {
                 if (error instanceof Error) {
-                    ui.notifications.error(
-                        game.i18n.format("PF2E.ErrorMessage.RuleElementSyntax", { message: error.message }),
-                    );
-                    throw error; // prevent update, to give the user a chance to correct, and prevent bad data
+                    ui.notifications.error("PF2E.ErrorMessage.RuleElementSyntax", {
+                        console: false,
+                        format: { message: error.message },
+                    });
                 }
+                throw error; // prevent update, to give the user a chance to correct, and prevent bad data
             }
         }
     }
