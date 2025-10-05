@@ -18,12 +18,10 @@
     </div>
 
     {{#if validationFailures}}
-        <div class="validation-failures">
-            <ul>
-                {{#each validationFailures as |message|}}
-                    <li><span>{{message}}</span></li>
-                {{/each}}
-            </ul>
-        </div>
+        <ul class="validation-failures flexcol">
+            {{#each validationFailures as |message|}}
+                <li>{{message}}</li>
+            {{/each}}
+        </ul>
     {{/if}}
 </section>
