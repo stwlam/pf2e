@@ -583,6 +583,19 @@
             "flags": {}
         },
         {
+            "name": "revenge-of-the-runelords-bestiary",
+            "label": "Revenge of the Runelords",
+            "path": "packs/revenge-of-the-runelords-bestiary",
+            "type": "Actor",
+            "banner": "systems/pf2e/assets/compendium-banner/red.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
             "name": "rusthenge-bestiary",
             "label": "Rusthenge",
             "path": "packs/rusthenge-bestiary",
@@ -1282,6 +1295,7 @@
                         "kingmaker-bestiary",
                         "myth-speaker-bestiary",
                         "quest-for-the-frozen-flame-bestiary",
+                        "revenge-of-the-runelords-bestiary",
                         "season-of-ghosts-bestiary",
                         "seven-dooms-for-sandpoint-bestiary",
                         "shades-of-blood-bestiary",
