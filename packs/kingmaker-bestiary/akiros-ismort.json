@@ -316,61 +316,13 @@
             "type": "equipment"
         },
         {
-            "_id": "rCD6KR41GJ745wwF",
-            "_stats": {
-                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.w2ENw2VMPcsbif8g"
-            },
-            "img": "systems/pf2e/icons/equipment/weapons/arrows.webp",
-            "name": "Arrows",
-            "sort": 500000,
-            "system": {
-                "baseItem": "arrows",
-                "bulk": {
-                    "value": 0.1
-                },
-                "containerId": null,
-                "craftableAs": null,
-                "description": {
-                    "value": "<p>These projectiles are the ammunition for bows. The shaft of an arrow is made of wood. It is stabilized in flight by fletching at one end and bears a metal head on the other.</p>"
-                },
-                "level": {
-                    "value": 0
-                },
-                "price": {
-                    "per": 10,
-                    "value": {
-                        "sp": 1
-                    }
-                },
-                "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
-                },
-                "quantity": 20,
-                "rules": [],
-                "size": "med",
-                "slug": "arrows",
-                "traits": {
-                    "rarity": "common",
-                    "value": []
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "max": 1,
-                    "value": 1
-                }
-            },
-            "type": "ammo"
-        },
-        {
             "_id": "YCGYWs0G3JbQQOny",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.e0vSAQfxhHauiAoD"
             },
             "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
             "name": "Healing Potion (Lesser)",
-            "sort": 600000,
+            "sort": 500000,
             "system": {
                 "baseItem": null,
                 "bulk": {
@@ -436,6 +388,54 @@
                 }
             },
             "type": "consumable"
+        },
+        {
+            "_id": "rCD6KR41GJ745wwF",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.w2ENw2VMPcsbif8g"
+            },
+            "img": "systems/pf2e/icons/equipment/weapons/arrows.webp",
+            "name": "Arrows",
+            "sort": 600000,
+            "system": {
+                "baseItem": "arrows",
+                "bulk": {
+                    "value": 0.1
+                },
+                "containerId": null,
+                "craftableAs": null,
+                "description": {
+                    "value": "<p>These projectiles are the ammunition for bows. The shaft of an arrow is made of wood. It is stabilized in flight by fletching at one end and bears a metal head on the other.</p>"
+                },
+                "level": {
+                    "value": 0
+                },
+                "price": {
+                    "per": 10,
+                    "value": {
+                        "sp": 1
+                    }
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": "Pathfinder Core Rulebook"
+                },
+                "quantity": 20,
+                "rules": [],
+                "size": "med",
+                "slug": "arrows",
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                },
+                "uses": {
+                    "autoDestroy": true,
+                    "max": 1,
+                    "value": 1
+                }
+            },
+            "type": "ammo"
         },
         {
             "_id": "YJbZ9CTWY2HNVBXB",

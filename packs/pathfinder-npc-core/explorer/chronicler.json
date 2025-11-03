@@ -1252,61 +1252,13 @@
             "type": "equipment"
         },
         {
-            "_id": "qrL8ADV9Fbelg0V7",
-            "_stats": {
-                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.AITVZmakiu3RgfKo"
-            },
-            "img": "systems/pf2e/icons/equipment/weapons/bolts.webp",
-            "name": "Bolts",
-            "sort": 1800000,
-            "system": {
-                "baseItem": "bolts",
-                "bulk": {
-                    "value": 0.1
-                },
-                "containerId": null,
-                "craftableAs": null,
-                "description": {
-                    "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
-                },
-                "level": {
-                    "value": 0
-                },
-                "price": {
-                    "per": 10,
-                    "value": {
-                        "sp": 1
-                    }
-                },
-                "publication": {
-                    "license": "ORC",
-                    "remaster": true,
-                    "title": "Pathfinder Player Core"
-                },
-                "quantity": 20,
-                "rules": [],
-                "size": "med",
-                "slug": "bolts",
-                "traits": {
-                    "rarity": "common",
-                    "value": []
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "max": 1,
-                    "value": 1
-                }
-            },
-            "type": "ammo"
-        },
-        {
             "_id": "ShegcvfKqLuGKJfi",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Y7UD64foDbDMV9sx"
             },
             "img": "icons/sundries/scrolls/scroll-symbol-eye-brown.webp",
             "name": "Scroll of Acid Grip (Rank 2)",
-            "sort": 1900000,
+            "sort": 1800000,
             "system": {
                 "baseItem": null,
                 "bulk": {
@@ -1352,7 +1304,6 @@
                     "_stats": {
                         "compendiumSource": "Compendium.pf2e.spells-srd.Item.9h9YCncqah6VNsKf"
                     },
-                    "flags": {},
                     "img": "icons/magic/acid/dissolve-arm-flesh.webp",
                     "name": "Acid Grip",
                     "sort": 0,
@@ -1462,7 +1413,7 @@
             },
             "img": "icons/sundries/scrolls/scroll-symbol-eye-brown.webp",
             "name": "Scroll of Heal (Rank 1)",
-            "sort": 2000000,
+            "sort": 1900000,
             "system": {
                 "baseItem": null,
                 "bulk": {
@@ -1508,7 +1459,6 @@
                     "_stats": {
                         "compendiumSource": "Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs"
                     },
-                    "flags": {},
                     "img": "icons/magic/life/cross-worn-green.webp",
                     "name": "Heal",
                     "sort": 0,
@@ -1722,6 +1672,54 @@
                 }
             },
             "type": "consumable"
+        },
+        {
+            "_id": "qrL8ADV9Fbelg0V7",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.AITVZmakiu3RgfKo"
+            },
+            "img": "systems/pf2e/icons/equipment/weapons/bolts.webp",
+            "name": "Bolts",
+            "sort": 2000000,
+            "system": {
+                "baseItem": "bolts",
+                "bulk": {
+                    "value": 0.1
+                },
+                "containerId": null,
+                "craftableAs": null,
+                "description": {
+                    "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
+                },
+                "level": {
+                    "value": 0
+                },
+                "price": {
+                    "per": 10,
+                    "value": {
+                        "sp": 1
+                    }
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "quantity": 20,
+                "rules": [],
+                "size": "med",
+                "slug": "bolts",
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                },
+                "uses": {
+                    "autoDestroy": true,
+                    "max": 1,
+                    "value": 1
+                }
+            },
+            "type": "ammo"
         },
         {
             "_id": "GhbdiBXGiH9AN1pw",

@@ -535,65 +535,13 @@
             "type": "armor"
         },
         {
-            "_id": "TtTZqewKG2CCqDp5",
-            "_stats": {
-                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.n5L7HE9H8jn8ftQy"
-            },
-            "img": "systems/pf2e/icons/equipment/consumables/ammunition/climbing-bolt.webp",
-            "name": "Climbing Bolt",
-            "sort": 700000,
-            "system": {
-                "baseItem": null,
-                "bulk": {
-                    "value": 0
-                },
-                "containerId": null,
-                "craftableAs": [
-                    "bolts"
-                ],
-                "description": {
-                    "value": "<p>The shaft of this bolt is wrapped with fine twine. When the bolt strikes a solid surface, the twine unwinds and enlarges into a 50-foot-long rope, securely fastened to the surface the bolt struck. The rope can be pulled free with an Interact action and a successful @Check[athletics|dc:20|name:Pull Free Rope] check.</p>"
-                },
-                "level": {
-                    "value": 4
-                },
-                "price": {
-                    "value": {
-                        "gp": 15
-                    }
-                },
-                "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
-                },
-                "quantity": 1,
-                "rules": [],
-                "size": "med",
-                "slug": "climbing-bolt",
-                "traits": {
-                    "rarity": "common",
-                    "value": [
-                        "consumable",
-                        "magical"
-                    ]
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "max": 1,
-                    "value": 1
-                }
-            },
-            "type": "ammo"
-        },
-        {
             "_id": "mOBUJvKz2hnXar6W",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.e0vSAQfxhHauiAoD"
             },
             "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
             "name": "Healing Potion (Lesser)",
-            "sort": 800000,
+            "sort": 700000,
             "system": {
                 "baseItem": null,
                 "bulk": {
@@ -658,6 +606,58 @@
                 }
             },
             "type": "consumable"
+        },
+        {
+            "_id": "TtTZqewKG2CCqDp5",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.n5L7HE9H8jn8ftQy"
+            },
+            "img": "systems/pf2e/icons/equipment/consumables/ammunition/climbing-bolt.webp",
+            "name": "Climbing Bolt",
+            "sort": 800000,
+            "system": {
+                "baseItem": null,
+                "bulk": {
+                    "value": 0
+                },
+                "containerId": null,
+                "craftableAs": [
+                    "bolts"
+                ],
+                "description": {
+                    "value": "<p>The shaft of this bolt is wrapped with fine twine. When the bolt strikes a solid surface, the twine unwinds and enlarges into a 50-foot-long rope, securely fastened to the surface the bolt struck. The rope can be pulled free with an Interact action and a successful @Check[athletics|dc:20|name:Pull Free Rope] check.</p>"
+                },
+                "level": {
+                    "value": 4
+                },
+                "price": {
+                    "value": {
+                        "gp": 15
+                    }
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": "Pathfinder Core Rulebook"
+                },
+                "quantity": 1,
+                "rules": [],
+                "size": "med",
+                "slug": "climbing-bolt",
+                "traits": {
+                    "rarity": "common",
+                    "value": [
+                        "consumable",
+                        "magical"
+                    ]
+                },
+                "uses": {
+                    "autoDestroy": true,
+                    "max": 1,
+                    "value": 1
+                }
+            },
+            "type": "ammo"
         },
         {
             "_id": "zvwg7BcdZO7f3CUr",

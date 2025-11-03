@@ -1601,61 +1601,13 @@
             "type": "armor"
         },
         {
-            "_id": "zDq6Mb7ScLnzLqOv",
-            "_stats": {
-                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.sqhr1crb184s3Vnd"
-            },
-            "img": "systems/pf2e/icons/equipment/weapons/blowgun-dart.webp",
-            "name": "Blowgun Darts",
-            "sort": 2000000,
-            "system": {
-                "baseItem": "blowgun-darts",
-                "bulk": {
-                    "value": 0
-                },
-                "containerId": null,
-                "craftableAs": null,
-                "description": {
-                    "value": "<p>These thin, light darts are typically made of hardwood and stabilized with fletching of down or fur. They are often hollow so they can be used to deliver poison.</p>"
-                },
-                "level": {
-                    "value": 0
-                },
-                "price": {
-                    "per": 10,
-                    "value": {
-                        "cp": 5
-                    }
-                },
-                "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
-                },
-                "quantity": 6,
-                "rules": [],
-                "size": "med",
-                "slug": "blowgun-darts",
-                "traits": {
-                    "rarity": "common",
-                    "value": []
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "max": 1,
-                    "value": 1
-                }
-            },
-            "type": "ammo"
-        },
-        {
             "_id": "SMqPkvP3sngKVR0q",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.aBOPYlfHAcXUmhF7"
             },
             "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-poisons/giant-wasp-venom.webp",
             "name": "Giant Wasp Venom (On Darts)",
-            "sort": 2100000,
+            "sort": 2000000,
             "system": {
                 "baseItem": null,
                 "bulk": {
@@ -1716,6 +1668,54 @@
                 }
             },
             "type": "consumable"
+        },
+        {
+            "_id": "zDq6Mb7ScLnzLqOv",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.sqhr1crb184s3Vnd"
+            },
+            "img": "systems/pf2e/icons/equipment/weapons/blowgun-dart.webp",
+            "name": "Blowgun Darts",
+            "sort": 2100000,
+            "system": {
+                "baseItem": "blowgun-darts",
+                "bulk": {
+                    "value": 0
+                },
+                "containerId": null,
+                "craftableAs": null,
+                "description": {
+                    "value": "<p>These thin, light darts are typically made of hardwood and stabilized with fletching of down or fur. They are often hollow so they can be used to deliver poison.</p>"
+                },
+                "level": {
+                    "value": 0
+                },
+                "price": {
+                    "per": 10,
+                    "value": {
+                        "cp": 5
+                    }
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": "Pathfinder Core Rulebook"
+                },
+                "quantity": 6,
+                "rules": [],
+                "size": "med",
+                "slug": "blowgun-darts",
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                },
+                "uses": {
+                    "autoDestroy": true,
+                    "max": 1,
+                    "value": 1
+                }
+            },
+            "type": "ammo"
         },
         {
             "_id": "4gP2dSNnL1rudfAt",

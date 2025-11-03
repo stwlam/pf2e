@@ -351,61 +351,13 @@
             "type": "equipment"
         },
         {
-            "_id": "1MMfu9PVN7Y48wzX",
-            "_stats": {
-                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.AITVZmakiu3RgfKo"
-            },
-            "img": "systems/pf2e/icons/equipment/weapons/bolts.webp",
-            "name": "Bolts",
-            "sort": 600000,
-            "system": {
-                "baseItem": "bolts",
-                "bulk": {
-                    "value": 0.1
-                },
-                "containerId": null,
-                "craftableAs": null,
-                "description": {
-                    "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
-                },
-                "level": {
-                    "value": 0
-                },
-                "price": {
-                    "per": 10,
-                    "value": {
-                        "sp": 1
-                    }
-                },
-                "publication": {
-                    "license": "ORC",
-                    "remaster": true,
-                    "title": "Pathfinder Player Core"
-                },
-                "quantity": 20,
-                "rules": [],
-                "size": "med",
-                "slug": "bolts",
-                "traits": {
-                    "rarity": "common",
-                    "value": []
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "max": 1,
-                    "value": 1
-                }
-            },
-            "type": "ammo"
-        },
-        {
             "_id": "Vg4jXeg10pAR8QXi",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.ALS7pobHFmOnR4yX"
             },
             "img": "icons/commodities/flowers/lotus-violet.webp",
             "name": "Fearflower Nectar",
-            "sort": 700000,
+            "sort": 600000,
             "system": {
                 "baseItem": null,
                 "bulk": {
@@ -465,6 +417,54 @@
                 }
             },
             "type": "consumable"
+        },
+        {
+            "_id": "1MMfu9PVN7Y48wzX",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.AITVZmakiu3RgfKo"
+            },
+            "img": "systems/pf2e/icons/equipment/weapons/bolts.webp",
+            "name": "Bolts",
+            "sort": 700000,
+            "system": {
+                "baseItem": "bolts",
+                "bulk": {
+                    "value": 0.1
+                },
+                "containerId": null,
+                "craftableAs": null,
+                "description": {
+                    "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
+                },
+                "level": {
+                    "value": 0
+                },
+                "price": {
+                    "per": 10,
+                    "value": {
+                        "sp": 1
+                    }
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "quantity": 20,
+                "rules": [],
+                "size": "med",
+                "slug": "bolts",
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                },
+                "uses": {
+                    "autoDestroy": true,
+                    "max": 1,
+                    "value": 1
+                }
+            },
+            "type": "ammo"
         },
         {
             "_id": "WCwTDEnslJApeAdw",

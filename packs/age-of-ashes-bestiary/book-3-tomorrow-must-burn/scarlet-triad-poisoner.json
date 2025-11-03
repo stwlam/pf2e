@@ -567,61 +567,13 @@
             "type": "consumable"
         },
         {
-            "_id": "wJU8l7IA566ORi33",
-            "_stats": {
-                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.AITVZmakiu3RgfKo"
-            },
-            "img": "systems/pf2e/icons/equipment/weapons/bolts.webp",
-            "name": "Bolts",
-            "sort": 900000,
-            "system": {
-                "baseItem": "bolts",
-                "bulk": {
-                    "value": 0.1
-                },
-                "containerId": null,
-                "craftableAs": null,
-                "description": {
-                    "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
-                },
-                "level": {
-                    "value": 0
-                },
-                "price": {
-                    "per": 10,
-                    "value": {
-                        "sp": 1
-                    }
-                },
-                "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
-                },
-                "quantity": 10,
-                "rules": [],
-                "size": "med",
-                "slug": "bolts",
-                "traits": {
-                    "rarity": "common",
-                    "value": []
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "max": 1,
-                    "value": 1
-                }
-            },
-            "type": "ammo"
-        },
-        {
             "_id": "9yiCjxLdJV4KSZ7b",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.QGXNqpP5KvSldoZz"
             },
             "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-poisons/giant-scorpion-venom.webp",
             "name": "Giant Scorpion Venom (Applied to Bolts)",
-            "sort": 1000000,
+            "sort": 900000,
             "system": {
                 "baseItem": null,
                 "bulk": {
@@ -682,6 +634,54 @@
                 }
             },
             "type": "consumable"
+        },
+        {
+            "_id": "wJU8l7IA566ORi33",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.AITVZmakiu3RgfKo"
+            },
+            "img": "systems/pf2e/icons/equipment/weapons/bolts.webp",
+            "name": "Bolts",
+            "sort": 1000000,
+            "system": {
+                "baseItem": "bolts",
+                "bulk": {
+                    "value": 0.1
+                },
+                "containerId": null,
+                "craftableAs": null,
+                "description": {
+                    "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>"
+                },
+                "level": {
+                    "value": 0
+                },
+                "price": {
+                    "per": 10,
+                    "value": {
+                        "sp": 1
+                    }
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": "Pathfinder Core Rulebook"
+                },
+                "quantity": 10,
+                "rules": [],
+                "size": "med",
+                "slug": "bolts",
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                },
+                "uses": {
+                    "autoDestroy": true,
+                    "max": 1,
+                    "value": 1
+                }
+            },
+            "type": "ammo"
         },
         {
             "_id": "PemrcXjJFtKQ8192",

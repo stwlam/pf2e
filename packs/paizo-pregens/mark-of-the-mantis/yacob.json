@@ -412,7 +412,7 @@
                 },
                 "location": null,
                 "prerequisites": {
-                     "value": []
+                    "value": []
                 },
                 "publication": {
                     "license": "ORC",

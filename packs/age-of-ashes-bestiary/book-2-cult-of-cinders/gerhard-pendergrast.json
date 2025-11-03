@@ -483,55 +483,13 @@
             "type": "consumable"
         },
         {
-            "_id": "UicWUJ68tR3WgGLD",
-            "img": "icons/weapons/ammunition/shot-round-lead.webp",
-            "name": "Grapeshot",
-            "sort": 800000,
-            "system": {
-                "baseItem": "arrows",
-                "bulk": {
-                    "value": 0
-                },
-                "containerId": null,
-                "craftableAs": null,
-                "description": {
-                    "value": ""
-                },
-                "level": {
-                    "value": 0
-                },
-                "price": {
-                    "value": {}
-                },
-                "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder #146: Cult of Cinders"
-                },
-                "quantity": 10,
-                "rules": [],
-                "size": "med",
-                "slug": null,
-                "traits": {
-                    "rarity": "common",
-                    "value": []
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "max": 1,
-                    "value": 1
-                }
-            },
-            "type": "ammo"
-        },
-        {
             "_id": "QqLnG9gM1Dn0GQRq",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.ylUdMTsfOQGJ3MN3"
             },
             "img": "systems/pf2e/icons/equipment/alchemical-items/alchemical-tools/tindertwig.webp",
             "name": "Tindertwig",
-            "sort": 900000,
+            "sort": 800000,
             "system": {
                 "baseItem": null,
                 "bulk": {
@@ -591,6 +549,48 @@
                 }
             },
             "type": "consumable"
+        },
+        {
+            "_id": "UicWUJ68tR3WgGLD",
+            "img": "icons/weapons/ammunition/shot-round-lead.webp",
+            "name": "Grapeshot",
+            "sort": 900000,
+            "system": {
+                "baseItem": "arrows",
+                "bulk": {
+                    "value": 0
+                },
+                "containerId": null,
+                "craftableAs": null,
+                "description": {
+                    "value": ""
+                },
+                "level": {
+                    "value": 0
+                },
+                "price": {
+                    "value": {}
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": "Pathfinder #146: Cult of Cinders"
+                },
+                "quantity": 10,
+                "rules": [],
+                "size": "med",
+                "slug": null,
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                },
+                "uses": {
+                    "autoDestroy": true,
+                    "max": 1,
+                    "value": 1
+                }
+            },
+            "type": "ammo"
         },
         {
             "_id": "hetb6HQzsfpikrYo",
