@@ -974,61 +974,13 @@
             "type": "equipment"
         },
         {
-            "_id": "TmU4NAuNYR0pfQyJ",
-            "_stats": {
-                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.AITVZmakiu3RgfKo"
-            },
-            "img": "systems/pf2e/icons/equipment/weapons/bolts.webp",
-            "name": "Bolts (Poisoned with Shadow Essence)",
-            "sort": 1500000,
-            "system": {
-                "baseItem": "bolts",
-                "bulk": {
-                    "value": 0.1
-                },
-                "containerId": null,
-                "craftableAs": null,
-                "description": {
-                    "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>\n<p>@UUID[Compendium.pf2e.equipment-srd.Item.Nethershade]{Shadow Essence}</p>"
-                },
-                "level": {
-                    "value": 0
-                },
-                "price": {
-                    "per": 10,
-                    "value": {
-                        "sp": 1
-                    }
-                },
-                "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": "Pathfinder Core Rulebook"
-                },
-                "quantity": 10,
-                "rules": [],
-                "size": "med",
-                "slug": "bolts",
-                "traits": {
-                    "rarity": "common",
-                    "value": []
-                },
-                "uses": {
-                    "autoDestroy": true,
-                    "max": 1,
-                    "value": 1
-                }
-            },
-            "type": "ammo"
-        },
-        {
             "_id": "6d2ffxrmBR7cIWmI",
             "_stats": {
                 "compendiumSource": "Compendium.pf2e.equipment-srd.Item.Wjkw0lEUOhypYvzo"
             },
             "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
             "name": "Shadow Essence (Applied to Bolts)",
-            "sort": 1600000,
+            "sort": 1500000,
             "system": {
                 "baseItem": null,
                 "bulk": {
@@ -1090,6 +1042,54 @@
                 }
             },
             "type": "consumable"
+        },
+        {
+            "_id": "TmU4NAuNYR0pfQyJ",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.AITVZmakiu3RgfKo"
+            },
+            "img": "systems/pf2e/icons/equipment/weapons/bolts.webp",
+            "name": "Bolts (Poisoned with Shadow Essence)",
+            "sort": 1600000,
+            "system": {
+                "baseItem": "bolts",
+                "bulk": {
+                    "value": 0.1
+                },
+                "containerId": null,
+                "craftableAs": null,
+                "description": {
+                    "value": "<p>Shorter than traditional arrows but similar in construction, bolts are the ammunition used by crossbows.</p>\n<p>@UUID[Compendium.pf2e.equipment-srd.Item.Nethershade]{Shadow Essence}</p>"
+                },
+                "level": {
+                    "value": 0
+                },
+                "price": {
+                    "per": 10,
+                    "value": {
+                        "sp": 1
+                    }
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": "Pathfinder Core Rulebook"
+                },
+                "quantity": 10,
+                "rules": [],
+                "size": "med",
+                "slug": "bolts",
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                },
+                "uses": {
+                    "autoDestroy": true,
+                    "max": 1,
+                    "value": 1
+                }
+            },
+            "type": "ammo"
         },
         {
             "_id": "ZQPTrzNTEq7gN16z",
