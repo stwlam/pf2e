@@ -1277,6 +1277,7 @@
                     "BoneClub": {
                         "Label": "Manifest Bone Club",
                         "New": "New",
+                        "NewLabel": "Bone Club",
                         "Shattered": "Shattered",
                         "ShatteredLabel": "Shattered Bone Club"
                     }

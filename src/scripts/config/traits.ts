@@ -1,12 +1,10 @@
 import { OtherArmorTag } from "@item/armor/types.ts";
 import { BackgroundTrait } from "@item/background/types.ts";
-import { RANGE_TRAITS } from "@item/base/data/values.ts";
 import { ClassTrait } from "@item/class/types.ts";
 import { OtherConsumableTag } from "@item/consumable/types.ts";
 import { PreciousMaterialType } from "@item/physical/types.ts";
 import { MagicTradition } from "@item/spell/types.ts";
 import { OtherWeaponTag } from "@item/weapon/types.ts";
-import { sluggify } from "@util";
 import * as R from "remeda";
 
 // Ancestry and heritage traits
@@ -413,6 +411,7 @@ const weaponTraits = {
     "attached-to-shield": "PF2E.TraitAttachedToShield",
     "attached-to-crossbow-or-firearm": "PF2E.TraitAttachedToCrossbowOrFirearm",
     auditory: "PF2E.TraitAuditory",
+    automatic: "PF2E.TraitAutomatic",
     backstabber: "PF2E.TraitBackstabber",
     backswing: "PF2E.TraitBackswing",
     bomb: "PF2E.TraitBomb",
@@ -590,12 +589,9 @@ const otherWeaponTags: Record<OtherWeaponTag, string> = {
     shoddy: "PF2E.Item.Physical.OtherTag.Shoddy",
 };
 
-const rangeTraits = R.mapToObj(RANGE_TRAITS, (trait) => [trait, `PF2E.Trait${sluggify(trait, { camel: "bactrian" })}`]);
-
 const npcAttackTraits = {
     ...weaponTraits,
     ...preciousMaterials,
-    ...rangeTraits,
     area: "PF2E.TraitArea",
     concentrate: "PF2E.TraitConcentrate",
     curse: "PF2E.TraitCurse",
@@ -1073,8 +1069,6 @@ const armorTraits = {
     tech: "PF2E.TraitTech",
 };
 
-const rangeDescriptions = R.mapToObj(RANGE_TRAITS, (trait) => [trait, "PF2E.TraitDescriptionRange"]);
-
 const kingmakerTraits = {
     ...actionTraits,
     army: "PF2E.Kingmaker.Trait.army",
@@ -1485,7 +1479,6 @@ const traitDescriptions = {
     rage: "PF2E.TraitDescriptionRage",
     akshasa: "PF2E.TraitDescriptionRakshasa",
     ranger: "PF2E.TraitDescriptionRanger",
-    ...rangeDescriptions,
     "ranged-trip": "PF2E.TraitDescriptionRangedTrip",
     rare: "PF2E.TraitDescriptionRare",
     ratfolk: "PF2E.TraitDescriptionRatfolk",
