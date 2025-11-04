@@ -469,10 +469,18 @@ abstract class PhysicalItemPF2e<TParent extends ActorPF2e | null = ActorPF2e | n
         item: PhysicalItemPF2e,
         { quantity = 1, stack = false }: { quantity?: number; stack?: boolean } = {},
     ): Promise<boolean> {
-        const subitems = fu.deepClone(this._source.system.subitems);
-        if (!subitems) {
-            throw ErrorPF2e("This item does not accept attachments");
-        }
+        if (!this._source.system.subitems) throw ErrorPF2e("This item does not accept attachments");
+
+        // Get subitems, excluding those that will need to be purged this update
+        // Empty ammo removal is deferred for reloading, since the ammo may still needed for rule elements to function
+        const purgedItems = this.isOfType("weapon")
+            ? this.subitems
+                  .filter((i) => i.isOfType("ammo", "weapon") && i.isAmmoFor(this) && !i.quantity)
+                  .map((i) => i.id)
+            : [];
+        const subitems = fu
+            .deepClone(this._source.system.subitems)
+            .filter((i) => i._id && !purgedItems.includes(i._id));
 
         // Add to subitems, matching with a stackable item if stack is true
         const validCarryTypes = ["attached", "installed"] as const;
