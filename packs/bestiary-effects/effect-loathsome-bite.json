@@ -1,15 +1,16 @@
 {
     "_id": "LgZx5xotO08JzhVc",
     "img": "icons/magic/death/mouth-bite-fangs-vampire.webp",
-    "name": "Effect: Mutilating Bite",
+    "name": "Effect: Loathsome Bite",
     "system": {
         "badge": {
             "max": 3,
+            "min": null,
             "type": "counter",
             "value": 1
         },
         "description": {
-            "value": "<p>The creature then takes a -1 status penalty to Charisma-based checks. This penalty is cumulative up to -3.</p>"
+            "value": "<p>You take a status penalty to Charisma-based checks.</p>"
         },
         "duration": {
             "expiry": null,
@@ -18,19 +19,19 @@
             "value": -1
         },
         "level": {
-            "value": 2
+            "value": 4
         },
         "publication": {
-            "license": "OGL",
-            "remaster": false,
-            "title": "Pathfinder Bestiary 3"
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Monster Core 2"
         },
         "rules": [
             {
                 "key": "FlatModifier",
                 "selector": "cha-based",
                 "type": "status",
-                "value": "@item.badge.value*-1"
+                "value": "-@item.badge.value"
             }
         ],
         "start": {

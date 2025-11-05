@@ -462,6 +462,19 @@
             "flags": {}
         },
         {
+            "name": "pathfinder-monster-core-2",
+            "label": "Monster Core 2",
+            "path": "packs/pathfinder-monster-core-2",
+            "type": "Actor",
+            "banner": "systems/pf2e/assets/compendium-banner/red.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            },
+            "flags": {}
+        },
+        {
             "name": "pathfinder-npc-core",
             "label": "NPC Core",
             "path": "packs/pathfinder-npc-core",
@@ -1401,7 +1414,9 @@
                 "pathfinder-bestiary",
                 "pathfinder-bestiary-2",
                 "pathfinder-bestiary-3",
+                "pathfinder-draconic-codex",
                 "pathfinder-monster-core",
+                "pathfinder-monster-core-2",
                 "pathfinder-npc-core"
             ]
         },
