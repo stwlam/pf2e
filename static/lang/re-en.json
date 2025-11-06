@@ -6811,6 +6811,11 @@
                 "DefendingLabel": "Trap Finder (defending against traps)",
                 "SearchLabel": "Trap Finder (searching for traps)"
             },
+            "TriangularTeeth": {
+                "Survival": {
+                    "Label": "Triangular Teeth — Navigate Waters"
+                }
+            },
             "TrinityGeodeLabel": "Trinity Geode",
             "TwinnedDefense": {
                 "Prompt": "Are you wielding a parry weapon?"
