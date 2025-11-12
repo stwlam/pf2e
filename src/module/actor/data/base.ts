@@ -252,7 +252,7 @@ interface BasicAttackAction {
 
 interface AttackAmmunitionData {
     compatible: { id: string; label: string }[];
-    loaded: { id: string; img: ImageFilePath; name: string; quantity: number; max: number }[];
+    loaded: { id: string; img: ImageFilePath; name: string; quantity: number; max: number; isTemporary: boolean }[];
     selected: {
         id: string;
         compatible: boolean;
