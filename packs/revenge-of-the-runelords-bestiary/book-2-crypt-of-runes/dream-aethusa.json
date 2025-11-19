@@ -2738,12 +2738,8 @@
                     "value": 34
                 },
                 "damageRolls": {
-                    "1ARSHXJlJRhs711Z": {
-                        "damage": "1d6",
-                        "damageType": "spirit"
-                    },
                     "fXlPiSbwpqaSkHQf": {
-                        "damage": "4d8+9",
+                        "damage": "3d8+13",
                         "damageType": "piercing"
                     }
                 },
@@ -3063,7 +3059,12 @@
                 }
             ],
             "speed": {
-                "otherSpeeds": [],
+                "otherSpeeds": [
+                    {
+                        "type": "fly",
+                        "value": 25
+                    }
+                ],
                 "value": 25
             }
         },

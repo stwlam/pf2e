@@ -89,7 +89,8 @@
                 "value": "lg"
             },
             "value": [
-                "mythic"
+                "mythic",
+                "nightmare"
             ]
         }
     },
