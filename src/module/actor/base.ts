@@ -1932,6 +1932,29 @@ class ActorPF2e<TParent extends TokenDocumentPF2e | null = TokenDocumentPF2e | n
                 this.update({ "system.attributes.hp.value": newHitPoints }, { allowHPOverage: true });
             }
         }
+
+        // Check through changes for any containerId updates.
+        // If items have been moved into backpacks, and the quantity exceeds 1, it splits it
+        const containersToCheck: string[] = [];
+        for (const change of changes) {
+            if (!R.isPlainObject(change)) continue;
+            const expanded = fu.expandObject(change);
+            if (R.isPlainObject(expanded.system) && expanded.system.containerId) {
+                containersToCheck.push(String(expanded.system.containerId));
+            }
+        }
+        const updates = createActorGroupUpdate();
+        for (const containerId of R.unique(containersToCheck)) {
+            const container = this.items.get(containerId);
+            if (container?.isOfType("backpack") && container.system.quantity > 1 && container.contents.size > 0) {
+                const clone = container.toObject(true);
+                clone._id = null;
+                clone.system.quantity = container.system.quantity - 1;
+                updates.itemCreates.push(clone);
+                updates.itemUpdates.push({ _id: container.id, "system.quantity": 1 });
+            }
+        }
+        applyActorGroupUpdate(this, updates); // no-ops if empty
     }
 
     protected override _onUpdate(
