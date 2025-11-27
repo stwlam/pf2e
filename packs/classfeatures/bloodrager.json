@@ -80,7 +80,20 @@
                     "bleed",
                     "slashing"
                 ],
-                "value": "@actor.abilities.con.mod+3"
+                "value": "@actor.flags.pf2e.ragingResistance"
+            },
+            {
+                "definition": [
+                    "origin:mark:harvest-blood"
+                ],
+                "key": "Resistance",
+                "label": "PF2E.IWR.Custom.HarvestBlood",
+                "predicate": [
+                    "self:effect:rage",
+                    "feature:raging-resistance"
+                ],
+                "type": "custom",
+                "value": "@actor.flags.pf2e.ragingResistance"
             },
             {
                 "damageType": "bleed",
