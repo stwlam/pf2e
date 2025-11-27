@@ -1413,6 +1413,9 @@
                 "CriticalHit": "Shell Broken by a Critical Hit"
             },
             "Shieldmarshal": {
+                "EquitableDefense": {
+                    "ResistanceToggle": "Equitable Defense — Critical Hit Resistance"
+                },
                 "LawbringerSpeedLabel": "Lawbringer — Moving Toward Target"
             },
             "ShockerLizard": {
