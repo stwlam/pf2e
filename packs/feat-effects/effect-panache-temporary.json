@@ -1,20 +1,20 @@
 {
-    "_id": "58QyKgMWfsUPqZn1",
-    "img": "icons/skills/melee/maneuver-daggers-paired-orange.webp",
-    "name": "Effect: Even the Odds",
+    "_id": "paKKHPds77fq5VTH",
+    "img": "icons/commodities/treasure/crown-gold-laurel-wreath.webp",
+    "name": "Effect: Panache (Temporary)",
     "system": {
         "description": {
-            "value": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.Even the Odds]</p>\n<p>You gain panache.</p>"
+            "value": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.Flashy Dodge], @UUID[Compendium.pf2e.feats-srd.Item.Extravagant Parry], @UUID[Compendium.pf2e.feats-srd.Item.Elegant Buckler], @UUID[Compendium.pf2e.feats-srd.Item.Charmed Life], @UUID[Compendium.pf2e.feats-srd.Item.Guardian's Deflection (Swashbuckler)]{Guardian's Deflection}, and bravado actions on a failure.</p>\n<p>You gain panache.</p>"
         },
         "duration": {
             "expiry": "turn-end",
             "sustained": false,
             "unit": "rounds",
-            "value": 0
+            "value": 1
         },
         "fromSpell": false,
         "level": {
-            "value": 4
+            "value": 1
         },
         "publication": {
             "license": "ORC",
@@ -35,7 +35,7 @@
             "value": 0
         },
         "tokenIcon": {
-            "show": true
+            "show": false
         },
         "traits": {
             "value": []

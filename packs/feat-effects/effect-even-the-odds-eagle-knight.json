@@ -1,31 +1,30 @@
 {
-    "_id": "1nCwQErK6hpkNvfw",
-    "img": "systems/pf2e/icons/equipment/weapons/rapier.webp",
-    "name": "Effect: Dueling Parry",
+    "_id": "xxkCSwizAu2wC7Fo",
+    "img": "icons/magic/life/heart-glowing-red.webp",
+    "name": "Effect: Even the Odds (Eagle Knight)",
     "system": {
         "description": {
-            "value": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.Dueling Parry]</p>\n<p>You gain a +2 circumstance bonus to AC.</p>"
+            "value": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.Even the Odds (Eagle Knight)]</p>\n<p>You gain 25 temporary Hit Points.</p>"
         },
         "duration": {
             "expiry": "turn-start",
             "sustained": false,
-            "unit": "rounds",
+            "unit": "minutes",
             "value": 1
         },
+        "fromSpell": false,
         "level": {
-            "value": 1
+            "value": 14
         },
         "publication": {
             "license": "ORC",
             "remaster": true,
-            "title": "Pathfinder Player Core"
+            "title": "Pathfinder Lost Omens Shining Kingdoms"
         },
         "rules": [
             {
-                "key": "FlatModifier",
-                "selector": "ac",
-                "type": "circumstance",
-                "value": 2
+                "key": "TempHP",
+                "value": 25
             }
         ],
         "start": {
@@ -36,7 +35,6 @@
             "show": true
         },
         "traits": {
-            "rarity": "common",
             "value": []
         }
     },
