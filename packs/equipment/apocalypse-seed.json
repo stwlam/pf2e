@@ -1,0 +1,50 @@
+{
+    "_id": "JsRaJz8Lo1FE1R0P",
+    "img": "icons/commodities/bones/tooth-molar-white.webp",
+    "name": "Apocalypse Seed",
+    "system": {
+        "baseItem": null,
+        "bulk": {
+            "value": 0.1
+        },
+        "containerId": null,
+        "description": {
+            "value": "<p>When the runelord of greed Gimmel summoned and briefly controlled the Oliphaunt of Jandelay, he set into motion events he couldn't have guessed, and the aftermath of the visitation would forever change Golarion. Neither the forces of Azlant nor Thassilon could challenge the Oliphaunt once it broke free of Gimmel's control, but that doesn't mean it didn't leave behind some small part of itself—a fragment of one of its teeth that served as a sort of seed, promising an eventual apocalypse in the land's far future. It was this tooth fragment that first drew the Ashen Man's attention to Golarion so long ago.</p>\n<p>The <em>Apocalypse Seed</em> might be but a fragment of one of the Oliphaunt's teeth, but it's still as large as a barrel. The huge chunk of ivory retains a jagged edge on the side where it broke off. Otherwise, it's unblemished and of an unsettling yellow tint in coloration. Sometimes, when caught on the edge of one's peripheral vision, the surface seems covered with writhing spiral sigils, but they fade from view if directly observed. The first time a creature touches the <em>Apocalypse Seed</em>, they hear phantom sounds of titanic footsteps and the far-off trumpet of annihilation, drawing inexorably closer for a few moments before the sensation fades, never to be repeated for that creature again.</p>\n<p><strong>Activate—Oliphaunt's Cry</strong> <span class=\"action-glyph\">2</span> (concentrate, manipulate, sonic)</p><hr /><p><strong>Effect</strong> Spend 1 Mythic Point. You summon the echo of the Oliphaunt's trumpeting blast, creating a @Template[type:cone|distance:120] of sound. Each creature in the area must attempt a @Check[fortitude|dc:45] save with the following effects.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature takes @Damage[5d10[sonic]|options:area-damage] damage and is @UUID[Compendium.pf2e.conditionitems.Item.Deafened] for 1 round.</p>\n<p><strong>Failure</strong> The creature takes @Damage[10d10[sonic]|options:area-damage] damage, is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} for 2 rounds, and is deafened for 2 rounds.</p>\n<p><strong>Critical Failure</strong> The creature takes @Damage[20d10[sonic]|options:area-damage] damage, is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 2} for 2 rounds, and is deafened for 4 rounds.</p><hr /><p><strong>Destruction</strong> The <em>Apocalypse Seed</em> is destroyed if it's returned to Jandelay and thrown into the Oliphaunt's mouth. This lifts the promised apocalypse from Golarion and makes it impossible for the Oliphaunt to ever return to this world unless a new <em>Apocalypse Seed</em> is created and buried somewhere on Golarion.</p>"
+        },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 20
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {}
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "quantity": 1,
+        "rules": [],
+        "size": "med",
+        "traits": {
+            "rarity": "unique",
+            "value": [
+                "artifact",
+                "magical",
+                "mythic"
+            ]
+        },
+        "usage": {
+            "value": "held-in-one-hand"
+        }
+    },
+    "type": "equipment"
+}

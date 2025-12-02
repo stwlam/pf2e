@@ -1,6 +1,6 @@
 {
     "_id": "58rL5sg2y4arW1i5",
-    "img": "systems/pf2e/icons/default-icons/alternatives/ancestries/skeleton.svg",
+    "img": "systems/pf2e/icons/ancestries/skeleton.webp",
     "name": "Skeleton",
     "system": {
         "additionalLanguages": {
@@ -40,6 +40,7 @@
                 ]
             }
         },
+        "hands": 2,
         "hp": 6,
         "items": {
             "pADW6": {

@@ -1,6 +1,6 @@
 {
     "_id": "tSurOqRcfumadTfr",
-    "img": "systems/pf2e/icons/default-icons/ancestry.svg",
+    "img": "systems/pf2e/icons/ancestries/ghoran.webp",
     "name": "Ghoran",
     "system": {
         "additionalLanguages": {
@@ -42,6 +42,7 @@
                 "value": []
             }
         },
+        "hands": 2,
         "hp": 8,
         "items": {
             "Jpors": {

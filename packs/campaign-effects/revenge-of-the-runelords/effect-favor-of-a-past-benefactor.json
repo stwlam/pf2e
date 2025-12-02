@@ -1,0 +1,44 @@
+{
+    "_id": "G8YANJEFkHebehZh",
+    "folder": "X4m1j7Mkqkts8fyV",
+    "img": "icons/magic/symbols/fleur-de-lis-yellow.webp",
+    "name": "Effect: Favor of a Past Benefactor",
+    "system": {
+        "description": {
+            "value": "<p>You take a –5 penalty to your spell DC and attack modifier.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": true,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "selector": "spell-attack-dc",
+                "value": -5
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

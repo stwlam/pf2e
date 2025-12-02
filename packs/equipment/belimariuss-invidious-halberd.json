@@ -1,0 +1,95 @@
+{
+    "_id": "H23XWSdTgBV1UhBq",
+    "img": "systems/pf2e/icons/equipment/weapons/halberd.webp",
+    "name": "Belimarius's Invidious Halberd",
+    "system": {
+        "baseItem": "halberd",
+        "bonus": {
+            "value": 0
+        },
+        "bonusDamage": {
+            "value": 0
+        },
+        "bulk": {
+            "value": 2
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+            "damageType": "piercing",
+            "dice": 1,
+            "die": "d10"
+        },
+        "description": {
+            "value": "<p><strong>Perception</strong> +29; darkvision, imprecise hearing within 60 feet</p>\n<p><strong>Communication</strong> speech (Azlanti, Elven, Thassilonian)</p>\n<p><strong>Skills</strong> Arcana [[/gmr 1d20+33 #Arcana]]{+33}, Deception [[/gmr 1d20+29 #Deception]]{+29}, Society [[/gmr 1d20+31 #Society]]{+31}</p>\n<p><strong>Int</strong> +8, <strong>Wis</strong> +6, <strong>Cha</strong> +4</p>\n<p><strong>Will</strong> [[/gmr 1d20+31 #Will]]{+31}</p><hr /><p><em>Belimarius's Invidious Halberd</em> is a <em>+3 greater striking keen spell reservoir high-grade dawnsilver halberd</em> (at this time, their spell reservoir contains @UUID[Compendium.pf2e.spells-srd.Item.Slow]). As the halberd passed from the hands of one runelord of envy to the next, the halberd's self-loathing and hatred of the arcane spellcasters they were forced to serve grew. Their own limited arcane magic paled in comparison to their powerful wielders, after all, and the halberd seethed at this perceived inequality. They only grudgingly abide their wielders—runelord or otherwise—and are only truly happy when they're used to cut down those who can cast arcane spells. The halberd can use 3 actions per turn, acting on their wielder's turn, and has a reaction. These actions and reaction don't count against their wielder's.</p><hr /><p><strong>Activate—Absorb Arcana</strong> <span class=\"action-glyph\">r</span> (arcane, concentrate)</p>\n<p><strong>Trigger</strong> The halberd damages a creature capable of casting arcane spells</p>\n<p><strong>Effect</strong> The halberd attempts to absorb one of the creature's prepared arcane spells or arcane spell slots. If the creature struck fails a @Check[will|dc:37] save, it loses an arcane spell (or lose an unused arcane spell slot) as if it'd cast that spell. The spell or slot lost is randomly determined from the highest rank available, starting at 6th rank and working down. The halberd passes this absorbed energy on to their wielder, who becomes @UUID[Compendium.pf2e.conditionitems.Item.Quickened] for 1 round and can use the extra action only to Strike with the halberd.</p><hr /><p><strong>Activate—Detonate Magic</strong> <span class=\"action-glyph\">2</span> (arcane, concentrate)</p>\n<p><strong>Frequency</strong> once per day</p>\n<p><strong>Effect</strong> The halberd casts @UUID[Compendium.pf2e.spells-srd.Item.Detonate Magic] (DC 37).</p><hr /><p><strong>Activate—Manipulate Mind</strong> <span class=\"action-glyph\">2</span> (arcane, concentrate)</p>\n<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Effect</strong> The halberd casts a 9th-rank @UUID[Compendium.pf2e.spells-srd.Item.Rewrite Memory] (DC 37).</p><hr /><p><strong>Activate—Shattermind</strong> <span class=\"action-glyph\">f</span> (arcane, concentrate)</p>\n<p><strong>Trigger</strong> The halberd critically hits a creature capable of casting arcane spells</p>\n<p><strong>Effect</strong> The creature struck is targeted with a 9th-rank @UUID[Compendium.pf2e.spells-srd.Item.Never Mind] spell (DC 37).</p><hr /><p><strong>Destruction</strong> <em>Belimarius's Invidious Halberd</em> is destroyed if it's hurled under the feet of the Oliphaunt of Jandelay while there's no current runelord of envy living in the world.</p>"
+        },
+        "expend": null,
+        "grade": null,
+        "group": "polearm",
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 17
+        },
+        "material": {
+            "grade": "high",
+            "type": "dawnsilver"
+        },
+        "price": {
+            "value": {
+                "gp": 2
+            }
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "quantity": 1,
+        "range": null,
+        "reload": {
+            "value": null
+        },
+        "rules": [],
+        "runes": {
+            "potency": 3,
+            "property": [
+                "keen",
+                "spellStoring"
+            ],
+            "striking": 2
+        },
+        "size": "med",
+        "specific": {
+            "material": {
+                "grade": "high",
+                "type": "dawnsilver"
+            },
+            "runes": {
+                "potency": 3,
+                "property": [
+                    "keen",
+                    "spellStoring"
+                ],
+                "striking": 2
+            }
+        },
+        "splashDamage": {
+            "value": 0
+        },
+        "traits": {
+            "rarity": "unique",
+            "value": [
+                "reach",
+                "versatile-s"
+            ]
+        },
+        "usage": {
+            "value": "held-in-two-hands"
+        }
+    },
+    "type": "weapon"
+}

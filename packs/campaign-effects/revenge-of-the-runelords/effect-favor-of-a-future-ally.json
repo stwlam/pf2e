@@ -1,0 +1,49 @@
+{
+    "_id": "rjQyiAqxvVzYUpqV",
+    "folder": "X4m1j7Mkqkts8fyV",
+    "img": "icons/magic/symbols/rune-sigil-horned-white-purple.webp",
+    "name": "Effect: Favor of a Future Ally",
+    "system": {
+        "description": {
+            "value": "<p>You take a –3 penalty to AC, and a –5 penalty to strike attack rolls.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": true,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "selector": "ac",
+                "value": -3
+            },
+            {
+                "key": "FlatModifier",
+                "selector": "strike-attack-roll",
+                "value": -5
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

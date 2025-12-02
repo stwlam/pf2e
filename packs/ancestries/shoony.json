@@ -1,6 +1,6 @@
 {
     "_id": "q6rsqYARyOGXZA8F",
-    "img": "systems/pf2e/icons/default-icons/alternatives/ancestries/shoony.webp",
+    "img": "systems/pf2e/icons/ancestries/shoony.webp",
     "name": "Shoony",
     "system": {
         "additionalLanguages": {
@@ -46,6 +46,7 @@
                 ]
             }
         },
+        "hands": 2,
         "hp": 6,
         "items": {
             "82kag": {

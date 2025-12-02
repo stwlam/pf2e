@@ -1,6 +1,6 @@
 {
     "_id": "u1VJEXsVlmh3Fyx0",
-    "img": "systems/pf2e/icons/default-icons/ancestry.svg",
+    "img": "systems/pf2e/icons/ancestries/vishkanya.webp",
     "name": "Vishkanya",
     "system": {
         "additionalLanguages": {
@@ -44,6 +44,7 @@
                 "value": []
             }
         },
+        "hands": 2,
         "hp": 8,
         "items": {
             "0wY9n": {

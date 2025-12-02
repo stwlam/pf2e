@@ -1,6 +1,6 @@
 {
     "_id": "FUqZRllwn6kmFA8K",
-    "img": "systems/pf2e/icons/default-icons/alternatives/ancestries/merfolk.svg",
+    "img": "systems/pf2e/icons/ancestries/merfolk.webp",
     "name": "Merfolk",
     "system": {
         "additionalLanguages": {
@@ -46,6 +46,7 @@
                 ]
             }
         },
+        "hands": 2,
         "hp": 8,
         "items": {
             "1ZhYb": {

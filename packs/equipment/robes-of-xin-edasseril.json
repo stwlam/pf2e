@@ -1,0 +1,81 @@
+{
+    "_id": "Yzsxn8w4Uuf9awBy",
+    "img": "icons/equipment/chest/shirt-collared-pink.webp",
+    "name": "Robes of Xin-Edasseril",
+    "system": {
+        "acBonus": 0,
+        "baseItem": "explorers-clothing",
+        "bulk": {
+            "value": 0.1
+        },
+        "category": "unarmored",
+        "checkPenalty": 0,
+        "containerId": null,
+        "description": {
+            "value": "<p>These robes, the traditional raiment of the runelord of envy, function as <em>+3 greater resilient antimagic greater energy-resistant explorer's clothing</em>. The energy resistance granted by these robes can be selected from acid, cold, electricity, or fire when you perform your daily preparations—without these preparations, the robes default to cold resistance. The robe's pockets function as a @UUID[Compendium.pf2e.equipment-srd.Item.Retrieval Belt (Major)].</p>"
+        },
+        "dexCap": 5,
+        "grade": null,
+        "group": "cloth",
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 19
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {
+                "cp": 0,
+                "gp": 40000,
+                "pp": 0
+            }
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+            "potency": 3,
+            "property": [
+                "antimagic",
+                "greaterColdResistant"
+            ],
+            "resilient": 2
+        },
+        "size": "med",
+        "specific": {
+            "material": {
+                "grade": null,
+                "type": null
+            },
+            "runes": {
+                "potency": 3,
+                "property": [
+                    "antimagic",
+                    "greaterColdResistant"
+                ],
+                "resilient": 2
+            }
+        },
+        "speedPenalty": 0,
+        "strength": null,
+        "traits": {
+            "rarity": "unique",
+            "value": [
+                "comfort",
+                "invested",
+                "magical"
+            ]
+        }
+    },
+    "type": "armor"
+}

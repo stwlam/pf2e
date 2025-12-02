@@ -1,6 +1,6 @@
 {
     "_id": "kYsBAJ103T44agJF",
-    "img": "systems/pf2e/icons/default-icons/alternatives/ancestries/automaton.svg",
+    "img": "systems/pf2e/icons/ancestries/automaton.webp",
     "name": "Automaton",
     "system": {
         "additionalLanguages": {
@@ -47,19 +47,20 @@
                 "value": []
             }
         },
+        "hands": 2,
         "hp": 8,
         "items": {
-            "l0mdk": {
-                "img": "systems/pf2e/icons/default-icons/feat.svg",
-                "level": 1,
-                "name": "Constructed Body",
-                "uuid": "Compendium.pf2e.ancestryfeatures.Item.Constructed Body"
-            },
-            "l6cpr": {
-                "img": "systems/pf2e/icons/default-icons/feat.svg",
+            "Djbf5": {
+                "img": "icons/commodities/tech/cog-brass.webp",
                 "level": 1,
                 "name": "Automaton Core",
                 "uuid": "Compendium.pf2e.ancestryfeatures.Item.Automaton Core"
+            },
+            "JeU1N": {
+                "img": "systems/pf2e/icons/features/classes/expert-overdrive.webp",
+                "level": 1,
+                "name": "Constructed Body",
+                "uuid": "Compendium.pf2e.ancestryfeatures.Item.Constructed Body"
             }
         },
         "languages": {

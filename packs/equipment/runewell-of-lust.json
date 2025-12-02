@@ -1,0 +1,50 @@
+{
+    "_id": "2gkG6hqPnSuPrdPD",
+    "img": "icons/environment/wilderness/portal.webp",
+    "name": "Runewell of Lust",
+    "system": {
+        "baseItem": null,
+        "bulk": {
+            "value": 0.1
+        },
+        "containerId": null,
+        "description": {
+            "gm": "<p>Once Runelord Belimarius is defeated, the Runewell of Lust can once again be activated as follows.</p><hr /><p><strong>Activate—Scrying</strong> 10 minutes (concentrate, manipulate)</p><p><strong>Effect</strong> The runewell casts a 10th-rank @UUID[Compendium.pf2e.spells-srd.Item.Scrying] spell (DC 46) to your specifications and gives you the benefits of telepathy for communicating with the target and 10th-rank @UUID[Compendium.pf2e.spells-srd.Item.Truesight] for anything you watch through it.</p><hr /><p><strong>Activate—Inner Dominance</strong> 1 hour (concentrate, manipulate, mental)</p><p><strong>Effect</strong> You spend an hour bathing in the runewell, gaining resistance 20 to mental damage and immunity to being controlled. As long as you benefit from Inner Dominance, the number of items you can invest each day is reduced by 2. As long as you benefit from Inner Dominance, you don't age. The Runewell of Lust can maintain Inner Dominance on up to seven creatures at a time, including Sorshen (who doesn't count against this limit). Inner Dominance lasts until it's dispelled, until the creature bearing it is slain, or until Sorshen chooses to end the effect as an Interact action.</p>",
+            "value": "<p>The Runewell of Lust is a potent artifact and was the first of its kind among the runelords. As with all runewells, the Runewell of Lust is immobile and located within a demiplane that's inexorably linked to it, but the anima focus that allows access to the demiplane and the runewell can be transported to new locations through a series of complex rites known only to Sorshen herself.</p>\n<p>Originally, the Runewell of Lust could absorb soul fragments of those who served Sorshen upon their deaths, granting her an essentially limitless supply of magical power she could use to fund potent rituals or craft magical items, but she disabled this ability soon after she woke years ago and decided it was time for a change. The Runewell of Lust appears as a hot spring filled with soothing 3-foot-deep waters.</p>\n<p><strong>Activate—Exit the Eye</strong> <span class=\"action-glyph\">1</span> (concentrate, manipulate)</p><hr /><p><strong>Effect</strong> By splashing the runewell's water on yourself while you stand within it, you transport yourself back to a space of your choice within 30 feet of the anima focus, which is currently located in Sorshen's atrium.</p><hr /><p><strong>Destruction</strong> If Sorshen is slain, the waters within the Runewell of Lust immediately become normal water, destroying the runewell in the process. The Eye of Desire is destroyed as well. Creatures not native to the Eye of Desire are immediately transported to the vicinity of the runewell's linked anima focus and become @UUID[Compendium.pf2e.conditionitems.Item.Stunned]{Stunned 3}; any foreign objects within the Eye of Desire at the time are similarly ejected.</p>"
+        },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 23
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {}
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "quantity": 1,
+        "rules": [],
+        "size": "med",
+        "traits": {
+            "rarity": "unique",
+            "value": [
+                "artifact",
+                "magical"
+            ]
+        },
+        "usage": {
+            "value": "other"
+        }
+    },
+    "type": "equipment"
+}

@@ -1,6 +1,6 @@
 {
     "_id": "3wQ49DoWFYQgVsq6",
-    "img": "systems/pf2e/icons/default-icons/alternatives/ancestries/minotaur.svg",
+    "img": "systems/pf2e/icons/ancestries/minotaur.webp",
     "name": "Minotaur",
     "system": {
         "additionalLanguages": {
@@ -46,6 +46,7 @@
                 ]
             }
         },
+        "hands": 2,
         "hp": 10,
         "items": {
             "MZeAa": {

@@ -50,8 +50,8 @@
         "hands": 2,
         "hp": 6,
         "items": {
-            "uu6ze": {
-                "img": "systems/pf2e/icons/default-icons/feat.svg",
+            "55xmg": {
+                "img": "icons/creatures/magical/fae-fairy-winged-glowing-green.webp",
                 "level": 1,
                 "name": "Magical Strikes",
                 "uuid": "Compendium.pf2e.ancestryfeatures.Item.Magical Strikes"

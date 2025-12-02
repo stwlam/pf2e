@@ -1,0 +1,105 @@
+{
+    "_id": "yYVbgyLGfhRJaNEY",
+    "img": "systems/pf2e/icons/equipment/weapons/guisarme.webp",
+    "name": "Sorshen's Sinuous Guisarme",
+    "system": {
+        "baseItem": "guisarme",
+        "bonus": {
+            "value": 0
+        },
+        "bonusDamage": {
+            "value": 0
+        },
+        "bulk": {
+            "value": 2
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+            "damageType": "slashing",
+            "dice": 1,
+            "die": "d10"
+        },
+        "description": {
+            "value": "<p><strong>Perception</strong> +37; precise vision 300 feet, imprecise hearing 300 feet, darkvision</p>\n<p><strong>Communication</strong> telepathy (Aklo, Azlanti, Chthonian, and Thassilonian)</p>\n<p><strong>Skills</strong> Arcana [[/gmr 1d20+43 #Arcana]]{+43}, Occultism [[/gmr 1d20+38 #Occultism]]{+38}, Society [[/gmr 1d20+36 #Society]]{+36}</p>\n<p><strong>Int</strong> +6, <strong>Wis</strong> +6, <strong>Cha</strong> +8</p>\n<p><strong>Will</strong> [[/gmr 1d20+37 #Will]]{+37}</p><hr /><p><em>Sorshen's Sinuous Guisarme</em> is a <em>+4 mythic striking keen quickstrike shifting spell reservoir high-grade dawnsilver guisarme</em>. The weapon's unique double-bladed design combined with her magical nature grants her the twin weapon trait. Her spell reservoir rune typically contains blindness. Her power and intelligence are derived from a magical gemstone containing 13 of Sorshen's dreams, all so outlandish or salacious that most would consider them to be nightmares—although these dreams have been transforming into less horrific visions as Sorshen's changing philosophies continue to influence her weapon. The guisarme can use 3 actions per turn, acting on her wielder's turn. These actions don't count against her wielder's.</p><hr /><p><strong>Activate—Arcane Shift</strong> <span class=\"action-glyph\">f</span> (concentrate)</p>\n<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You activate the guisarme's shifting rune to Shift Weapon</p>\n<p><strong>Effect</strong> The guisarme transforms into a @UUID[Compendium.pf2e.equipment-srd.Item.Staff of Control (Major)] with 10 charges. If you spend 1 Mythic Point when you Cast a Spell from this staff and expend 10 charges, the spell is heightened to 10th rank, and its save DC and attack rolls are calculated at mythic proficiency. While in major staff of control form, none of the guisarme's weapon runes are active, nor can she Impose Will, but she remains a high-grade dawnsilver item and retains her intelligence—she can use her actions to Cast a Spell from the staff but can't spend Mythic Points to heighten spells to 10th rank. She automatically reverts to guisarme form once all her charges are expended or if you command the staff to revert to guisarme form by using Shift Weapon again.</p><hr /><p><strong>Activate—Impose Will</strong> <span class=\"action-glyph\">2</span> Cast a Spell</p>\n<p><strong>Frequency</strong> once per day per spell</p>\n<p><strong>Effect</strong> <em>Sorshen's Sinuous Guisarme</em> casts one of the following spells, heightened to 10th rank, to your specifications: @UUID[Compendium.pf2e.spells-srd.Item.Charm] (DC 45), @UUID[Compendium.pf2e.spells-srd.Item.Flicker], or @UUID[Compendium.pf2e.spells-srd.Item.Subconscious Suggestion] (DC 45). The guisarme can use this activation. If you use this activation and spend 1 Mythic Point, the save DC for the spell increases to DC 50.</p><hr /><p><strong>Destruction</strong> <em>Sorshen's Sinuous Guisarme</em> can be destroyed if it's hurled under the crushing feet of the Oliphaunt of Jandelay, but only if there's no current runelord of lust living in the world. Note that when Sorshen took on the mantle of ruler of New Thassilon, she abandoned her role as runelord of lust, so at this time, half of this destruction requirement is already fulfilled. Of course, a PC who decides to toss this weapon under the Oliphaunt's feet during the course of this adventure will likely disappoint—or perhaps even enrage—Queen Sorshen, who might seek retaliation in the future.</p>"
+        },
+        "expend": null,
+        "grade": null,
+        "group": "polearm",
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 23
+        },
+        "material": {
+            "grade": "high",
+            "type": "dawnsilver"
+        },
+        "price": {
+            "value": {
+                "cp": 0,
+                "pp": 0,
+                "sp": 0
+            }
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "quantity": 1,
+        "range": null,
+        "reload": {
+            "value": null
+        },
+        "rules": [],
+        "runes": {
+            "potency": 4,
+            "property": [
+                "keen",
+                "speed",
+                "shifting",
+                "spellStoring"
+            ],
+            "striking": 4
+        },
+        "size": "med",
+        "specific": {
+            "material": {
+                "grade": "high",
+                "type": "dawnsilver"
+            },
+            "runes": {
+                "potency": 4,
+                "property": [
+                    "keen",
+                    "speed",
+                    "shifting",
+                    "spellStoring"
+                ],
+                "striking": 4
+            }
+        },
+        "splashDamage": {
+            "value": 0
+        },
+        "traits": {
+            "rarity": "unique",
+            "value": [
+                "artifact",
+                "intelligent",
+                "magical",
+                "mythic",
+                "reach",
+                "trip"
+            ]
+        },
+        "usage": {
+            "value": "held-in-two-hands"
+        }
+    },
+    "type": "weapon"
+}

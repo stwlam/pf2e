@@ -1,0 +1,101 @@
+{
+    "_id": "8MD6Fwjjgb9cMXQb",
+    "img": "icons/weapons/swords/sword-guard.webp",
+    "name": "Timeflaying Blade",
+    "system": {
+        "baseItem": "bastard-sword",
+        "bonus": {
+            "value": 0
+        },
+        "bonusDamage": {
+            "value": 0
+        },
+        "bulk": {
+            "value": 1
+        },
+        "category": "martial",
+        "containerId": null,
+        "damage": {
+            "damageType": "slashing",
+            "dice": 1,
+            "die": "d8"
+        },
+        "description": {
+            "value": "<p><em>Timeflaying blades</em> are forged around shards of collapsed paradoxes. Their existence is largely an enigma. In the furthest corners of esoteric scholarship, they're mentioned in passing or simply alluded to without ever being named outright. They're associated with Stethelos, the legendary city said to lie at the heart of the Dimension of Time, though it's unclear if they were made there, were discovered there, or are bound to return there at the end of time itself.</p>\n<p>A <em>timeflaying blade</em> is a <em>+3 greater striking greater corrosive keen quickstrike orichalcum bastard sword</em>. Acid damage caused by a <em>timeflaying blade</em> appears not to be caused by liquid, but by the act of material simply eroding away into dust as if thousands of years passed in an instant (this doesn't impact a creature or object's acid immunity, resistance, or weakness, though).</p>\n<p><strong>Activate—Flay Time</strong> <span class=\"action-glyph\">1</span> (concentrate, incapacitation, manipulate)</p>\n<p><strong>Frequency</strong> once per minute</p><hr /><p><strong>Effect</strong> Spend 1 Mythic Point. You swing the <em>timeflaying blade</em> through the air as if slicing something while you attempt to sever a creature within 120 feet from time itself. The creature must attempt a @Check[will|dc:43] save.</p><hr /><p><strong>Critical Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} for 1 round.</p>\n<p><strong>Success</strong> The creature is hurled [[/gmr 1d4 #rounds]]{1d4 rounds} into the future. They disappear in a flash of white light, only to reappear in the same space on their initiative after the duration. If that space is occupied, the creature is shunted harmlessly aside to the closest unoccupied space.</p>\n<p><strong>Failure</strong> As success, but the creature is hurled forward in time [[/gmr 1d4 #minutes]]{1d4 minutes}.</p>\n<p><strong>Critical Failure</strong> As success, but the creature is hurled into an entirely alternate timeline. At your discretion, the creature's gear is left behind in your timeline. Whether or not the creature will ever return to your timeline depends on the GM's whim, but at the very least, it should never return within the span of a year's passing.</p>"
+        },
+        "expend": null,
+        "grade": null,
+        "group": "sword",
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 20
+        },
+        "material": {
+            "grade": "high",
+            "type": "orichalcum"
+        },
+        "price": {
+            "value": {
+                "cp": 0,
+                "gp": 68000,
+                "pp": 0,
+                "sp": 0
+            }
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "quantity": 1,
+        "range": null,
+        "reload": {
+            "value": null
+        },
+        "rules": [],
+        "runes": {
+            "potency": 3,
+            "property": [
+                "greaterCorrosive",
+                "keen",
+                "speed"
+            ],
+            "striking": 2
+        },
+        "size": "med",
+        "specific": {
+            "material": {
+                "grade": "high",
+                "type": "orichalcum"
+            },
+            "runes": {
+                "potency": 3,
+                "property": [
+                    "greaterCorrosive",
+                    "keen",
+                    "speed"
+                ],
+                "striking": 2
+            }
+        },
+        "splashDamage": {
+            "value": 0
+        },
+        "traits": {
+            "rarity": "rare",
+            "value": [
+                "magical",
+                "mythic",
+                "two-hand-d12"
+            ]
+        },
+        "usage": {
+            "value": "held-in-one-hand"
+        }
+    },
+    "type": "weapon"
+}

@@ -1,0 +1,49 @@
+{
+    "_id": "UzaM1jejUKNpVfoA",
+    "img": "icons/magic/symbols/mask-yellow-orange.webp",
+    "name": "Effect: Never Enough",
+    "system": {
+        "description": {
+            "value": "<p>Your spell DC increases by 1, and your spell attacks gain a +1 circumstance bonus.</p>"
+        },
+        "duration": {
+            "expiry": "turn-end",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "selector": "spell-dc",
+                "value": 1
+            },
+            {
+                "key": "FlatModifier",
+                "selector": "spell-attack",
+                "type": "circumstance",
+                "value": 1
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

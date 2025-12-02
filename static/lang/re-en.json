@@ -882,6 +882,9 @@
                 }
             },
             "BarghestFeed": "How many times has the Barghest fed?",
+            "Belimarius": {
+                "MythicAlteration": "This ability cannot be used until Belimarius ascends."
+            },
             "BladeMagus": {
                 "ArcaneCascade": {
                     "Note": "While in this stance, the Blade magi's melee Strikes deal @Damage[(4[splash])[force]]{4 splash force} damage to foes adjacent to the target."

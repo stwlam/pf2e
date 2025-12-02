@@ -1,6 +1,6 @@
 {
     "_id": "6F2fSFC1Eo1JdpY4",
-    "img": "systems/pf2e/icons/default-icons/alternatives/ancestries/poppet.svg",
+    "img": "systems/pf2e/icons/ancestries/poppet.webp",
     "name": "Poppet",
     "system": {
         "additionalLanguages": {
@@ -47,19 +47,20 @@
                 ]
             }
         },
+        "hands": 2,
         "hp": 6,
         "items": {
-            "3fzmc": {
-                "img": "systems/pf2e/icons/default-icons/feat.svg",
-                "level": 1,
-                "name": "Constructed (Poppet)",
-                "uuid": "Compendium.pf2e.ancestryfeatures.Item.Constructed (Poppet)"
-            },
-            "giqow": {
-                "img": "systems/pf2e/icons/default-icons/feat.svg",
+            "M1KcQ": {
+                "img": "icons/magic/fire/flame-burning-skeleton-explosion.webp",
                 "level": 1,
                 "name": "Flammable",
                 "uuid": "Compendium.pf2e.ancestryfeatures.Item.Flammable"
+            },
+            "SoFFU": {
+                "img": "icons/magic/control/voodoo-doll-pain-damage-yellow.webp",
+                "level": 1,
+                "name": "Constructed (Poppet)",
+                "uuid": "Compendium.pf2e.ancestryfeatures.Item.Constructed (Poppet)"
             }
         },
         "languages": {

@@ -1237,6 +1237,7 @@
                 "Type": {
                     "abysium": "abysium",
                     "adamantine": "adamantine",
+                    "aging": "aging",
                     "alchemical": "alchemical",
                     "all-damage": "all damage",
                     "arcane": "arcane",
@@ -1308,6 +1309,7 @@
                     "polymorph": "polymorph",
                     "possession": "possession",
                     "primal": "primal",
+                    "prediction": "prediction",
                     "prone": "prone",
                     "protean-anatomy": "protean anatomy",
                     "radiation": "radiation",

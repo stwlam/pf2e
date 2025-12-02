@@ -1,0 +1,79 @@
+{
+    "_id": "TYs0oqRjEa9wBJ7N",
+    "img": "icons/equipment/chest/shirt-collared-pink.webp",
+    "name": "Sorshen's Scintillating Garment",
+    "system": {
+        "acBonus": 0,
+        "apex": {
+            "attribute": "cha"
+        },
+        "baseItem": "explorers-clothing",
+        "bulk": {
+            "value": 0.1
+        },
+        "category": "unarmored",
+        "checkPenalty": 0,
+        "containerId": null,
+        "description": {
+            "value": "<p>The traditional robes of Sorshen, Runelord of Lust, this garment combines a powerful artifact with a sign of office, as with many runelords' accoutrements. Woven of the finest silks and accented with precious stones, the garment is light and easy to move in. Sorshen created, then expanded on the artifact throughout her time as the runelord of lust, adding to it during much of the Age of Legend.</p>\n<p>This ever-shifting garment of silk and gems subtly reshapes itself in response to its wearer, adopting an appearance most flattering to their form. It's a set of <em>+3 greater resilient explorer's clothing</em>. The garment's four pockets each function as separate <em>@UUID[Compendium.pf2e.equipment-srd.Item.Spacious Pouch (Type IV)]{Spacious Pouches (Type IV)}</em>. While wearing the garment, you're immune to mental effects unless you choose otherwise. When you invest <em>Sorshen's Scintillating Garment</em>, you increase your Charisma modifier by 1, or increase it to +4, whichever would give you a higher value.</p>\n<p><strong>Activate—Scintillating Colors</strong> <span class=\"action-glyph\">2</span> (arcane, aura, visual)</p>\n<p><strong>Frequency</strong> once per hour</p><hr /><p><strong>Effect</strong> <em>Sorshen's Scintillating Garment</em> casts @UUID[Compendium.pf2e.spells-srd.Item.Dizzying Colors] (DC 41), heightened to 10th rank, to your specifications. If you spend 1 Mythic Point as part of this activation, the spell's area changes to a @Template[type:emanation|distance:20], and you can designate any number of creatures in that area to be immune to the spell's effects, and the spell loses the incapacitation trait.</p><hr /><p><strong>Destruction</strong> <em>Sorshen's Scintillating Garment</em> is destroyed if it's immersed in the waters of a destroyed <em>Runewell of Lust</em>.</p>"
+        },
+        "dexCap": 5,
+        "grade": null,
+        "group": "cloth",
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 0
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {
+                "cp": 0,
+                "gp": 0,
+                "pp": 0
+            }
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+            "potency": 3,
+            "property": [],
+            "resilient": 2
+        },
+        "size": "med",
+        "specific": {
+            "material": {
+                "grade": null,
+                "type": null
+            },
+            "runes": {
+                "potency": 3,
+                "property": [],
+                "resilient": 2
+            }
+        },
+        "speedPenalty": 0,
+        "strength": null,
+        "traits": {
+            "rarity": "unique",
+            "value": [
+                "apex",
+                "artifact",
+                "comfort",
+                "mythic"
+            ]
+        }
+    },
+    "type": "armor"
+}

@@ -1,0 +1,57 @@
+{
+    "_id": "KFmJLxZAFQ2Q7C1N",
+    "img": "icons/weapons/polearms/spear-flared-silver-pink.webp",
+    "name": "Effect: Queen Sorshen's Aid (Indulgent Arcana)",
+    "system": {
+        "description": {
+            "value": "<p>The next spell you cast with the mental trait has its save DC increased by 2 and removes the incapacitation trait, if any.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    "item:trait:mental"
+                ],
+                "selector": "spell-dc",
+                "type": "circumstance",
+                "value": 2
+            },
+            {
+                "itemType": "spell",
+                "key": "ItemAlteration",
+                "mode": "remove",
+                "predicate": [
+                    "item:trait:mental"
+                ],
+                "property": "traits",
+                "value": "incapacitation"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

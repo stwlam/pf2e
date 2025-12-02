@@ -1,0 +1,38 @@
+{
+    "_id": "Hjb8iwGGxkyhiz7E",
+    "img": "icons/magic/perception/eye-ringed-glow-angry-large-red.webp",
+    "name": "Effect: Spiteful Eye",
+    "system": {
+        "description": {
+            "gm": "<p>The knight of malice takes a –2 circumstance penalty to Reflex saving throws and their Strikes deal an extra 1d6 mental damage.</p>",
+            "value": ""
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "rules": [],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

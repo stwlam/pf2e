@@ -1,6 +1,6 @@
 {
     "_id": "pJkQlFTvpQ5GjZ5e",
-    "img": "systems/pf2e/icons/default-icons/alternatives/ancestries/centaur.svg",
+    "img": "systems/pf2e/icons/ancestries/centaur.webp",
     "name": "Centaur",
     "system": {
         "additionalLanguages": {
@@ -48,6 +48,7 @@
                 ]
             }
         },
+        "hands": 2,
         "hp": 8,
         "items": {
             "TaKbB": {

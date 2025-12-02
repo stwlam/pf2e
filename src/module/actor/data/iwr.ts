@@ -93,6 +93,7 @@ abstract class IWR<TType extends IWRType> {
             case "light":
             case "metal":
             case "olfactory":
+            case "prediction":
             case "radiation":
             case "time":
             case "visual":

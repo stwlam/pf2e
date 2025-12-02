@@ -1,6 +1,6 @@
 {
     "_id": "gayvFCiQcGNCA7aM",
-    "img": "systems/pf2e/icons/default-icons/ancestry.svg",
+    "img": "systems/pf2e/icons/ancestries/jotunborn.webp",
     "name": "Jotunborn",
     "system": {
         "additionalLanguages": {
@@ -48,6 +48,7 @@
                 ]
             }
         },
+        "hands": 2,
         "hp": 10,
         "items": {
             "sfQdI": {

@@ -1,0 +1,44 @@
+{
+    "_id": "WWevYlEmHFDBiOLe",
+    "folder": "X4m1j7Mkqkts8fyV",
+    "img": "systems/pf2e/icons/spells/elephant-form.webp",
+    "name": "Effect: Favor of the Oliphaunt",
+    "system": {
+        "description": {
+            "value": "<p>Your max HP is reduced by 110.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": true,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "selector": "hp",
+                "value": -110
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

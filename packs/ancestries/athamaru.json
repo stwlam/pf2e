@@ -1,6 +1,6 @@
 {
     "_id": "Cg1AMgp3zrGmimWd",
-    "img": "systems/pf2e/icons/default-icons/alternatives/ancestries/athamaru.svg",
+    "img": "systems/pf2e/icons/ancestries/athamaru.webp",
     "name": "Athamaru",
     "system": {
         "additionalLanguages": {
@@ -45,6 +45,7 @@
                 ]
             }
         },
+        "hands": 2,
         "hp": 8,
         "items": {},
         "languages": {

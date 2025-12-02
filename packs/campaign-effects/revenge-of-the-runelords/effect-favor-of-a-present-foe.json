@@ -1,0 +1,48 @@
+{
+    "_id": "HTPJ0ciyeaIgrPzQ",
+    "folder": "X4m1j7Mkqkts8fyV",
+    "img": "icons/creatures/magical/humanoid-silhouette-glowing-pink.webp",
+    "name": "Effect: Favor of a Present Foe",
+    "system": {
+        "description": {
+            "value": "<p>You take a –4 penalty to skill checks, saving throws, and perception.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": true,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Adventure Path #221: Into the Apocalypse Archive"
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "selector": [
+                    "skill-check",
+                    "saving-throw",
+                    "perception"
+                ],
+                "value": -4
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}
