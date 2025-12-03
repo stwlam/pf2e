@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/torags-silver-anvil.webp",
     "name": "Torag's Silver Anvil",
     "system": {
+        "ammo": null,
         "baseItem": "meteor-hammer",
         "bonus": {
             "value": 3

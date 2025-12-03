@@ -1,0 +1,45 @@
+{
+    "_id": "ggqCmAH0a7cmAdA3",
+    "img": "icons/magic/symbols/rune-sigil-green.webp",
+    "name": "Effect: Assured Fate",
+    "system": {
+        "description": {
+            "value": "<p>When you roll initiative, you can choose to have a result equal to 13 + your initiative modifier.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "hours",
+            "value": 24
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 7
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "SubstituteRoll",
+                "removeAfterRoll": "if-enabled",
+                "selector": "initiative",
+                "slug": "assured-fate",
+                "value": 13
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

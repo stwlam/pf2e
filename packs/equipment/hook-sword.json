@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/hook-sword.webp",
     "name": "Hook Sword",
     "system": {
+        "ammo": null,
         "baseItem": "hook-sword",
         "bonus": {
             "value": 0

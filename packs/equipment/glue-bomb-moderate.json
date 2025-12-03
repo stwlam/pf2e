@@ -3,6 +3,7 @@
     "img": "icons/containers/bags/sack-simple-leather-tan.webp",
     "name": "Glue Bomb (Moderate)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 1

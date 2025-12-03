@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-ice-crystal-blue.webp",
     "name": "Shadowpiercer",
     "system": {
+        "ammo": null,
         "baseItem": "spear",
         "bonus": {
             "value": 0

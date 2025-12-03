@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/khopesh.webp",
     "name": "Khopesh",
     "system": {
+        "ammo": null,
         "baseItem": "khopesh",
         "bonus": {
             "value": 0

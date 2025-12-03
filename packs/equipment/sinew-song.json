@@ -3,6 +3,7 @@
     "img": "icons/tools/instruments/lute-gold-brown.webp",
     "name": "Sinew-Song",
     "system": {
+        "ammo": null,
         "baseItem": "sickle",
         "bonus": {
             "value": 0

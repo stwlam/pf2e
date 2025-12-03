@@ -1,0 +1,32 @@
+{
+    "_id": "MUQT8abHdjAP1OeQ",
+    "folder": "R7ReCVeTRePoKQHP",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Empyreal Dragon) Wreath of Holy Light",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon imbues its allies with heavenly fire. Creatures within 60 feet of the dragon gain the holy trait and their Strikes do an additional 1d10 fire damage for 1 minute. If the creature critically Strikes an enemy, the enemy is also set on fire and takes 1d6 persistent fire damage.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.Effect: Wreath of Holy Light]</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "concentrate",
+                "divine",
+                "holy"
+            ]
+        }
+    },
+    "type": "action"
+}

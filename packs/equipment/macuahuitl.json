@@ -3,6 +3,7 @@
     "img": "icons/weapons/clubs/club-heavy-barbed-brown.webp",
     "name": "Macuahuitl",
     "system": {
+        "ammo": null,
         "baseItem": "macuahuitl",
         "bonus": {
             "value": 0

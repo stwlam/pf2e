@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/chakram.webp",
     "name": "Chakram",
     "system": {
+        "ammo": null,
         "baseItem": "chakram",
         "bonus": {
             "value": 0

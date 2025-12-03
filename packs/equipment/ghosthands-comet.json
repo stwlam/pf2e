@@ -3,6 +3,7 @@
     "img": "icons/weapons/guns/rifle-fluted.webp",
     "name": "Ghosthand's Comet",
     "system": {
+        "ammo": null,
         "baseItem": null,
         "bonus": {
             "value": 0

@@ -1,0 +1,32 @@
+{
+    "_id": "VL0wMhHgm7NJKDHZ",
+    "folder": "BWBOH28ATkMK6bbz",
+    "img": "systems/pf2e/icons/actions/OneAction.webp",
+    "name": "(Diabolic Dragon) Diabolic Disguise",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon assumes the form of a specific creature whose soul gem or infernal contract is in their possession or hoard. This has the effects of Change Shape, except the dragon also gains perfunctory knowledge of the creature's personality, social connections, mannerisms, and surface memories, at the GM's discretion. Any knowledge the dragon gains by taking on another creature's form is lost when the dragon dismisses the effect or changes shape again, although nothing prevents them from recording it by other means while transformed.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "concentrate",
+                "divine",
+                "polymorph"
+            ]
+        }
+    },
+    "type": "action"
+}

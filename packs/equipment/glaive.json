@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/glaive-simple.webp",
     "name": "Glaive",
     "system": {
+        "ammo": null,
         "baseItem": "glaive",
         "bonus": {
             "value": 0

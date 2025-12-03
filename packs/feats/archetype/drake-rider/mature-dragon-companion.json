@@ -1,0 +1,46 @@
+{
+    "_id": "adWnAp41sCCx02Ap",
+    "folder": "YHNkfjmB5sxWRLiG",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Mature Dragon Companion",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "class",
+        "description": {
+            "value": "<p>Your dragon companion matures and the bond you share is strengthened. The dragon companion you gained with your @UUID[Compendium.pf2e.feats-srd.Item.Drake Rider Dedication] is now a mature animal companion.</p>\n<p>Your dragon companion gains greater independence. During an encounter, even if you don't use the @UUID[Compendium.pf2e.actionspf2e.Item.Command an Animal] action, your dragon companion can still use 1 action that round on your turn to Stride or Strike. It can do this at any point during your turn, as long as you aren't currently taking an action. If it does, that's all the actions it gets that round—you can't Command it later.</p>"
+        },
+        "level": {
+            "value": 4
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Drake Rider Dedication"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "archetype"
+            ]
+        }
+    },
+    "type": "feat"
+}

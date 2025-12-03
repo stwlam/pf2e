@@ -1,0 +1,42 @@
+{
+    "_id": "eFb1PU15j7t7wxqp",
+    "img": "icons/magic/light/explosion-star-orange-purple.webp",
+    "name": "Effect: Restorative Halo",
+    "system": {
+        "description": {
+            "value": "<p>You gain fast healing equal to half the origin's level.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 10
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "FastHealing",
+                "value": "@item.origin.level"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-hooked-simple-blue.webp",
     "name": "Splintering Spear",
     "system": {
+        "ammo": null,
         "baseItem": "spear",
         "bonus": {
             "value": 0

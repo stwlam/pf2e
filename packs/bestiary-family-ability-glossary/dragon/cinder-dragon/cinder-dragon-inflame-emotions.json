@@ -1,0 +1,33 @@
+{
+    "_id": "SBnCmBgRgdh0nBRM",
+    "folder": "fvJQ3kMyEjvLkbyQ",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Cinder Dragon) Inflame Emotions",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon sends out a wave of heat that inflames emotions with 90 feet. Creatures within it must attempt a @Check[will] save with a DC equal to the dragon's @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.Frightful Presence] DC. Regardless of the results, they are then immune to Inflame Emotions for 1 minute.</p><hr /><p><strong>Critical Success</strong> The creature can spend a reaction to make a melee Strike against a target of its choice.</p>\n<p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature immediately makes a melee Strike against a target of the dragon's choice. The creature cannot use reactions until the start of its next turn.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "emotion",
+                "fire",
+                "mental",
+                "primal"
+            ]
+        }
+    },
+    "type": "action"
+}

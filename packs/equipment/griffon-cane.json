@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-simple-spiral-grey.webp",
     "name": "Griffon Cane",
     "system": {
+        "ammo": null,
         "baseItem": "griffon-cane",
         "bonus": {
             "value": 0

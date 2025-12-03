@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/shuriken.webp",
     "name": "Shuriken",
     "system": {
+        "ammo": null,
         "baseItem": "shuriken",
         "bonus": {
             "value": 0

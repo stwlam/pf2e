@@ -1,0 +1,61 @@
+{
+    "_id": "iqgAmntmu3udEgEI",
+    "folder": "hC1Cykg6qFGneUPq",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Blood And Spirit",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "ancestry",
+        "description": {
+            "value": "<p>Your connection to the divine has sanctified your blood, but the power only manifests when you are shedding it. Choose holy or unholy. While you are taking persistent bleed damage, you can Interact to coat a piercing or slashing weapon you're wielding with your blood. Until the end of your turn, your Strikes with that weapon deal an additional 1d6 spirit damage with the chosen trait to creatures with the opposing trait.</p>\n<p>@UUID[Compendium.pf2e.feat-effects.Item.Effect: Blood and Spirit]</p>\n<p>Alternatively, you can deal @Damage[1d6[slashing]] damage to yourself (which can't be resisted in any way) as part of that Interact action if you aren't taking persistent bleed damage.</p>"
+        },
+        "level": {
+            "value": 5
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Divine Dragonblood"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "choices": [
+                    {
+                        "label": "PF2E.TraitHoly",
+                        "value": "holy"
+                    },
+                    {
+                        "label": "PF2E.TraitUnholy",
+                        "value": "unholy"
+                    }
+                ],
+                "key": "ChoiceSet",
+                "rollOption": "blood-and-spirit"
+            }
+        ],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "dragonblood"
+            ]
+        }
+    },
+    "type": "feat"
+}

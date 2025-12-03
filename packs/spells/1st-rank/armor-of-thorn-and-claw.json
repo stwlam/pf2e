@@ -1,0 +1,72 @@
+{
+    "_id": "EPTmSiURVp2ldkVB",
+    "folder": "T8AzYUgNIAgTJ9Iz",
+    "img": "icons/commodities/leather/scales-brown.webp",
+    "name": "Armor of Thorn and Claw",
+    "system": {
+        "area": null,
+        "cost": {
+            "value": ""
+        },
+        "counteraction": false,
+        "damage": {
+            "hY0fBGsbaFD86ct0": {
+                "applyMod": false,
+                "category": null,
+                "formula": "1",
+                "kinds": [
+                    "damage"
+                ],
+                "materials": [],
+                "type": "piercing"
+            }
+        },
+        "defense": null,
+        "description": {
+            "value": "<p>Razor-sharp thorns and claws erupt from your skin or scales. Whenever a creature touches you or hits you with a melee unarmed attack, it takes 1 piercing damage. Additionally, if you become @UUID[Compendium.pf2e.conditionitems.Item.Grabbed], @UUID[Compendium.pf2e.conditionitems.Item.Restrained], or otherwise held @UUID[Compendium.pf2e.conditionitems.Item.Immobilized] in a creature's grasp, such as by being engulfed or swallowed, the creature takes @Damage[(ceil(@item.rank / 2))d4[persistent,bleed]] damage.</p><hr /><p><strong>Heightened (+2)</strong> The piercing damage increases by 2, and the persistent bleed damage increases by 1d4.</p>"
+        },
+        "duration": {
+            "sustained": false,
+            "value": "1 minute"
+        },
+        "heightening": {
+            "area": 0,
+            "damage": {
+                "hY0fBGsbaFD86ct0": "2"
+            },
+            "interval": 2,
+            "type": "interval"
+        },
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "range": {
+            "value": ""
+        },
+        "requirements": "",
+        "rules": [],
+        "target": {
+            "value": ""
+        },
+        "time": {
+            "value": "2"
+        },
+        "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+                "primal"
+            ],
+            "value": [
+                "concentrate",
+                "manipulate",
+                "morph"
+            ]
+        }
+    },
+    "type": "spell"
+}

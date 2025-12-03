@@ -3,6 +3,7 @@
     "img": "icons/weapons/hammers/hammer-double-steel-embossed.webp",
     "name": "Jistkan Colossus Crusher",
     "system": {
+        "ammo": null,
         "baseItem": "maul",
         "bonus": {
             "value": 0

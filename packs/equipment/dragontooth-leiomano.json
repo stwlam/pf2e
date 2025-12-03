@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/speartip-simple-stone.webp",
     "name": "Dragontooth Leiomano",
     "system": {
+        "ammo": null,
         "baseItem": "leiomano",
         "bonus": {
             "value": 0

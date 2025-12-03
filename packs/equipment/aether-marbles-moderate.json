@@ -3,6 +3,7 @@
     "img": "icons/commodities/gems/pearl-rough-turquoise.webp",
     "name": "Aether Marbles (Moderate)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 2

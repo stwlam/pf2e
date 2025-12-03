@@ -1,0 +1,57 @@
+{
+    "_id": "f3DIcotFvBkldMUO",
+    "folder": "sZFSeaV3PQMOzaiO",
+    "img": "systems/pf2e/icons/default-icons/deity.svg",
+    "name": "Gaasham",
+    "system": {
+        "attribute": [
+            "con",
+            "int"
+        ],
+        "category": "deity",
+        "description": {
+            "value": "<p>In the days of Old Koloran and Ninshabur, the name Gaasham was exalted in song, from the highest ziggurat to the lowliest homesteader's hearth. He was the muse on the wind who enkindled the hearts of architects and builders, promising them a path toward their grand works and opuses. Gaasham guided their chisels and accepted their praise, ever hopeful to craft a work which might withstand the doom that haunted him since the early days of creation.</p>\n<p>Gaasham was conceived in the minds of Apsu and Sarshallatu for a role other than the one he would inherit. He clung within his shell too long, fearful of what would be asked of him, fearful of his finite form in the presence of beings so far grander than himself, and fearful of the fallibility that might see him shame his progenitors. Swaddled within his egg, he mistook the cacophonous sounds which rattled through his being as the thunderous songs of his mother, only to emerge to find the desolation inflicted by Dahak upon all of creation.</p>\n<p>Apsu was the first to gaze upon his second laid (but late to hatch) son, and his eyes were filled with a stern pity. All Gaasham's fears coalesced and were promptly cast aside. He was granted the mantle of Architect, to serve as successor to his brother Dahak, now condemned to the role of destroyer. Gaasham embraced this new role and, with it, all the doom which is preordained to befall all usurpers. Gaasham would serve his father, and all that he would build would be consigned to ruin.</p>\n<p><strong>Title</strong> The Architect</p>\n<p><strong>Areas of Concern</strong> construction, self- actualization, legacies</p>\n<p><strong>Edicts</strong> build when it is asked of you, foster growth in others, meditate upon your actions</p>\n<p><strong>Anathema</strong> act without thinking, hesitate in the face of destructive forces, refuse to change your ways</p>\n<p><strong>Religious Symbol</strong> a bronze oval, half-oxidized</p>\n<p><strong>Sacred Animal</strong> draft lizard</p>\n<p><strong>Sacred Colors</strong> bronze, eggshell, teal</p>"
+        },
+        "domains": {
+            "alternate": [
+                "change",
+                "perfection"
+            ],
+            "primary": [
+                "cities",
+                "creation",
+                "wyrmkin",
+                "toil"
+            ]
+        },
+        "font": [
+            "heal"
+        ],
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "sanctification": {
+            "modal": "can",
+            "what": [
+                "holy"
+            ]
+        },
+        "skill": [
+            "crafting"
+        ],
+        "spells": {
+            "1": "Compendium.pf2e.spells-srd.Item.Object Reading",
+            "5": "Compendium.pf2e.spells-srd.Item.Wave of Despair",
+            "9": "Compendium.pf2e.spells-srd.Item.Resplendent Mansion"
+        },
+        "traits": {},
+        "weapons": [
+            "jaws",
+            "light-hammer"
+        ]
+    },
+    "type": "deity"
+}

@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/dwarven-war-axe.webp",
     "name": "Dwarven War Axe",
     "system": {
+        "ammo": null,
         "baseItem": "dwarven-war-axe",
         "bonus": {
             "value": 0

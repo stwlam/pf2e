@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/ogre-hook.webp",
     "name": "Gut-Ripper",
     "system": {
+        "ammo": null,
         "baseItem": "ogre-hook",
         "bonus": {
             "value": 0

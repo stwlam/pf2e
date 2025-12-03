@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/longsword.webp",
     "name": "Spellcutter",
     "system": {
+        "ammo": null,
         "baseItem": "longsword",
         "bonus": {
             "value": 0

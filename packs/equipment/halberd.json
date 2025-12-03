@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/halberd.webp",
     "name": "Halberd",
     "system": {
+        "ammo": null,
         "baseItem": "halberd",
         "bonus": {
             "value": 0

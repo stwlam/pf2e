@@ -3,6 +3,7 @@
     "img": "icons/consumables/drinks/tea-jug-gourd-brown.webp",
     "name": "Peshpine Grenade (Moderate)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 1

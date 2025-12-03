@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/sickle-saber.webp",
     "name": "Sickle-saber",
     "system": {
+        "ammo": null,
         "baseItem": "sickle-saber",
         "bonus": {
             "value": 0

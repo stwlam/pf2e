@@ -3,6 +3,7 @@
     "img": "icons/magic/fire/barrier-wall-flame-ring-yellow.webp",
     "name": "Heavenly Rolling Flames",
     "system": {
+        "ammo": null,
         "baseItem": "feng-huo-lun",
         "bonus": {
             "value": 0

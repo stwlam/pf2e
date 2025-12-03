@@ -3,6 +3,7 @@
     "img": "icons/commodities/materials/slime-brown.webp",
     "name": "Mud Bomb (Major)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 3

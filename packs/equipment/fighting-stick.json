@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/fighting-stick.webp",
     "name": "Fighting Stick",
     "system": {
+        "ammo": null,
         "baseItem": "fighting-stick",
         "bonus": {
             "value": 0

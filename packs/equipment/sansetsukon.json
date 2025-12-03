@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/default-icons/weapon.svg",
     "name": "Sansetsukon",
     "system": {
+        "ammo": null,
         "baseItem": "sansetsukon",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/magic/nature/plant-undersea-seaweed-glow-green.webp",
     "name": "Sticky Algae Bomb (Moderate)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 1

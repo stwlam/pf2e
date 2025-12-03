@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/kama.webp",
     "name": "Kama",
     "system": {
+        "ammo": null,
         "baseItem": "kama",
         "bonus": {
             "value": 0

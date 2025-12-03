@@ -1,0 +1,65 @@
+{
+    "_id": "8oqAuez98yqAgteo",
+    "folder": "7WeCnFHvfttgw2vH",
+    "img": "icons/commodities/materials/material-feathers-purple.webp",
+    "name": "House Drake",
+    "system": {
+        "ancestry": {
+            "name": "Dragonet",
+            "slug": "dragonet",
+            "uuid": "Compendium.pf2e.ancestries.Item.B5Ewz31nJBOzHSMg"
+        },
+        "description": {
+            "value": "<p>You have bright blue and purple scales, with silvery teeth and claws. Your jaws count as silver and you gain a +1 circumstance bonus to damage rolls against fiends. You add Diabolic to your list of known languages.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "ActiveEffectLike",
+                "mode": "add",
+                "path": "system.build.languages.granted",
+                "value": {
+                    "slug": "diabolic",
+                    "source": "{item|name}"
+                }
+            },
+            {
+                "definition": [
+                    "item:base:jaws"
+                ],
+                "key": "AdjustStrike",
+                "mode": "add",
+                "property": "materials",
+                "value": "silver"
+            },
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    "target:trait:fiend"
+                ],
+                "selector": [
+                    "jaws-damage"
+                ],
+                "type": "circumstance",
+                "value": 1
+            },
+            {
+                "key": "RollOption",
+                "option": "dragonet-heritage"
+            },
+            {
+                "key": "RollOption",
+                "option": "dragonet-heritage:house-drake"
+            }
+        ],
+        "traits": {
+            "rarity": "common",
+            "value": []
+        }
+    },
+    "type": "heritage"
+}

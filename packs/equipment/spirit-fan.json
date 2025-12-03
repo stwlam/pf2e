@@ -3,6 +3,7 @@
     "img": "icons/commodities/materials/material-feathers-violet.webp",
     "name": "Spirit Fan",
     "system": {
+        "ammo": null,
         "baseItem": "fighting-fan",
         "bonus": {
             "value": 0

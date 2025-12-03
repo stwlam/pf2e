@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-hooked-rounded.webp",
     "name": "Dueling Spear",
     "system": {
+        "ammo": null,
         "baseItem": "dueling-spear",
         "bonus": {
             "value": 0

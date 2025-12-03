@@ -1,0 +1,64 @@
+{
+    "_id": "fzScFR5aAl0YhtDd",
+    "img": "systems/pf2e/icons/equipment/contracts/infernal-contracts/oath-of-the-devoted.webp",
+    "name": "Pact of the Herald and Host",
+    "system": {
+        "baseItem": null,
+        "bulk": {
+            "value": 0
+        },
+        "containerId": null,
+        "description": {
+            "value": "<p>You have exchanged your voice for the authority and breath of your bound dragon. Your voice echoes with the dragon's idiosyncrasies. You can cast fear as an innate spell once per day, with the spell's tradition matching that of your bound dragon.</p>\n<p>Once per day, from any distance, your bound dragon can choose to take control of your voice. They dictate everything you say (or don't say) for up to 10 minutes. They can choose to speak in any language you or they know, though they can't use your voice to cast spells or activate items.</p>\n<p><strong>Activate—Breath of the Dragon</strong> <span class=\"action-glyph\">1</span> (concentrate)</p>\n<p><strong>Frequency</strong> once per day</p><hr /><p><strong>Effect</strong> You exhale a torrent of energy in a @Template[type:cone|distance:30] or a @Template[type:line|distance:60], dealing @Damage[(@actor.level)d6|options:area-damage]{1d6 damage per level}. Each creature in the area must attempt a basic saving throw against the higher of your class DC or spell DC. You can't use this ability again for [[/r 1d4 #Recharge Breath of the Dragon]]{1d4 rounds}. The area, damage type, and type of saving throw match those of your @UUID[Compendium.pf2e.journals.JournalEntry.kzxu2dI7tFxv6Ix6.JournalEntryPage.GduFISQ6kzEB6sec#draconic-benefactors]{Draconic Benefactor}. This ability has the trait associated with the type of damage it deals.</p>\n<p>@Check[fortitude|against:class-spell|basic|options:area-effect] @Check[reflex|against:class-spell|basic|options:area-effect] @Check[will|against:class-spell|basic|options:area-effect]</p><hr /><p><strong>Oathbreaker's Calamity</strong> Should either party break the oath, your throat and mouth become swollen and elongated, preventing you from speaking any language but Draconic and causing any use of the Dragon Breath ability granted by this pact to also damage you. The dragon becomes @UUID[Compendium.pf2e.conditionitems.Item.Deafened], but call still hear your voice.</p>"
+        },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 6
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {}
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "quantity": 1,
+        "rules": [
+            {
+                "key": "DamageAlteration",
+                "mode": "override",
+                "predicate": [
+                    "feature:draconic-benefactor"
+                ],
+                "property": "damage-type",
+                "requiresEquipped": false,
+                "selectors": [
+                    "{item|id}-inline-damage"
+                ],
+                "value": "{actor|flags.pf2e.draconicBenefactor.breathDamage}"
+            }
+        ],
+        "size": "med",
+        "traits": {
+            "rarity": "rare",
+            "value": [
+                "contract",
+                "invested",
+                "magical"
+            ]
+        },
+        "usage": {
+            "value": "other"
+        }
+    },
+    "type": "equipment"
+}

@@ -1,0 +1,49 @@
+{
+    "_id": "YtL4Q55dAM1GzdDh",
+    "folder": "YHNkfjmB5sxWRLiG",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Winged Leap",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "class",
+        "description": {
+            "value": "<p>While drakes and dragons are able flyers, they're uncomfortable carrying a rider in the air without special training. Through hard work, nerves of steel, and the deep bond you share with your draconic companion, your companion has learned to carry you skyward, if only briefly. Your dragon companion gains the @UUID[Compendium.pf2e.actionspf2e.Item.Winged Leap] action.</p>"
+        },
+        "level": {
+            "value": 4
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Drake Rider Dedication"
+                },
+                {
+                    "value": "dragon companion with the mount special ability"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "archetype"
+            ]
+        }
+    },
+    "type": "feat"
+}

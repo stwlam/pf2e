@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/greatsword-crossguard-silver.webp",
     "name": "Lamentation of the Faithless",
     "system": {
+        "ammo": null,
         "baseItem": "greatsword",
         "bonus": {
             "value": 0

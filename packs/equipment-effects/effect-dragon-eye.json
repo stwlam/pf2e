@@ -1,0 +1,106 @@
+{
+    "_id": "K3nzzDkz8dNwAd1a",
+    "img": "icons/commodities/biological/eye-lizard-orange-red.webp",
+    "name": "Effect: Dragon Eye",
+    "system": {
+        "description": {
+            "value": "<p>Granted by @UUID[Compendium.pf2e.equipment-srd.Item.Dragon Eye]</p>\n<p>When you cast <em>breathe fire</em> at 3rd-rank or higher, creatures in the spell's area must attempt a basic Will save instead of a basic Reflex save, and in addition to taking the spell's normal damage on a failure, they're frightened 1. This adds the emotion, fear, and mental traits to the spell.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 5
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "itemType": "spell",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:slug:breathe-fire",
+                    {
+                        "gte": [
+                            "item:rank",
+                            3
+                        ]
+                    }
+                ],
+                "property": "traits",
+                "value": "emotion"
+            },
+            {
+                "itemType": "spell",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:slug:breathe-fire",
+                    {
+                        "gte": [
+                            "item:rank",
+                            3
+                        ]
+                    }
+                ],
+                "property": "traits",
+                "value": "fear"
+            },
+            {
+                "itemType": "spell",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:slug:breathe-fire",
+                    {
+                        "gte": [
+                            "item:rank",
+                            3
+                        ]
+                    }
+                ],
+                "property": "traits",
+                "value": "mental"
+            },
+            {
+                "itemType": "spell",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:slug:breathe-fire",
+                    {
+                        "gte": [
+                            "item:rank",
+                            3
+                        ]
+                    }
+                ],
+                "property": "description",
+                "value": [
+                    {
+                        "text": "PF2E.SpecificRule.Equipment.DragonEye.Addendum"
+                    }
+                ]
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

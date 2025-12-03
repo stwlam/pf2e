@@ -12,8 +12,17 @@
         "description": {
             "value": "<p>This small grappling hook is designed to be tied to a rope and fired from a crossbow. When fired, it has half the normal range increment for the weapon.</p>"
         },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
         "level": {
             "value": 0
+        },
+        "material": {
+            "grade": null,
+            "type": null
         },
         "price": {
             "value": {

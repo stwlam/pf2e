@@ -1,0 +1,32 @@
+{
+    "_id": "2LRP9Pm34qOvlo0V",
+    "folder": "69bBtNytLWOMbhCl",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Whisper Dragon) Share Sight",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon states the name of an allied informant within 100 miles, giving them a mental alert. The informant can choose whether to accept the contact. If they consent, the dragon projects their senses into the informant's, allowing them to perceive through their informant. When they do, they lose all sensory information from their own body. The dragon can Sustain this effect for up to 1 hour and Dismiss it as a free action.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "concentrate",
+                "occult",
+                "scrying"
+            ]
+        }
+    },
+    "type": "action"
+}

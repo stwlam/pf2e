@@ -1,0 +1,46 @@
+{
+    "_id": "zKh3SQLDHMVcKRLk",
+    "folder": "JrW9SiDN0kRE26sN",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Hidden Hoard",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "class",
+        "description": {
+            "value": "<p>Your <em>draconic gift</em> is the key to a repository of treasure that only you can access. You create an extradimensional space that can hold up to 100 Bulk worth of objects. The space functions as a spacious pouch, but has no Bulk, and can be Interacted with using only one hand by touching your draconic gift. You can normally store and retrieve items that could fit through the opening of a bag (as @UUID[Compendium.pf2e.equipment-srd.Item.Spacious Pouch (Type I)]{spacious pouch}). However, you can store an unattended item larger than would normally fit (but no larger than 10 Bulk) by spending 1 minute concentrating on your <em>draconic gift</em> as you press it against the object. Retrieving it takes 1 minute and causes the item to appear in the closest unoccupied space.</p>"
+        },
+        "level": {
+            "value": 16
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Draconic Acolyte Dedication"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "archetype"
+            ]
+        }
+    },
+    "type": "feat"
+}

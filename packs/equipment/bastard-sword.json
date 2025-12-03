@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/sword-guard.webp",
     "name": "Bastard Sword",
     "system": {
+        "ammo": null,
         "baseItem": "bastard-sword",
         "bonus": {
             "value": 0

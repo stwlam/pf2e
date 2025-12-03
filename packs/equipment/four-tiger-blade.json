@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/scimitar-blue.webp",
     "name": "Four-Tiger Blade",
     "system": {
+        "ammo": null,
         "baseItem": "longsword",
         "bonus": {
             "value": 0

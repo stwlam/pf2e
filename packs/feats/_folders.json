@@ -66,6 +66,28 @@
         "type": "Item"
     },
     {
+        "_id": "JrW9SiDN0kRE26sN",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "3gIKQZf49LM55dii",
+        "name": "Draconic Acolyte",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "YHNkfjmB5sxWRLiG",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "3gIKQZf49LM55dii",
+        "name": "Drake Rider",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
         "_id": "JnEMJDh1jH8xZjO1",
         "color": null,
         "description": "",
@@ -2349,6 +2371,17 @@
         "flags": {},
         "folder": "3gIKQZf49LM55dii",
         "name": "Beast Gunner",
+        "sort": 4600000,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "PI7smgjYlqPUcHiq",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "6dfcpgcEgb0DINu5",
+        "name": "Dragonet",
         "sort": 4600000,
         "sorting": "a",
         "type": "Item"

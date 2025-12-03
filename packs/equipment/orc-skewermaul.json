@@ -3,6 +3,7 @@
     "img": "icons/weapons/hammers/hammer-war-spiked.webp",
     "name": "Orc Skewermaul",
     "system": {
+        "ammo": null,
         "baseItem": "orc-skewermaul",
         "bonus": {
             "value": 0

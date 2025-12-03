@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-ornate-gold.webp",
     "name": "Main-Gauche",
     "system": {
+        "ammo": null,
         "baseItem": "main-gauche",
         "bonus": {
             "value": 0

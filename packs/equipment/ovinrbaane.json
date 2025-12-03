@@ -3,6 +3,7 @@
     "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
     "name": "Ovinrbaane",
     "system": {
+        "ammo": null,
         "baseItem": "greatsword",
         "bonus": {
             "value": 0

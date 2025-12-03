@@ -1,0 +1,61 @@
+{
+    "_id": "6VvvcS067uytDv76",
+    "folder": "hC1Cykg6qFGneUPq",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Debilitating Breath",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "ancestry",
+        "description": {
+            "value": "<p>Your breath causes lasting hindrance to those it harms. Creatures who fail their saves against your @UUID[Compendium.pf2e.feats-srd.Item.Breath of the Dragon (Dragonblood)]{Breath of the Dragon} gain one of the following conditions, based on the damage type of your breath: @UUID[Compendium.pf2e.conditionitems.Item.Clumsy]{Clumsy 1} (electricity, cold, fire, or sonic damage), @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1} (acid, physical, or poison damage), or @UUID[Compendium.pf2e.conditionitems.Item.Stupefied]{Stupefied 1} (force, mental, spirit, vitality, or void damage). The condition lasts until the end of your next turn.</p>"
+        },
+        "level": {
+            "value": 13
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Breath of the Dragon"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "itemType": "feat",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:slug:breath-of-the-dragon-dragonblood"
+                ],
+                "property": "description",
+                "value": [
+                    {
+                        "text": "{item|description}"
+                    }
+                ]
+            }
+        ],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "dragonblood"
+            ]
+        }
+    },
+    "type": "feat"
+}

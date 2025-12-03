@@ -1,0 +1,30 @@
+{
+    "_id": "F1MbFmS07oKnJdIw",
+    "folder": "kdQ25fthFzWR8ETU",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Resurrection Dragon) Harmful Claw",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The resurrection dragon channels a divine spell into their claw. They Cast a 1-action version of @UUID[Compendium.pf2e.spells-srd.Item.Harm], but the effects of the spell don't occur immediately. The dragon then makes a claw Strike. This counts as two attacks for the dragon's multiple attack penalty. The attack is imbued with the spell's effects according to the results of the Strike.</p><hr /><p><strong>Critical Success</strong> The Strike deals double damage as normal, and the target must attempt a basic Fortitude save against the spell's damage, but treats its result as one degree of success worse.</p>\n<p><strong>Success</strong> The Strike deals damage as normal, and the target attempts a basic Fortitude save against the spell's damage.</p>\n<p><strong>Failure</strong> The Strike deals no damage, but the target must attempt a basic Fortitude save against the spell's damage.</p>\n<p><strong>Critical Failure</strong> The Strike deals no damage, and the target is unaffected by the spell.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "divine"
+            ]
+        }
+    },
+    "type": "action"
+}

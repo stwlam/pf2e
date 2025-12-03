@@ -1,0 +1,35 @@
+{
+    "_id": "edpWHUorHAO5Z7SF",
+    "folder": "ciZ93ntsAh499AKP",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Mirage Dragon) Phantasmal Terror",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon either temporarily appears to be in multiple places at once or grows to Gargantuan size to frighten their foes. Each enemy within a @Template[type:emanation|distance:120] who can see the mirage dragon must attempt a @Check[will|dc:0|options:area-effect,inflicts:frightened] save (with a DC equal to the dragon's Captivating Display).</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p><strong>Failure</strong> The target @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} and can't is use reactions until the start of the dragon's next turn.</p>\n<p><strong>Critical Failure</strong> As failure, but @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 3}.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "concentrate",
+                "emotion",
+                "fear",
+                "illusion",
+                "mental",
+                "visual"
+            ]
+        }
+    },
+    "type": "action"
+}

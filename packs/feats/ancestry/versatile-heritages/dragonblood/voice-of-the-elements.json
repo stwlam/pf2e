@@ -1,0 +1,59 @@
+{
+    "_id": "2m94GSxJIkQZ5Xnt",
+    "folder": "hC1Cykg6qFGneUPq",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Voice of the Elements",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "ancestry",
+        "description": {
+            "value": "<p>You inherit a primal dragon's bond to base elements. You gain a +1 circumstance bonus to Diplomacy checks to [[/act make-an-impression]] on creatures with the elemental trait. You can also ask questions of, receive answers from, and use the Diplomacy skill with elementals that don't speak any language.</p>"
+        },
+        "level": {
+            "value": 5
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Primal Dragonblood"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    "action:make-an-impression",
+                    "target:trait:elemental"
+                ],
+                "selector": [
+                    "diplomacy"
+                ],
+                "type": "circumstance",
+                "value": 1
+            }
+        ],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "dragonblood"
+            ]
+        }
+    },
+    "type": "feat"
+}

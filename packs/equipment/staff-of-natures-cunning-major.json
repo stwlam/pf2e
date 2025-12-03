@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-forest-gold.webp",
     "name": "Staff of Nature's Cunning (Major)",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/default-icons/weapon.svg",
     "name": "Zhuazhi Bang",
     "system": {
+        "ammo": null,
         "baseItem": "zhuazhi-bang",
         "bonus": {
             "value": 0

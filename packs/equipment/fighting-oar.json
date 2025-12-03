@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/default-icons/weapon.svg",
     "name": "Fighting Oar",
     "system": {
+        "ammo": null,
         "baseItem": "fighting-oar",
         "bonus": {
             "value": 0

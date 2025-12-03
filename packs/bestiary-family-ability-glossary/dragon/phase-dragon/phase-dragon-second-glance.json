@@ -1,0 +1,63 @@
+{
+    "_id": "HqT1fM4S5kmCLrBU",
+    "folder": "3BtYGuOX2GA56tE0",
+    "img": "systems/pf2e/icons/actions/OneAction.webp",
+    "name": "(Phase Dragon) Second Glance",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>If the phase dragon's next action is to use an ability or spell with the teleportation trait, they become @UUID[Compendium.pf2e.conditionitems.Item.Invisible] when they arrive at their destination and leave an illusory duplicate at their initial location. The invisibility ends and the illusory duplicate disappears if the dragon takes a hostile action; if a creature interacts with the false image, including attempting to Strike it; or at the start of the dragon's next turn, whichever comes first.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "RollOption",
+                "label": "PF2E.NPCAbility.OmenDragon.SecondGlance.Label",
+                "mergeable": true,
+                "option": "spellshape",
+                "placement": "spellcasting",
+                "suboptions": [
+                    {
+                        "label": "PF2E.NPCAbility.OmenDragon.SecondGlance.Label",
+                        "value": "second-glance"
+                    }
+                ],
+                "toggleable": true
+            },
+            {
+                "itemType": "spell",
+                "key": "ItemAlteration",
+                "label": "PF2E.NPCAbility.OmenDragon.SecondGlance.Label",
+                "mode": "add",
+                "predicate": [
+                    "item:trait:teleportation",
+                    "spellshape:second-glance"
+                ],
+                "property": "description",
+                "value": [
+                    {
+                        "text": "{item|description}"
+                    }
+                ]
+            }
+        ],
+        "traits": {
+            "value": [
+                "illusion",
+                "spellshape",
+                "visual"
+            ]
+        }
+    },
+    "type": "action"
+}

@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-flared-blue.webp",
     "name": "War Javelin",
     "system": {
+        "ammo": null,
         "baseItem": "war-javelin",
         "bonus": {
             "value": 0

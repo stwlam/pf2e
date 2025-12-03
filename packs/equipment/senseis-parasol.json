@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-simple-gold.webp",
     "name": "Sensei's Parasol",
     "system": {
+        "ammo": null,
         "baseItem": "bo-staff",
         "bonus": {
             "value": 0

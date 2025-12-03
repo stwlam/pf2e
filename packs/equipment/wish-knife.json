@@ -3,6 +3,7 @@
     "img": "icons/weapons/daggers/dagger-curved-purple.webp",
     "name": "Wish Knife",
     "system": {
+        "ammo": null,
         "baseItem": "wish-knife",
         "bonus": {
             "value": 0

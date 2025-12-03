@@ -3,6 +3,7 @@
     "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
     "name": "Dragon Handwraps",
     "system": {
+        "ammo": null,
         "apex": {
             "attribute": "str"
         },

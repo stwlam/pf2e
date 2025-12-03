@@ -1,0 +1,46 @@
+{
+    "_id": "RkaE55TeCvwmQq7E",
+    "folder": "YHNkfjmB5sxWRLiG",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Wing Rider",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "class",
+        "description": {
+            "value": "<p>Your bond with your dragon has been honed so fine that it can carry you aloft with its full capability. Your dragon companion has a fly Speed of 25 feet at all times.</p>"
+        },
+        "level": {
+            "value": 10
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Winged Leap"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "archetype"
+            ]
+        }
+    },
+    "type": "feat"
+}

@@ -3,6 +3,7 @@
     "img": "icons/tools/scribal/pen-steel-grey-brown.webp",
     "name": "Stiletto Pen",
     "system": {
+        "ammo": null,
         "baseItem": "stiletto-pen",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/thrown/ball-spiked.webp",
     "name": "Trueshape Bomb (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 3

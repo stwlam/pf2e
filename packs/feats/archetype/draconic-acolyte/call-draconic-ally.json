@@ -1,0 +1,46 @@
+{
+    "_id": "7hucfLLgeNeX5Pkw",
+    "folder": "JrW9SiDN0kRE26sN",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Call Draconic Ally",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "class",
+        "description": {
+            "value": "<p>Either by beseeching a dragon or bending it to your will, you conjure a mighty creature to assist you. Once per day while you are Channeling Draconic Power, you can cast @UUID[Compendium.pf2e.spells-srd.Item.Summon Dragon] as an innate spell with a tradition matching your draconic exemplar, heightened to half your level rounded up.</p>"
+        },
+        "level": {
+            "value": 14
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Draconic Acolyte Dedication"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "archetype"
+            ]
+        }
+    },
+    "type": "feat"
+}

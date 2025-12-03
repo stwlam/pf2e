@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/spellguard-blade.webp",
     "name": "Spellguard Blade",
     "system": {
+        "ammo": null,
         "baseItem": "main-gauche",
         "bonus": {
             "value": 0

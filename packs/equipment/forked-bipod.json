@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/forked-bipod.webp",
     "name": "Forked Bipod",
     "system": {
+        "ammo": null,
         "baseItem": "forked-bipod",
         "bonus": {
             "value": 0

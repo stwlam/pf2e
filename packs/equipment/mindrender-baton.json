@@ -3,6 +3,7 @@
     "img": "icons/commodities/tech/metal-joint.webp",
     "name": "Mindrender Baton",
     "system": {
+        "ammo": null,
         "baseItem": "club",
         "bonus": {
             "value": 0

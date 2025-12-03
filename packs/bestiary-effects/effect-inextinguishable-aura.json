@@ -1,0 +1,43 @@
+{
+    "_id": "gszL5RAakyyYfBMb",
+    "img": "icons/magic/fire/flame-burning-skull-orange.webp",
+    "name": "Effect: Inextinguishable Aura",
+    "system": {
+        "description": {
+            "value": "<p>When you attempt a flat check to end persistent fire damage, it must roll twice and take the worst result.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "keep": "lower",
+                "key": "RollTwice",
+                "selector": "pd-recovery-check"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

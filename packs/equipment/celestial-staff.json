@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-winged-red.webp",
     "name": "Celestial Staff",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

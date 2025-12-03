@@ -1,0 +1,30 @@
+{
+    "_id": "Z7BKGKMsvkZBg9XN",
+    "folder": "BV5aEURntyhZdh32",
+    "img": "systems/pf2e/icons/actions/Passive.webp",
+    "name": "(Omen Dragon) Forewarned and Forearmed",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>At the start of the day, a dragon can perform a 10-minute ritual to prepare themself for any fights they might have in the day ahead. The dragon chooses one of the following effects, which last for 24 hours.</p><ul><li><p><strong>Assured Fate</strong> (fortune) When the omen dragon rolls initiative, instead of rolling, they can choose to have a result equal to 13 + their initiative modifier.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.Effect: Assured Fate]</p></li><li><p><strong>Instinctive Challenge</strong> During an encounter, the fortune dragon gains an additional reaction at the start of their turn that can be used only for Challenge Fate.</p></li></ul>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "occult"
+            ]
+        }
+    },
+    "type": "action"
+}

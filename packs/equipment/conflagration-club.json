@@ -3,6 +3,7 @@
     "img": "icons/weapons/maces/mace-studded-steel.webp",
     "name": "Conflagration Club",
     "system": {
+        "ammo": null,
         "baseItem": "greatclub",
         "bonus": {
             "value": 0

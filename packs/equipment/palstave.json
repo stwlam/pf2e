@@ -3,6 +3,7 @@
     "img": "icons/weapons/axes/axe-simple-purple-black.webp",
     "name": "Palstave",
     "system": {
+        "ammo": null,
         "baseItem": "palstave",
         "bonus": {
             "value": 0

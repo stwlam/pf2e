@@ -12,8 +12,17 @@
         "description": {
             "value": "<p>Sun slings use small metal bullets covered in sharp spikes known as sun shots. A bundle of 10 sun shots has light bulk and costs 1 sp.</p>"
         },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
         "level": {
             "value": 0
+        },
+        "material": {
+            "grade": null,
+            "type": null
         },
         "price": {
             "per": 10,

@@ -3,6 +3,7 @@
     "img": "icons/consumables/potions/potion-bottle-corked-white.webp",
     "name": "Silversoul Bomb (Major)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 3

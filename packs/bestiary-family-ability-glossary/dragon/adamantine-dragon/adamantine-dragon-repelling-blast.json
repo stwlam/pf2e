@@ -1,0 +1,35 @@
+{
+    "_id": "atbn1J9kkvGuH9U7",
+    "folder": "L1tGMeQQr855fP23",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Adamantine Dragon) Repelling Blast",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p><strong>Frequency</strong> one per day</p><hr /><p><strong>Effect</strong> The dragon expels scales from their body in a @Template[type:emanation|distance:50]. Creatures in the area take slashing damage equal to the dragon's Avalanche Breath (with a @Check[reflex|basic|dc:] save of the same DC). The dragon receives the modifiers of Abandon Armor regardless of their Hit Points until after a night of rest.</p>"
+        },
+        "frequency": {
+            "max": 1,
+            "per": "day"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "metal",
+                "primal"
+            ]
+        }
+    },
+    "type": "action"
+}

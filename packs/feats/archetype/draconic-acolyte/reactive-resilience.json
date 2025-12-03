@@ -1,0 +1,67 @@
+{
+    "_id": "f58Vhv4R4J6a7ie9",
+    "folder": "JrW9SiDN0kRE26sN",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Reactive Resilience",
+    "system": {
+        "actionType": {
+            "value": "reaction"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "class",
+        "description": {
+            "value": "<p><strong>Frequency</strong> once per day</p>\n<p><strong>Trigger</strong> You take damage.</p>\n<p><strong>Requirements</strong> You are Channeling Draconic Power.</p><hr /><p>Your power blunts blades and weakens spells like the hardiest of dragon scales. You gain resistance to the triggering damage equal to your level. Channel Draconic Power ends.</p>"
+        },
+        "frequency": {
+            "max": 1,
+            "per": "day"
+        },
+        "level": {
+            "value": 8
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Draconic Resilience"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "RollOption",
+                "option": "reactive-resilence",
+                "predicate": [
+                    "self:effect:channel-draconic-essence"
+                ],
+                "toggleable": true
+            },
+            {
+                "key": "Resistance",
+                "predicate": [
+                    "reactive-resilence"
+                ],
+                "type": "all-damage",
+                "value": "@actor.level"
+            }
+        ],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "archetype"
+            ]
+        }
+    },
+    "type": "feat"
+}

@@ -1,0 +1,67 @@
+{
+    "_id": "IlD1DL4kZl1tinCT",
+    "folder": "hC1Cykg6qFGneUPq",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Heart of Earth",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "ancestry",
+        "description": {
+            "value": "<p>The earth parts to allow you passage. You gain a burrow Speed of 15 feet. While burrowing, your tremorsense becomes precise up to 15 feet. When you Burrow, you can choose to leave behind a tunnel of your size or smaller for others to traverse through.</p>"
+        },
+        "level": {
+            "value": 13
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Terra Dragonblood"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "BaseSpeed",
+                "selector": "burrow",
+                "value": 15
+            },
+            {
+                "key": "RollOption",
+                "label": "PF2E.SpecificRule.Dragonblood.HeartOfEarth.RollOptionLabel",
+                "option": "heart-of-earth-tremorsense",
+                "toggleable": true
+            },
+            {
+                "acuity": "precise",
+                "key": "Sense",
+                "predicate": [
+                    "heart-of-earth-tremorsense"
+                ],
+                "range": 15,
+                "selector": "tremorsense"
+            }
+        ],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "dragonblood"
+            ]
+        }
+    },
+    "type": "feat"
+}

@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/storm-flash.webp",
     "name": "Storm Flash",
     "system": {
+        "ammo": null,
         "baseItem": "rapier",
         "bonus": {
             "value": 2

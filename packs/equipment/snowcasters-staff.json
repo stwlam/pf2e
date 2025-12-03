@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-ornate-teal.webp",
     "name": "Snowcaster's Staff",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

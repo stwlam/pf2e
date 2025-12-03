@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/mace.webp",
     "name": "Chaplain's Cudgel",
     "system": {
+        "ammo": null,
         "baseItem": "mace",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/magic/air/fog-gas-smoke-orange.webp",
     "name": "Skunk Bomb (Lesser)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 0

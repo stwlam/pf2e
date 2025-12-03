@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/blade-of-four-energies.webp",
     "name": "Blade of Four Energies",
     "system": {
+        "ammo": null,
         "baseItem": "shortsword",
         "bonus": {
             "value": 0

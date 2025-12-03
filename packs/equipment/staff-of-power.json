@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/staves/staff-of-power.webp",
     "name": "Staff of Power",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 2

@@ -1,0 +1,64 @@
+{
+    "_id": "J7b0h6t09kS5e0R4",
+    "folder": "JrW9SiDN0kRE26sN",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Essence Overflow",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "class",
+        "description": {
+            "value": "<p><strong>Requirements</strong> You are Channeling Draconic Essence.</p><hr /><p>Uncontainable power explodes from your spectral dragon. Your Channel Draconic Essence ends, and all creatures (except you) in a @Template[type:emanation|distance:10] from your spectral dragon take @Damage[(5+floor((@item.level - 4)/2))d6|options:area-damage] damage with a @Check[reflex|against:class-spell|basic|options:area-effect] save against the higher of your class DC or spell DC. The damage's type matches the breath of your draconic benefactor. You then can't use Essence Overflow again for [[/gmr 1d4 #Recharge Essence Overflow]]{1d4 rounds}.</p>\n<p>At 8th level and every 2 levels thereafter, the damage increases by 1d6.</p>"
+        },
+        "level": {
+            "value": 6
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Draconic Acolyte Dedication"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "itemId": "{item|id}",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "property": "traits",
+                "value": "{actor|flags.pf2e.draconicBenefactor.tradition}"
+            },
+            {
+                "key": "DamageAlteration",
+                "mode": "override",
+                "property": "damage-type",
+                "selectors": [
+                    "{item|id}-inline-damage"
+                ],
+                "value": "{actor|flags.pf2e.draconicBenefactor.breathDamage}"
+            }
+        ],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "archetype",
+                "concentrate"
+            ]
+        }
+    },
+    "type": "feat"
+}

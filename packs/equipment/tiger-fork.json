@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/trident.webp",
     "name": "Tiger Fork",
     "system": {
+        "ammo": null,
         "baseItem": "trident",
         "bonus": {
             "value": 0

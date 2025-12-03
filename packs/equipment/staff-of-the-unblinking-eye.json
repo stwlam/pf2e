@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-ornate-eye.webp",
     "name": "Staff of the Unblinking Eye",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

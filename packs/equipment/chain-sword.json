@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/chain-sword.webp",
     "name": "Chain Sword",
     "system": {
+        "ammo": null,
         "baseItem": "chain-sword",
         "bonus": {
             "value": 0

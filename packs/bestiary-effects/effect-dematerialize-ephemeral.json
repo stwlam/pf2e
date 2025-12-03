@@ -1,0 +1,56 @@
+{
+    "_id": "WMbwQNRLQ9boujz4",
+    "img": "icons/creatures/magical/spirit-undead-winged-ghost.webp",
+    "name": "Effect: Dematerialize (Ephemeral)",
+    "system": {
+        "description": {
+            "value": "<p>Your circumstance bonus to AC is reduced by 2.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 9
+        },
+        "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": ""
+        },
+        "rules": [
+            {
+                "key": "AdjustModifier",
+                "mode": "subtract",
+                "predicate": [
+                    "bonus:type:circumstance"
+                ],
+                "selector": "ac",
+                "value": 2
+            },
+            {
+                "key": "AdjustModifier",
+                "mode": "upgrade",
+                "predicate": [
+                    "bonus:type:circumstance"
+                ],
+                "selector": "ac",
+                "value": 0
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

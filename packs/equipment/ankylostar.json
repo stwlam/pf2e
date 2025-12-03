@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/ankylostar.webp",
     "name": "Ankylostar",
     "system": {
+        "ammo": null,
         "baseItem": "morningstar",
         "bonus": {
             "value": 2

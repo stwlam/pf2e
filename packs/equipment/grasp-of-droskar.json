@@ -3,6 +3,7 @@
     "img": "icons/equipment/hand/gauntlet-tooled-steel.webp",
     "name": "Grasp of Droskar",
     "system": {
+        "ammo": null,
         "baseItem": "gauntlet",
         "bonus": {
             "value": 0

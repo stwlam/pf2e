@@ -1,0 +1,30 @@
+{
+    "_id": "STynsk9Ro0kAQTxr",
+    "folder": "O007xPgLH8FWD7A2",
+    "img": "systems/pf2e/icons/actions/Passive.webp",
+    "name": "(Horned Dragon) Apex Dominance",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>When the dragon casts @UUID[Compendium.pf2e.spells-srd.Item.Dominate] on a creature with the animal trait, the result of the target's saving throw is one degree of success worse. An animal the dragon controls with this spell can speak Draconic and gains a +2 status bonus to any Intelligence-, Wisdom-, and Charisma-based skill checks it attempts while @UUID[Compendium.pf2e.conditionitems.Item.Controlled].</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "primal"
+            ]
+        }
+    },
+    "type": "action"
+}

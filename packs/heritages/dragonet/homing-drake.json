@@ -1,0 +1,36 @@
+{
+    "_id": "EG0zqAipDIMGBAKz",
+    "folder": "7WeCnFHvfttgw2vH",
+    "img": "icons/commodities/leather/scales-green.webp",
+    "name": "Homing Drake",
+    "system": {
+        "ancestry": {
+            "name": "Dragonet",
+            "slug": "dragonet",
+            "uuid": "Compendium.pf2e.ancestries.Item.B5Ewz31nJBOzHSMg"
+        },
+        "description": {
+            "value": "<p>You have a short, stubby nose, and tiny spines that resemble hairs. You might have vividly colored scales or be a dun brown. You can cast the @UUID[Compendium.pf2e.spells-srd.Item.Know the Way] cantrip as an arcane innate spell at will. A cantrip is heightened to a spell rank equal to half your level rounded up.</p>\n<p>In addition, you always know the distance and direction to your home. You can designate a new location as your home after you spend 1 week there, but you can have only a single designated home at a time.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "RollOption",
+                "option": "dragonet-heritage"
+            },
+            {
+                "key": "RollOption",
+                "option": "dragonet-heritage:homing-drake"
+            }
+        ],
+        "traits": {
+            "rarity": "common",
+            "value": []
+        }
+    },
+    "type": "heritage"
+}

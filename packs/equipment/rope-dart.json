@@ -3,6 +3,7 @@
     "img": "icons/weapons/thrown/dagger-ringed-steel.webp",
     "name": "Rope Dart",
     "system": {
+        "ammo": null,
         "baseItem": "rope-dart",
         "bonus": {
             "value": 0

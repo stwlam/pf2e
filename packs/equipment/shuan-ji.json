@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/default-icons/weapon.svg",
     "name": "Shuan Ji",
     "system": {
+        "ammo": null,
         "baseItem": "shuan-ji",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/fist/fist-katar-triple-engraved.webp",
     "name": "Tri-bladed Katar",
     "system": {
+        "ammo": null,
         "baseItem": "tri-bladed-katar",
         "bonus": {
             "value": 0

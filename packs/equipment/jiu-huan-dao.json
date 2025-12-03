@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/scimitar-broad.webp",
     "name": "Jiu Huan Dao",
     "system": {
+        "ammo": null,
         "baseItem": "jiu-huan-dao",
         "bonus": {
             "value": 0

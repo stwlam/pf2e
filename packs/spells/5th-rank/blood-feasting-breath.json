@@ -1,0 +1,83 @@
+{
+    "_id": "94eJHyFPNM1Z3TZp",
+    "folder": "iDjm2cXyRAe4VZ35",
+    "img": "icons/skills/wounds/blood-cells-red.webp",
+    "name": "Blood-Feasting Breath",
+    "system": {
+        "area": {
+            "type": "cone",
+            "value": 30
+        },
+        "cost": {
+            "value": ""
+        },
+        "counteraction": false,
+        "damage": {
+            "oqOPvqTwINsivfRH": {
+                "applyMod": false,
+                "category": null,
+                "formula": "5d6",
+                "kinds": [
+                    "damage"
+                ],
+                "materials": [],
+                "type": "void"
+            }
+        },
+        "defense": {
+            "save": {
+                "basic": true,
+                "statistic": "fortitude"
+            }
+        },
+        "description": {
+            "value": "<p><strong>Area</strong> (continued) two 30-foot cones</p><hr /><p>Like a vorpal dragon, you absorb life with an inhale and release it with an exhale. All living creatures in the first cone take 5d6 void damage with a basic Fortitude save. You and all living creatures in the second cone regain Hit Points equal to the greatest damage a single creature took from the first cone.</p><hr /><p><strong>Heightened (+1)</strong> The damage and healing increase by 1d6.</p>"
+        },
+        "duration": {
+            "sustained": false,
+            "value": ""
+        },
+        "heightening": {
+            "area": 0,
+            "damage": {
+                "oqOPvqTwINsivfRH": "1d6"
+            },
+            "interval": 1,
+            "type": "interval"
+        },
+        "level": {
+            "value": 5
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "range": {
+            "value": ""
+        },
+        "requirements": "",
+        "rules": [],
+        "target": {
+            "value": ""
+        },
+        "time": {
+            "value": "3"
+        },
+        "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+                "divine",
+                "occult"
+            ],
+            "value": [
+                "concentrate",
+                "healing",
+                "manipulate",
+                "vitality",
+                "void"
+            ]
+        }
+    },
+    "type": "spell"
+}

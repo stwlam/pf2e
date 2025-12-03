@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/sword-katana.webp",
     "name": "Vashu's Ninth Life",
     "system": {
+        "ammo": null,
         "baseItem": "katana",
         "bonus": {
             "value": 0

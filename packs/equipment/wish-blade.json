@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/wish-blade.webp",
     "name": "Wish Blade",
     "system": {
+        "ammo": null,
         "baseItem": "wish-blade",
         "bonus": {
             "value": 0

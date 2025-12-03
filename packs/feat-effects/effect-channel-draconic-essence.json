@@ -1,0 +1,63 @@
+{
+    "_id": "DkdAPJohjgtnCIJe",
+    "img": "icons/creatures/reptiles/dragon-horned-blue.webp",
+    "name": "Effect: Channel Draconic Essence",
+    "system": {
+        "description": {
+            "value": "<p>Granted by @UUID[Compendium.pf2e.actionspf2e.Item.Channel Draconic Essence]</p>\n<p>You gain a +1 status bonus to saves against sleep and paralysis.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": false,
+            "unit": "encounter",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "RollOption",
+                "label": "PF2E.SpecificRule.DraconicAcolyte.ChannelDraconicEssence.InSpace",
+                "option": "spectral-dragon",
+                "toggleable": true,
+                "value": true
+            },
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    "spectral-dragon",
+                    {
+                        "or": [
+                            "item:trait:sleep",
+                            "inflicts:paralyzed"
+                        ]
+                    }
+                ],
+                "selector": [
+                    "saving-throw"
+                ],
+                "slug": "channel-draconic-essence-bonus",
+                "type": "status",
+                "value": 1
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

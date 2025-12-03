@@ -1,0 +1,58 @@
+{
+    "_id": "qO4xOJ0kAvhVGDpX",
+    "folder": "xqlqJ6eeiNtWb7bq",
+    "img": "icons/magic/light/explosion-star-teal-purple.webp",
+    "name": "Orb of Twisting Fate",
+    "system": {
+        "area": null,
+        "cost": {
+            "value": ""
+        },
+        "counteraction": false,
+        "damage": {},
+        "defense": {
+            "save": {
+                "basic": false,
+                "statistic": "will"
+            }
+        },
+        "description": {
+            "value": "<p>The glass orb of an omen dragon erupts from your target's forehead, overwhelming their mind with alternative options.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> At the start of its turn, the target must decide whether to spend its first action to Stride in a random direction or to spend its first action doing nothing. The spell then ends.</p>\n<p><strong>Failure</strong> As success, but instead of ending automatically, the target attempts a new save at the end of each of its turns, ending the effect on a success.</p>\n<p><strong>Critical Failure</strong> As success, but instead of ending automatically, the spell lasts for the full duration.</p>"
+        },
+        "duration": {
+            "sustained": false,
+            "value": "up to 1 minute"
+        },
+        "level": {
+            "value": 7
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "range": {
+            "value": "15 feet"
+        },
+        "requirements": "",
+        "rules": [],
+        "target": {
+            "value": "1 creature"
+        },
+        "time": {
+            "value": "2"
+        },
+        "traits": {
+            "rarity": "common",
+            "traditions": [
+                "occult"
+            ],
+            "value": [
+                "concentrate",
+                "manipulate",
+                "mental"
+            ]
+        }
+    },
+    "type": "spell"
+}

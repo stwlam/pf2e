@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/lance.webp",
     "name": "Lance of Sun's Radiance",
     "system": {
+        "ammo": null,
         "baseItem": "lance",
         "bonus": {
             "value": 0

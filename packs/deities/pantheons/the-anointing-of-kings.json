@@ -1,0 +1,57 @@
+{
+    "_id": "bNEq1DQKYUVHVKC1",
+    "folder": "DJ7SUPtx7Tcfzs5y",
+    "img": "systems/pf2e/icons/default-icons/deity.svg",
+    "name": "The Anointing of Kings",
+    "system": {
+        "attribute": [
+            "str",
+            "cha"
+        ],
+        "category": "pantheon",
+        "description": {
+            "value": "<p><strong>Pantheon Members</strong> Apsu, Narriseminek, Shizuru</p>\n<p><strong>Areas of Concern</strong> rulership, judgment, lineage, fated authority</p>\n<p><strong>Edicts</strong> pursue perfection in yourself and others, help others seize their destiny, search for lost rulers</p>\n<p><strong>Anathema</strong> refuse a promotion, work against the fulfillment of prophecy, kill the last member of a noble line</p>\n<p><strong>Religious Symbol</strong> plume of orange and blue fire above a crown</p>\n<p>A movement worshipping these strange divine bedfellows as guardians of destiny and rulership has emerged since the Godsrain. With political, social, and military matters unsettled, acolytes of the Anointing of Kings yearn for a time of strong leaders and certain predictions. Some search hidden record books and genealogical libraries in hopes of finding worthy heirs that have been overlooked by the ages, while others seek personal power, hoping to ascend to thrones and rule over dominions. While all followers of the pantheon value ascension to glory and monarchy, significant disagreement simmers about how to achieve this goal. Those who favor Apsu and Shizuru advocate for slowing gathering power and legitimacy in hopes of a diplomatic takeover. Narriseminek's faithful scoff at such incrementalist methods and push for the violent overthrow of regimes they don't consider legitimate.</p>"
+        },
+        "domains": {
+            "alternate": [
+                "wyrmkin",
+                "tyranny"
+            ],
+            "primary": [
+                "ambition",
+                "confidence",
+                "duty",
+                "fate"
+            ]
+        },
+        "font": [
+            "heal"
+        ],
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "sanctification": {
+            "modal": "can",
+            "what": [
+                "holy",
+                "unholy"
+            ]
+        },
+        "skill": [
+            "diplomacy"
+        ],
+        "spells": {
+            "1": "Compendium.pf2e.spells-srd.Item.Sure Strike",
+            "3": "Compendium.pf2e.spells-srd.Item.Enthrall",
+            "5": "Compendium.pf2e.spells-srd.Item.Dreaming Potential"
+        },
+        "traits": {},
+        "weapons": [
+            "mace"
+        ]
+    },
+    "type": "deity"
+}

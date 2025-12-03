@@ -3,6 +3,7 @@
     "img": "icons/weapons/hammers/hammer-war-rounding.webp",
     "name": "Maul-spade",
     "system": {
+        "ammo": null,
         "baseItem": "maul-spade",
         "bonus": {
             "value": 0

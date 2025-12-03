@@ -1,0 +1,64 @@
+{
+    "_id": "Y1cG8cw4qoHR145y",
+    "folder": "7WeCnFHvfttgw2vH",
+    "img": "icons/creatures/invertebrates/dragonfly-teal.webp",
+    "name": "Fey Dragonet",
+    "system": {
+        "ancestry": {
+            "name": "Dragonet",
+            "slug": "dragonet",
+            "uuid": "Compendium.pf2e.ancestries.Item.B5Ewz31nJBOzHSMg"
+        },
+        "description": {
+            "value": "<p>You have a brightly colored body with gleaming scales that become more lustrous as you age, and iridescent butterfly wings. You can change the coloration and pattern of your wings with a single action to let you blend into an area.</p>\n<p>When your wings match your environment, you gain a +2 circumstance bonus to Stealth checks until your surroundings shift in coloration or pattern. You gain the fey trait and add Fey to your list of known languages.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "ActiveEffectLike",
+                "mode": "add",
+                "path": "system.build.languages.granted",
+                "value": {
+                    "slug": "fey",
+                    "source": "{item|name}"
+                }
+            },
+            {
+                "key": "RollOption",
+                "label": "PF2E.SpecificRule.Dragonet.FeyDragonet.WingColor",
+                "option": "fey-dragonet-wing-color",
+                "toggleable": true
+            },
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    "fey-dragonet-wing-color"
+                ],
+                "selector": [
+                    "stealth"
+                ],
+                "type": "circumstance",
+                "value": 2
+            },
+            {
+                "key": "RollOption",
+                "option": "dragonet-heritage"
+            },
+            {
+                "key": "RollOption",
+                "option": "dragonet-heritage:fey-dragonet"
+            }
+        ],
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "fey"
+            ]
+        }
+    },
+    "type": "heritage"
+}

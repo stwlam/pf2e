@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-crescent-green.webp",
     "name": "Staff of Impossible Visions (Major)",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

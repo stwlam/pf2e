@@ -3,6 +3,7 @@
     "img": "icons/weapons/daggers/dagger-straight-thin-black.webp",
     "name": "Corset Knife",
     "system": {
+        "ammo": null,
         "baseItem": "corset-knife",
         "bonus": {
             "value": 0

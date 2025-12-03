@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/flyssa.webp",
     "name": "Flyssa",
     "system": {
+        "ammo": null,
         "baseItem": "flyssa",
         "bonus": {
             "value": 0

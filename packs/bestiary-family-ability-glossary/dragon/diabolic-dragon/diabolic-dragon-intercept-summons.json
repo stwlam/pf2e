@@ -1,0 +1,30 @@
+{
+    "_id": "RLqgyWn86ZyB9CBL",
+    "folder": "BWBOH28ATkMK6bbz",
+    "img": "systems/pf2e/icons/actions/Reaction.webp",
+    "name": "(Diabolic Dragon) Intercept Summons",
+    "system": {
+        "actionType": {
+            "value": "reaction"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "defensive",
+        "description": {
+            "value": "<p><strong>Trigger</strong> A creature within 30 feet uses magic to summon or conjure a creature</p><hr /><p><strong>Effect</strong> The dragon attempts a counteract check with a Hell Lore check (counteract rank equal to half the dragon's level, rounded up). On a success, the dragon seizes control of the effect, causing it to fail and immediately casting a summon fiend spell of the same rank (minimum 5th) as the triggering effect to summon a creature with the devil trait.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "concentrate"
+            ]
+        }
+    },
+    "type": "action"
+}

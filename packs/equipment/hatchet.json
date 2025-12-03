@@ -3,6 +3,7 @@
     "img": "icons/weapons/axes/axe-broad-black.webp",
     "name": "Hatchet",
     "system": {
+        "ammo": null,
         "baseItem": "hatchet",
         "bonus": {
             "value": 0

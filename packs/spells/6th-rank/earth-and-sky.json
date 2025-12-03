@@ -1,0 +1,63 @@
+{
+    "_id": "XOs8C2eZJAO3go0N",
+    "folder": "zDlxATrLAlbYA2Mv",
+    "img": "icons/magic/earth/projectile-boulder-dust.webp",
+    "name": "Earth and Sky",
+    "system": {
+        "area": {
+            "type": "emanation",
+            "value": 20
+        },
+        "cost": {
+            "value": ""
+        },
+        "counteraction": false,
+        "damage": {},
+        "defense": {
+            "save": {
+                "basic": false,
+                "statistic": "fortitude"
+            }
+        },
+        "description": {
+            "value": "<p>You erupt into the air with the force of a dragon taking flight, launching nearby creatures into the sky with you. This spell has no effect unless you're on solid ground when you cast it. You fly directly upward, up to 100 feet into the air. When the spell ends, you safely float to the ground, as gentle landing. Every other creature in the area when you Cast this Spell must attempt a Fortitude saving throw.</p><hr /><p><strong>Critical Success</strong> The creature is unaffected.</p>\n<p><strong>Success</strong> The creature is launched the same distance into the air as you, then falls.</p>\n<p><strong>Failure</strong> The creature is launched the same distance into the air as you, then falls and can't @UUID[Compendium.pf2e.actionspf2e.Item.Arrest a Fall]{Arrest its Fall}.</p>\n<p><strong>Critical Failure</strong> As failure, but the creature takes twice as much damage from falling.</p>"
+        },
+        "duration": {
+            "sustained": false,
+            "value": ""
+        },
+        "level": {
+            "value": 6
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "range": {
+            "value": ""
+        },
+        "requirements": "",
+        "rules": [],
+        "target": {
+            "value": ""
+        },
+        "time": {
+            "value": "2"
+        },
+        "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+                "arcane",
+                "primal"
+            ],
+            "value": [
+                "air",
+                "concentrate",
+                "earth",
+                "manipulate"
+            ]
+        }
+    },
+    "type": "spell"
+}

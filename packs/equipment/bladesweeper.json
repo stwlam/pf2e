@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/sword-guard-brass-worn.webp",
     "name": "Bladesweeper",
     "system": {
+        "ammo": null,
         "baseItem": "bladesweeper",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/scimitar-guard.webp",
     "name": "Butterfly Sword",
     "system": {
+        "ammo": null,
         "baseItem": "butterfly-sword",
         "bonus": {
             "value": 0

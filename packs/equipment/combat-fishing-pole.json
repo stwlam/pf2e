@@ -3,6 +3,7 @@
     "img": "icons/tools/fishing/rod-wood-blue-tan.webp",
     "name": "Combat Fishing Pole",
     "system": {
+        "ammo": null,
         "baseItem": "combat-fishing-pole",
         "bonus": {
             "value": 0

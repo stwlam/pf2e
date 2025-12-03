@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-ornate-gold.webp",
     "name": "Elven Branched Spear",
     "system": {
+        "ammo": null,
         "baseItem": "elven-branched-spear",
         "bonus": {
             "value": 0

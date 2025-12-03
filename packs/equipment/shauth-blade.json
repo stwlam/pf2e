@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/shauth-blade.webp",
     "name": "Shauth Blade",
     "system": {
+        "ammo": null,
         "baseItem": null,
         "bonus": {
             "value": 0

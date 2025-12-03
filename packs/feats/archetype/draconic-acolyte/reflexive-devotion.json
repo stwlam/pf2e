@@ -1,0 +1,55 @@
+{
+    "_id": "eAcMHQgfsOePtYgp",
+    "folder": "JrW9SiDN0kRE26sN",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Reflexive Devotion",
+    "system": {
+        "actionType": {
+            "value": "free"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "class",
+        "description": {
+            "value": "<p><strong>Trigger</strong> You roll initiative.</p><hr /><p>The power of dragons flows through you at the merest thought. You Channel Draconic Essence.</p>"
+        },
+        "level": {
+            "value": 10
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Draconic Acolyte Dedication"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "Note",
+                "selector": [
+                    "initiative"
+                ],
+                "text": "{item|description}",
+                "title": "{item|name}"
+            }
+        ],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "archetype"
+            ]
+        }
+    },
+    "type": "feat"
+}

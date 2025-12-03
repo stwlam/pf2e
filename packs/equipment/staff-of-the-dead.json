@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-skull-feathers-brown.webp",
     "name": "Staff of the Dead",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

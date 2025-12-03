@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/khakkhara.webp",
     "name": "Worldringer",
     "system": {
+        "ammo": null,
         "baseItem": "khakkhara",
         "bonus": {
             "value": 0

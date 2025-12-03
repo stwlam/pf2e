@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/blade-of-the-black-soverign.webp",
     "name": "Blade of the Black Sovereign",
     "system": {
+        "ammo": null,
         "baseItem": "greatsword",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/greatsword-guard-gold-worn.webp",
     "name": "Chalice of Justice",
     "system": {
+        "ammo": null,
         "baseItem": "longsword",
         "bonus": {
             "value": 2

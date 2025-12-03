@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-blue-jewel.webp",
     "name": "Auspicious Scepter",
     "system": {
+        "ammo": null,
         "baseItem": "mace",
         "bonus": {
             "value": 0

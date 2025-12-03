@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/light-pick.webp",
     "name": "Light Pick",
     "system": {
+        "ammo": null,
         "baseItem": "light-pick",
         "bonus": {
             "value": 0

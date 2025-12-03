@@ -3,6 +3,7 @@
     "img": "icons/weapons/daggers/dagger-bone-engraved-black.webp",
     "name": "Poisonous Dagger",
     "system": {
+        "ammo": null,
         "baseItem": "dagger",
         "bonus": {
             "value": 0

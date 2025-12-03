@@ -1,0 +1,60 @@
+{
+    "_id": "1KtlTS3dWcqRWwb8",
+    "folder": "hC1Cykg6qFGneUPq",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Tenacious Jaws",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "ancestry",
+        "description": {
+            "value": "<p>Your teeth are curved or hooked to hold on to your enemies. Your jaws unarmed attack gains the grapple trait. When you use your @UUID[Compendium.pf2e.feats-srd.Item.Breath of the Dragon (Dragonblood)]{Breath of the Dragon}, an opponent @UUID[Compendium.pf2e.conditionitems.Item.Grabbed] or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] in your jaws uses the outcome one degree of success worse than the result of their saving throw.</p>"
+        },
+        "level": {
+            "value": 5
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Draconic Aspect"
+                },
+                {
+                    "value": "jaws unarmed attack"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "itemType": "weapon",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:base:jaws"
+                ],
+                "property": "traits",
+                "value": "grapple"
+            }
+        ],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "dragonblood"
+            ]
+        }
+    },
+    "type": "feat"
+}

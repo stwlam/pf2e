@@ -1,0 +1,28 @@
+{
+    "_id": "rraWyBNnO9PepelJ",
+    "folder": "L1tGMeQQr855fP23",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Adamantine Dragon) Cratering Smash",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon smashes itself into the ground, cratering the earth in a 10-foot deep, 60-foot wide emanation. Creatures in the area are thrown into the air and must attempt a @Check[reflex|dc:|options:area-effect,damaging-effect,inflicts:prone] save with a DC equal to the dragon's Avalanche Breath.</p><hr /><p><strong>Critical Success</strong> The creature lands on its feet.</p>\n<p><strong>Success</strong> The creature lands @UUID[Compendium.pf2e.conditionitems.Item.Prone].</p>\n<p><strong>Failure</strong> The creature lands prone and takes @Damage[(floor(@actor.level/2))d6[untyped]]{1d6 damage per every two levels} of the dragon.</p>\n<p><strong>Critical Failure</strong> As failure, and the dragon can make a jaws Strike against the creature as a free action. It can only attack one creature that critically failed its save.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "action"
+}

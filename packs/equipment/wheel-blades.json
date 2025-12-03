@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/wheel-blades.webp",
     "name": "Wheel Blades",
     "system": {
+        "ammo": null,
         "baseItem": "wheel-blades",
         "bonus": {
             "value": 0

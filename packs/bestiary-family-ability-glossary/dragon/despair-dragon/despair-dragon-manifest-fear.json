@@ -1,0 +1,36 @@
+{
+    "_id": "zup3V3RgZJ1sy9Vy",
+    "folder": "dJ6sJGc3u6hlxBAu",
+    "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+    "name": "(Despair Dragon) Manifest Fear",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 3
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The despair dragon creates an illusory image of a creature referenced in local superstition. This functions as @UUID[Compendium.pf2e.spells-srd.Item.Illusory Creature], heightened to a rank equal to half the dragon's level. The damage die of the illusory creature's Strikes increases to d6s against creatures with the frightened condition.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "auditory",
+                "concentrate",
+                "illusion",
+                "manipulate",
+                "mental",
+                "olfactory",
+                "visual"
+            ]
+        }
+    },
+    "type": "action"
+}

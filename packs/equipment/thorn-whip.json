@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/thorn-whip.webp",
     "name": "Thorn Whip",
     "system": {
+        "ammo": null,
         "baseItem": "thorn-whip",
         "bonus": {
             "value": 0

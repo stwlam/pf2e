@@ -1,0 +1,40 @@
+{
+    "_id": "Rz0hZM6CFvX5LnXg",
+    "folder": "7WeCnFHvfttgw2vH",
+    "img": "icons/commodities/gems/pearl-natural.webp",
+    "name": "Pearl Dragonet",
+    "system": {
+        "ancestry": {
+            "name": "Dragonet",
+            "slug": "dragonet",
+            "uuid": "Compendium.pf2e.ancestries.Item.B5Ewz31nJBOzHSMg"
+        },
+        "description": {
+            "value": "<p>You have pearlescent scales and a round body, with short legs, small wings, and a long tail. The shape of your body lets you absorb a blow and roll away.</p>\n<p><strong>@UUID[Compendium.pf2e.actionspf2e.Item.Bounce Away]</strong><span class=\"action-glyph\">r</span></p>\n<p>@Embed[Compendium.pf2e.actionspf2e.Item.OpiIzr7h1EKY8wKh inline]</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "GrantItem",
+                "uuid": "Compendium.pf2e.actionspf2e.Item.Bounce Away"
+            },
+            {
+                "key": "RollOption",
+                "option": "dragonet-heritage"
+            },
+            {
+                "key": "RollOption",
+                "option": "dragonet-heritage:pearl-dragonet"
+            }
+        ],
+        "traits": {
+            "rarity": "common",
+            "value": []
+        }
+    },
+    "type": "heritage"
+}

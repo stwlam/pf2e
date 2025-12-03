@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/sword-guard.webp",
     "name": "Talonstrike Blade (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "bastard-sword",
         "bonus": {
             "value": 0

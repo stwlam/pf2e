@@ -3,6 +3,7 @@
     "img": "icons/weapons/clubs/club-simple-barbed-purple.webp",
     "name": "War Gavel",
     "system": {
+        "ammo": null,
         "baseItem": "war-gavel",
         "bonus": {
             "value": 0

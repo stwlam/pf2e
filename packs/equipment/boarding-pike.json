@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-hooked-spike.webp",
     "name": "Boarding Pike",
     "system": {
+        "ammo": null,
         "baseItem": "boarding-pike",
         "bonus": {
             "value": 0

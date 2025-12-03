@@ -3,6 +3,7 @@
     "img": "icons/weapons/daggers/dagger-crooked-black.webp",
     "name": "Deathseeker",
     "system": {
+        "ammo": null,
         "baseItem": "kris",
         "bonus": {
             "value": 0

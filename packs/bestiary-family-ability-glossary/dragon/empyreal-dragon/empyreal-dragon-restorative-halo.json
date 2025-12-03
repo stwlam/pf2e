@@ -1,0 +1,31 @@
+{
+    "_id": "ZdlH2u3E1EAHchVP",
+    "folder": "R7ReCVeTRePoKQHP",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Empyreal Dragon) Restorative Halo",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon's halo divides into smaller halos, hovering over up to six creatures of the dragon's choice within its inspiring presence aura. Creatures wearing a halo gain fast healing equal to half the dragon's level for 1 minute.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.Effect: Restorative Halo]</p>\n<p>The dragon cannot use other abilities of its halo while other creatures wear it, and they can Dismiss the effect for any or all affected creatures.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "concentrate",
+                "divine"
+            ]
+        }
+    },
+    "type": "action"
+}

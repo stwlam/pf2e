@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/north-winds-night-verse.webp",
     "name": "North Wind's Night Verse",
     "system": {
+        "ammo": null,
         "baseItem": "katana",
         "bonus": {
             "value": 0

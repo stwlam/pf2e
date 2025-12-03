@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/tamchal-chakram.webp",
     "name": "Tamchal Chakram",
     "system": {
+        "ammo": null,
         "baseItem": "tamchal-chakram",
         "bonus": {
             "value": 0

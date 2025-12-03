@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-hooked-double.webp",
     "name": "Breaching Pike",
     "system": {
+        "ammo": null,
         "baseItem": "breaching-pike",
         "bonus": {
             "value": 0

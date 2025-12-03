@@ -1,0 +1,60 @@
+{
+    "_id": "1wKxFamTt3A3ZohD",
+    "folder": "DJ7SUPtx7Tcfzs5y",
+    "img": "systems/pf2e/icons/default-icons/deity.svg",
+    "name": "Essence Dancers",
+    "system": {
+        "attribute": [
+            "int",
+            "wis"
+        ],
+        "category": "pantheon",
+        "description": {
+            "value": "<p><strong>Pantheon Members</strong> Brixori, Garhaazh, Turvu, Yluma</p>\n<p><strong>Areas of Concern</strong> the cosmos, ley lines, magic, synthesis</p>\n<p><strong>Edicts</strong> pursue fundamental truths, compare your experience to that of others, investigate new solutions</p>\n<p><strong>Anathema</strong> become stagnant or passive in your thinking, abandon magic, sequester useful discoveries or valuable information</p>\n<p><strong>Religious Symbol</strong> four intertwined dragons</p>\n<p>Magical theory describes the four fundamental magical essences—life, matter, mind, and spirit—that undergird the practice of magic as it's known today, with the essences bound together in a dance of complex interactions to form the four traditions of magic. Followers of the Essence Dancers not only seek to understand these interactions but also see the dragon gods as embodiments of these forces and guides toward transcendent understanding of magic and the cosmos. Worship of the pantheon recently began at the Magaambya, likely a syncretistic combination of beliefs from visiting Taralu dwarven scholars and from scholars on the blending of arcane and primal magic traditions. Carried by travelers investigating magical phenomena or tracing the course of ley lines, the pantheon quickly spread across Golarion. Such pilgrimages are common among the faithful; journeys are undertaken in pairs, with ideal traveling partners wielding magic covering the spectrum of magical essences, such as a druid and bard traveling together. Congregations of the faithful are led by a tetrad, four worshippers who together command all four traditions of magic.</p>"
+        },
+        "domains": {
+            "alternate": [
+                "nature",
+                "secrecy"
+            ],
+            "primary": [
+                "creation",
+                "wyrmkin",
+                "knowledge",
+                "magic"
+            ]
+        },
+        "font": [
+            "harm",
+            "heal"
+        ],
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "sanctification": {
+            "modal": "can",
+            "what": [
+                "holy",
+                "unholy"
+            ]
+        },
+        "skill": [
+            "nature"
+        ],
+        "spells": {
+            "1": "Compendium.pf2e.spells-srd.Item.Mindlink",
+            "3": "Compendium.pf2e.spells-srd.Item.Hypercognition",
+            "5": "Compendium.pf2e.spells-srd.Item.Summon Dragon",
+            "8": "Compendium.pf2e.spells-srd.Item.Quandary"
+        },
+        "traits": {},
+        "weapons": [
+            "claw",
+            "tekko-kagi"
+        ]
+    },
+    "type": "deity"
+}

@@ -3,6 +3,7 @@
     "img": "icons/containers/bags/coinpouch-simple-leather-tan.webp",
     "name": "Combat Lure",
     "system": {
+        "ammo": null,
         "baseItem": "combat-lure",
         "bonus": {
             "value": 0

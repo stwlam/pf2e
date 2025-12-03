@@ -3,6 +3,7 @@
     "img": "icons/containers/bags/pack-leather-tan.webp",
     "name": "Battle Saddle",
     "system": {
+        "ammo": null,
         "baseItem": "battle-saddle",
         "bonus": {
             "value": 0

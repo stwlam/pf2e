@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/longspear.webp",
     "name": "Spear of the Destroyer's Flame",
     "system": {
+        "ammo": null,
         "baseItem": "longspear",
         "bonus": {
             "value": 0

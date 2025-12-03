@@ -3,6 +3,7 @@
     "img": "icons/weapons/axes/pickaxe-iron-green.webp",
     "name": "Chainbreaker",
     "system": {
+        "ammo": null,
         "baseItem": "pick",
         "bonus": {
             "value": 0

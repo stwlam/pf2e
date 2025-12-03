@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/sword-guard-red.webp",
     "name": "Searing Blade (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "longsword",
         "bonus": {
             "value": 3

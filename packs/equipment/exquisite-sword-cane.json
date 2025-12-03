@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-ornate-hook.webp",
     "name": "Exquisite Sword Cane",
     "system": {
+        "ammo": null,
         "baseItem": "exquisite-sword-cane",
         "bonus": {
             "value": 0

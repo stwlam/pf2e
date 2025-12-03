@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/shortsword-guard-steel-worn.webp",
     "name": "Gladius",
     "system": {
+        "ammo": null,
         "baseItem": "gladius",
         "bonus": {
             "value": 0

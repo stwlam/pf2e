@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/poi.webp",
     "name": "Poi",
     "system": {
+        "ammo": null,
         "baseItem": "poi",
         "bonus": {
             "value": 0

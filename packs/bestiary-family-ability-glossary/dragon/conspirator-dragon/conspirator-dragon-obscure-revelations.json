@@ -1,0 +1,30 @@
+{
+    "_id": "k9R1zUe2GCWci5Gd",
+    "folder": "y8G86Pau0M79IlgT",
+    "img": "systems/pf2e/icons/actions/Passive.webp",
+    "name": "(Conspirator Dragon) Obscure Revelations",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "defensive",
+        "description": {
+            "value": "<p>When the dragon is subject to a detection, revelation, or scrying effect, the GM rolls a secret counteract check with a counteract rank of half the dragon's level (rounded up) and a modifier equal to the dragon's Will. The dragon becomes aware of effects counteracted this way and their sources, then provides false information of its choosing.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "occult"
+            ]
+        }
+    },
+    "type": "action"
+}

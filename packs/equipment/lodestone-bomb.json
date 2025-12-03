@@ -3,6 +3,7 @@
     "img": "icons/commodities/gems/pearl-swirl-teal.webp",
     "name": "Lodestone Bomb",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 2

@@ -3,6 +3,7 @@
     "img": "icons/weapons/axes/axe-broad-black.webp",
     "name": "Clear Cutter's Axe",
     "system": {
+        "ammo": null,
         "baseItem": "hatchet",
         "bonus": {
             "value": 0

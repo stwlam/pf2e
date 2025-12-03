@@ -3,6 +3,7 @@
     "img": "icons/equipment/hand/gauntlet-cuffed-steel-blue.webp",
     "name": "Cinderclaw Gauntlet",
     "system": {
+        "ammo": null,
         "baseItem": "spiked-gauntlet",
         "bonus": {
             "value": 1

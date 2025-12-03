@@ -3,6 +3,7 @@
     "img": "icons/weapons/daggers/dagger-curved-green.webp",
     "name": "Karambit",
     "system": {
+        "ammo": null,
         "baseItem": "karambit",
         "bonus": {
             "value": 0

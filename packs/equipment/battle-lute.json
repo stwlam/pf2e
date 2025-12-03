@@ -3,6 +3,7 @@
     "img": "icons/tools/instruments/lute-gold-brown.webp",
     "name": "Battle Lute",
     "system": {
+        "ammo": null,
         "baseItem": "battle-lute",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/scimitar-guard-wood.webp",
     "name": "Falchion",
     "system": {
+        "ammo": null,
         "baseItem": "falchion",
         "bonus": {
             "value": 0

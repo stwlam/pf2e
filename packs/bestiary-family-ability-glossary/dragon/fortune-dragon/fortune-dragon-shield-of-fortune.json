@@ -1,0 +1,28 @@
+{
+    "_id": "9LwWHRazIImJYvD3",
+    "folder": "NH4nclIWp1ne8aJQ",
+    "img": "systems/pf2e/icons/actions/OneAction.webp",
+    "name": "(Fortune Dragon) Shield of Fortune",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon adjusts the treasure around their body to function as a kind of shield. They gain a +2 circumstance bonus to AC until the beginning of their next turn and can use the Shield Block reaction. The shield has Hardness, Hit Points, and BT of a sturdy shield of the dragon's level. When it is broken, it triggers the effect of the dragon's Share the Wealth ability.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "action"
+}

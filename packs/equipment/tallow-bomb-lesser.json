@@ -3,6 +3,7 @@
     "img": "icons/consumables/food/soup-broth-bowl-wooden-yellow.webp",
     "name": "Tallow Bomb (Lesser)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 0

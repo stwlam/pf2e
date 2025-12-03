@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-simple-spiral-grey.webp",
     "name": "Probing Cane",
     "system": {
+        "ammo": null,
         "baseItem": "probing-cane",
         "bonus": {
             "value": 0

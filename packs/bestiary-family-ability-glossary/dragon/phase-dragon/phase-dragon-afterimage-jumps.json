@@ -1,0 +1,35 @@
+{
+    "_id": "OgtpOXZuyzuSyZ1j",
+    "folder": "3BtYGuOX2GA56tE0",
+    "img": "systems/pf2e/icons/actions/Passive.webp",
+    "name": "(Phase Dragon) Afterimage Jumps",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p><strong>Frequency</strong> once per 10 minutes</p><hr /><p><strong>Effect</strong> The phase dragon teleports in a quick series of jumps around their own location, creating three illusory images of themself that are hard to distinguish from the real thing. Any foe targeting the phase dragon with an attack must first succeed at a @Check[flat|dc:15]. On a failure, the phase dragon isn't affected and one of the illusory duplicates is shattered; the DC of the next flat check for Afterimage Jumps is reduced by 5. Any remaining images disappear at the start of the dragon's next turn.</p>\n<p>@Check[flat|dc:10] @Check[flat|dc:5]</p>"
+        },
+        "frequency": {
+            "max": 1,
+            "per": "PT10M"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "illusion",
+                "visual"
+            ]
+        }
+    },
+    "type": "action"
+}

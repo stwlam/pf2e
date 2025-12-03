@@ -1,0 +1,55 @@
+{
+    "_id": "s7kVnr0EdljCamuR",
+    "folder": "7cyoYPoPYA01mErU",
+    "img": "icons/magic/air/wind-vortex-swirl-blue-purple.webp",
+    "name": "Cloud Current",
+    "system": {
+        "area": null,
+        "cost": {
+            "value": ""
+        },
+        "counteraction": false,
+        "damage": {},
+        "defense": null,
+        "description": {
+            "value": "<p>Air and water vapor combine into a great cloud that funnels a powerful current within it. The eddies make the cloud appear from a distance to be a group of cloud dragons tumbling through the sky. The cloud is up to 30 feet wide, 30 feet tall, and 10 miles long. It runs parallel to the ground, and the nearest end of it must be within range and at least 100 feet above the ground. The current travels in a direction you choose when you Cast the Spell, and the travel Speed of creatures flying through the cloud in that direction is doubled. You can Dismiss the cloud.</p><hr /><p><strong>Heightened (6th)</strong> The duration is 8 hours, and the cloud can be up to 50 feet wide and 100 miles long.</p>\n<p><strong>Heightened (8th)</strong> As 6th, and travel speed is quadrupled.</p>"
+        },
+        "duration": {
+            "sustained": false,
+            "value": "1 hour"
+        },
+        "level": {
+            "value": 4
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "range": {
+            "value": "500 feet"
+        },
+        "requirements": "",
+        "rules": [],
+        "target": {
+            "value": ""
+        },
+        "time": {
+            "value": "1 minute"
+        },
+        "traits": {
+            "rarity": "uncommon",
+            "traditions": [
+                "arcane",
+                "primal"
+            ],
+            "value": [
+                "air",
+                "concentrate",
+                "manipulate",
+                "water"
+            ]
+        }
+    },
+    "type": "spell"
+}

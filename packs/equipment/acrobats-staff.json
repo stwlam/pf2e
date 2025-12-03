@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-simple-gold.webp",
     "name": "Acrobat's Staff",
     "system": {
+        "ammo": null,
         "baseItem": "bo-staff",
         "bonus": {
             "value": 0

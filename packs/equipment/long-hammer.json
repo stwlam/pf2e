@@ -3,6 +3,7 @@
     "img": "icons/weapons/hammers/hammer-war-rounding.webp",
     "name": "Long Hammer",
     "system": {
+        "ammo": null,
         "baseItem": "long-hammer",
         "bonus": {
             "value": 0

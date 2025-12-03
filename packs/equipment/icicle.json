@@ -3,6 +3,7 @@
     "img": "icons/magic/water/projectile-arrow-ice-gray-blue.webp",
     "name": "Icicle",
     "system": {
+        "ammo": null,
         "baseItem": "longspear",
         "bonus": {
             "value": 0

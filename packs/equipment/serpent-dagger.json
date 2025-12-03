@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/dagger-of-venom.webp",
     "name": "Serpent Dagger",
     "system": {
+        "ammo": null,
         "baseItem": "dagger",
         "bonus": {
             "value": 1

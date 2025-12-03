@@ -3,6 +3,7 @@
     "img": "icons/weapons/hammers/hammer-war-rounding.webp",
     "name": "Warhammer",
     "system": {
+        "ammo": null,
         "baseItem": "warhammer",
         "bonus": {
             "value": 0

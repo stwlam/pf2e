@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-orb-feather.webp",
     "name": "Fluid Form Staff (Major)",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

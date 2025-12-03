@@ -1,0 +1,43 @@
+{
+    "_id": "DvBztBzWQQco4nWs",
+    "folder": "dJ6sJGc3u6hlxBAu",
+    "img": "systems/pf2e/icons/actions/Passive.webp",
+    "name": "(Despair Dragon) Cursed Memories",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>90 feet. Creatures near a despair dragon can't trust their own minds. When any creature in the aura attempts a skill check to @UUID[Compendium.pf2e.actionspf2e.Item.Recall Knowledge], they must roll twice and take the lower result.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "Aura",
+                "radius": 90,
+                "traits": [
+                    "mental",
+                    "misfortune",
+                    "occult"
+                ]
+            }
+        ],
+        "traits": {
+            "value": [
+                "aura",
+                "mental",
+                "misfortune",
+                "occult"
+            ]
+        }
+    },
+    "type": "action"
+}

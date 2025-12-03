@@ -14,8 +14,17 @@
         "description": {
             "value": "<p><strong>Activate</strong> <span class=\"action-glyph\">A</span> (manipulate)</p><hr /><p>Creation of these arrows was inspired by an encounter with a horned archon scout who sought to peacefully restrain their foes. When an activated <em>antler arrow</em> hits a target, bone antlers extend to pin it down. The target must succeed at a @Check[reflex|dc:16] save or become stuck to the surface, taking the critical specialization effects of a bow.</p>\n<p>If the hit with the <em>antler arrow</em> is a critical hit and you have access to the bow critical specialization effect, the DC of the Athletics check increases to 15.</p>"
         },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
         "level": {
             "value": 2
+        },
+        "material": {
+            "grade": null,
+            "type": null
         },
         "price": {
             "value": {

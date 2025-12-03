@@ -1,0 +1,50 @@
+{
+    "_id": "Suk2LiODbjftQ4lL",
+    "img": "systems/pf2e/icons/equipment/contracts/infernal-contracts/fiendish-teleportation.webp",
+    "name": "The Timeless Bond",
+    "system": {
+        "baseItem": null,
+        "bulk": {
+            "value": 0
+        },
+        "containerId": null,
+        "description": {
+            "value": "<p>You've linked your lifespan to your bound dragon. Your natural physical aging ceases and you gain the Draconic Vitality action, but your soul grows withered and scabrous by the weight of a dragon's experience with time.</p>\n<p>Once per week, from any distance, the dragon can use a free action, which has the concentrate trait, to become @UUID[Compendium.pf2e.conditionitems.Item.Quickened] for 1 minute. They can use the extra action to Stride, Strike, or to contribute an action to casting a spell. When the dragon uses this ability, you age 10 years and become @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 3} for 1 hour.</p>\n<p><strong>Draconic Vitality</strong> <span class=\"action-glyph\">1</span> (concentrate)</p>\n<p><strong>Frequency</strong> once per day</p><hr /><p><strong>Effect</strong> Reduce your doomed value by 2. For 1 hour, you gain a +2 status bonus to saves against poisons and diseases, and a status bonus equal to your level to Hit Points you regain from spells with the same tradition as your bound dragon.</p><hr /><p><strong>Oathbreaker's Calamity</strong> Should either party break the oath, you begin aging at an accelerated rate. Every [[/gmr 1d6 #days]]{1d6 days}, you must succeed at a flat DC 14 check or age 10 years and become @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 3}. In turn, the dragon loses years of experience, reducing its age 100 years every time you fail the flat check. If the dragon is de-aged past the time they made the pact, the pact remains, but the dragon loses all memories of you and the pact.</p>"
+        },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 12
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {}
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "quantity": 1,
+        "rules": [],
+        "size": "med",
+        "traits": {
+            "rarity": "rare",
+            "value": [
+                "contract",
+                "invested",
+                "magical"
+            ]
+        },
+        "usage": {
+            "value": "held-in-one-hand"
+        }
+    },
+    "type": "equipment"
+}

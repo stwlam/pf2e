@@ -3,6 +3,7 @@
     "img": "icons/weapons/sickles/scythe-bone-jagged.webp",
     "name": "Bloodgorger Scythe",
     "system": {
+        "ammo": null,
         "baseItem": "scythe",
         "bonus": {
             "value": 0

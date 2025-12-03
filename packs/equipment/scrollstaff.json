@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-simple-spiral-grey.webp",
     "name": "Scrollstaff",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/axes/axe-double-engraved.webp",
     "name": "Greataxe",
     "system": {
+        "ammo": null,
         "baseItem": "greataxe",
         "bonus": {
             "value": 0

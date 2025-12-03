@@ -1,0 +1,39 @@
+{
+    "_id": "hjToSb8qs12q0K3M",
+    "folder": "3BtYGuOX2GA56tE0",
+    "img": "systems/pf2e/icons/actions/OneAction.webp",
+    "name": "(Phase Dragon) Dematerialize",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p><hr /><p><strong>Effect</strong> The phase dragon becomes incorporeal, gaining the incorporeal trait, resistance to all damage (except force, ghost touch, and spirit) equal to half their level (double the resistance against non-magical damage), and immunity to precision damage. If the dragon attempts a Strike against a creature with any circumstance bonuses to AC (such as from a shield or cover), reduce that bonus by 2. This effect lasts for 1 minute or until the phase dragon Dismisses it.</p>"
+        },
+        "frequency": {
+            "max": 1,
+            "per": "PT1H"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "selfEffect": {
+            "name": "Effect: Dematerialize",
+            "uuid": "Compendium.pf2e.bestiary-effects.Item.Effect: Dematerialize"
+        },
+        "traits": {
+            "value": [
+                "concentrate",
+                "polymorph"
+            ]
+        }
+    },
+    "type": "action"
+}

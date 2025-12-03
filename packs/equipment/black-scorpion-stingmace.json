@@ -3,6 +3,7 @@
     "img": "icons/weapons/maces/mace-spiked-skull.webp",
     "name": "Black Scorpion Stingmace",
     "system": {
+        "ammo": null,
         "baseItem": "mace",
         "bonus": {
             "value": 0

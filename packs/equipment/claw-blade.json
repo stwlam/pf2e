@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/claw-blade.webp",
     "name": "Claw Blade",
     "system": {
+        "ammo": null,
         "baseItem": "claw-blade",
         "bonus": {
             "value": 0

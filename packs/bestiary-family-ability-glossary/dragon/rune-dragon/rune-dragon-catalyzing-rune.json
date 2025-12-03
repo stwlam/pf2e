@@ -1,0 +1,31 @@
+{
+    "_id": "NoWUUKD9HK7Tu945",
+    "folder": "B3dchd9VcSYcfPvl",
+    "img": "systems/pf2e/icons/actions/OneAction.webp",
+    "name": "(Rune Dragon) Catalyzing Rune",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "offensive",
+        "description": {
+            "gm": "<p><strong>Ancient Rune Dragon</strong> As adult rune dragon, but the area is a @Template[type:burst|distance:40] and the DC is 41.</p><p><strong>Rune Archdragon</strong> As adult rune dragon, but the area is a @Template[type:burst|distance:60] and the DC is 46.</p>",
+            "value": "<p>The dragon creates a highly reactive rune in a @Template[type:burst|distance:30] up to 60 feet away. Whenever a creature takes damage from a detonating rune while within the area, all other creatures in the area take the damage of the detonating rune (@Check[reflex|dc:34|basic] save). The Catalyzing Rune lasts for 1 minute but can be removed if creatures adjacent to the rune spend two Interact actions.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "arcane"
+            ]
+        }
+    },
+    "type": "action"
+}

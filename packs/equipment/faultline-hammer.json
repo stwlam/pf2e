@@ -3,6 +3,7 @@
     "img": "icons/weapons/hammers/hammer-double-studded.webp",
     "name": "Faultline Hammer",
     "system": {
+        "ammo": null,
         "baseItem": "earthbreaker",
         "bonus": {
             "value": 0

@@ -1,0 +1,59 @@
+{
+    "_id": "5shHvm7YP0B5diqB",
+    "folder": "JrW9SiDN0kRE26sN",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Draconic Resilience",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "class",
+        "description": {
+            "value": "<p><strong>Requirements</strong> You are holding or wearing your <em>draconic gift</em>.</p><hr /><p>Energy reminiscent of dragon scales shimmers over you, making it more difficult for attacks to penetrate your defenses. Until the start of your next turn, you gain a +1 status bonus to AC and gain resistance equal to half your level to bludgeoning damage. If you are @UUID[Compendium.pf2e.actionspf2e.Item.Channel Draconic Essence]{Channeling Draconic Essence}, you can grant these benefits to a willing creature who is in the same space as your spectral dragon instead of you.</p>"
+        },
+        "level": {
+            "value": 4
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Draconic Acolyte Dedication"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "itemId": "{item|id}",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "property": "traits",
+                "value": "{actor|flags.pf2e.draconicBenefactor.tradition}"
+            }
+        ],
+        "selfEffect": {
+            "name": "Effect: Draconic Resilience",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Draconic Resilience"
+        },
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "archetype",
+                "concentrate"
+            ]
+        }
+    },
+    "type": "feat"
+}

@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/default-icons/weapon.svg",
     "name": "Three-Section Naginata",
     "system": {
+        "ammo": null,
         "baseItem": "three-section-naginata",
         "bonus": {
             "value": 0

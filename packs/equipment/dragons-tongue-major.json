@@ -1,0 +1,84 @@
+{
+    "_id": "fukrqsWzFeRbiLbi",
+    "img": "icons/weapons/polearms/spear-hooked-red.webp",
+    "name": "Dragon's Tongue (Major)",
+    "system": {
+        "ammo": null,
+        "baseItem": "longspear",
+        "bonus": {
+            "value": 0
+        },
+        "bulk": {
+            "value": 0.1
+        },
+        "category": "simple",
+        "containerId": null,
+        "damage": {
+            "damageType": "slashing",
+            "dice": 1,
+            "die": "d6"
+        },
+        "description": {
+            "value": "<p>This <em>+3 major striking longspear</em> was crafted by a renowned monster hunter, who designed the prototype from the bones and scales of a diabolic dragon. The drathyrican folds of an ancient dragon, the organ that generates their magical breath, are crucial to the operation of the spear. The mechanics of the weapon are largely based on an injection spear: when the safety is disengaged and a secondary lever is squeezed, it produces a magical effect like a dragon's breath from the hollow tip of the spear.</p>\n<p><strong>Activate—Breath of the Spear</strong> <span class=\"action-glyph\">2</span> (concentrate, manipulate) The dragon's tongue releases a burst of energy that manifests as a @Template[type:cone|distance:30] dealing @Damage[10d6[untyped]|options:area-damage] damage with a @Check[reflex|dc:43|basic|options:area-effect] save. You can't use this activation again for [[/r 1d4 #Recharge this activation]]{1d4 rounds}. The damage type matches the breath of the dragon the weapon was made from, and this activation has the corresponding trait.</p><hr /><p><strong>Craft Requirements</strong> The initial raw materials must include the drathyrican folds of a dragon.</p>"
+        },
+        "expend": null,
+        "grade": null,
+        "group": "spear",
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 20
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {
+                "gp": 55000
+            }
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "quantity": 1,
+        "range": null,
+        "reload": {
+            "value": null
+        },
+        "rules": [],
+        "runes": {
+            "potency": 2,
+            "property": [],
+            "striking": 1
+        },
+        "size": "med",
+        "specific": {
+            "material": {
+                "grade": null,
+                "type": null
+            },
+            "runes": {
+                "potency": 2,
+                "property": [],
+                "striking": 1
+            }
+        },
+        "splashDamage": {
+            "value": 0
+        },
+        "traits": {
+            "rarity": "uncommon",
+            "value": []
+        },
+        "usage": {
+            "value": "held-in-one-hand"
+        }
+    },
+    "type": "weapon"
+}

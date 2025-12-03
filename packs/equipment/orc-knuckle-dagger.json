@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/orc-knuckle-dagger.webp",
     "name": "Orc Knuckle Dagger",
     "system": {
+        "ammo": null,
         "baseItem": "orc-knuckle-dagger",
         "bonus": {
             "value": 0

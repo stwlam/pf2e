@@ -1,0 +1,31 @@
+{
+    "_id": "Tro2ZR9B7SgFbZps",
+    "folder": "69bBtNytLWOMbhCl",
+    "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+    "name": "(Whisper Dragon) Draft Contract",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 3
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon produces a contract for a single living mortal. This contract can grant a single boon or ability, the extent of which is dependent on the power of the dragon, in exchange for one piece of knowledge the mortal possesses. The mortal must willingly sign their true name to the contract, as well as the knowledge they wish to surrender. Upon signing, the mortal forgets the bartered information, which cannot be restored by any means short of a @UUID[Compendium.pf2e.spells-srd.Item.Wish] ritual; if they restore this knowledge, they lose the boon granted by the contract.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "manipulate",
+                "occult"
+            ]
+        }
+    },
+    "type": "action"
+}

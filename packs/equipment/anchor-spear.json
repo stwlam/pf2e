@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/trident-jeweled-purple.webp",
     "name": "Anchor Spear",
     "system": {
+        "ammo": null,
         "baseItem": "spear",
         "bonus": {
             "value": 0

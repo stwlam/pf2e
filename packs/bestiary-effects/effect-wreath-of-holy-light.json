@@ -1,0 +1,62 @@
+{
+    "_id": "mq351Vs8ATFa5nYv",
+    "img": "icons/magic/fire/flame-burning-yellow-orange.webp",
+    "name": "Effect: Wreath of Holy Light",
+    "system": {
+        "description": {
+            "value": "<p>You gain the holy trait, your Strikes do an additional 1d10 fire damage, and if you critically Strike an enemy, the enemy also takes 1d6 persistent fire damage.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 10
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "add": [
+                    "holy"
+                ],
+                "key": "ActorTraits"
+            },
+            {
+                "damageType": "fire",
+                "diceNumber": 1,
+                "dieSize": "d10",
+                "key": "DamageDice",
+                "selector": "strike-damage",
+                "slug": "wreath-of-holy-light"
+            },
+            {
+                "category": "persistent",
+                "critical": true,
+                "damageType": "fire",
+                "diceNumber": 1,
+                "dieSize": "d6",
+                "key": "DamageDice",
+                "selector": "strike-damage",
+                "slug": "wreath-of-holy-light-persistent"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

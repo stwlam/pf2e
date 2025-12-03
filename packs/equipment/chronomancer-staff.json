@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-ornate-blue.webp",
     "name": "Chronomancer Staff",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

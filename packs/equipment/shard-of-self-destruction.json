@@ -3,6 +3,7 @@
     "img": "icons/commodities/bones/tooth-canine-white.webp",
     "name": "Shard of Self-Destruction",
     "system": {
+        "ammo": null,
         "baseItem": "dagger",
         "bonus": {
             "value": 0

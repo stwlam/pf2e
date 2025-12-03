@@ -3,6 +3,7 @@
     "img": "icons/commodities/materials/pottery-jug.webp",
     "name": "Junk Bomb (Major)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 3

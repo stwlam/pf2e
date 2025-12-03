@@ -1,0 +1,46 @@
+{
+    "_id": "pFKfYsxBWdUlmU6A",
+    "folder": "YHNkfjmB5sxWRLiG",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Strafing Breath",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 3
+        },
+        "category": "class",
+        "description": {
+            "value": "<p><strong>Requirements</strong> @UUID[Compendium.pf2e.feats-srd.Item.War Rider Stance] is active.</p><hr /><p>You urge your dragon mount forward, wreathed in magical power. Your mount Strides three times. If your mount has a fly Speed, it can substitute a Fly action for any of these Stride actions. As it moves, your dragon companion's magical breath billows around you. The aura from War Rider Stance increases to a @Template[type:emanation|distance:10] during this movement, and each creature that's in the emanation at any point during your movement takes the damage from it (with the normal save). A creature can take damage only once, even if you move past it multiple times.</p>"
+        },
+        "level": {
+            "value": 12
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "War Rider Stance"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "archetype"
+            ]
+        }
+    },
+    "type": "feat"
+}

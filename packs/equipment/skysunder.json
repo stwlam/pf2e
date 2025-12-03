@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/clan-dagger.webp",
     "name": "Skysunder",
     "system": {
+        "ammo": null,
         "baseItem": "clan-dagger",
         "bonus": {
             "value": 0

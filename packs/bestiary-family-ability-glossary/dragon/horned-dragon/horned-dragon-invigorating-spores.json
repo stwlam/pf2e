@@ -1,0 +1,34 @@
+{
+    "_id": "KINhG5lnnok03UKZ",
+    "folder": "O007xPgLH8FWD7A2",
+    "img": "systems/pf2e/icons/actions/OneAction.webp",
+    "name": "(Horned Dragon) Invigorating Spores",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon contorts, ejecting spores from a variety of multicolored fungi covering its limbs. The spores drift toward the dragon's snout and invigorate it. The dragon gains temporary Hit Points equal to its level that last 10 minutes. The dragon also gains resistance to bludgeoning, slashing, and piercing damage equal to half its level until the end of its next turn. The dragon can't use Invigorating Spores again for [[/gmr 1d4 #Recharge Invigorating Spores]]{1d4 rounds}.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "selfEffect": {
+            "name": "Effect: Invigorating Spores",
+            "uuid": "Compendium.pf2e.bestiary-effects.Item.Effect: Invigorating Spores"
+        },
+        "traits": {
+            "value": [
+                "manipulate"
+            ]
+        }
+    },
+    "type": "action"
+}

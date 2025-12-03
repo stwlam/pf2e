@@ -3,6 +3,7 @@
     "img": "icons/weapons/thrown/bolas-stone.webp",
     "name": "Bola",
     "system": {
+        "ammo": null,
         "baseItem": "bola",
         "bonus": {
             "value": 0

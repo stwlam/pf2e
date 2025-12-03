@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/scizore.webp",
     "name": "Scizore of the Crab",
     "system": {
+        "ammo": null,
         "baseItem": "scizore",
         "bonus": {
             "value": 0

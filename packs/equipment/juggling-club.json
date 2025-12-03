@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/juggling-club.webp",
     "name": "Juggling Club",
     "system": {
+        "ammo": null,
         "baseItem": "juggling-club",
         "bonus": {
             "value": 0

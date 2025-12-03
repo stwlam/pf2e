@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/dog-bone-knife.webp",
     "name": "Dog-Bone Knife",
     "system": {
+        "ammo": null,
         "baseItem": "dagger",
         "bonus": {
             "value": 0

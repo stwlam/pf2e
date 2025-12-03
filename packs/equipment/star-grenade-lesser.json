@@ -3,6 +3,7 @@
     "img": "icons/magic/light/explosion-star-glow-blue-purple.webp",
     "name": "Star Grenade (Lesser)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 0

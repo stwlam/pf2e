@@ -3,6 +3,7 @@
     "img": "icons/commodities/gems/pearl-rough-turquoise.webp",
     "name": "Blasting Stone (Lesser)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 0

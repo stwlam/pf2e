@@ -1,0 +1,93 @@
+{
+    "_id": "0q1sI5pgZs0eHydw",
+    "img": "icons/commodities/metal/barstock-heated-steel.webp",
+    "name": "Effect: Mineral Deposits",
+    "system": {
+        "description": {
+            "value": ""
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 9
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "choices": [
+                    {
+                        "label": "PF2E.PreciousMaterialColdIron",
+                        "value": "cold-iron"
+                    },
+                    {
+                        "label": "PF2E.PreciousMaterialSilver",
+                        "value": "silver"
+                    },
+                    {
+                        "label": "PF2E.PreciousMaterialAdamantine",
+                        "predicate": [
+                            {
+                                "gte": [
+                                    "self:level",
+                                    17
+                                ]
+                            }
+                        ],
+                        "value": "adamantine"
+                    }
+                ],
+                "flag": "material",
+                "key": "ChoiceSet",
+                "prompt": "PF2E.SpecificRule.Prompt.Material"
+            },
+            {
+                "choices": [
+                    {
+                        "label": "PF2E.Weapon.Base.claw",
+                        "value": "claw"
+                    },
+                    {
+                        "label": "PF2E.Weapon.Base.jaws",
+                        "value": "jaws"
+                    },
+                    {
+                        "label": "PF2E.BattleForm.Attack.Tail",
+                        "value": "tail"
+                    }
+                ],
+                "flag": "attack",
+                "key": "ChoiceSet",
+                "prompt": "PF2E.SpecificRule.Prompt.UnarmedAttack"
+            },
+            {
+                "definition": [
+                    "item:base:{item|flags.pf2e.rulesSelections.attack}"
+                ],
+                "key": "AdjustStrike",
+                "mode": "add",
+                "property": "materials",
+                "value": "{item|flags.pf2e.rulesSelections.material}"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

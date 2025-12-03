@@ -3,6 +3,7 @@
     "img": "icons/weapons/hammers/shorthammer-embossed-white.webp",
     "name": "Light Hammer",
     "system": {
+        "ammo": null,
         "baseItem": "light-hammer",
         "bonus": {
             "value": 0

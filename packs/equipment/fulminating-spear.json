@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-flared-bronze-teal.webp",
     "name": "Fulminating Spear",
     "system": {
+        "ammo": null,
         "baseItem": "spear",
         "bonus": {
             "value": 0

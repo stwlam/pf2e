@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-hooked-broad.webp",
     "name": "Broadspear",
     "system": {
+        "ammo": null,
         "baseItem": "broadspear",
         "bonus": {
             "value": 0

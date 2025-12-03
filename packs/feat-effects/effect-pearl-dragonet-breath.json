@@ -1,0 +1,62 @@
+{
+    "_id": "covFunty2HlvEN9K",
+    "img": "icons/magic/control/modfiy-luck-fortune-brown.webp",
+    "name": "Effect: Pearl Dragonet Breath",
+    "system": {
+        "description": {
+            "value": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.Dragonet Breath]</p>\n<p>If the origin's breath gives good luck, you gain a +1 status bonus to your next attack roll or skill check. If the origin's breath gives bad luck, you take a –1 status penalty to your next attack roll or skill check.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "choices": [
+                    {
+                        "label": "PF2E.SpecificRule.Dragonet.DragonetBreath.PearlDragonet.BadLuck",
+                        "value": -1
+                    },
+                    {
+                        "label": "PF2E.SpecificRule.Dragonet.DragonetBreath.PearlDragonet.GoodLuck",
+                        "value": 1
+                    }
+                ],
+                "flag": "modifier",
+                "key": "ChoiceSet"
+            },
+            {
+                "key": "FlatModifier",
+                "removeAfterRoll": "if-enabled",
+                "selector": [
+                    "attack-roll",
+                    "skill-check"
+                ],
+                "type": "status",
+                "value": "@item.flags.pf2e.rulesSelections.modifier"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

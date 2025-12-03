@@ -12,8 +12,17 @@
         "description": {
             "value": "<p>These projectiles are the ammunition for bows. The shaft of an arrow is made of wood. It is stabilized in flight by fletching at one end and bears a metal head on the other.</p>"
         },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
         "level": {
             "value": 0
+        },
+        "material": {
+            "grade": null,
+            "type": null
         },
         "price": {
             "per": 10,

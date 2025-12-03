@@ -3,6 +3,7 @@
     "img": "icons/weapons/fist/fist-katar-gold.webp",
     "name": "Katar",
     "system": {
+        "ammo": null,
         "baseItem": "katar",
         "bonus": {
             "value": 0

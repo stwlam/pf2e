@@ -3,6 +3,7 @@
     "img": "icons/sundries/survival/waterskin-leather-brown.webp",
     "name": "Water Bomb (Major)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 3

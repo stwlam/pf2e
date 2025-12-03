@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/rhoka-sword.webp",
     "name": "Rhoka Sword",
     "system": {
+        "ammo": null,
         "baseItem": "rhoka-sword",
         "bonus": {
             "value": 0

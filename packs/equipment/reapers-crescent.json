@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/sickle.webp",
     "name": "Reaper's Crescent",
     "system": {
+        "ammo": null,
         "baseItem": "sickle",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/treasure/art-objects/major-art-object/tankard-owned-by-cayden-cailean.webp",
     "name": "Cayden's Tankard",
     "system": {
+        "ammo": null,
         "baseItem": "light-hammer",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-nature-spiral.webp",
     "name": "Arboreal Staff",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

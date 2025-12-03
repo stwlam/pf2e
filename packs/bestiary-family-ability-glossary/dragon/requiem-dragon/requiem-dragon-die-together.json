@@ -1,0 +1,33 @@
+{
+    "_id": "695gtfH7p2H0G6Ch",
+    "folder": "4jkfL4ywBRKBAh0j",
+    "img": "systems/pf2e/icons/actions/Reaction.webp",
+    "name": "(Requiem Dragon) Die Together",
+    "system": {
+        "actionType": {
+            "value": "reaction"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "defensive",
+        "deathNote": true,
+        "description": {
+            "value": "<p><strong>Trigger</strong> The dragon dies</p><hr /><p><strong>Effect</strong> The dragon tethers their soul to the soul of a living creature within 60 feet, pulling it along into death. The target must attempt a @Check[fortitude|dc:|options:damaging-effect,inflicts:dying] save.</p><hr /><p><strong>Critical Success</strong> The target is unaffected.</p>\n<p><strong>Success</strong> The target takes void damage equal to half the damage dealt by the dragon's Dooming Breath.</p>\n<p><strong>Failure</strong> The target takes void damage equal to the damage dealt by the dragon's Dooming Breath.</p>\n<p><strong>Critical Failure</strong> The target drops to 0 Hit Points and becomes dying 1, or increases its dying condition by 1 if it's already dying. While the target is dying, the dragon remains at 1 Hit Point and dies instantly if the target loses the dying condition.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "divine",
+                "incapacitation",
+                "void"
+            ]
+        }
+    },
+    "type": "action"
+}

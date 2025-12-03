@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/whip-claw.webp",
     "name": "Whip Claw",
     "system": {
+        "ammo": null,
         "baseItem": "whip-claw",
         "bonus": {
             "value": 0

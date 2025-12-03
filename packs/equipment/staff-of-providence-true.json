@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-ornate-eye.webp",
     "name": "Staff of Providence (True)",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/default-icons/weapon.svg",
     "name": "Kaldemash's Lament",
     "system": {
+        "ammo": null,
         "baseItem": null,
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/scimitar-guard-gold.webp",
     "name": "Talwar",
     "system": {
+        "ammo": null,
         "baseItem": "talwar",
         "bonus": {
             "value": 0

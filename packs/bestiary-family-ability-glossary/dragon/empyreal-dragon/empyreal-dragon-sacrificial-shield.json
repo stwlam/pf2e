@@ -1,0 +1,44 @@
+{
+    "_id": "9Gt3bYla9VqLrOPB",
+    "folder": "R7ReCVeTRePoKQHP",
+    "img": "systems/pf2e/icons/actions/Reaction.webp",
+    "name": "(Empyreal Dragon) Sacrificial Shield",
+    "system": {
+        "actionType": {
+            "value": "reaction"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "defensive",
+        "description": {
+            "value": "<p><strong>Trigger</strong> An ally within 60 feet of the dragon would take damage</p><hr /><p><strong>Effect</strong> The dragon's halo imposes itself in front of the creature like a shield, transferring the damage to the dragon. If the damage is void, the dragon gains resistance to that damage equal to half its level.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "RollOption",
+                "option": "sacrificial-shield",
+                "toggleable": true
+            },
+            {
+                "key": "Resistance",
+                "predicate": [
+                    "sacrificial-shield"
+                ],
+                "type": "void",
+                "value": "floor(@actor.level/2)"
+            }
+        ],
+        "traits": {
+            "value": [
+                "divine"
+            ]
+        }
+    },
+    "type": "action"
+}

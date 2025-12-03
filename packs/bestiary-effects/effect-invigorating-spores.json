@@ -1,0 +1,49 @@
+{
+    "_id": "6vJacr4iXeYf44Vd",
+    "img": "icons/magic/nature/plant-sprout-snow-green.webp",
+    "name": "Effect: Invigorating Spores",
+    "system": {
+        "description": {
+            "value": "<p>You gain temporary Hit Points equal to your level, and you gain resistance to bludgeoning, piercing, and slashing damage equal to half your level.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 10
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 8
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "TempHP",
+                "value": "@actor.level"
+            },
+            {
+                "key": "GrantItem",
+                "onDeleteActions": {
+                    "granter": "detach"
+                },
+                "uuid": "Compendium.pf2e.bestiary-effects.Item.Effect: Invigorating Spores (Resistance)"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

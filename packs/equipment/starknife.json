@@ -3,6 +3,7 @@
     "img": "icons/weapons/thrown/shuriken-triple-purple.webp",
     "name": "Starknife",
     "system": {
+        "ammo": null,
         "baseItem": "starknife",
         "bonus": {
             "value": 0

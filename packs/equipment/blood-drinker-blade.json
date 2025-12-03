@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/sword-guard-purple.webp",
     "name": "Blood-Drinker Blade",
     "system": {
+        "ammo": null,
         "baseItem": "shortsword",
         "bonus": {
             "value": 0

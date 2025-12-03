@@ -50,10 +50,10 @@
                 "key": "ActiveEffectLike",
                 "mode": "upgrade",
                 "path": "flags.pf2e.ragingResistance",
-                "priority": 55,
                 "predicate": [
                     "feat:unstoppable-juggernaut"
                 ],
+                "priority": 55,
                 "value": "8 + @actor.abilities.con.mod"
             }
         ],

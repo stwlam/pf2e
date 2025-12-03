@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/staves/staff-of-enchantment.webp",
     "name": "Staff of Control (Major)",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-simple-brown.webp",
     "name": "Whipstaff",
     "system": {
+        "ammo": null,
         "baseItem": "whip-staff",
         "bonus": {
             "value": 0

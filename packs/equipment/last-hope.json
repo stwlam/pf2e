@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/sword-guard-blue.webp",
     "name": "Last Hope",
     "system": {
+        "ammo": null,
         "baseItem": "longsword",
         "bonus": {
             "value": 0

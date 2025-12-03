@@ -1,0 +1,31 @@
+{
+    "_id": "V3xivGSkm73pdnu1",
+    "folder": "kdQ25fthFzWR8ETU",
+    "img": "systems/pf2e/icons/actions/FreeAction.webp",
+    "name": "(Resurrection Dragon) Shred Souls",
+    "system": {
+        "actionType": {
+            "value": "free"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p><strong>Trigger</strong> The resurrection dragon ends their turn</p>\n<p><strong>Requirements</strong> The dragon's Soul Siphoning Breath recharged this turn</p><hr /><p><strong>Effect</strong> Excess void energy spills out from the dragon in a @Template[type:emanation|distance:60]. Each living creature in the area must succeed at a @Check[fortitude|dc:|options:area-effect] save with a DC equal to the dragon's Soul Siphoning Breath or gain weakness to void equal to the dragon's resistance to spirit for 1 round (or 1 minute on a critical failure).</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "divine",
+                "void"
+            ]
+        }
+    },
+    "type": "action"
+}

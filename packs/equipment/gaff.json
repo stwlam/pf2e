@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/gaff.webp",
     "name": "Gaff",
     "system": {
+        "ammo": null,
         "baseItem": "gaff",
         "bonus": {
             "value": 0

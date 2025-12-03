@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/scimitar-worn-blue.webp",
     "name": "Mageslayer",
     "system": {
+        "ammo": null,
         "baseItem": "scimitar",
         "bonus": {
             "value": 0

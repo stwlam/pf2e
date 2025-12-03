@@ -1,0 +1,48 @@
+{
+    "_id": "OrWZVlCohFRGzWsB",
+    "folder": "y8G86Pau0M79IlgT",
+    "img": "systems/pf2e/icons/actions/Passive.webp",
+    "name": "(Conspirator Dragon) Apex Paranoids",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>Conspirator dragons fear more than any one of them would admit; holding power comes with the fear that power will be lost or stolen. The dragon has the @UUID[Compendium.pf2e.conditionitems.Item.Quickened] condition and can use the extra action only for [[/act feint]], [[/act seek]], and [[/act sense-motive]] actions.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "inMemoryOnly": true,
+                "key": "GrantItem",
+                "uuid": "Compendium.pf2e.conditionitems.Item.Quickened"
+            },
+            {
+                "itemType": "condition",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:granter:id:{item|id}"
+                ],
+                "property": "description",
+                "value": [
+                    {
+                        "text": "{item|description}"
+                    }
+                ]
+            }
+        ],
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "action"
+}

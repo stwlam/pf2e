@@ -3,6 +3,7 @@
     "img": "icons/weapons/maces/mace-round-steel.webp",
     "name": "Gada",
     "system": {
+        "ammo": null,
         "baseItem": "gada",
         "bonus": {
             "value": 0

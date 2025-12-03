@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/horsechopper.webp",
     "name": "Horsechopper",
     "system": {
+        "ammo": null,
         "baseItem": "horsechopper",
         "bonus": {
             "value": 0

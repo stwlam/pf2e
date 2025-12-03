@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/sword-guard-gold-red.webp",
     "name": "Aldori Dueling Sword",
     "system": {
+        "ammo": null,
         "baseItem": "aldori-dueling-sword",
         "bonus": {
             "value": 0

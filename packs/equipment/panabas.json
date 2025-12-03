@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/scimitar-bone.webp",
     "name": "Panabas",
     "system": {
+        "ammo": null,
         "baseItem": "panabas",
         "bonus": {
             "value": 0

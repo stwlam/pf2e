@@ -3,6 +3,7 @@
     "img": "icons/weapons/thrown/grenade-round.webp",
     "name": "Spellsap Grenade (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": null,
         "bonus": {
             "value": 0

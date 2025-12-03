@@ -1,0 +1,28 @@
+{
+    "_id": "8UbjOjhhGGrTAWMq",
+    "folder": "L1tGMeQQr855fP23",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Adamantine Dragon) Scything Wings",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p><strong>Requirements</strong> The dragon has their Speed increased by Abandon Armor</p><hr /><p><strong>Effect</strong> The dragon Flies and makes up to two claw attacks against different creatures along their flight.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "action"
+}

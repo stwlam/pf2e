@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/sword-guard-engraved.webp",
     "name": "Luck Blade (Wishing)",
     "system": {
+        "ammo": null,
         "baseItem": "shortsword",
         "bonus": {
             "value": 3

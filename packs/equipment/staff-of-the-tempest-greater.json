@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-simple-wrapped.webp",
     "name": "Staff of the Tempest (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

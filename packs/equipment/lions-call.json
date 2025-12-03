@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/greatsword-guard-gold.webp",
     "name": "Lion's Call",
     "system": {
+        "ammo": null,
         "baseItem": "shortsword",
         "bonus": {
             "value": 0

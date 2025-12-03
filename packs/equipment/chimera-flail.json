@@ -3,6 +3,7 @@
     "img": "icons/weapons/maces/flail-triple-grey.webp",
     "name": "Chimera Flail",
     "system": {
+        "ammo": null,
         "baseItem": "war-flail",
         "bonus": {
             "value": 0

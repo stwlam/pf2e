@@ -3,6 +3,7 @@
     "img": "icons/containers/kitchenware/jug-wrapped-red.webp",
     "name": "Defoliation Bomb (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 2

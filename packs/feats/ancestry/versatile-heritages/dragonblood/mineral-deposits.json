@@ -1,0 +1,54 @@
+{
+    "_id": "BSrYYphRONIkM19m",
+    "folder": "hC1Cykg6qFGneUPq",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Mineral Deposits",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "ancestry",
+        "description": {
+            "value": "<p>Precious metals from your bloodstream line your claws, jaws, or the tip of your tail, and you're able call upon your blood to surge and empower your attacks. Choose cold iron or silver and a claw, jaws, or tail unarmed attack that you have. Until the end of your turn, your Strikes with the chosen unarmed attack count as being made of the chosen metal. At 17th level, you can choose adamantine.</p>"
+        },
+        "frequency": {
+            "max": 1,
+            "per": "PT1H"
+        },
+        "level": {
+            "value": 9
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Terra Dragonblood"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "selfEffect": {
+            "name": "Effect: Mineral Deposits",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Mineral Deposits"
+        },
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "dragonblood"
+            ]
+        }
+    },
+    "type": "feat"
+}

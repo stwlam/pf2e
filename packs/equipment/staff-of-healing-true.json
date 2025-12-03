@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-ornate-gold-jeweled.webp",
     "name": "Staff of Healing (True)",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

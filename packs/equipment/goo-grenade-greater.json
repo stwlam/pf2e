@@ -3,6 +3,7 @@
     "img": "icons/consumables/potions/bottle-round-ring-teal.webp",
     "name": "Goo Grenade (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 2

@@ -1,0 +1,28 @@
+{
+    "_id": "WG1csSWO85nU7mce",
+    "folder": "y8G86Pau0M79IlgT",
+    "img": "systems/pf2e/icons/actions/Passive.webp",
+    "name": "(Conspirator Dragon) Occult Whisperers",
+    "system": {
+        "actionType": {
+            "value": "free"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>After conversing with a creature for 10 minutes, the dragon can cast one of its occult innate spells targeting the creature by weaving it into the conversation. Spells cast in this way lose the manipulate trait and gain the linguistic trait.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "action"
+}

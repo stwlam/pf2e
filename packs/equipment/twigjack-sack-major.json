@@ -3,6 +3,7 @@
     "img": "icons/containers/bags/sack-leather-brown-green.webp",
     "name": "Twigjack Sack (Major)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 3

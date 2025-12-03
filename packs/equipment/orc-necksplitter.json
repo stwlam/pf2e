@@ -3,6 +3,7 @@
     "img": "icons/weapons/axes/axe-battle-heavy-jagged.webp",
     "name": "Orc Necksplitter",
     "system": {
+        "ammo": null,
         "baseItem": "orc-necksplitter",
         "bonus": {
             "value": 0

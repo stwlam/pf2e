@@ -1,0 +1,36 @@
+{
+    "_id": "8FJ0GmjLaxAT3H25",
+    "folder": "ciZ93ntsAh499AKP",
+    "img": "systems/pf2e/icons/actions/FreeAction.webp",
+    "name": "(Mirage Dragon) Afterimage",
+    "system": {
+        "actionType": {
+            "value": "free"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p><strong>Frequency</strong> once per hour</p>\n<p><strong>Requirements</strong> The mirage dragon's next action is to cast @UUID[Compendium.pf2e.spells-srd.Item.Invisibility]</p><hr /><p><strong>Effect</strong> As the dragon turns @UUID[Compendium.pf2e.conditionitems.Item.Invisible], they leave an illusory duplicate of themself in their original position that lasts for 1 minute. A creature that determines the duplicate is an illusion doesn't necessarily know the mirage dragon is invisible, and one that can see their invisible form doesn't necessarily know the duplicate is an illusion. When the mirage dragon Strides or Flies, they can Sustain the illusion as a free action to have it Stride or Fly up to 60 feet, speak through the illusion, or make a claw Strike using the dragon's spell attack modifier for the attack roll. This Strike deals the same amount and type of damage as an @UUID[Compendium.pf2e.spells-srd.Item.Illusory Creature] spell heightened to the dragon's highest spell rank. The mirage dragon can Dismiss the illusion.</p>"
+        },
+        "frequency": {
+            "max": 1,
+            "per": "PT1H"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "arcane",
+                "illusion",
+                "spellshape"
+            ]
+        }
+    },
+    "type": "action"
+}

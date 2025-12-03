@@ -1,0 +1,66 @@
+{
+    "_id": "GnIAh8I8Ln8IQao8",
+    "img": "icons/creatures/magical/spirit-undead-winged-ghost.webp",
+    "name": "Effect: Dematerialize",
+    "system": {
+        "description": {
+            "value": "<p>You gain the incorporeal trait, resistance to all damage (except force, ghost touch, and spirit) equal to half your level (double against non-magical damage), and immunity to precision damage.</p>\n<p>If you attempt a Strike against a creature with any circumstance bonus to AC, reduce that bonus by 2.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 9
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "add": [
+                    "incorporeal"
+                ],
+                "key": "ActorTraits"
+            },
+            {
+                "doubleVs": [
+                    "non-magical"
+                ],
+                "exceptions": [
+                    "force",
+                    "ghost-touch",
+                    "spirit"
+                ],
+                "key": "Resistance",
+                "type": "all-damage",
+                "value": "floor(@actor.level/2)"
+            },
+            {
+                "key": "Immunity",
+                "type": "precision"
+            },
+            {
+                "key": "EphemeralEffect",
+                "selectors": "strike-attack-roll",
+                "uuid": "Compendium.pf2e.bestiary-effects.Item.Effect: Dematerialize (Ephemeral)"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

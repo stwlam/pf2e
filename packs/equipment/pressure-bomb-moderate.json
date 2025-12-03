@@ -3,6 +3,7 @@
     "img": "icons/weapons/thrown/bomb-pressure-black.webp",
     "name": "Pressure Bomb (Moderate)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 1

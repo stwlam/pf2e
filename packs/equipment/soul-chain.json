@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/soul-chain.webp",
     "name": "Soul Chain",
     "system": {
+        "ammo": null,
         "baseItem": "spiked-chain",
         "bonus": {
             "value": 0

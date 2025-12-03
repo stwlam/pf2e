@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/tekko-kagi.webp",
     "name": "Skeletal Claw",
     "system": {
+        "ammo": null,
         "baseItem": "tekko-kagi",
         "bonus": {
             "value": 0

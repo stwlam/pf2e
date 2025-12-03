@@ -3,6 +3,7 @@
     "img": "icons/magic/earth/projectile-boulder-dust.webp",
     "name": "Shatterstone (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 3

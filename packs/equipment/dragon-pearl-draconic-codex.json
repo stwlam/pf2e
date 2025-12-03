@@ -1,0 +1,60 @@
+{
+    "_id": "38O6OrDAFq8K6buR",
+    "img": "icons/commodities/gems/pearl-storm.webp",
+    "name": "Dragon Pearl (Draconic Codex)",
+    "system": {
+        "baseItem": null,
+        "bulk": {
+            "value": 0.1
+        },
+        "containerId": null,
+        "description": {
+            "value": "<p>When an irritant is caught within a dragon's scales, the dragon's body protects itself by coating the object in layers of dragon scale. Over time, it can form an item called a <em>dragon pearl</em>. Such pearls, hard and iridescent, are infused with draconic magic and can be powerful tools in the right hands. They're usually placed in an ornate setting on a pin or necklace. Wearing the dragon pearl grants you a +2 item bonus to Intimidation checks.</p>\n<p><strong>Activate—Pearlescent Shell</strong> <span class=\"action-glyph\">1</span> (concentrate)</p>\n<p><strong>Frequency</strong> once per day</p><hr /><p><strong>Effect</strong> You call protective power from the pearl to form a defensive barrier around yourself. You're affected by an 8th-rank @UUID[Compendium.pf2e.spells-srd.Item.Containment] spell, which takes on the appearance of shimmering translucent dragon scales. The field has resistance 15 to one damage type related to the dragon the pearl came from. When you activate the pearl, you choose the type from all types the dragon has immunity or resistance to plus a type based on their tradition: force for arcane, spirit for divine, mental for occult, or poison for primal.</p>"
+        },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 16
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {
+                "gp": 9000
+            }
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "quantity": 1,
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "selector": [
+                    "intimidation"
+                ],
+                "type": "item",
+                "value": 2
+            }
+        ],
+        "size": "med",
+        "traits": {
+            "rarity": "uncommon",
+            "value": [
+                "invested",
+                "magical"
+            ]
+        },
+        "usage": {
+            "value": "worn"
+        }
+    },
+    "type": "equipment"
+}

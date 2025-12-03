@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/greatsword-crossguard-silver.webp",
     "name": "Skyrider Sword",
     "system": {
+        "ammo": null,
         "baseItem": "greatsword",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-forked-wood.webp",
     "name": "Filcher's Fork",
     "system": {
+        "ammo": null,
         "baseItem": "filchers-fork",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/maces/mace-studded-steel.webp",
     "name": "Aklys",
     "system": {
+        "ammo": null,
         "baseItem": "aklys",
         "bonus": {
             "value": 0

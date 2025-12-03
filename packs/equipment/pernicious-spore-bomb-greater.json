@@ -3,6 +3,7 @@
     "img": "icons/consumables/mushrooms/ovate-thin-blue.webp",
     "name": "Pernicious Spore Bomb (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 2

@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-simple-engraved.webp",
     "name": "Longspear",
     "system": {
+        "ammo": null,
         "baseItem": "longspear",
         "bonus": {
             "value": 0

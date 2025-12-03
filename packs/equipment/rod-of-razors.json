@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-hooked-blue.webp",
     "name": "Rod of Razors",
     "system": {
+        "ammo": null,
         "baseItem": "halberd",
         "bonus": {
             "value": 0

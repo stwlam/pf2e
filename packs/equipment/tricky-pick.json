@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/tricky-pick.webp",
     "name": "Tricky Pick",
     "system": {
+        "ammo": null,
         "baseItem": "tricky-pick",
         "bonus": {
             "value": 0

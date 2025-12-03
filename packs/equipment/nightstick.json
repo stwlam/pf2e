@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/nightstick.webp",
     "name": "Nightstick",
     "system": {
+        "ammo": null,
         "baseItem": "nightstick",
         "bonus": {
             "value": 0

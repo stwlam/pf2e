@@ -3,6 +3,7 @@
     "img": "icons/weapons/daggers/dagger-double-black.webp",
     "name": "Visap",
     "system": {
+        "ammo": null,
         "baseItem": "visap",
         "bonus": {
             "value": 0

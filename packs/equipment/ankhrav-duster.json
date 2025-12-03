@@ -3,6 +3,7 @@
     "img": "icons/weapons/fist/fist-knuckles-brass.webp",
     "name": "Ankhrav Duster",
     "system": {
+        "ammo": null,
         "baseItem": "knuckle-duster",
         "bonus": {
             "value": 0

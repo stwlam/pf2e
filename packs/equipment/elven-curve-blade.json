@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/elven-curve-blade.webp",
     "name": "Elven Curve Blade",
     "system": {
+        "ammo": null,
         "baseItem": "elven-curve-blade",
         "bonus": {
             "value": 0

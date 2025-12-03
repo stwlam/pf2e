@@ -3,6 +3,7 @@
     "img": "icons/weapons/maces/mace-round-steel.webp",
     "name": "Polarizing Mace",
     "system": {
+        "ammo": null,
         "baseItem": "light-mace",
         "bonus": {
             "value": 0

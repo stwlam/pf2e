@@ -3,6 +3,7 @@
     "img": "icons/consumables/potions/potion-tube-corked-green.webp",
     "name": "Versatile Vial",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 0

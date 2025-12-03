@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-flared-steel.webp",
     "name": "Preordained Spear",
     "system": {
+        "ammo": null,
         "baseItem": "spear",
         "bonus": {
             "value": 0

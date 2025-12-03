@@ -1,0 +1,31 @@
+{
+    "_id": "9dCKA0ld81TuubR5",
+    "folder": "kdQ25fthFzWR8ETU",
+    "img": "systems/pf2e/icons/actions/Passive.webp",
+    "name": "(Resurrection Dragon) Deathless Servant",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>When a resurrection dragon performs the @UUID[Compendium.pf2e.spells-srd.Item.Create Undead] ritual, they can create any common undead and don't require secondary casters. If the dragon creates a mindless undead creature whose level is at least 2 lower than themself, it automatically becomes the dragon's minion—a deathless servant. This minion can't be destroyed unless the dragon is slain; if reduced to 0 Hit Points, such a minion returns to full Hit Points [[/gmr 1d6 #days]]{1d6 days} later. A resurrection dragon can have only one deathless servant at a time.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "divine",
+                "unholy"
+            ]
+        }
+    },
+    "type": "action"
+}

@@ -3,6 +3,7 @@
     "img": "icons/weapons/maces/shortmace-ornate-gold.webp",
     "name": "Freedom's Flame",
     "system": {
+        "ammo": null,
         "baseItem": "morningstar",
         "bonus": {
             "value": 0

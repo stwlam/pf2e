@@ -1,0 +1,32 @@
+{
+    "_id": "4JD49GKrvl2aR6j7",
+    "folder": "ciZ93ntsAh499AKP",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Mirage Dragon) Reshape Terrain",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The mirage dragon blends illusion and reality in a @Template[type:emanation|distance:25]. A creature that enters the area must succeed at a @Check[will|dc:] save (the same DC as the dragon's Captivating Display) or treat the area as difficult terrain. Creatures who attempt a save against this effect use the same outcome if they leave and reenter the area.</p>\n<p>On its turn, the archdragon can Sustain this effect to move the illusions up to 35 feet each, or to swap spots with any illusion that is within 30 feet of itself. Any duplicate that is more than 60 feet away from the archdragon disappears.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "arcane",
+                "concentrate",
+                "illusion"
+            ]
+        }
+    },
+    "type": "action"
+}

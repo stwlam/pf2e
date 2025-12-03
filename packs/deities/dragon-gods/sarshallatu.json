@@ -1,0 +1,62 @@
+{
+    "_id": "Em8MqxFDNofBUuBH",
+    "folder": "sZFSeaV3PQMOzaiO",
+    "img": "systems/pf2e/icons/default-icons/deity.svg",
+    "name": "Sarshallatu",
+    "system": {
+        "attribute": [
+            "wis",
+            "cha"
+        ],
+        "category": "deity",
+        "description": {
+            "value": "<p>In a time before time, Sarshallatu was endless, like a great sea spreading out into the infinite horizon. She knew only that she existed and in the untethered reaches of mind unbound by trappings of physicality, she considered the idea of the self—and in the flickering moment in which she wondered if there might be more to her than the infinite that she was, she glimpsed something new. Something beyond herself, beyond her conception, beyond her perception. She laughed, and it thundered across what would become creation, for this something new was another being. She would call him the Waybringer, Apsu, and by indulging in his existence the infinite became finite and Sarshallatu ceased to be endless.</p>\n<p>With Apsu came time, and it was a wonderful thing. It would give Sarshallatu memories to cherish. It gave her hope and trepidation for all that might come in time; a mate, a clutch of offspring, a cosmos to craft to their whims, worlds to paint with all potentialities of what could someday be. The infinite within the finite, the greatest gift she had ever conceived of, for all beings now to share.</p>\n<p>But with time came change as well, and the laughter of eons would see a being once infinite learn about loss. Apsu and she would produce a clutch of offspring, but they were sadly lesser. They played vicious games and made countless calamities. They would fight and they would die, and from these losses, Sarshallatu learned contempt.</p>\n<p>She pulled back from her offspring and her love, to shy away from the world of Golarion which she had hoped would have been their grandest endeavor. She had chosen to be finite, to be known, to be of a state of being which no longer encompassed all things. To be something other than something that simply is. And once more she laughed, for she realized she was the cause of her suffering as much as she was the catalyst for her joys. The song of her laughter rumbled like thunder across creation, rattling the cosmos.</p>\n<p><strong>Title</strong> The Thundering Song</p>\n<p><strong>Areas of Concern</strong> dragons, potential, reality</p>\n<p><strong>Edicts</strong> feel privileged to witness wonders of creation, find value in being, change to better know yourself</p>\n<p><strong>Anathema</strong> change yourself for another, be consumed by temporary things, let others define your soul</p>\n<p><strong>Religious Symbol</strong> sun wheel composed of serpents</p>\n<p><strong>Sacred Animal</strong> all</p>\n<p><strong>Sacred Colors</strong> none</p>"
+        },
+        "domains": {
+            "alternate": [
+                "knowledge",
+                "magic",
+                "sorrow",
+                "star"
+            ],
+            "primary": [
+                "creation",
+                "wyrmkin",
+                "fate",
+                "time"
+            ]
+        },
+        "font": [
+            "harm",
+            "heal"
+        ],
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "sanctification": {
+            "modal": "can",
+            "what": [
+                "holy",
+                "unholy"
+            ]
+        },
+        "skill": [
+            "arcana"
+        ],
+        "spells": {
+            "1": "Compendium.pf2e.spells-srd.Item.Mindlink",
+            "3": "Compendium.pf2e.spells-srd.Item.Enthrall",
+            "5": "Compendium.pf2e.spells-srd.Item.Summon Dragon",
+            "9": "Compendium.pf2e.spells-srd.Item.Unfathomable Song"
+        },
+        "traits": {},
+        "weapons": [
+            "jaws",
+            "sling"
+        ]
+    },
+    "type": "deity"
+}

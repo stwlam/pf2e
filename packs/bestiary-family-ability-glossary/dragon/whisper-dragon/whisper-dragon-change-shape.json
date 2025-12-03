@@ -1,0 +1,32 @@
+{
+    "_id": "N2RrmpcKHBpqZ3ud",
+    "folder": "69bBtNytLWOMbhCl",
+    "img": "systems/pf2e/icons/actions/Passive.webp",
+    "name": "(Whisper Dragon) Change Shape",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon takes on the appearance of a Small or Medium humanoid. Their humanoid shape has a specific, persistent appearance. In humanoid shape, the dragon loses their jaws, claws, and tail Strikes, but retains their attack bonuses with any weapons they wield. Their Speed is reduced to 25 feet.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "concentrate",
+                "occult",
+                "polymorph"
+            ]
+        }
+    },
+    "type": "action"
+}

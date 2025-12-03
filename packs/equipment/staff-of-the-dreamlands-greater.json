@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-simple.webp",
     "name": "Staff of the Dreamlands (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

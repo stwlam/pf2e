@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-simple-knotted.webp",
     "name": "Cythbikian Staff",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

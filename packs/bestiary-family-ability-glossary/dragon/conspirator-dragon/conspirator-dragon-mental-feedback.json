@@ -1,0 +1,33 @@
+{
+    "_id": "Y9tkwsBQKbXTFxjT",
+    "folder": "y8G86Pau0M79IlgT",
+    "img": "systems/pf2e/icons/actions/Reaction.webp",
+    "name": "(Conspirator Dragon) Mental Feedback",
+    "system": {
+        "actionType": {
+            "value": "reaction"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "defensive",
+        "description": {
+            "value": "<p><strong>Trigger</strong> A creature uses a magical mental effect against the dragon</p><hr /><p><strong>Effect</strong> The dragon uses their mental blast against the triggering creature. On a critical hit, the mental effect is disrupted.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "concentrate",
+                "emotion",
+                "mental",
+                "occult"
+            ]
+        }
+    },
+    "type": "action"
+}

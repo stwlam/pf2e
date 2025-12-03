@@ -3,6 +3,7 @@
     "img": "icons/consumables/fruit/durian-cut-yellow.webp",
     "name": "Durian Bomb (Moderate)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 1

@@ -3,6 +3,7 @@
     "img": "icons/weapons/axes/axe-battle-skull-black.webp",
     "name": "Jorngarl's Harm",
     "system": {
+        "ammo": null,
         "baseItem": "greataxe",
         "bonus": {
             "value": 0

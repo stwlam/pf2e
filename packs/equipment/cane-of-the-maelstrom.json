@@ -3,6 +3,7 @@
     "img": "icons/weapons/wands/wand-carved-pink.webp",
     "name": "Cane of the Maelstrom",
     "system": {
+        "ammo": null,
         "baseItem": "club",
         "bonus": {
             "value": 0

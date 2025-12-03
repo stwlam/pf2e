@@ -1,0 +1,59 @@
+{
+    "_id": "RKCISPRJMRz9FR4n",
+    "folder": "sZFSeaV3PQMOzaiO",
+    "img": "systems/pf2e/icons/default-icons/deity.svg",
+    "name": "Turvu",
+    "system": {
+        "attribute": [
+            "wis",
+            "int"
+        ],
+        "category": "deity",
+        "description": {
+            "value": "<p>As Apsu and Sarshallatu imagined their offspring, they deigned that one needed to understand the responsibility that comes with divinity. Thus, Turvu was born. Yet as Turvu witnessed the turmoil and violence erupting within their own family, they fled the chaos boiling around them.</p>\n<p>Turvu found themself drawn to exploration rather than a stagnant lifestyle. They devoted their time to understanding each plane of existence and the variety of magic, resources, and beauty that could be found there. Through their travels, Turvu began to understand the very essence of divinity and found little use for the division of the good and the evil.</p>\n<p>A being that exists beyond the binary of beliefs, Turvu's very consciousness spans multiple planes of existence, defying the conventional laws of space and time. Lithe and more serpentine than other dragons, with kaleidoscopic scales that seem to shift to match their surroundings, Turvu's features and general demeanor allow them to integrate on any plane, be it in Heaven, Hell, or beyond.</p>\n<p><strong>Title</strong> The Shifting Plane</p>\n<p><strong>Areas of Concern</strong> death of ego, divinity, philosophy</p>\n<p><strong>Edicts</strong> travel and explore the world and other planes, seek to understand all sides of a conflict</p>\n<p><strong>Anathema</strong> deem anything purely good or evil without first seeking context, remain stagnant in the pursuit of exploration or knowledge</p>\n<p><strong>Religious Symbol</strong> a prism with many sides reflecting many colors</p>\n<p><strong>Sacred Animal</strong> none</p>\n<p><strong>Sacred Colors</strong> white</p>"
+        },
+        "domains": {
+            "alternate": [
+                "wyrmkin",
+                "perfection"
+            ],
+            "primary": [
+                "freedom",
+                "introspection",
+                "knowledge",
+                "travel"
+            ]
+        },
+        "font": [
+            "harm",
+            "heal"
+        ],
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "sanctification": {
+            "modal": "can",
+            "what": [
+                "holy",
+                "unholy"
+            ]
+        },
+        "skill": [
+            "religion"
+        ],
+        "spells": {
+            "1": "Compendium.pf2e.spells-srd.Item.Illusory Disguise",
+            "4": "Compendium.pf2e.spells-srd.Item.Translocate",
+            "5": "Compendium.pf2e.spells-srd.Item.Cloak of Colors"
+        },
+        "traits": {},
+        "weapons": [
+            "claw",
+            "staff"
+        ]
+    },
+    "type": "deity"
+}

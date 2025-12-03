@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/piranha-kiss.webp",
     "name": "Piranha Kiss",
     "system": {
+        "ammo": null,
         "baseItem": "piranha-kiss",
         "bonus": {
             "value": 0

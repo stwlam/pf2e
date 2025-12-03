@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-hooked-broad.webp",
     "name": "Dancer's Spear",
     "system": {
+        "ammo": null,
         "baseItem": "dancers-spear",
         "bonus": {
             "value": 0

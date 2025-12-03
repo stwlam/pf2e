@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/monkeys-fist.webp",
     "name": "Monkey's Fist",
     "system": {
+        "ammo": null,
         "baseItem": "monkeys-fist",
         "bonus": {
             "value": 0

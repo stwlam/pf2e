@@ -1,0 +1,78 @@
+{
+    "_id": "4siBPDdWmwks1bI5",
+    "img": "icons/commodities/biological/wing-lizard-pink-purple.webp",
+    "name": "Effect: Sheltering Wing",
+    "system": {
+        "description": {
+            "value": "<p>Granted by Sheltering Wing</p>\n<p>You gain a +1 circumstance bonus to AC and to saving throws against spells. If you have Dragon's Flight, this bonus increases to +2.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 9
+        },
+        "publication": {
+            "license": "OGL",
+            "remaster": false,
+            "title": ""
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "selector": [
+                    "ac"
+                ],
+                "slug": "sheltering-wing-ac",
+                "tags": [
+                    "sheltering-wing"
+                ],
+                "type": "circumstance",
+                "value": 1
+            },
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    "item:type:spell"
+                ],
+                "selector": [
+                    "saving-throw"
+                ],
+                "slug": "sheltering-wing-saves",
+                "tags": [
+                    "sheltering-wing"
+                ],
+                "type": "circumstance",
+                "value": 1
+            },
+            {
+                "key": "AdjustModifier",
+                "mode": "upgrade",
+                "predicate": [
+                    "feat:dragons-flight",
+                    "bonus:tag:sheltering-wing"
+                ],
+                "selectors": [
+                    "ac",
+                    "saving-throw"
+                ],
+                "value": 2
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

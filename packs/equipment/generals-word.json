@@ -3,6 +3,7 @@
     "img": "icons/weapons/maces/mace-flanged-steel.webp",
     "name": "General's Word",
     "system": {
+        "ammo": null,
         "baseItem": "mace",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-animal-skull.webp",
     "name": "Staff of the Ruling Beast",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

@@ -1,0 +1,122 @@
+{
+    "_id": "y5amezSt82FYu9HG",
+    "folder": "4fJHnYFqH0VjZXPv",
+    "img": "icons/environment/people/infantry-army.webp",
+    "name": "Horde of Underlings",
+    "system": {
+        "area": {
+            "type": "cone",
+            "value": 30
+        },
+        "cost": {
+            "value": ""
+        },
+        "counteraction": false,
+        "damage": {
+            "I4N3zTQhgn4hsQXi": {
+                "applyMod": false,
+                "category": null,
+                "formula": "1d4",
+                "kinds": [
+                    "damage"
+                ],
+                "materials": [],
+                "type": "untyped"
+            }
+        },
+        "defense": null,
+        "description": {
+            "value": "<p>You summon six underlings, such as skeletons or kobolds. When you cast this spell, you decide what kind of creatures they are, if they're Small or Medium, and whether they deal bludgeoning, piercing, or slashing damage (choose once and applying it to all underlings). Each underling has 1 Hit Point, 5 AC, and automatically fails all saving throws. Each underling appears in an unoccupied square of your choice within the area. The underlings don't block movement, but they are difficult terrain for creatures other than you.</p>\n<p>Each underling attacks one enemy adjacent to it (if any), automatically dealing 1d4 damage of the chosen type. The first time you Sustain the spell on each subsequent round, each underling moves 20 feet toward the nearest enemy. If an underling ends its movement adjacent to an enemy, it damages that enemy as described above.</p><hr /><p><strong>Heightened (+1)</strong> The number of underlings increases by 2</p>"
+        },
+        "duration": {
+            "sustained": true,
+            "value": "1 minute"
+        },
+        "level": {
+            "value": 3
+        },
+        "overlays": {
+            "MrS8Sucy96N76bbH": {
+                "name": "Horde of Underlings (Slashing)",
+                "overlayType": "override",
+                "sort": 3,
+                "system": {
+                    "damage": {
+                        "I4N3zTQhgn4hsQXi": {
+                            "category": null,
+                            "kinds": [
+                                "damage"
+                            ],
+                            "type": "slashing"
+                        }
+                    },
+                    "defense": null
+                }
+            },
+            "w8atLIFl4M4opem0": {
+                "name": "Horde of Underlings (Bludgeoning)",
+                "overlayType": "override",
+                "sort": 1,
+                "system": {
+                    "damage": {
+                        "I4N3zTQhgn4hsQXi": {
+                            "category": null,
+                            "kinds": [
+                                "damage"
+                            ],
+                            "type": "bludgeoning"
+                        }
+                    },
+                    "defense": null
+                }
+            },
+            "ziEh8fyWNzSs9TS9": {
+                "name": "Horde of Underlings (Piercing)",
+                "overlayType": "override",
+                "sort": 2,
+                "system": {
+                    "damage": {
+                        "I4N3zTQhgn4hsQXi": {
+                            "category": null,
+                            "kinds": [
+                                "damage"
+                            ],
+                            "type": "piercing"
+                        }
+                    },
+                    "defense": null
+                }
+            }
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "range": {
+            "value": ""
+        },
+        "requirements": "",
+        "rules": [],
+        "target": {
+            "value": ""
+        },
+        "time": {
+            "value": "3"
+        },
+        "traits": {
+            "rarity": "rare",
+            "traditions": [
+                "arcane",
+                "divine",
+                "occult",
+                "primal"
+            ],
+            "value": [
+                "concentrate",
+                "manipulate"
+            ]
+        }
+    },
+    "type": "spell"
+}

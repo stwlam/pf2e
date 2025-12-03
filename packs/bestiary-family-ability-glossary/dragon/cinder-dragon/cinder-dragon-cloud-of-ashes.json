@@ -1,0 +1,30 @@
+{
+    "_id": "D54bMK3tv4232W0X",
+    "folder": "fvJQ3kMyEjvLkbyQ",
+    "img": "systems/pf2e/icons/actions/OneAction.webp",
+    "name": "(Cinder Dragon) Cloud of Ashes",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>The dragon blows a cloud of ashes and smoke out through their scales, surrounding themself in a @Template[type:emanation|distance:15] that lasts until the end of their next turn. All creatures within the cloud become @UUID[Compendium.pf2e.conditionitems.Item.Concealed] to both sight and scent, and all creatures outside the cloud are concealed to creatures within it. Any creature that enters the area or begins its turn in the area must attempt a @Check[fortitude] save with a DC equal to the dragon's Pyre Breath.</p><hr /><p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature begins coughing and until the start of its next turn it must succeed at a @Check[flat|dc:5] if it attempts any action that requires it to speak, or it loses the action.</p>\n<p><strong>Critical Failure</strong> As failure, plus it must immediately spend its next action coughing.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "primal"
+            ]
+        }
+    },
+    "type": "action"
+}

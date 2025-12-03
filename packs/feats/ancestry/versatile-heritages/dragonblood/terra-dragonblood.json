@@ -1,0 +1,53 @@
+{
+    "_id": "92fmK6O9y8Wf03P4",
+    "folder": "hC1Cykg6qFGneUPq",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Terra Dragonblood",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "ancestry",
+        "description": {
+            "value": "<p>Each step upon the earth makes your blood resonate. You gain tremorsense as an imprecise sense to a range of 30 feet; if you already have tremorsense, increase its range by 5 feet. If you choose a draconic exemplar, you must choose a dragon with a burrow Speed.</p>"
+        },
+        "level": {
+            "value": 1
+        },
+        "prerequisites": {
+            "value": []
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {
+                "tremorsense": {
+                    "acuity": "imprecise",
+                    "range": 30,
+                    "special": {
+                        "ancestry": false,
+                        "llv": false,
+                        "second": false
+                    }
+                }
+            },
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "dragonblood",
+                "lineage"
+            ]
+        }
+    },
+    "type": "feat"
+}

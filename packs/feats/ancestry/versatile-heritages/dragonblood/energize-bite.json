@@ -1,0 +1,53 @@
+{
+    "_id": "3Xc0jsbXBsF4FSui",
+    "folder": "hC1Cykg6qFGneUPq",
+    "img": "icons/sundries/books/book-red-exclamation.webp",
+    "name": "Energize Bite",
+    "system": {
+        "actionType": {
+            "value": "free"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "ancestry",
+        "description": {
+            "value": "<p><strong>Requirements</strong> Your most recent action was to use @UUID[Compendium.pf2e.feats-srd.Item.Breath of the Dragon (Dragonblood)]{Breath of the Dragon}.</p><hr /><p>The deadly energy of your breath remains in your jaws to empower your attacks. Until the end of your turn, your jaws unarmed attack deals an extra 1d6 damage of a type matching that of your draconic benefactor. This ability has the trait associated with the type of damage it deals.</p>"
+        },
+        "level": {
+            "value": 9
+        },
+        "prerequisites": {
+            "value": [
+                {
+                    "value": "Breath of the Dragon"
+                },
+                {
+                    "value": "jaws unarmed attack"
+                }
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "selfEffect": {
+            "name": "Effect: Energize Bite",
+            "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Energize Bite"
+        },
+        "subfeatures": {
+            "proficiencies": {},
+            "senses": {},
+            "suppressedFeatures": []
+        },
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "dragonblood"
+            ]
+        }
+    },
+    "type": "feat"
+}

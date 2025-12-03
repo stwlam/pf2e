@@ -11,7 +11,7 @@
         },
         "category": "classfeature",
         "description": {
-            "value": "<p>The blood of dragons flows through your veins. These beasts are both fearsome in combat and skilled at magic.</p>\n<p><strong>Tradition</strong> variable (see Draconic Exemplars below)</p>\n<p><strong>Bloodline Skills</strong> Intimidation and one other skill (see Draconic Exemplars below)</p>\n<p><strong>Sorcerous Gifts</strong> cantrip: @UUID[Compendium.pf2e.spells-srd.Item.Shield]; 1st: @UUID[Compendium.pf2e.spells-srd.Item.Fear]; 2nd: see Draconic Exemplars below; 3rd: @UUID[Compendium.pf2e.spells-srd.Item.Haste]; 4th: @UUID[Compendium.pf2e.spells-srd.Item.Fly]; 5th: see Draconic Exemplars below; 6th: @UUID[Compendium.pf2e.spells-srd.Item.Dragon Form] (dragon must match your draconic exemplar); 7th: @UUID[Compendium.pf2e.spells-srd.Item.Mask of Terror]; 8th: see Draconic Exemplars below; 9th: @UUID[Compendium.pf2e.spells-srd.Item.Overwhelming Presence]</p>\n<p><strong>Bloodline Spells</strong> initial: @UUID[Compendium.pf2e.spells-srd.Item.Flurry of Claws]; advanced: @UUID[Compendium.pf2e.spells-srd.Item.Dragon Breath]; greater: @UUID[Compendium.pf2e.spells-srd.Item.Dragon Wings]</p>\n<p><strong>Blood Magic—Scaly Hide</strong> Draconic scales grow briefly on you or one target, granting a +1 status bonus to AC for 1 round.</p><h3>Draconic Exemplars</h3><p>At 1st level, choose the tradition related to the dragon exemplar who influenced your bloodline. You can't change your dragon exemplar later. As noted, this affects both your bloodline's features and your sorcerous gift spells.</p><ul><li><strong>Arcane—Tradition</strong> arcane; <strong>Bloodline Skill</strong> Arcana; <strong>Sorcerous Gifts</strong> 2nd: @UUID[Compendium.pf2e.spells-srd.Item.Blazing Bolt]; 5th: @UUID[Compendium.pf2e.spells-srd.Item.Subconscious Suggestion]; 8th: @UUID[Compendium.pf2e.spells-srd.Item.Quandary]</li><li><strong>Divine—Tradition</strong> divine; <strong>Bloodline Skill</strong> Religion; <strong>Sorcerous Gifts</strong> 2nd: @UUID[Compendium.pf2e.spells-srd.Item.Augury]; 5th: @UUID[Compendium.pf2e.spells-srd.Item.Divine Immolation]; 8th: @UUID[Compendium.pf2e.spells-srd.Item.Divine Inspiration]</li><li><strong>Occult—Tradition</strong> occult; <strong>Bloodline Skill</strong> Occultism; <strong>Sorcerous Gifts</strong> 2nd: @UUID[Compendium.pf2e.spells-srd.Item.Blood Vendetta]; 5th: @UUID[Compendium.pf2e.spells-srd.Item.Slither]; 8th: @UUID[Compendium.pf2e.spells-srd.Item.Unrelenting Observation]</li><li><p><strong>Primal—Tradition</strong> primal; <strong>Bloodline Skill</strong> Nature; <strong>Sorcerous Gifts</strong> 2nd: @UUID[Compendium.pf2e.spells-srd.Item.Shatter]; 5th: @UUID[Compendium.pf2e.spells-srd.Item.Howling Blizzard]; 8th: @UUID[Compendium.pf2e.spells-srd.Item.Earthquake]</p></li></ul>"
+            "value": "<p>The blood of dragons flows through your veins. These beasts are both fearsome in combat and skilled at magic.</p>\n<p><strong>Tradition</strong> variable (see Draconic Exemplars below)</p>\n<p><strong>Bloodline Skills</strong> Intimidation and one other skill (see Draconic Exemplars below)</p>\n<p><strong>Sorcerous Gifts</strong> cantrip: @UUID[Compendium.pf2e.spells-srd.Item.Shield]; 1st: @UUID[Compendium.pf2e.spells-srd.Item.Fear]; 2nd: see Draconic Exemplars below; 3rd: @UUID[Compendium.pf2e.spells-srd.Item.Haste]; 4th: @UUID[Compendium.pf2e.spells-srd.Item.Fly]; 5th: see Draconic Exemplars below; 6th: @UUID[Compendium.pf2e.spells-srd.Item.Dragon Form] (dragon must match your draconic exemplar); 7th: @UUID[Compendium.pf2e.spells-srd.Item.Mask of Terror]; 8th: see Draconic Exemplars below; 9th: @UUID[Compendium.pf2e.spells-srd.Item.Overwhelming Presence]</p>\n<p><strong>Bloodline Spells</strong> initial: @UUID[Compendium.pf2e.spells-srd.Item.Flurry of Claws]; advanced: @UUID[Compendium.pf2e.spells-srd.Item.Dragon Breath]; greater: @UUID[Compendium.pf2e.spells-srd.Item.Dragon Wings]</p>\n<p><strong>Blood Magic—Scaly Hide</strong> Draconic scales grow briefly on you or one target, granting a +1 status bonus to AC for 1 round.</p><h3>Draconic Exemplars</h3><p>At 1st level, choose the tradition related to the dragon exemplar who influenced your bloodline. You can't change your dragon exemplar later. As noted, this affects both your bloodline's features and your sorcerous gift spells.</p><ul><li><strong>Arcane—Tradition</strong> arcane; <strong>Bloodline Skill</strong> Arcana; <strong>Sorcerous Gifts</strong> 2nd: @UUID[Compendium.pf2e.spells-srd.Item.Blazing Bolt]; 5th: @UUID[Compendium.pf2e.spells-srd.Item.Subconscious Suggestion]; 8th: @UUID[Compendium.pf2e.spells-srd.Item.Quandary]</li><li><strong>Divine—Tradition</strong> divine; <strong>Bloodline Skill</strong> Religion; <strong>Sorcerous Gifts</strong> 2nd: @UUID[Compendium.pf2e.spells-srd.Item.Augury]; 5th: @UUID[Compendium.pf2e.spells-srd.Item.Divine Immolation]; 8th: @UUID[Compendium.pf2e.spells-srd.Item.Divine Inspiration]</li><li><strong>Occult—Tradition</strong> occult; <strong>Bloodline Skill</strong> Occultism; <strong>Sorcerous Gifts</strong> 2nd: @UUID[Compendium.pf2e.spells-srd.Item.Blood Vendetta]; 5th: @UUID[Compendium.pf2e.spells-srd.Item.Slither]; 8th: @UUID[Compendium.pf2e.spells-srd.Item.Unrelenting Observation]</li><li><p><strong>Primal—Tradition</strong> primal; <strong>Bloodline Skill</strong> Nature; <strong>Sorcerous Gifts</strong> 2nd: @UUID[Compendium.pf2e.spells-srd.Item.Shatter]; 5th: @UUID[Compendium.pf2e.spells-srd.Item.Howling Blizzard]; 8th: @UUID[Compendium.pf2e.spells-srd.Item.Earthquake]</p></li></ul><p>@UUID[Compendium.pf2e.journals.JournalEntry.kzxu2dI7tFxv6Ix6.JournalEntryPage.Dy1cyGJUfzyZ4EIy]{Draconic Sorcerer Bloodlines}</p>"
         },
         "level": {
             "value": 1
@@ -74,11 +74,92 @@
                         }
                     },
                     {
+                        "label": "PF2E.Dragon.Barrage",
+                        "value": {
+                            "damageType": "force",
+                            "skill": "arcana",
+                            "slug": "barrage",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Bog",
+                        "value": {
+                            "damageType": "fire",
+                            "skill": "nature",
+                            "slug": "bog",
+                            "tradition": "primal"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Brine",
+                        "value": {
+                            "damageType": "fire",
+                            "skill": "nature",
+                            "slug": "brine",
+                            "tradition": "primal"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Cinder",
+                        "value": {
+                            "damageType": "fire",
+                            "skill": "nature",
+                            "slug": "cinder",
+                            "tradition": "primal"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Cloud",
+                        "value": {
+                            "damageType": "fire",
+                            "skill": "nature",
+                            "slug": "cloud",
+                            "tradition": "primal"
+                        }
+                    },
+                    {
                         "label": "PF2E.Dragon.Conspirator",
                         "value": {
                             "damageType": "mental",
                             "skill": "occultism",
                             "slug": "conspirator",
+                            "tradition": "occult"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Coral",
+                        "value": {
+                            "damageType": "fire",
+                            "skill": "nature",
+                            "slug": "coral",
+                            "tradition": "primal"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Crystal",
+                        "value": {
+                            "damageType": "fire",
+                            "skill": "nature",
+                            "slug": "crystal",
+                            "tradition": "primal"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Delight",
+                        "value": {
+                            "damageType": "spirit",
+                            "skill": "religion",
+                            "slug": "delight",
+                            "tradition": "divine"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Despair",
+                        "value": {
+                            "damageType": "mental",
+                            "skill": "occultism",
+                            "slug": "despair",
                             "tradition": "occult"
                         }
                     },
@@ -101,6 +182,24 @@
                         }
                     },
                     {
+                        "label": "PF2E.Dragon.Executor",
+                        "value": {
+                            "damageType": "spirit",
+                            "skill": "religion",
+                            "slug": "executor",
+                            "tradition": "divine"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Forest",
+                        "value": {
+                            "damageType": "fire",
+                            "skill": "nature",
+                            "slug": "forest",
+                            "tradition": "primal"
+                        }
+                    },
+                    {
                         "label": "PF2E.Dragon.Fortune",
                         "value": {
                             "damageType": "force",
@@ -119,12 +218,39 @@
                         }
                     },
                     {
+                        "label": "PF2E.Dragon.Magma",
+                        "value": {
+                            "damageType": "fire",
+                            "skill": "nature",
+                            "slug": "magma",
+                            "tradition": "primal"
+                        }
+                    },
+                    {
                         "label": "PF2E.Dragon.Mirage",
                         "value": {
                             "damageType": "force",
                             "skill": "arcana",
                             "slug": "mirage",
                             "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Mocking",
+                        "value": {
+                            "damageType": "mental",
+                            "skill": "occultism",
+                            "slug": "mocking",
+                            "tradition": "occult"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Oath",
+                        "value": {
+                            "damageType": "spirit",
+                            "skill": "religion",
+                            "slug": "oath",
+                            "tradition": "divine"
                         }
                     },
                     {
@@ -137,29 +263,182 @@
                         }
                     },
                     {
+                        "label": "PF2E.Dragon.Phase",
+                        "value": {
+                            "damageType": "force",
+                            "skill": "arcana",
+                            "slug": "phase",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Requiem",
+                        "value": {
+                            "damageType": "spirit",
+                            "skill": "religion",
+                            "slug": "requiem",
+                            "tradition": "divine"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Resurrection",
+                        "value": {
+                            "damageType": "spirit",
+                            "skill": "religion",
+                            "slug": "resurrection",
+                            "tradition": "divine"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Rime",
+                        "value": {
+                            "damageType": "fire",
+                            "skill": "nature",
+                            "slug": "rime",
+                            "tradition": "primal"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Rune",
+                        "value": {
+                            "damageType": "force",
+                            "skill": "arcana",
+                            "slug": "rune",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Sage",
+                        "value": {
+                            "damageType": "spirit",
+                            "skill": "occultism",
+                            "slug": "sage",
+                            "tradition": "occult"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Sea",
+                        "value": {
+                            "damageType": "force",
+                            "skill": "arcana",
+                            "slug": "sea",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Sky",
+                        "value": {
+                            "damageType": "spirit",
+                            "skill": "religion",
+                            "slug": "sky",
+                            "tradition": "divine"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Sky",
+                        "value": {
+                            "damageType": "electricity",
+                            "skill": "arcana",
+                            "slug": "sky",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Sovereign",
+                        "value": {
+                            "damageType": "mental",
+                            "skill": "occultism",
+                            "slug": "sovereign",
+                            "tradition": "occult"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Stormcrown",
+                        "value": {
+                            "damageType": "fire",
+                            "skill": "nature",
+                            "slug": "stormcrown",
+                            "tradition": "primal"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Time",
+                        "value": {
+                            "damageType": "force",
+                            "skill": "arcana",
+                            "slug": "time",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Umbral",
+                        "value": {
+                            "damageType": "mental",
+                            "skill": "occultism",
+                            "slug": "umbral",
+                            "tradition": "occult"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Underworld",
+                        "value": {
+                            "damageType": "force",
+                            "skill": "arcana",
+                            "slug": "underworld",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Vizier",
+                        "value": {
+                            "damageType": "mental",
+                            "skill": "occultism",
+                            "slug": "vizier",
+                            "tradition": "occult"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Vorpal",
+                        "value": {
+                            "damageType": "force",
+                            "skill": "arcana",
+                            "slug": "vorpal",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Wailing",
+                        "value": {
+                            "damageType": "force",
+                            "skill": "arcana",
+                            "slug": "wailing",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Whisper",
+                        "value": {
+                            "damageType": "mental",
+                            "skill": "occultism",
+                            "slug": "whisper",
+                            "tradition": "occult"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Wish",
+                        "value": {
+                            "damageType": "force",
+                            "skill": "arcana",
+                            "slug": "wish",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
                         "label": "PF2E.Dragon.Black",
                         "value": {
                             "damageType": "acid",
                             "skill": "arcana",
                             "slug": "black",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
-                        "label": "PF2E.Dragon.Brine",
-                        "value": {
-                            "damageType": "acid",
-                            "skill": "arcana",
-                            "slug": "brine",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
-                        "label": "PF2E.Dragon.Copper",
-                        "value": {
-                            "damageType": "acid",
-                            "skill": "arcana",
-                            "slug": "copper",
                             "tradition": "arcane"
                         }
                     },
@@ -173,33 +452,6 @@
                         }
                     },
                     {
-                        "label": "PF2E.Dragon.Bronze",
-                        "value": {
-                            "damageType": "electricity",
-                            "skill": "arcana",
-                            "slug": "bronze",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
-                        "label": "PF2E.Dragon.Cloud",
-                        "value": {
-                            "damageType": "electricity",
-                            "skill": "arcana",
-                            "slug": "cloud",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
-                        "label": "PF2E.Dragon.Sky",
-                        "value": {
-                            "damageType": "electricity",
-                            "skill": "arcana",
-                            "slug": "sky",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
                         "label": "PF2E.Dragon.Brass",
                         "value": {
                             "damageType": "fire",
@@ -209,29 +461,29 @@
                         }
                     },
                     {
-                        "label": "PF2E.Dragon.Underworld",
+                        "label": "PF2E.Dragon.Bronze",
+                        "value": {
+                            "damageType": "electricity",
+                            "skill": "arcana",
+                            "slug": "bronze",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Copper",
+                        "value": {
+                            "damageType": "acid",
+                            "skill": "arcana",
+                            "slug": "copper",
+                            "tradition": "arcane"
+                        }
+                    },
+                    {
+                        "label": "PF2E.Dragon.Gold",
                         "value": {
                             "damageType": "fire",
                             "skill": "arcana",
-                            "slug": "underworld",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
-                        "label": "PF2E.Dragon.Crystal",
-                        "value": {
-                            "damageType": "piercing",
-                            "skill": "arcana",
-                            "slug": "crystal",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
-                        "label": "PF2E.Dragon.Forest",
-                        "value": {
-                            "damageType": "piercing",
-                            "skill": "arcana",
-                            "slug": "forest",
+                            "slug": "gold",
                             "tradition": "arcane"
                         }
                     },
@@ -245,11 +497,11 @@
                         }
                     },
                     {
-                        "label": "PF2E.Dragon.Sea",
+                        "label": "PF2E.Dragon.Red",
                         "value": {
-                            "damageType": "bludgeoning",
+                            "damageType": "fire",
                             "skill": "arcana",
-                            "slug": "sea",
+                            "slug": "red",
                             "tradition": "arcane"
                         }
                     },
@@ -268,51 +520,6 @@
                             "damageType": "cold",
                             "skill": "arcana",
                             "slug": "white",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
-                        "label": "PF2E.Dragon.Sovereign",
-                        "value": {
-                            "damageType": "mental",
-                            "skill": "arcana",
-                            "slug": "sovereign",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
-                        "label": "PF2E.Dragon.Umbral",
-                        "value": {
-                            "damageType": "void",
-                            "skill": "arcana",
-                            "slug": "umbral",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
-                        "label": "PF2E.Dragon.Red",
-                        "value": {
-                            "damageType": "fire",
-                            "skill": "arcana",
-                            "slug": "red",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
-                        "label": "PF2E.Dragon.Gold",
-                        "value": {
-                            "damageType": "fire",
-                            "skill": "arcana",
-                            "slug": "gold",
-                            "tradition": "arcane"
-                        }
-                    },
-                    {
-                        "label": "PF2E.Dragon.Magma",
-                        "value": {
-                            "damageType": "fire",
-                            "skill": "arcana",
-                            "slug": "magma",
                             "tradition": "arcane"
                         }
                     }
@@ -389,13 +596,45 @@
                                                             "feature:bloodline:draconic:occult",
                                                             "feature:bloodline:draconic:primal",
                                                             "feature:bloodline:draconic:adamantine",
+                                                            "feature:bloodline:draconic:barrage",
+                                                            "feature:bloodline:draconic:bog",
+                                                            "feature:bloodline:draconic:brine",
+                                                            "feature:bloodline:draconic:cinder",
+                                                            "feature:bloodline:draconic:cloud",
                                                             "feature:bloodline:draconic:conspirator",
+                                                            "feature:bloodline:draconic:coral",
+                                                            "feature:bloodline:draconic:crystal",
+                                                            "feature:bloodline:draconic:delight",
+                                                            "feature:bloodline:draconic:despair",
                                                             "feature:bloodline:draconic:diabolic",
                                                             "feature:bloodline:draconic:empyreal",
+                                                            "feature:bloodline:draconic:executor",
+                                                            "feature:bloodline:draconic:forest",
                                                             "feature:bloodline:draconic:fortune",
                                                             "feature:bloodline:draconic:horned",
+                                                            "feature:bloodline:draconic:magma",
                                                             "feature:bloodline:draconic:mirage",
-                                                            "feature:bloodline:draconic:omen"
+                                                            "feature:bloodline:draconic:mocking",
+                                                            "feature:bloodline:draconic:oath",
+                                                            "feature:bloodline:draconic:omen",
+                                                            "feature:bloodline:draconic:phase",
+                                                            "feature:bloodline:draconic:requiem",
+                                                            "feature:bloodline:draconic:resurrection",
+                                                            "feature:bloodline:draconic:rime",
+                                                            "feature:bloodline:draconic:rune",
+                                                            "feature:bloodline:draconic:sage",
+                                                            "feature:bloodline:draconic:sea",
+                                                            "feature:bloodline:draconic:sky",
+                                                            "feature:bloodline:draconic:sovereign",
+                                                            "feature:bloodline:draconic:stormcrown",
+                                                            "feature:bloodline:draconic:time",
+                                                            "feature:bloodline:draconic:umbral",
+                                                            "feature:bloodline:draconic:underworld",
+                                                            "feature:bloodline:draconic:vizier",
+                                                            "feature:bloodline:draconic:vorpal",
+                                                            "feature:bloodline:draconic:wailing",
+                                                            "feature:bloodline:draconic:whisper",
+                                                            "feature:bloodline:draconic:wish"
                                                         ]
                                                     }
                                                 ]
@@ -418,25 +657,15 @@
                                                     {
                                                         "or": [
                                                             "feature:bloodline:draconic:black",
-                                                            "feature:bloodline:draconic:brine",
-                                                            "feature:bloodline:draconic:copper",
                                                             "feature:bloodline:draconic:blue",
-                                                            "feature:bloodline:draconic:bronze",
-                                                            "feature:bloodline:draconic:cloud",
-                                                            "feature:bloodline:draconic:sky",
                                                             "feature:bloodline:draconic:brass",
-                                                            "feature:bloodline:draconic:underworld",
-                                                            "feature:bloodline:draconic:crystal",
-                                                            "feature:bloodline:draconic:forest",
-                                                            "feature:bloodline:draconic:green",
-                                                            "feature:bloodline:draconic:sea",
-                                                            "feature:bloodline:draconic:silver",
-                                                            "feature:bloodline:draconic:white",
-                                                            "feature:bloodline:draconic:sovereign",
-                                                            "feature:bloodline:draconic:umbral",
-                                                            "feature:bloodline:draconic:red",
+                                                            "feature:bloodline:draconic:bronze",
+                                                            "feature:bloodline:draconic:copper",
                                                             "feature:bloodline:draconic:gold",
-                                                            "feature:bloodline:draconic:magma"
+                                                            "feature:bloodline:draconic:green",
+                                                            "feature:bloodline:draconic:red",
+                                                            "feature:bloodline:draconic:silver",
+                                                            "feature:bloodline:draconic:white"
                                                         ]
                                                     }
                                                 ]
@@ -503,12 +732,120 @@
                                             },
                                             {
                                                 "and": [
+                                                    "feature:bloodline:draconic:barrage",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:telekinetic-maneuver",
+                                                            "item:slug:telekinetic-haul",
+                                                            "item:slug:quandary"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:bog",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:sudden-blight",
+                                                            "item:slug:corrosive-muck",
+                                                            "item:slug:desiccate"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:brine",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:water-breathing",
+                                                            "item:slug:corrosive-muck",
+                                                            "item:slug:desiccate"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:cinder",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:floating-flame",
+                                                            "item:slug:flame-dancer",
+                                                            "item:slug:rainbow-fumarole"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:cloud",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:resist-energy",
+                                                            "item:slug:howling-blizzard",
+                                                            "item:slug:punishing-winds"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
                                                     "feature:bloodline:draconic:conspirator",
                                                     {
                                                         "or": [
                                                             "item:slug:paranoia",
                                                             "item:slug:synaptic-pulse",
                                                             "item:slug:unrelenting-observation"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:coral",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:water-breathing",
+                                                            "item:slug:control-water",
+                                                            "item:slug:whirlpool"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:crystal",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:expeditious-excavation",
+                                                            "item:slug:wall-of-stone",
+                                                            "item:slug:earthquake"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:delight",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:laughing-fit",
+                                                            "item:slug:breath-of-life",
+                                                            "item:slug:moment-of-renewal"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:despair",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:paranoia",
+                                                            "item:slug:wave-of-despair",
+                                                            "item:slug:canticle-of-everlasting-grief"
                                                         ]
                                                     }
                                                 ]
@@ -539,11 +876,35 @@
                                             },
                                             {
                                                 "and": [
+                                                    "feature:bloodline:draconic:executor",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:revealing-light",
+                                                            "item:slug:divine-immolation",
+                                                            "item:slug:divine-inspiration"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:forest",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:animal-messenger",
+                                                            "item:slug:natures-pathway",
+                                                            "item:slug:punishing-winds"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
                                                     "feature:bloodline:draconic:fortune",
                                                     {
                                                         "or": [
                                                             "item:slug:invisibility",
-                                                            "item:slug:howling-blizzard",
+                                                            "item:slug:scouting-eye",
                                                             "item:slug:uncontrollable-dance"
                                                         ]
                                                     }
@@ -556,7 +917,19 @@
                                                         "or": [
                                                             "item:slug:one-with-plants",
                                                             "item:slug:toxic-cloud",
-                                                            "item:slug:dessicate"
+                                                            "item:slug:desiccate"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:magma",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:revealing-light",
+                                                            "item:slug:toxic-cloud",
+                                                            "item:slug:rainbow-fumarole"
                                                         ]
                                                     }
                                                 ]
@@ -575,12 +948,252 @@
                                             },
                                             {
                                                 "and": [
+                                                    "feature:bloodline:draconic:mocking",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:laughing-fit",
+                                                            "item:slug:cloak-of-colors",
+                                                            "item:slug:uncontrollable-dance"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:oath",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:cleanse-affliction",
+                                                            "item:slug:truespeech",
+                                                            "item:slug:divine-inspiration"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
                                                     "feature:bloodline:draconic:omen",
                                                     {
                                                         "or": [
                                                             "item:slug:status",
                                                             "item:slug:wave-of-despair",
+                                                            "item:slug:hidden-mind"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:phase",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:blur",
+                                                            "item:slug:banishment",
+                                                            "item:slug:disappearance"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:requiem",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:see-the-unseen",
+                                                            "item:slug:banishment",
+                                                            "item:slug:spirit-song"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:resurrection",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:spirit-sense",
+                                                            "item:slug:invoke-spirits",
+                                                            "item:slug:moment-of-renewal"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:rime",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:shatter",
+                                                            "item:slug:howling-blizzard",
+                                                            "item:slug:arctic-rift"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:rune",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:embed-message",
+                                                            "item:slug:imaginary-lockbox",
                                                             "item:slug:quandary"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:sage",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:translate",
+                                                            "item:slug:scouting-eye",
+                                                            "item:slug:quandary"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:sea",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:water-breathing",
+                                                            "item:slug:mariners-curse",
+                                                            "item:slug:desiccate"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:sky",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:augury",
+                                                            "item:slug:lightning-storm",
+                                                            "item:slug:divine-inspiration"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:sovereign",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:clear-mind",
+                                                            "item:slug:truespeech",
+                                                            "item:slug:dream-council"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:stormcrown",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:deafness",
+                                                            "item:slug:lightning-storm",
+                                                            "item:slug:punishing-winds"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:time",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:loose-times-arrow",
+                                                            "item:slug:banishment",
+                                                            "item:slug:quandary"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:umbral",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:reapers-lantern",
+                                                            "item:slug:shadow-blast",
+                                                            "item:slug:disappearance"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:underworld",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:resist-energy",
+                                                            "item:slug:toxic-cloud",
+                                                            "item:slug:earthquake"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:vizier",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:dispel-magic",
+                                                            "item:slug:subconscious-suggestion",
+                                                            "item:slug:hidden-mind"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:vorpal",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:revealing-light",
+                                                            "item:slug:impaling-spike",
+                                                            "item:slug:ferrous-form"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:wailing",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:noise-blast",
+                                                            "item:slug:confusing-cry",
+                                                            "item:slug:spirit-song"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:whisper",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:humanoid-form",
+                                                            "item:slug:scouting-eye",
+                                                            "item:slug:dream-council"
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "and": [
+                                                    "feature:bloodline:draconic:wish",
+                                                    {
+                                                        "or": [
+                                                            "item:slug:phantasmal-treasure",
+                                                            "item:slug:hallucination",
+                                                            "item:slug:confusing-colors"
                                                         ]
                                                     }
                                                 ]

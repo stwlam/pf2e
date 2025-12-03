@@ -1,0 +1,38 @@
+{
+    "_id": "6vq8c3BM9Haf5dcH",
+    "folder": "4jkfL4ywBRKBAh0j",
+    "img": "systems/pf2e/icons/actions/OneAction.webp",
+    "name": "(Requiem Dragon) Soul Roar",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p><hr /><p><strong>Effect</strong> The dragon lets out a mighty roar that rouses their allies and rattles the souls of their enemies. Each ally in a @Template[type:emanation|distance:120] gains temporary Hit Points equal to the dragon's level that last for 1 minute, while each enemy within that area must attempt a @Check[will|dc:|options:area-effect,inflicts:doomed,inflicts:fleeing,inflicts:frightened] save.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.Effect: Soul Roar (Ally)]</p><hr /><p><strong>Critical Success</strong> The creature is unaffected and is immune to Soul Roar for 1 minute.</p>\n<p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}.</p>\n<p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} and @UUID[Compendium.pf2e.conditionitems.Item.Doomed]{Doomed 1}. If the target is already doomed, the doomed value increases by 1 (to a maximum of @UUID[Compendium.pf2e.conditionitems.Item.Doomed]{Doomed 4}).</p>\n<p><strong>Critical Failure</strong> The creature gains the @UUID[Compendium.pf2e.conditionitems.Item.Fleeing] condition for 1 round, is @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 4}, and is doomed 1. If the target is already doomed, the doomed value increases by 1 (to a maximum of doomed 4).</p>"
+        },
+        "frequency": {
+            "max": 1,
+            "per": "round"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "auditory",
+                "emotion",
+                "fear",
+                "mental",
+                "spirit"
+            ]
+        }
+    },
+    "type": "action"
+}

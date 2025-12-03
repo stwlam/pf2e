@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/default-icons/weapon.svg",
     "name": "Capturing Spetum",
     "system": {
+        "ammo": null,
         "baseItem": "capturing-spetum",
         "bonus": {
             "value": 0

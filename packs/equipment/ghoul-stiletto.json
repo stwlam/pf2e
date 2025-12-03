@@ -3,6 +3,7 @@
     "img": "icons/weapons/daggers/dagger-straight-thin-black.webp",
     "name": "Ghoul Stiletto",
     "system": {
+        "ammo": null,
         "baseItem": "dagger",
         "bonus": {
             "value": 0

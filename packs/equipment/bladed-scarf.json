@@ -3,6 +3,7 @@
     "img": "icons/commodities/cloth/cloth-bolt-gold-red.webp",
     "name": "Bladed Scarf",
     "system": {
+        "ammo": null,
         "baseItem": "bladed-scarf",
         "bonus": {
             "value": 0

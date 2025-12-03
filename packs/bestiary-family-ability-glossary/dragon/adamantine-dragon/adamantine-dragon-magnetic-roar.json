@@ -1,0 +1,31 @@
+{
+    "_id": "9rwssyPzNfxuqX5d",
+    "folder": "L1tGMeQQr855fP23",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Adamantine Dragon) Magnetic Roar",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>With a mighty roar, the dragon attracts metal in a @Template[type:emanation|distance:60]. Any unattended metal object of 1 Bulk or less flies to the dragon and sticks to their hide, granting a +2 item bonus to AC for 1 minute. Any creature holding a metal object of 1 Bulk or less must attempt at a @Check[fortitude|dc:] save with a DC equal to the dragon's Avalanche Breath DC or have their item pulled to the dragon and stuck for 1 round. A creature wearing metal armor instead must succeed at a @Check[fortitude|dc:] save against the DC + 2 or be pulled, taking @Damage[1d6[bludgeoning]] damage for every 10 feet it was moved, and become magnetically stuck to the dragon for 1 round. An object or creature can be unstuck with an Interact action.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "metal",
+                "primal"
+            ]
+        }
+    },
+    "type": "action"
+}

@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/sword-cane.webp",
     "name": "Exquisite Sword Cane Sheath",
     "system": {
+        "ammo": null,
         "baseItem": "exquisite-sword-cane-sheath",
         "bonus": {
             "value": 0

@@ -1,0 +1,52 @@
+{
+    "_id": "Qr1foFh24dkTqe1s",
+    "folder": "7WeCnFHvfttgw2vH",
+    "img": "icons/commodities/materials/material-feathers-blue.webp",
+    "name": "Tidepool Dragonet",
+    "system": {
+        "ancestry": {
+            "name": "Dragonet",
+            "slug": "dragonet",
+            "uuid": "Compendium.pf2e.ancestries.Item.B5Ewz31nJBOzHSMg"
+        },
+        "description": {
+            "value": "<p>You have a slender, eel-like body with azure scales. Your wings sweep along your body like massive fins, making you well suited for watery terrain.</p>\n<p>You gain the amphibious trait, and a swim Speed of 15 feet. You add Thalassic to your list of known languages.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "ActiveEffectLike",
+                "mode": "add",
+                "path": "system.build.languages.granted",
+                "value": {
+                    "slug": "thalassic",
+                    "source": "{item|name}"
+                }
+            },
+            {
+                "key": "BaseSpeed",
+                "selector": "swim",
+                "value": 15
+            },
+            {
+                "key": "RollOption",
+                "option": "dragonet-heritage"
+            },
+            {
+                "key": "RollOption",
+                "option": "dragonet-heritage:tidepool-dragonet"
+            }
+        ],
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "amphibious"
+            ]
+        }
+    },
+    "type": "heritage"
+}

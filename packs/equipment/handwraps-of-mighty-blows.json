@@ -3,6 +3,7 @@
     "img": "icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp",
     "name": "Handwraps of Mighty Blows",
     "system": {
+        "ammo": null,
         "baseItem": null,
         "bonus": {
             "value": 1

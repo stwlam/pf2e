@@ -3,6 +3,7 @@
     "img": "icons/weapons/thrown/dagger-ringed-steel.webp",
     "name": "Throwing Knife (Extinction Curse)",
     "system": {
+        "ammo": null,
         "baseItem": "throwing-knife",
         "bonus": {
             "value": 0

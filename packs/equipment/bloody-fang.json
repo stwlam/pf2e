@@ -3,6 +3,7 @@
     "img": "icons/weapons/daggers/dagger-straight-blue.webp",
     "name": "Bloody Fang",
     "system": {
+        "ammo": null,
         "baseItem": "dagger",
         "bonus": {
             "value": 0

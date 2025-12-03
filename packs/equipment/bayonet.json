@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/bayonet.webp",
     "name": "Bayonet",
     "system": {
+        "ammo": null,
         "baseItem": null,
         "bonus": {
             "value": 0

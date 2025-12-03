@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/scimitar-guard-wood.webp",
     "name": "Thundering Fury Dadao",
     "system": {
+        "ammo": null,
         "baseItem": "greatsword",
         "bonus": {
             "value": 0

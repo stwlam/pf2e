@@ -1,0 +1,84 @@
+{
+    "_id": "B5Ewz31nJBOzHSMg",
+    "img": "systems/pf2e/icons/default-icons/ancestry.svg",
+    "name": "Dragonet",
+    "system": {
+        "additionalLanguages": {
+            "count": 0,
+            "custom": "",
+            "value": []
+        },
+        "boosts": {
+            "0": {
+                "value": [
+                    "dex"
+                ]
+            },
+            "1": {
+                "value": [
+                    "cha"
+                ]
+            },
+            "2": {
+                "value": [
+                    "str",
+                    "dex",
+                    "con",
+                    "int",
+                    "wis",
+                    "cha"
+                ]
+            }
+        },
+        "description": {
+            "value": ""
+        },
+        "flaws": {
+            "0": {
+                "value": [
+                    "con"
+                ]
+            }
+        },
+        "hands": 2,
+        "hp": 8,
+        "items": {
+            "BDkKf": {
+                "img": "icons/creatures/abilities/mouth-teeth-rows-red.webp",
+                "level": 1,
+                "name": "Big Sharp Teeth",
+                "uuid": "Compendium.pf2e.ancestryfeatures.Item.Big Sharp Teeth"
+            },
+            "lxyWw": {
+                "img": "icons/creatures/abilities/wing-batlike-white-blue.webp",
+                "level": 1,
+                "name": "Wings (Dragonet)",
+                "uuid": "Compendium.pf2e.ancestryfeatures.Item.Wings (Dragonet)"
+            }
+        },
+        "languages": {
+            "custom": "",
+            "value": [
+                "common",
+                "draconic"
+            ]
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "reach": 0,
+        "rules": [],
+        "size": "tiny",
+        "speed": 20,
+        "traits": {
+            "rarity": "rare",
+            "value": [
+                "dragon"
+            ]
+        },
+        "vision": "darkvision"
+    },
+    "type": "ancestry"
+}

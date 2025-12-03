@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/greatclub.webp",
     "name": "Kinetic Club",
     "system": {
+        "ammo": null,
         "baseItem": "greatclub",
         "bonus": {
             "value": 0

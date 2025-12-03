@@ -3,6 +3,7 @@
     "img": "icons/weapons/swords/sword-guard-purple.webp",
     "name": "Celestial Peachwood Sword",
     "system": {
+        "ammo": null,
         "baseItem": "shortsword",
         "bonus": {
             "value": 0

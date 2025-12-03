@@ -3,6 +3,7 @@
     "img": "icons/tools/hand/sickle-steel-grey.webp",
     "name": "Revenant Blade",
     "system": {
+        "ammo": null,
         "baseItem": "sickle",
         "bonus": {
             "value": 0

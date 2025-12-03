@@ -3,6 +3,7 @@
     "img": "icons/weapons/maces/mace-flanged-steel-grey.webp",
     "name": "Thundermace",
     "system": {
+        "ammo": null,
         "baseItem": "thundermace",
         "bonus": {
             "value": 0

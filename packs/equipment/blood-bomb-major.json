@@ -3,6 +3,7 @@
     "img": "icons/commodities/materials/slime-red.webp",
     "name": "Blood Bomb (Major)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 3

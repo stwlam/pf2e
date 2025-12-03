@@ -3,6 +3,7 @@
     "img": "icons/magic/fire/explosion-fireball-large-purple-orange.webp",
     "name": "Blightburn Bomb (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 2

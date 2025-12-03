@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/default-icons/weapon.svg",
     "name": "Liuyedao",
     "system": {
+        "ammo": null,
         "baseItem": "liuyedao",
         "bonus": {
             "value": 0

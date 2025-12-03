@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/war-razor.webp",
     "name": "Retribution",
     "system": {
+        "ammo": null,
         "baseItem": "war-razor",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/rapier.webp",
     "name": "Rime Foil",
     "system": {
+        "ammo": null,
         "baseItem": "rapier",
         "bonus": {
             "value": 0

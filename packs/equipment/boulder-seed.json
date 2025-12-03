@@ -3,6 +3,7 @@
     "img": "icons/commodities/stone/stone-chunk-moss-grey.webp",
     "name": "Boulder Seed",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 2

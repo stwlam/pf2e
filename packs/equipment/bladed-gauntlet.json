@@ -3,6 +3,7 @@
     "img": "icons/equipment/hand/gauntlet-tooled-steel.webp",
     "name": "Bladed Gauntlet",
     "system": {
+        "ammo": null,
         "baseItem": "bladed-gauntlet",
         "bonus": {
             "value": 0

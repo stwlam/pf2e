@@ -3,6 +3,7 @@
     "img": "icons/weapons/axes/axe-battle-black.webp",
     "name": "Battle Axe",
     "system": {
+        "ammo": null,
         "baseItem": "battle-axe",
         "bonus": {
             "value": 0

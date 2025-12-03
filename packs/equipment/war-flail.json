@@ -3,6 +3,7 @@
     "img": "icons/weapons/maces/flail-studded-grey.webp",
     "name": "War Flail",
     "system": {
+        "ammo": null,
         "baseItem": "war-flail",
         "bonus": {
             "value": 0

@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-ornate-teal.webp",
     "name": "Boreal Staff (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

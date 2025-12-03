@@ -1,0 +1,30 @@
+{
+    "_id": "VmiXrvmqg7JdKopn",
+    "folder": "jffSLcfMxD2keuEL",
+    "img": "systems/pf2e/icons/actions/Passive.webp",
+    "name": "(Coral Dragon) Palytoxin",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>Any creature who takes damage from the dragon's jaws, claws, or tail attack, or who Strikes and does damage to the dragon with an unarmed attack, takes @Damage[1d6[poison]] damage (@Damage[2d6[poison]|shortLabel] for ancient and archdragons) and must attempt a @Check[fortitude|dc:|options:inflicts:drained,inflicts:enfeebled] saving throw (DC equal to the DC of the dragon's Hydraulic Breath).</p><hr /><p><strong>Success</strong> The creature is unaffected.</p>\n<p><strong>Failure</strong> The creature's enfeebled condition increases by 1 until the end of its next turn, to a maximum of 3. If the creature is already @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 3}, it becomes @UUID[Compendium.pf2e.conditionitems.Item.Drained]{Drained 1} instead.</p>\n<p><strong>Critical Failure</strong> As failure, except the creature's enfeebled condition increases by 2 instead of 1.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "poison"
+            ]
+        }
+    },
+    "type": "action"
+}

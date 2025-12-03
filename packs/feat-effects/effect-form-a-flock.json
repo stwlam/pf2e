@@ -1,0 +1,43 @@
+{
+    "_id": "7k5oCD4wQUNFZYkC",
+    "img": "icons/creatures/abilities/wing-batlike-red-pink.webp",
+    "name": "Effect: Form a Flock",
+    "system": {
+        "description": {
+            "value": "<p>Granted by Form a Flock</p>\n<p>You are dazzled.</p>"
+        },
+        "duration": {
+            "expiry": null,
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 13
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "inMemoryOnly": true,
+                "key": "GrantItem",
+                "uuid": "Compendium.pf2e.conditionitems.Item.Dazzled"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

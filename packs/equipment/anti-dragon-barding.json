@@ -1,0 +1,82 @@
+{
+    "_id": "ZsMwDe78kIqZj5de",
+    "img": "icons/commodities/metal/mail-scale-steel.webp",
+    "name": "Anti-Dragon Barding",
+    "system": {
+        "acBonus": 1,
+        "baseItem": null,
+        "bulk": {
+            "value": 0.1
+        },
+        "category": "light-barding",
+        "checkPenalty": -1,
+        "containerId": null,
+        "description": {
+            "value": "<p>Consisting of long steel spikes projecting from light barding, anti-dragon barding helps to protect vulnerable mounts and livestock from massive aerial predators, including dragons, griffons, and rocs.</p>\n<p>An animal companion wearing anti-dragon barding gains a +2 item bonus to its Fortitude DC and Reflex DC against attempts to [[/act grapple]], [[/act reposition]], [[/act shove]], or [[/act trip]] it, and a creature that successfully Grapples the animal companion takes @Damage[1d4[piercing]] damage.</p>"
+        },
+        "dexCap": 5,
+        "grade": null,
+        "group": null,
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 6
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "value": {
+                "gp": 200
+            }
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "quantity": 1,
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    {
+                        "or": [
+                            "action:grapple",
+                            "action:reposition",
+                            "action:shove",
+                            "action:trip"
+                        ]
+                    }
+                ],
+                "selector": [
+                    "reflex-dc",
+                    "fortitude-dc"
+                ],
+                "type": "item",
+                "value": 2
+            }
+        ],
+        "runes": {
+            "potency": 0,
+            "property": [],
+            "resilient": 0
+        },
+        "size": "med",
+        "speedPenalty": -5,
+        "strength": 3,
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "companion",
+                "invested",
+                "magical"
+            ]
+        }
+    },
+    "type": "armor"
+}

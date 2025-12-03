@@ -3,6 +3,7 @@
     "img": "icons/consumables/potions/potion-flask-corked-flat-red.webp",
     "name": "Vexing Vapor (Moderate)",
     "system": {
+        "ammo": null,
         "baseItem": "alchemical-bomb",
         "bonus": {
             "value": 1

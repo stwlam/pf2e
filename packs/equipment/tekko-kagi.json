@@ -3,6 +3,7 @@
     "img": "icons/weapons/fist/claw-grey-black.webp",
     "name": "Tekko-Kagi",
     "system": {
+        "ammo": null,
         "baseItem": "tekko-kagi",
         "bonus": {
             "value": 0

@@ -1,0 +1,49 @@
+{
+    "_id": "qI1dHuib2vuitFMJ",
+    "folder": "fvJQ3kMyEjvLkbyQ",
+    "img": "systems/pf2e/icons/actions/Passive.webp",
+    "name": "(Cinder Dragon) Inextinguishable Aura",
+    "system": {
+        "actionType": {
+            "value": "passive"
+        },
+        "actions": {
+            "value": null
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p>90 feet. Flames burn underwater in this aura and cannot be doused by non-magical water. When a creature within this aura attempts a flat check to end persistent fire damage, it must roll twice and take the worse result.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "effects": [
+                    {
+                        "includesSelf": false,
+                        "uuid": "Compendium.pf2e.bestiary-effects.Item.Effect: Inextinguishable Aura"
+                    }
+                ],
+                "key": "Aura",
+                "radius": 90,
+                "traits": [
+                    "fire",
+                    "misfortune",
+                    "primal"
+                ]
+            }
+        ],
+        "traits": {
+            "value": [
+                "aura",
+                "fire",
+                "misfortune",
+                "primal"
+            ]
+        }
+    },
+    "type": "action"
+}

@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/kukri.webp",
     "name": "Kukri",
     "system": {
+        "ammo": null,
         "baseItem": "kukri",
         "bonus": {
             "value": 0

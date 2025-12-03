@@ -1,0 +1,36 @@
+{
+    "_id": "VpXDP2fGKgYSU9uJ",
+    "folder": "jffSLcfMxD2keuEL",
+    "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+    "name": "(Coral Dragon) Primal Tide",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 3
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p><strong>Requirements</strong> The dragon is within the bounds of or no more than 25 feet away from their reef</p>\n<p><strong>Frequency</strong> once per hour</p><hr /><p><strong>Effect</strong> The dragon calls tens of thousands of tiny marine creatures from the crevices in their reef, which pour over a @Template[type:emanation|distance:50] in a clawing, biting, stinging swarm. Every creature in the area that is fully or partially submerged in water must succeed at a @Check[reflex|basic|dc:|options:area-effect] saving throw (DC equal to the DC of the dragon's Hydraulic Breath) or take piercing damage equal to half that dealt by their Hydraulic Breath and an equivalent amount of poison damage. The dragon can specify any number of creatures within the area to be spared. All summoned creatures disperse at the end of the dragon's turn.</p>"
+        },
+        "frequency": {
+            "max": 1,
+            "per": "PT1H"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "concentrate",
+                "manipulate",
+                "water"
+            ]
+        }
+    },
+    "type": "action"
+}

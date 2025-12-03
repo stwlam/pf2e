@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/glaive-hooked-steel.webp",
     "name": "Whisperer of Souls",
     "system": {
+        "ammo": null,
         "baseItem": "glaive",
         "bonus": {
             "value": 2

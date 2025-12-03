@@ -1,0 +1,60 @@
+{
+    "_id": "PjGZEG8hnzcYc6vm",
+    "img": "icons/commodities/leather/scales-green.webp",
+    "name": "Dragon Scute (Lesser)",
+    "system": {
+        "baseItem": null,
+        "bulk": {
+            "value": 0.1
+        },
+        "category": "catalyst",
+        "containerId": null,
+        "damage": null,
+        "description": {
+            "value": "<p><strong>Activate</strong> Cast a Spell</p><hr /><p>The thick plates that form the strongest points in a dragon's armor can be used as powerful defensive catalysts. Using one of these scales to cast @UUID[Compendium.pf2e.spells-srd.Item.Mountain Resilience] causes the target's skin to grow a thick layer of draconic scales. Instead of the spell's normal effects, the target gains damage resistance based on the type and dragon's tradition.</p>\n<p>The scale can be used with <em>mountain resilience</em> of 6th rank or higher.</p>\n<p><strong>Arcane</strong> resistance 5 against all damage from spells</p>\n<p><strong>Divine</strong> resistance 10 to spirit, vitality, and void</p>\n<p><strong>Occult</strong> resistance 10 to mental</p>\n<p><strong>Primal</strong> resistance 7 to bludgeoning, piercing, slashing, and poison</p>"
+        },
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "level": {
+            "value": 12
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "price": {
+            "per": 1,
+            "value": {
+                "gp": 400
+            }
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "quantity": 1,
+        "rules": [],
+        "size": "med",
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "catalyst",
+                "consumable",
+                "magical"
+            ]
+        },
+        "usage": {
+            "value": "held-in-one-hand"
+        },
+        "uses": {
+            "autoDestroy": true,
+            "max": 1,
+            "value": 1
+        }
+    },
+    "type": "consumable"
+}

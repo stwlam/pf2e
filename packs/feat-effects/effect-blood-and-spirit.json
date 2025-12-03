@@ -1,0 +1,89 @@
+{
+    "_id": "tu36I5HWaqOjaLVu",
+    "img": "icons/skills/wounds/blood-cells-vessel-blue.webp",
+    "name": "Effect: Blood and Spirit",
+    "system": {
+        "description": {
+            "value": "<p>Granted by Blood and Spirit</p>\n<p>Choose a piercing or slashing weapon you're wielding. Your Strikes with that weapon deal an additional 1d6 spirit damage with the holy or unholy trait, depending on your chosen trait.</p>"
+        },
+        "duration": {
+            "expiry": "turn-end",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 0
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 5
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "choices": {
+                    "ownedItems": true,
+                    "predicate": [
+                        "item:equipped",
+                        {
+                            "or": [
+                                "item:damage:type:piercing",
+                                "item:damage:type:slashing"
+                            ]
+                        }
+                    ],
+                    "types": [
+                        "weapon"
+                    ]
+                },
+                "flag": "weapon",
+                "key": "ChoiceSet",
+                "prompt": "PF2E.SpecificRule.Prompt.Weapon"
+            },
+            {
+                "definition": [
+                    "item:id:{item|flags.pf2e.rulesSelections.weapon}"
+                ],
+                "key": "AdjustStrike",
+                "mode": "add",
+                "predicate": [
+                    "blood-and-spirit:holy"
+                ],
+                "property": "traits",
+                "value": "holy"
+            },
+            {
+                "definition": [
+                    "item:id:{item|flags.pf2e.rulesSelections}"
+                ],
+                "key": "AdjustStrike",
+                "mode": "add",
+                "predicate": [
+                    "blood-and-spirit:unholy"
+                ],
+                "property": "traits",
+                "value": "unholy"
+            },
+            {
+                "damageType": "spirit",
+                "diceNumber": 1,
+                "dieSize": "d6",
+                "key": "DamageDice",
+                "selector": "{item|flags.pf2e.rulesSelections.weapon}-damage"
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

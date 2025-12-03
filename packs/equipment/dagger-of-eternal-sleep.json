@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/consumables/other-consumables/dagger-of-eternal-sleep.webp",
     "name": "Dagger of Eternal Sleep",
     "system": {
+        "ammo": null,
         "baseItem": "dagger",
         "bonus": {
             "value": 1

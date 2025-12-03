@@ -3,6 +3,7 @@
     "img": "icons/weapons/hammers/hammer-double-engraved-gold.webp",
     "name": "Dwarven Thrower",
     "system": {
+        "ammo": null,
         "baseItem": "warhammer",
         "bonus": {
             "value": 2

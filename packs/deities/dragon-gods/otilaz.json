@@ -1,0 +1,60 @@
+{
+    "_id": "SHSMB0WvrJB4E8rU",
+    "folder": "sZFSeaV3PQMOzaiO",
+    "img": "systems/pf2e/icons/default-icons/deity.svg",
+    "name": "Otilaz",
+    "system": {
+        "attribute": [
+            "int",
+            "wis"
+        ],
+        "category": "deity",
+        "description": {
+            "value": "<p>The One of All was never born and thus will forever be untarnished by the fallibility that any existence would inevitably bring. It's held eternally in the memory of Sarshallatu as the purest of her clutch, as the one who would have graced creation and brought meaning to all that could be seen. The name she had chosen for the ill-fated soul that Dahak brought crashing down upon the head of Apsu was to be Otilaz. And Otilaz was to be perfect.</p>\n<p>In the fickle nature of the ineffable, Otilaz was not born—yet Otilaz does exist. Its quintessence stirred despite its material form being brutalized and cast limp upon the horrified visage of Apsu. It watched as Dahak gnawed upon one of its errant limbs and spat cursed words in a language that rattled the firmament and pulled fraying threads upon the Dark Tapestry. Otilaz looked upon its corpse, and it felt enlightened.</p>\n<p>It knew it was meant to exist. It knew its material form held meaning; it invoked horror in a father, sorrow in a mother, and that it was known to be catalyst for both to its sibling. It wondered why such eternal powers could feel this way toward something that never was, and in contemplation of this truth it glimpsed enlightenment upon the nature of impermanence.</p>\n<p><strong>Title</strong> The One Of All</p>\n<p><strong>Areas of Concern</strong> alchemy, death, impermanence</p>\n<p><strong>Edicts</strong> learn from observed mistakes, promote change and growth, accept the inevitable</p>\n<p><strong>Anathema</strong> seek immortality or enlightenment, become stagnant, believe yourself a learned master</p>\n<p><strong>Religious Symbol</strong> alchemical symbol of the ouroboros</p>\n<p><strong>Sacred Animal</strong> amphisbaena</p>\n<p><strong>Sacred Colors</strong> black, blue, red, white</p>"
+        },
+        "domains": {
+            "alternate": [
+                "abomination",
+                "wyrmkin",
+                "sorrow"
+            ],
+            "primary": [
+                "change",
+                "death",
+                "introspection",
+                "soul"
+            ]
+        },
+        "font": [
+            "harm",
+            "heal"
+        ],
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "sanctification": {
+            "modal": "can",
+            "what": [
+                "holy",
+                "unholy"
+            ]
+        },
+        "skill": [
+            "occultism"
+        ],
+        "spells": {
+            "1": "Compendium.pf2e.spells-srd.Item.Phantom Pain",
+            "3": "Compendium.pf2e.spells-srd.Item.Curse of Lost Time",
+            "8": "Compendium.pf2e.spells-srd.Item.Canticle of Everlasting Grief"
+        },
+        "traits": {},
+        "weapons": [
+            "jaws",
+            "mace"
+        ]
+    },
+    "type": "deity"
+}

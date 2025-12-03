@@ -3,6 +3,7 @@
     "img": "icons/weapons/wands/wand-carved-pink.webp",
     "name": "Guardian Staff (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

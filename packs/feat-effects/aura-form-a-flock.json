@@ -1,0 +1,62 @@
+{
+    "_id": "wdOBAcEkC7L0NdJ8",
+    "img": "icons/creatures/abilities/wing-batlike-red-pink.webp",
+    "name": "Aura: Form a Flock",
+    "system": {
+        "description": {
+            "value": "<p>Granted by Form a Flock</p>\n<p>You gain a 10-foot aura, 25 temporary Hit Points, and you gain weakness 5 to area and splash damage. Enemies in the aura are dazzled.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 13
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [
+            {
+                "key": "TempHP",
+                "value": 25
+            },
+            {
+                "key": "Weakness",
+                "type": "area-damage",
+                "value": 5
+            },
+            {
+                "key": "Weakness",
+                "type": "splash-damage",
+                "value": 5
+            },
+            {
+                "effects": [
+                    {
+                        "affects": "enemies",
+                        "uuid": "Compendium.pf2e.feat-effects.Item.Effect: Form a Flock"
+                    }
+                ],
+                "key": "Aura",
+                "radius": 10
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

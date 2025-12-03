@@ -3,6 +3,7 @@
     "img": "icons/commodities/materials/material-feathers-violet.webp",
     "name": "Phoenix Fighting Fan",
     "system": {
+        "ammo": null,
         "baseItem": "fighting-fan",
         "bonus": {
             "value": 0

@@ -1,0 +1,32 @@
+{
+    "_id": "FRIgZwQtHqp1rEo3",
+    "folder": "O007xPgLH8FWD7A2",
+    "img": "systems/pf2e/icons/actions/OneAction.webp",
+    "name": "(Horned Dragon) Horn Projectile",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p><strong>Frequency</strong> once per round</p><hr /><p><strong>Effect</strong> The dragon hurls a fragment of its horn at a target within 40 feet. The target takes the same damage as the dragon's horn Strike and must attempt a @Check[reflex|options:damaging-effect,inflicts:immobilized] save.</p><hr /><p><strong>Critical Success</strong> The target takes no damage.</p>\n<p><strong>Success</strong> The target takes half damage.</p>\n<p><strong>Failure</strong> The target takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.Immobilized] as the horn fragment pins them to the nearest surface.</p>\n<p><strong>Critical Failure</strong> As failure, but the target takes double damage and @Damage[2d6[persistent,bleed]] damage as the fragment pierces their body.</p>"
+        },
+        "frequency": {
+            "max": 1,
+            "per": "round"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "action"
+}

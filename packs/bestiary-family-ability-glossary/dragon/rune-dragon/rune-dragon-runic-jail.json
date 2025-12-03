@@ -1,0 +1,31 @@
+{
+    "_id": "MKeRtn8lAPs098qk",
+    "folder": "B3dchd9VcSYcfPvl",
+    "img": "systems/pf2e/icons/actions/OneAction.webp",
+    "name": "(Rune Dragon) Runic Jail",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 1
+        },
+        "category": "offensive",
+        "description": {
+            "gm": "<p><strong>Ancient Rune Dragon</strong> As adult rune dragon, but the area is a @Template[type:burst|distance:20].</p><p><strong>Rune Archdragon</strong> As adult rune dragon, but the area is a @Template[type:burst|distance:30].</p>",
+            "value": "<p>The rune dragon conjures a prison that promises pain to those within and those who try to escape. The dragon creates a runic jail in a @Template[type:burst|distance:10] up to 60 feet away. The area is difficult terrain and creatures outside the jail become @UUID[Compendium.pf2e.conditionitems.Item.Concealed] to creatures within it. If a creature uses a move action to leave the runic jail, they gain a detonating rune. The runic jail lasts for 1 round, but a creature adjacent to the jail, but not within it, can use an Interact action to remove the rune early.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": [
+                "arcane"
+            ]
+        }
+    },
+    "type": "action"
+}

@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/specific-magic-weapons/four-ways-dogslicer.webp",
     "name": "Four-Ways Dogslicer",
     "system": {
+        "ammo": null,
         "baseItem": "dogslicer",
         "bonus": {
             "value": 0

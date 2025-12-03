@@ -3,6 +3,7 @@
     "img": "icons/weapons/staves/staff-orante-gold.webp",
     "name": "Spellstriker Staff",
     "system": {
+        "ammo": null,
         "baseItem": "staff",
         "bonus": {
             "value": 0

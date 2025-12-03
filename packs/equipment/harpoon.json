@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-simple-barbed.webp",
     "name": "Harpoon",
     "system": {
+        "ammo": null,
         "baseItem": "harpoon",
         "bonus": {
             "value": 0

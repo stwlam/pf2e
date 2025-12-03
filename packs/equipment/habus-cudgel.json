@@ -3,6 +3,7 @@
     "img": "icons/weapons/clubs/club-barbed.webp",
     "name": "Habu's Cudgel",
     "system": {
+        "ammo": null,
         "baseItem": "club",
         "bonus": {
             "value": 0

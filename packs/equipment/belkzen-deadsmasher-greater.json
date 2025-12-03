@@ -3,6 +3,7 @@
     "img": "icons/weapons/maces/mace-round-spiked-black.webp",
     "name": "Belkzen Deadsmasher (Greater)",
     "system": {
+        "ammo": null,
         "baseItem": "morningstar",
         "bonus": {
             "value": 0

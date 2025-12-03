@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/bec-de-corbin.webp",
     "name": "Bec de Corbin",
     "system": {
+        "ammo": null,
         "baseItem": "bec-de-corbin",
         "bonus": {
             "value": 0

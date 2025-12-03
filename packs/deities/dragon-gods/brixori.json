@@ -1,0 +1,50 @@
+{
+    "_id": "ColsorVmocw5Plmg",
+    "folder": "sZFSeaV3PQMOzaiO",
+    "img": "systems/pf2e/icons/default-icons/deity.svg",
+    "name": "Brixori",
+    "system": {
+        "attribute": [
+            "int",
+            "wis"
+        ],
+        "category": "deity",
+        "description": {
+            "value": "<p>Born the smallest and weakest of her clutch, Brixori was often teased and bullied by her other siblings, none more so than her violent brother Dahak. Dahak left Brixori alive when he tore his other siblings asunder, either out of piteous contempt or because he simply forgot she existed—Brixori has never been clear on which.</p>\n<p>As a young dragon, Brixori sought solace in uncovering esoteric knowledge from the hidden recesses of the multiverse. Through years of rigorous study and unwavering determination, Brixori's command over occult magic grew formidable. She mastered the art of communing with spirits, bending shadows to her will, and invoking ancient rites that could alter the fabric of reality itself.</p>\n<p>Though her power is great, Brixori prefers to remain in the shadows of her other siblings. She considers the libraries of Golarion her true hoard and often uses a humanoid avatar to spend her days among the university stacks. Brixori feels more comfortable conversing with mortals in this form, preferring quiet locations and conversations held in hushed voices. For those wise enough to see through her disguise, she is a gentle and generous deity. For those foolish enough to cross her, her wrath is swift and severe.</p>\n<p>Brixori's influence extends beyond her fellow dragons, touching the lives of mortals who seek her guidance in the occult arts. She is beacon for those who yearn for knowledge and power beyond the mundane, a patron of the mystical and the supernatural. Her followers, a diverse assembly of witches, oracles, and scholars, revere her not only for her power, but for her journey from underestimated runt to a goddess of unparalleled occult mastery.</p>\n<p><strong>Title</strong> The Wayward Sister</p>\n<p><strong>Areas of Concern</strong> libraries, the supernatural, underdogs</p>\n<p><strong>Edicts</strong> pursue knowledge even in the most unusual places, seek to understand that which cannot be explained, show kindness to those who are weaker than the rest</p>\n<p><strong>Anathema</strong> underestimate an enemy or an ally, treat those weaker than you unkindly</p>\n<p><strong>Religious Symbol</strong> a deep purple, gem-encrusted tome</p>\n<p><strong>Sacred Animal</strong> dragonfly</p>\n<p><strong>Sacred Colors</strong> purple, black, silver</p>"
+        },
+        "domains": {
+            "alternate": [],
+            "primary": [
+                "glyph",
+                "introspection",
+                "knowledge",
+                "magic"
+            ]
+        },
+        "font": [
+            "harm",
+            "heal"
+        ],
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "sanctification": null,
+        "skill": [
+            "arcana"
+        ],
+        "spells": {
+            "1": "Compendium.pf2e.spells-srd.Item.Déjà Vu",
+            "3": "Compendium.pf2e.spells-srd.Item.Threefold Aspect",
+            "5": "Compendium.pf2e.spells-srd.Item.Summon Dragon",
+            "8": "Compendium.pf2e.spells-srd.Item.Quandary"
+        },
+        "traits": {},
+        "weapons": [
+            "starknife"
+        ]
+    },
+    "type": "deity"
+}

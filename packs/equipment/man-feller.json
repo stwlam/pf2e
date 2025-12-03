@@ -3,6 +3,7 @@
     "img": "icons/weapons/axes/axe-battle-blackened.webp",
     "name": "Man-Feller",
     "system": {
+        "ammo": null,
         "baseItem": "battle-axe",
         "bonus": {
             "value": 0

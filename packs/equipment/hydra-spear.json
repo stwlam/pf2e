@@ -3,6 +3,7 @@
     "img": "icons/weapons/polearms/spear-flared-steel.webp",
     "name": "Hydra Spear",
     "system": {
+        "ammo": null,
         "baseItem": "longspear",
         "bonus": {
             "value": 0

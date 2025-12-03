@@ -3,6 +3,7 @@
     "img": "systems/pf2e/icons/equipment/weapons/switchscythe.webp",
     "name": "Switchscythe",
     "system": {
+        "ammo": null,
         "baseItem": "switchscythe",
         "bonus": {
             "value": 0

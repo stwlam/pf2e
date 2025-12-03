@@ -3,6 +3,7 @@
     "img": "icons/weapons/thrown/bolas-steel.webp",
     "name": "Meteor Hammer",
     "system": {
+        "ammo": null,
         "baseItem": "meteor-hammer",
         "bonus": {
             "value": 0

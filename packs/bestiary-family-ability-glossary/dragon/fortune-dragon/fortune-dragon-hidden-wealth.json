@@ -1,0 +1,28 @@
+{
+    "_id": "bAYATJsZVkQw636K",
+    "folder": "NH4nclIWp1ne8aJQ",
+    "img": "systems/pf2e/icons/actions/TwoActions.webp",
+    "name": "(Fortune Dragon) Hidden Wealth",
+    "system": {
+        "actionType": {
+            "value": "action"
+        },
+        "actions": {
+            "value": 2
+        },
+        "category": "offensive",
+        "description": {
+            "value": "<p><strong>Requirements</strong> The dragon is adjacent to their hoard</p><hr /><p><strong>Effect</strong> The dragon retreats inside of a pile of riches to restore their energy. They [[/act hide]] within their pile of riches, using it as greater cover. The dragon regains one expended spontaneous spell slot. In addition, their Shield of Fortune regains Hit Points equal to the dragon's level.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Lost Omens Draconic Codex"
+        },
+        "rules": [],
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "action"
+}
