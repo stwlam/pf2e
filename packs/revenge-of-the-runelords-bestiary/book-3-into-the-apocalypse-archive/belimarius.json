@@ -3007,10 +3007,7 @@
                     }
                 ],
                 "slug": "spell-effect-hidden-mind",
-                "start": {
-                    "initiative": null,
-                    "value": -7084068
-                },
+                "start": {},
                 "tokenIcon": {
                     "show": true
                 },
