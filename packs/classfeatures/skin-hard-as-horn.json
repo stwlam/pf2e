@@ -73,6 +73,9 @@
                 "toggleable": true
             },
             {
+                "exceptions": [
+                    "critical-hits"
+                ],
                 "key": "Resistance",
                 "predicate": [
                     "divine-spark:skin-hard-as-horn"
