@@ -44,6 +44,18 @@
                 "mode": "upgrade",
                 "path": "system.skills.athletics.rank",
                 "value": 1
+            },
+            {
+                "key": "ActiveEffectLike",
+                "mode": "override",
+                "path": "flags.pf2e.gunslinger.slingersReload",
+                "value": "Compendium.pf2e.actionspf2e.Item.Clear a Path"
+            },
+            {
+                "key": "ActiveEffectLike",
+                "mode": "override",
+                "path": "flags.pf2e.gunslinger.initialDeed",
+                "value": "Compendium.pf2e.actionspf2e.Item.Living Fortification"
             }
         ],
         "traits": {

@@ -44,6 +44,18 @@
                 "mode": "upgrade",
                 "path": "system.skills.acrobatics.rank",
                 "value": 1
+            },
+            {
+                "key": "ActiveEffectLike",
+                "mode": "override",
+                "path": "flags.pf2e.gunslinger.slingersReload",
+                "value": "Compendium.pf2e.actionspf2e.Item.Reloading Strike"
+            },
+            {
+                "key": "ActiveEffectLike",
+                "mode": "override",
+                "path": "flags.pf2e.gunslinger.initialDeed",
+                "value": "Compendium.pf2e.actionspf2e.Item.Into the Fray"
             }
         ],
         "traits": {

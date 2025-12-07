@@ -44,6 +44,18 @@
                     "class:gunslinger"
                 ],
                 "uuid": "Compendium.pf2e.actionspf2e.Item.Touch and Go"
+            },
+            {
+                "key": "ActiveEffectLike",
+                "mode": "override",
+                "path": "flags.pf2e.gunslinger.slingersReload",
+                "value": "Compendium.pf2e.actionspf2e.Item.Touch and Go"
+            },
+            {
+                "key": "ActiveEffectLike",
+                "mode": "override",
+                "path": "flags.pf2e.gunslinger.initialDeed",
+                "value": "Compendium.pf2e.actionspf2e.Item.Spring the Trap"
             }
         ],
         "traits": {

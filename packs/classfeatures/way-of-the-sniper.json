@@ -44,6 +44,18 @@
                 "mode": "upgrade",
                 "path": "system.skills.stealth.rank",
                 "value": 1
+            },
+            {
+                "key": "ActiveEffectLike",
+                "mode": "override",
+                "path": "flags.pf2e.gunslinger.slingersReload",
+                "value": "Compendium.pf2e.actionspf2e.Item.Covered Reload"
+            },
+            {
+                "key": "ActiveEffectLike",
+                "mode": "override",
+                "path": "flags.pf2e.gunslinger.initialDeed",
+                "value": "Compendium.pf2e.actionspf2e.Item.One Shot, One Kill"
             }
         ],
         "traits": {

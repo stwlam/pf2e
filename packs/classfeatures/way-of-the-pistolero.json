@@ -60,6 +60,18 @@
                 "mode": "upgrade",
                 "path": "system.skills.{item|flags.pf2e.rulesSelections.skill}.rank",
                 "value": 1
+            },
+            {
+                "key": "ActiveEffectLike",
+                "mode": "override",
+                "path": "flags.pf2e.gunslinger.slingersReload",
+                "value": "Compendium.pf2e.actionspf2e.Item.Raconteur's Reload"
+            },
+            {
+                "key": "ActiveEffectLike",
+                "mode": "override",
+                "path": "flags.pf2e.gunslinger.initialDeed",
+                "value": "Compendium.pf2e.actionspf2e.Item.Ten Paces"
             }
         ],
         "traits": {
