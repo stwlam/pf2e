@@ -70,7 +70,7 @@
                     "compliant-gold-extra-reach",
                     "divine-spark:{item|flags.pf2e.rulesSelections.ikon}"
                 ],
-                "value": 10
+                "value": 5
             }
         ],
         "traits": {
