@@ -38,12 +38,12 @@
             "value": "reaction"
         },
         "traits": {
-            "rarity": "common",
+            "rarity": "uncommon",
             "traditions": [],
             "value": [
                 "cleric",
-                "focus",
-                "manipulate"
+                "concentrate",
+                "focus"
             ]
         }
     },
