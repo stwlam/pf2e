@@ -5,10 +5,10 @@
     "name": "Mythic Strike",
     "system": {
         "actionType": {
-            "value": "passive"
+            "value": "action"
         },
         "actions": {
-            "value": null
+            "value": 1
         },
         "category": "class",
         "description": {
