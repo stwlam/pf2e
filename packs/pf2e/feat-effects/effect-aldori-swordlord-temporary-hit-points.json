@@ -1,7 +1,7 @@
 {
     "_id": "eJyyBqrXLOE4R9JI",
     "img": "icons/skills/melee/blade-tip-orange.webp",
-    "name": "Effect: Aldori Swordlord (Tempory Hit Points)",
+    "name": "Effect: Aldori Swordlord (Temporary Hit Points)",
     "system": {
         "description": {
             "value": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.Aldori Swordlord]</p>\n<p>You gain temporary Hit Points.</p>"
@@ -23,6 +23,7 @@
         },
         "rules": [
             {
+                "adjustName": false,
                 "choices": [
                     {
                         "label": "PF2E.Check.Result.Degree.Attack.criticalSuccess",
