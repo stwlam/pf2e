@@ -3220,7 +3220,10 @@
             "type": "action"
         }
     ],
-    "name": "Despair Dragon (Ancient, Spellcaster)",
+    "name": "Despair Archdragon (Spellcaster)",
+    "prototypeToken": {
+        "name": "Despair Archdragon"
+    },
     "system": {
         "abilities": {
             "cha": {
