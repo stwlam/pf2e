@@ -3862,6 +3862,9 @@
                     "GreaterNote": "Whenever you use an action to Climb or Swim and you succeed at the Athletics check, add a +10-foot item bonus to the distance you move.",
                     "Note": "Whenever you use an action to Climb or Swim and you succeed at the Athletics check, add a +5-foot item bonus to the distance you move."
                 },
+                "Banner": {
+                    "CommandersBanner": "Magical Commander's Banner"
+                },
                 "BismuthArmor": {
                     "Note": "If the attack misses, the spell reflects toward the caster, who becomes @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round."
                 },
