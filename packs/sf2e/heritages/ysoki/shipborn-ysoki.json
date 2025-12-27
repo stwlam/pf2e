@@ -5,8 +5,8 @@
     "name": "Shipborn Ysoki",
     "system": {
         "ancestry": {
-            "name": "Ratfolk",
-            "slug": "ratfolk",
+            "name": "Ysoki",
+            "slug": "ysoki",
             "uuid": "Compendium.sf2e.ancestries.Item.P6PcVnCkh4XMdefw"
         },
         "description": {

@@ -1,0 +1,32 @@
+{
+    "_id": "7p9HtLzWBHc18JDW",
+    "folder": "bB5HzELH07UIY03Z",
+    "img": "systems/sf2e/icons/default-icons/heritage.svg",
+    "name": "Deep Ysoki",
+    "system": {
+        "ancestry": {
+            "name": "Ysoki",
+            "slug": "ysoki",
+            "uuid": "Compendium.sf2e.ancestries.Item.P6PcVnCkh4XMdefw"
+        },
+        "description": {
+            "value": "<p>You're accustomed to living in dark places, such as maintenance shafts, asteroids, and on distant moons and planetoids far from the sun. You gain darkvision.</p>"
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Starfinder Player Core"
+        },
+        "rules": [
+            {
+                "key": "Sense",
+                "selector": "darkvision"
+            }
+        ],
+        "traits": {
+            "rarity": "common",
+            "value": []
+        }
+    },
+    "type": "heritage"
+}
