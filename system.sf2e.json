@@ -460,5 +460,83 @@
             },
             "flags": {}
         }
+    ],
+    "packFolders": [
+        {
+            "name": "Bestiaries",
+            "sorting": "m",
+            "color": "#3b2524",
+            "packs": [
+                "alien-core-bestiary",
+                "guilt-of-the-grave-world-bestiary",
+                "rulebook-bestiaries",
+                "standalone-adventure-bestiary",
+                "starfinder-society-bestiary"
+            ]
+        },
+        {
+            "name": "Pregenerated PCs",
+            "sorting": "m",
+            "color": "#3b2524",
+            "packs": [
+                "iconics",
+                "paizo-pregens"
+            ]
+        },
+        {
+            "name": "Effects",
+            "sorting": "m",
+            "color": "#2f3339",
+            "packs": [
+                "bestiary-effects",
+                "conditions",
+                "equipment-effects",
+                "feat-effects",
+                "other-effects",
+                "spell-effects"
+            ]
+        },
+        {
+            "name": "Character Building",
+            "sorting": "m",
+            "color": "#343c33",
+            "packs": [
+                "actions",
+                "ancestries",
+                "ancestry-features",
+                "backgrounds",
+                "classes",
+                "class-features",
+                "deities",
+                "equipment",
+                "feats",
+                "heritages",
+                "spells"
+            ]
+        },
+        {
+            "name": "GM Tools",
+            "sorting": "m",
+            "color": "#181818",
+            "packs": [
+                "bestiary-ability-glossary-srd"
+            ]
+        },
+        {
+            "name": "Macros",
+            "sorting": "m",
+            "color": "#181818",
+            "packs": [
+                "macros"
+            ]
+        },
+        {
+            "name": "Journals",
+            "sorting": "m",
+            "color": "#181818",
+            "packs": [
+                "journals"
+            ]
+        }
     ]
 }
