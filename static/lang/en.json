@@ -609,7 +609,10 @@
                         "Title": "Regenerate attack"
                     },
                     "Label": "Generate Attack",
-                    "Notification": "Generated NPC attack: {attack}"
+                    "Notification": {
+                        "New": "Generated NPC attack: {attack}",
+                        "Relinked": "Relinked NPC Attack: {attack}"
+                    }
                 },
                 "Identification": {
                     "Skills": {
@@ -2602,6 +2605,7 @@
                         }
                     }
                 },
+                "LinkedWeapon": "Linked Weapon",
                 "Tags": {
                     "RangeN": "Range {n} Feet",
                     "RangeIncrementN": "Range Increment {n} Feet"
