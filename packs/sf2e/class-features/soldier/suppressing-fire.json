@@ -28,10 +28,10 @@
         "rules": [
             {
                 "key": "Note",
-                "predicate": [
-                    "item:trait:area"
+                "selector": [
+                    "area-fire-damage",
+                    "auto-fire-damage"
                 ],
-                "selector": "ranged-strike-damage",
                 "text": "SF2E.SpecificRule.Soldier.SuppressingFire.Note",
                 "title": "{item|name}"
             }

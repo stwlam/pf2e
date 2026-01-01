@@ -7434,7 +7434,7 @@
                 },
                 "Trooper": {
                     "CoordinatedFire": {
-                        "Note": "Your target becomes @UUID[Compendium.sf2e-anachronism.conditions.enA7BxAjBb7ns1iF]{Suppressed} until the end of your next turn."
+                        "Note": "Your target becomes @UUID[Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF]{Suppressed} until the end of your next turn."
                     }
                 }
             },
@@ -7497,7 +7497,7 @@
             },
             "Android": {
                 "MachineSaboteur": {
-                    "Note": "The target becomes @UUID[Compendium.sf2e-anachronism.conditions.Item.6A2QDy8wRGCVQsSd]{Glitching 1}."
+                    "Note": "The target becomes @UUID[Compendium.sf2e.conditions.Item.6A2QDy8wRGCVQsSd]{Glitching 1}."
                 }
             },
             "Astrazoan": {
@@ -7551,7 +7551,7 @@
             },
             "Envoy": {
                 "CutEmDeep": {
-                    "Note": "When you successfully Demoralize the target of your @UUID[Compendium.sf2e-anachronism.actions.Item.cmCtfURzpbzkxWsy]{Get 'Em!}, the target doesn't become immune to your further attempts to Demoralize them."
+                    "Note": "When you successfully Demoralize the target of your @UUID[Compendium.sf2e.actions.Item.cmCtfURzpbzkxWsy]{Get 'Em!}, the target doesn't become immune to your further attempts to Demoralize them."
                 },
                 "Directive": {
                     "LeadByExample": {
@@ -7560,7 +7560,7 @@
                     }
                 },
                 "EffortlessInfluencer": {
-                    "Note": "<p>When you succeed at a check with Deception, Diplomacy, or Intimidation, allies within 60 feet who witnessed your success gain a +1 status bonus to the next check they attempt with that skill within 1 minute (or a +2 bonus if your check was a critical success).</p><p>@UUID[Compendium.sf2e-anachronism.feat-effects.Item.ZQM4vfHEKgxvNJik]{Effect: Effortless Influencer}</p>"
+                    "Note": "<p>When you succeed at a check with Deception, Diplomacy, or Intimidation, allies within 60 feet who witnessed your success gain a +1 status bonus to the next check they attempt with that skill within 1 minute (or a +2 bonus if your check was a critical success).</p><p>@UUID[Compendium.sf2e.feat-effects.Item.ZQM4vfHEKgxvNJik]{Effect: Effortless Influencer}</p>"
                 },
                 "GetEm": {
                     "LeadByExample": {
@@ -7568,9 +7568,9 @@
                     }
                 },
                 "HangInThere": {
-                    "CriticalSuccess": "The target gains temporary Hit Points equal to double their level plus your Charisma modifier. @UUID[Compendium.sf2e-anachronism.feat-effects.Item.B4JhFkbk5WHmWcOZ]{Effect: Hang In There!}",
+                    "CriticalSuccess": "The target gains temporary Hit Points equal to double their level plus your Charisma modifier. @UUID[Compendium.sf2e.feat-effects.Item.B4JhFkbk5WHmWcOZ]{Effect: Hang In There!}",
                     "Prompt": "What proficiency DC was used?",
-                    "Success": "The target gains temporary Hit Points their level plus your Charisma modifier. @UUID[Compendium.sf2e-anachronism.feat-effects.Item.B4JhFkbk5WHmWcOZ]{Effect: Hang In There!}"
+                    "Success": "The target gains temporary Hit Points their level plus your Charisma modifier. @UUID[Compendium.sf2e.feat-effects.Item.B4JhFkbk5WHmWcOZ]{Effect: Hang In There!}"
                 },
                 "HiddenAgenda": {
                     "ToggleLabel": "Save against thought-or-emotion-revealing effect"
@@ -7579,7 +7579,7 @@
                     "Prompt": "Select a leadership style."
                 },
                 "PardonMe": {
-                    "Note": "When you successfully Tumble Through using Deception, the foe whose space you passed through is @UUID[Compendium.sf2e-anachronism.conditions.Item.enA7BxAjBb7ns1iF]{Suppressed} until the end of its next turn."
+                    "Note": "When you successfully Tumble Through using Deception, the foe whose space you passed through is @UUID[Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF]{Suppressed} until the end of its next turn."
                 },
                 "SavvyInfluencer": {
                     "Note": "<p>The first time per day when you roll a natural 1 on a Deception, Diplomacy, or Intimidation check, you don't automatically reduce your degree of success (you get a critical failure only if your result is 10 lower than the DC).</p>"
@@ -7708,7 +7708,7 @@
                     "Alteration": "If you cast this spell with only 1 target, you gain electricity resistance equal to half your level (minimum 1) until the end of your next turn."
                 },
                 "GelidBite": {
-                    "Note": "On a critical hit, the target is also @UUID[Compendium.sf2e-anachronism.conditions.Item.enA7BxAjBb7ns1iF]{Suppressed} until the end of your next turn, unless it succeeds at a @Check[fortitude|against:class-spell] save against your class DC or spell DC, whichever is higher."
+                    "Note": "On a critical hit, the target is also @UUID[Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF]{Suppressed} until the end of your next turn, unless it succeeds at a @Check[fortitude|against:class-spell] save against your class DC or spell DC, whichever is higher."
                 }
             },
             "Kasatha": {
@@ -7730,14 +7730,14 @@
             "Mystic": {
                 "Connection": {
                     "Akashic": {
-                        "AdvancedEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.z0Spgrf92nmaqjCW] focus spell.",
-                        "GreaterEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.CjVOXjuvvTJqC7AD] focus spell.",
+                        "AdvancedEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.z0Spgrf92nmaqjCW]{Akashic Assistant} focus spell.",
+                        "GreaterEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.CjVOXjuvvTJqC7AD]{Data Drain} focus spell.",
                         "Harmony": "When you Transfer Vitality, the target receives a psychic download from the Akashic Record and can immediately attempt to @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge} as a reaction. This doesn't trigger any special abilities, reactions, or free actions that trigger when a creature uses Recall Knowledge.",
-                        "InitialEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.mAu69GVbFKYzQM5a] focus spell.",
+                        "InitialEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.mAu69GVbFKYzQM5a]{Akashic Fount} focus spell.",
                         "PerfectHarmony": "You create an extradimensional memory palace that functions as @UUID[Compendium.pf2e.spells-srd.Item.vPWMEyVTreMOoFnm]. Creating a door to the demiplane takes 1 minute. The memory palace keeps the same layout each time you access it, adjustable during daily preparations. Each phantasmal minion in your memory palace functions as an akashic assistant (like those created by the *akashic assistant* spell)."
                     },
                     "Elemental": {
-                        "AdvancedEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.5apI8Yamauo02VYR] epiphany spell.",
+                        "AdvancedEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.5apI8Yamauo02VYR]{Elemental Barrier} epiphany spell.",
                         "ElementalBarrier": {
                             "Air": "Defending against electricity or sonic damage",
                             "Earth": "Defending against bludgeoning or piercing damage",
@@ -7746,11 +7746,11 @@
                             "Water": "Defending against cold damage",
                             "Wood": "Defending against poison damage"
                         },
-                        "GreaterEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.DZOjyZBZUrzkw5q2] epiphany spell.",
+                        "GreaterEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.DZOjyZBZUrzkw5q2]{Elemental Nova} epiphany spell.",
                         "Harmony": {
                             "Addendum": "When you Transfer Vitality, choose an elemental trait: air, earth, fire, metal, water, or wood. If one or more of your elemental epiphanies are active, you must select the elemental trait you chose as part of casting those spells. Until the end of their next turn, the target’s next Strike deals damage based on the chosen trait (your choice), rather than its typical damage type: electricity or sonic for air, bludgeoning or piercing for earth, acid or slashing for metal, fire for fire, bludgeoning or cold for water, or piercing or poison for wood."
                         },
-                        "InitialEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.d5dmu4HZ3YyrwcaF] epiphany spell.",
+                        "InitialEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.d5dmu4HZ3YyrwcaF]{Elemental Weapon} epiphany spell.",
                         "PerfectHarmony": {
                             "Addendum": "When you heal a bonded ally with Transfer Vitality, your ally gains resistance equal to half your mystic level to the two damage types chosen during your daily preparations until the beginning of your next turn.",
                             "LabelOne": "Perfect Harmony Resistance",
@@ -7758,12 +7758,12 @@
                         }
                     },
                     "Healing": {
-                        "AdvancedEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.zzi7LUKxKNWr5GsG] focus spell.",
-                        "GreaterEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.MTulATAiOZfZNQ9d] focus spell.",
+                        "AdvancedEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.zzi7LUKxKNWr5GsG]{Vitality Nova} focus spell.",
+                        "GreaterEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.MTulATAiOZfZNQ9d]{Vital Rebirth} focus spell.",
                         "Harmony": {
                             "Addendum": "When you Transfer Vitality, attempt to counteract one affliction affecting the target, or attempt to counteract one effect of your choice imposing one of the following conditions on the target: @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded}, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy}, @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}, @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened}, @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled}, @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened}."
                         },
-                        "InitialEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.d7Mj4nUQe8wg1mV7] focus spell.",
+                        "InitialEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.d7Mj4nUQe8wg1mV7]{Infusion} focus spell.",
                         "PerfectHarmony": {
                             "AddendumCounteract": "In addition, if you didn't counteract the effect, but you would've if its counteract rank were 2 lower, instead suppress the effect until the beginning of your next turn. The effect's duration doesn't elapse while it's suppressed.",
                             "AddendumExpanded": "When you Transfer Vitality, attempt to counteract one affliction affecting the target, or attempt to counteract one effect of your choice imposing one of the following conditions on the target: @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded}, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy}, @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}, @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR]{Deafened}, @UUID[Compendium.pf2e.conditionitems.Item.3uh1r86TzbQvosxv]{Doomed}, @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained}, @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled}, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}, @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened}, and @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned}."
@@ -7771,25 +7771,25 @@
                     },
                     "Prompt": "Select a connection.",
                     "Rhythm": {
-                        "AdvancedEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.AlYzxLKWZujnzsjJ] focus spell.",
-                        "GreaterEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.Ii8adgcCejAovsNv] focus spell.",
+                        "AdvancedEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.AlYzxLKWZujnzsjJ]{Shuffle Repeat} focus spell.",
+                        "GreaterEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.Ii8adgcCejAovsNv]{Remix} focus spell.",
                         "Harmony": {
                             "Addendum": "When you Transfer Vitality, you can extend the duration of any active epiphany from the rhythm connection by 1 round."
                         },
-                        "InitialEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.smCC1LNhMb7Z1lrU] focus spell.",
+                        "InitialEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.smCC1LNhMb7Z1lrU]{Anthem} focus spell.",
                         "PerfectHarmony": {
                             "Addendum": "The first time each round you Transfer Vitality, the target who regained Hit Points can Stride as a free action. This has the traversal trait."
                         }
                     },
                     "Shadow": {
-                        "AdvancedEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.rluzzX2ml4yFWnYw] focus spell.",
-                        "GreaterEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.pgjlPNfXCpEYyLVu] focus spell.",
+                        "AdvancedEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.rluzzX2ml4yFWnYw]{Cloying Shadows} focus spell.",
+                        "GreaterEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.pgjlPNfXCpEYyLVu]{Shadow Prison} focus spell.",
                         "Harmony": {
                             "Addendum": "When you Transfer Vitality, the target's shadow darkens and swells, reducing bright light within a @Template[type:emanation|distance:10] of the target to dim light. This is a form of magical darkness and can overcome non-magical light sources or attempt to counteract magical light. The target becomes @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed} while in this dim light and can use the concealed condition to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa]{Hide}. This lasts until the end of your next turn."
                         },
-                        "InitialEpiphany": "You learn the @UUID[Compendium.sf2e-anachronism.spells.Item.uh9Br4yrKvJA6zq0] focus spell.",
+                        "InitialEpiphany": "You learn the @UUID[Compendium.sf2e.spells.Item.uh9Br4yrKvJA6zq0]{Shadow Snap} focus spell.",
                         "PerfectHarmony": {
-                            "Addendum": "When you Transfer Vitality, the target can use @UUID[Compendium.sf2e-anachronism.actions.Item.u9NU2bULHg3S5FaP]{Umbral Stride} once before the end of their next turn."
+                            "Addendum": "When you Transfer Vitality, the target can use @UUID[Compendium.sf2e.actions.Item.u9NU2bULHg3S5FaP]{Umbral Stride} once before the end of their next turn."
                         }
                     }
                 },
@@ -7841,8 +7841,8 @@
                 "Specialization": {
                     "Infiltrator": {
                         "EnhancedExploit": {
-                            "FreeActionNote": "You can @UUID[Compendium.sf2e-anachronism.actions.Item.qbyer2woEdGXZzoR]{Sabotage} as a free action whenever you critically hit a tech creature with a melee or ranged attack, targeting the triggering creature.",
-                            "ReactionNote": "You can @UUID[Compendium.sf2e-anachronism.actions.Item.qbyer2woEdGXZzoR]{Sabotage} as a reaction whenever a tech creature or a creature using a tech weapon critically fails a melee attack roll against you, targeting the triggering creature or weapon."
+                            "FreeActionNote": "You can @UUID[Compendium.sf2e.actions.Item.qbyer2woEdGXZzoR]{Sabotage} as a free action whenever you critically hit a tech creature with a melee or ranged attack, targeting the triggering creature.",
+                            "ReactionNote": "You can @UUID[Compendium.sf2e.actions.Item.qbyer2woEdGXZzoR]{Sabotage} as a reaction whenever a tech creature or a creature using a tech weapon critically fails a melee attack roll against you, targeting the triggering creature or weapon."
                         }
                     },
                     "Prompt": "Select a specialization.",
@@ -7855,7 +7855,7 @@
                 }
             },
             "Promession": {
-                "Note": "The target gets a result one degree of success worse than it rolled on its Fortitude save. @UUID[Compendium.sf2e-anachronism.spell-effects.Item.Mjzoqg7MpTst3koD]{Spell Effect: Promession}"
+                "Note": "The target gets a result one degree of success worse than it rolled on its Fortitude save. @UUID[Compendium.sf2e.spell-effects.Item.Mjzoqg7MpTst3koD]{Spell Effect: Promession}"
             },
             "Prompt": {
                 "BiotechAugmentation": "Select a biotech augmentation.",
@@ -7913,7 +7913,7 @@
                     "PhotonNote": "If the Strike is a critical success, the target must succeed at a @Check[fortitude|against:solarian] save against your class DC or become @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1} until the start of its turn."
                 },
                 "ShatteringImpact": {
-                    "GravitonNote": "On a hit, the target takes a –10-foot status penalty to Speed until the start of your next turn. @UUID[Compendium.sf2e-anachronism.feat-effects.Item.Ll3uZdiSqaszP3fn]{Effect: Shattering Impact}"
+                    "GravitonNote": "On a hit, the target takes a –10-foot status penalty to Speed until the start of your next turn. @UUID[Compendium.sf2e.feat-effects.Item.Ll3uZdiSqaszP3fn]{Effect: Shattering Impact}"
                 },
                 "SolarFlare": {
                     "Graviton": {
@@ -7922,20 +7922,7 @@
                     "Label": "Solar Flare"
                 },
                 "SolarShield": {
-                    "Description": {
-                        "PartOne": "Your solar manifestations now include the ability to create a small shield of celestial energy. This energy shield does not require a hand to use, as it floats near you. You can Raise a Shield, giving you a +1 circumstance bonus to AC until the start of your next turn.",
-                        "PartTwo": "While the shield is raised, you can use the Shield Block reaction with your shield. The shield has 5 + 2 × your level Hit Points and no Hardness. Your shield can't be broken, but if it's destroyed, you cannot manifest a new shield for 10 minutes. If your shield vanishes due to you losing attunement, when you Attune to reform it, the shield returns with however many Hit Points it previously had. The shield regains all its lost Hit Points during your daily preparations or whenever you rest for at least 10 minutes, even if it's been destroyed."
-                    },
-                    "Effect": "@UUID[Compendium.sf2e-anachronism.feat-effects.Item.q5W7fV1wXvqBFxt8]{Effect: Solar Shield}",
-                    "GravitonAttuned": {
-                        "Label": "Graviton-Attuned",
-                        "Note": "Your shield has Hardness equal to half your level rounded up."
-                    },
-                    "Label": "Solar Shield",
-                    "PhotonAttuned": {
-                        "Label": "Photon-Attuned",
-                        "Note": "If your shield is destroyed, adjacent enemies must succeed at a @Check[type:fortitude|dc:resolve(@actor.system.attributes.classDC.value)] save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round. On a critical failure they are instead @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round."
-                    }
+                    "Label": "Solar Shield"
                 },
                 "SolarShot": {
                     "Label": "Solar Shot"
@@ -7963,13 +7950,13 @@
                     "ProficiencyLabel": "Solar Flare & Solar Weapon"
                 },
                 "StellarResilience": {
-                    "Note": "When you roll a success on a Fortitude or Will save against a mental or incapacitation effect, you can @UUID[Compendium.sf2e-anachronism.actions.Item.3xDhpvORBmK6AtcI]{Attune} as a free action."
+                    "Note": "When you roll a success on a Fortitude or Will save against a mental or incapacitation effect, you can @UUID[Compendium.sf2e.actions.Item.3xDhpvORBmK6AtcI]{Attune} as a free action."
                 }
             },
             "Soldier": {
                 "FightingStyle": {
                     "ArmorStorm": {
-                        "Note": "When you successfully Disarm, Grapple, Reposition, Shove, or Trip a creature, it becomes @UUID[Compendium.sf2e-anachronism.conditions.Item.enA7BxAjBb7ns1iF]{Suppressed} until the start of your next turn."
+                        "Note": "When you successfully Disarm, Grapple, Reposition, Shove, or Trip a creature, it becomes @UUID[Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF]{Suppressed} until the start of your next turn."
                     },
                     "Prompt": "Select a fighting style."
                 },
@@ -7979,7 +7966,7 @@
                     "ToggleLabel": "Intimidating Taunt — Reduce Save DCs"
                 },
                 "SuppressingFire": {
-                    "Note": "If you make an attack with a weapon that has the area trait, enemies in the affected area who fail their save against your attack become @UUID[Compendium.sf2e-anachronism.conditions.Item.enA7BxAjBb7ns1iF]{Suppressed} until the start of your next turn."
+                    "Note": "If you make an attack with a weapon that has the area trait, enemies in the affected area who fail their save against your attack become @UUID[Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF]{Suppressed} until the start of your next turn."
                 }
             },
             "Spellshape": {
