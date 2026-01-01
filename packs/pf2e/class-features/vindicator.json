@@ -219,6 +219,32 @@
                 ]
             },
             {
+                "itemType": "action",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:slug:hunt-prey"
+                ],
+                "priority": 130,
+                "property": "description",
+                "value": [
+                    {
+                        "text": "PF2E.SpecificRule.Ranger.Vindicator.BenefitsAddendum"
+                    },
+                    {
+                        "predicate": [
+                            {
+                                "or": [
+                                    "feat:animal-companion-ranger",
+                                    "feat:shared-prey"
+                                ]
+                            }
+                        ],
+                        "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Share Hunter's Edge (Vindication)]"
+                    }
+                ]
+            },
+            {
                 "definition": [
                     "item:deity-favored",
                     "item:category:advanced"

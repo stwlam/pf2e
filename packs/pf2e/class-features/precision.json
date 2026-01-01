@@ -66,7 +66,7 @@
                 "property": "description",
                 "value": [
                     {
-                        "text": "{item|description}"
+                        "text": "PF2E.SpecificRule.Ranger.HuntersEdge.Precision.Description"
                     },
                     {
                         "predicate": [
@@ -91,6 +91,47 @@
                         "predicate": [
                             "feat:masterful-companion",
                             "item:slug:animal-companion-ranger"
+                        ],
+                        "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Share Hunter's Edge (Precision, Masterful)]"
+                    }
+                ]
+            },
+            {
+                "itemType": "action",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:slug:hunt-prey"
+                ],
+                "priority": 130,
+                "property": "description",
+                "value": [
+                    {
+                        "text": "PF2E.SpecificRule.Ranger.HuntersEdge.Precision.Description"
+                    },
+                    {
+                        "predicate": [
+                            {
+                                "or": [
+                                    "feat:animal-companion-ranger",
+                                    "feat:shared-prey"
+                                ]
+                            }
+                        ],
+                        "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Share Hunter's Edge (Precision)]"
+                    },
+                    {
+                        "predicate": [
+                            "feat:masterful-companion",
+                            "feature:masterful-hunter"
+                        ],
+                        "text": "PF2E.SpecificRule.Ranger.MasterfulHunter.Precision",
+                        "title": "PF2E.SpecificRule.Ranger.MasterfulHunter.Label"
+                    },
+                    {
+                        "predicate": [
+                            "feat:masterful-companion",
+                            "feature:masterful-hunter"
                         ],
                         "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Share Hunter's Edge (Precision, Masterful)]"
                     }

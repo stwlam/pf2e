@@ -5865,6 +5865,12 @@
                 }
             },
             "Ranger": {
+                "AnimalCompanion": {
+                    "HuntPreyAddendum": "When you Hunt Prey, your animal companion gains the action's benefits and your hunter's edge benefit if you have one."
+                },
+                "DoublePrey": {
+                    "HuntPreyAddendum": "When you use the Hunt Prey action, you can pick two creatures as your prey."
+                },
                 "FocusSpells": {
                     "GravityWeapon": {
                         "RollOptionLabel": "Gravity Weapon — First weapon Strike this round"
@@ -5877,26 +5883,38 @@
                 "HuntersEdge": {
                     "FirstAttack": "First attack on hunted prey this round",
                     "Flurry": {
+                        "Description": "Your multiple attack penalty for attacks against your hunted prey is –3 (–2 with an agile attack) on your second attack of the turn instead of –5, and –6 (–4 with an agile attack) on your third or subsequent attack of the turn, instead of –10.",
                         "Label": "Flurry"
                     },
                     "Outwit": {
+                        "Description": "You gain a +1 circumstance bonus to AC against your prey's attacks and a +2 circumstance bonus to Deception checks, Intimidation checks, Stealth checks, and any checks to Recall Knowledge about the prey.",
                         "Label": "Outwit"
                     },
                     "Precision": {
+                        "Description": "The first time you hit your hunted prey in a round, you also deal 1d8 additional precision damage. At 11th level, the extra damage increases to 2d8 precision damage, and at 19th level, the extra damage increases to 3d8 precision damage.",
                         "Label": "Precision",
                         "ToggleLabel": "Precision — Hit against Hunted Prey"
                     },
                     "Prompt": "Select a hunter's edge."
                 },
+                "MasterfulCompanion": {
+                    "HuntPreyAddendum": "When you Hunt Prey, your animal companion gains the masterful hunter benefit associated with your hunter's edge, rather than just your original hunter's edge benefit."
+                },
                 "MasterfulHunter": {
                     "Flurry": "If you have master proficiency with your weapon, your multiple attack penalty for attacks against your hunted prey is –2 (–1 with an agile weapon) on your second attack of the turn, and –4 (–2 with an agile weapon) on your third and subsequent attacks of the turn.",
                     "Label": "Masterful Hunter",
-                    "Outwit": "Your mastery of skills allows you to overwhelm your prey. If you have master proficiency in Deception, Intimidation, Stealth, or the skill you use to Recall Knowledge about your prey, increase the circumstance bonus against the prey with that skill from +2 to +4. If you have master proficiency with your armor, increase the circumstance bonus to AC against the prey from +1 to +2.",
-                    "Precision": "Your weapon mastery allows you to hit your prey's vital areas multiple times. The second time in a round you hit your hunted prey, you also deal 1d8 precision damage. At 19th level, your second hit in a round against your hunted prey deals 2d8 precision damage, and your third hit in a round against your hunted prey deals 1d8 precision damage."
+                    "Outwit": "If you have master proficiency in Deception, Intimidation, Stealth, or the skill you use to Recall Knowledge about your prey, increase the circumstance bonus against the prey with that skill from +2 to +4. If you have master proficiency with your armor, increase the circumstance bonus to AC against the prey from +1 to +2.",
+                    "Precision": "The second time in a round you hit your hunted prey, you also deal 1d8 precision damage. At 19th level, your second hit in a round against your hunted prey deals 2d8 precision damage, and your third hit in a round against your hunted prey deals 1d8 precision damage."
+                },
+                "SharedPrey": {
+                    "HuntPreyAddendum": "When you use Hunt Prey and select only one prey, you can grant your Hunt Prey benefits and hunter's edge to an ally in addition to gaining them yourself. The ally retains these benefits until you use Hunt Prey again."
                 },
                 "TheHarderTheyFall": {
                     "CriticalSuccess": "On a critical success, your target takes @Damage[(ternary(gte(@actor.system.skills.athletics.rank,3),4,2))d8[bludgeoning]] damage.",
                     "Success": "On a success, your target takes @Damage[(ternary(gte(@actor.system.skills.athletics.rank,3),2,1))d8[bludgeoning]] damage."
+                },
+                "TripleThreat": {
+                    "HuntPreyAddendum": "When you use Hunt Prey, you can designate three creatures as prey, designate two creatures as prey and share the effect with one ally (as Shared Prey), or designate one creature as prey and share the effect with two allies."
                 },
                 "Vindicator": {
                     "BenefitsAddendum": "You gain a +1 status bonus to your spell attack rolls against your hunted prey, and they take a –1 status penalty to their saving throws against divine spells you cast.",

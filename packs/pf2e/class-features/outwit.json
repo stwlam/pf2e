@@ -61,7 +61,7 @@
                 "property": "description",
                 "value": [
                     {
-                        "text": "{item|description}"
+                        "text": "PF2E.SpecificRule.Ranger.HuntersEdge.Outwit.Description"
                     },
                     {
                         "predicate": [
@@ -86,6 +86,47 @@
                         "predicate": [
                             "feat:masterful-companion",
                             "item:slug:animal-companion-ranger"
+                        ],
+                        "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Share Hunter's Edge (Outwit, Masterful)]"
+                    }
+                ]
+            },
+            {
+                "itemType": "action",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:slug:hunt-prey"
+                ],
+                "priority": 130,
+                "property": "description",
+                "value": [
+                    {
+                        "text": "PF2E.SpecificRule.Ranger.HuntersEdge.Outwit.Description"
+                    },
+                    {
+                        "predicate": [
+                            {
+                                "or": [
+                                    "feat:animal-companion-ranger",
+                                    "feat:shared-prey"
+                                ]
+                            }
+                        ],
+                        "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Share Hunter's Edge (Outwit)]"
+                    },
+                    {
+                        "predicate": [
+                            "feat:masterful-companion",
+                            "feature:masterful-hunter"
+                        ],
+                        "text": "PF2E.SpecificRule.Ranger.MasterfulHunter.Outwit",
+                        "title": "PF2E.SpecificRule.Ranger.MasterfulHunter.Label"
+                    },
+                    {
+                        "predicate": [
+                            "feat:masterful-companion",
+                            "feature:masterful-hunter"
                         ],
                         "text": "@UUID[Compendium.pf2e.feat-effects.Item.Effect: Share Hunter's Edge (Outwit, Masterful)]"
                     }
