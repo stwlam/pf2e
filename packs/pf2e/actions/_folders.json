@@ -11,23 +11,23 @@
         "type": "Item"
     },
     {
-        "_id": "jd6nMs9azZDAnq0O",
+        "_id": "IyXSLzzPGuzFfpr7",
         "color": null,
         "description": "",
         "flags": {},
-        "folder": "rNNBdDwRx7hiA7HV",
-        "name": "Anadi",
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Apocalypse Rider",
         "sort": 0,
         "sorting": "a",
         "type": "Item"
     },
     {
-        "_id": "MC8XIGbjOtqV1Pak",
+        "_id": "NyTPPqxeQuLHPPux",
         "color": null,
         "description": "",
         "flags": {},
-        "folder": "rNNBdDwRx7hiA7HV",
-        "name": "Ardande",
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Assassin",
         "sort": 0,
         "sorting": "a",
         "type": "Item"
@@ -50,6 +50,50 @@
         "flags": {},
         "folder": "rNNBdDwRx7hiA7HV",
         "name": "Automaton",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "nDNsmNMkVFmYz1Ib",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Beast Gunner",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "81RnPONXJS1U9IEy",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Broken Chain",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "NN0dg0eYfDMqn5X8",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Campfire Chronicler",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "jylKrWU7fO2UAXfx",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Celebrity",
         "sort": 0,
         "sorting": "a",
         "type": "Item"
@@ -110,6 +154,17 @@
         "type": "Item"
     },
     {
+        "_id": "psFMPQTgLsdrlxCA",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Demolitionist",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
         "_id": "WQ7mJpu7COAQir3K",
         "color": null,
         "description": "",
@@ -138,6 +193,28 @@
         "flags": {},
         "folder": "rNNBdDwRx7hiA7HV",
         "name": "Dragonet",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "0Gh4DIYeP20ZcHzE",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Drake Rider",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "AlExEHveoONk8uRQ",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "pcrYSK7qHYMo6YmC",
+        "name": "Druid",
         "sort": 0,
         "sorting": "a",
         "type": "Item"
@@ -187,6 +264,17 @@
         "type": "Item"
     },
     {
+        "_id": "rTect3ab73RVqHyR",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Eternal Legend",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
         "_id": "7HMJ6QQwb1kqupMP",
         "color": null,
         "description": "",
@@ -198,12 +286,56 @@
         "type": "Item"
     },
     {
-        "_id": "k2hONFD7eKFtDmLz",
+        "_id": "BUd9fgASqIgKHnN9",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": null,
+        "name": "Familiar",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "mwIysNfulWPovHTa",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Field Propagandist",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "pACK4g0wLn3SClt3",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Folklorist",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "TCHnKfgqO82BW01c",
         "color": null,
         "description": "",
         "flags": {},
         "folder": "rNNBdDwRx7hiA7HV",
-        "name": "Faultspawn",
+        "name": "Ghoran",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "DSQs9bCVkmTdGi8P",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Ghost",
         "sort": 0,
         "sorting": "a",
         "type": "Item"
@@ -248,6 +380,28 @@
         "flags": {},
         "folder": "rNNBdDwRx7hiA7HV",
         "name": "Halfling",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "brncJgxU8ihqYVHM",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "SmhFb7wkyXL8hXLP",
+        "name": "Hexploration",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "Q4Lhr3grm4CLDYjv",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Hobgoblin",
         "sort": 0,
         "sorting": "a",
         "type": "Item"
@@ -319,12 +473,56 @@
         "type": "Item"
     },
     {
+        "_id": "qaCdtnSYA7bww5SW",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Kobold",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
         "_id": "4KZvSiPq52FGMRA5",
         "color": null,
         "description": "",
         "flags": {},
         "folder": "rNNBdDwRx7hiA7HV",
         "name": "Leshy",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "3lcRdMseyXRvv6vN",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "SmhFb7wkyXL8hXLP",
+        "name": "Ley Lines",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "L24vM0Pp8fBBfRcZ",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Lizardfolk",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "ALlJ3LrVzJ2mYICB",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Magaambyan Attendant",
         "sort": 0,
         "sorting": "a",
         "type": "Item"
@@ -341,12 +539,111 @@
         "type": "Item"
     },
     {
+        "_id": "tmAGySjeCemcGA5K",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Merfolk",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "UE2dQd3fjN79Wnem",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Minotaur",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
         "_id": "7vJAhZhScTykQUKB",
         "color": null,
         "description": "",
         "flags": {},
         "folder": "pcrYSK7qHYMo6YmC",
         "name": "Monk",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "aY6daKvlMjyRnPVr",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": null,
+        "name": "Mythic",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "aZ8xnneZUBb3jELm",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Necrologist",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "ODAhEVppdC3Ynul2",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "pcrYSK7qHYMo6YmC",
+        "name": "Oracle",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "ad9AvXmyYHKCV5qw",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Orc",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "azAKMVq16u79SF8E",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Palatine Detective",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "LbvOwDya6zCointV",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Poisoner",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "O945IITRzC7nCzrE",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Prophesied Monarch",
         "sort": 0,
         "sorting": "a",
         "type": "Item"
@@ -363,12 +660,34 @@
         "type": "Item"
     },
     {
+        "_id": "Eqw5pcssobn2SEkf",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "SmhFb7wkyXL8hXLP",
+        "name": "Psychic Duels",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
         "_id": "uHxlgOK7MByeLIda",
         "color": null,
         "description": "",
         "flags": {},
         "folder": "pcrYSK7qHYMo6YmC",
         "name": "Ranger",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "0nTNBUj3xrBYcRxi",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Red Mantis Assassin",
         "sort": 0,
         "sorting": "a",
         "type": "Item"
@@ -396,6 +715,39 @@
         "type": "Item"
     },
     {
+        "_id": "maoQvaIFbwzeLm5L",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Samsaran",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "J9XnOS0Cvz6zgzNa",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Scion of Domora",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "mbyY4IHblvI3wYlS",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "pcrYSK7qHYMo6YmC",
+        "name": "Shared",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
         "_id": "inVhNpeCG3bAX7em",
         "color": null,
         "description": "",
@@ -407,12 +759,56 @@
         "type": "Item"
     },
     {
+        "_id": "CqOTMfwP4I1jiGzX",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Skeleton",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "AwsKFaudDJHfmCAp",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Stalwart Defender",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
         "_id": "VnysSTMlRJ4WjAYT",
         "color": null,
         "description": "",
         "flags": {},
         "folder": null,
         "name": "Stamina",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "2kYZyGPPk9zHqABc",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Starlit Sentinel",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "WPRZ0LgiT9hH0MFI",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Stone Brawler",
         "sort": 0,
         "sorting": "a",
         "type": "Item"
@@ -451,6 +847,50 @@
         "type": "Item"
     },
     {
+        "_id": "00zjVW69GoS6cvJC",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "xDDEN7Q1D4SMWkMq",
+        "name": "Sylph",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "y1n7hF0rN7ufu3OW",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "xDDEN7Q1D4SMWkMq",
+        "name": "Talos",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "k2rUJchj08iJzdAw",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Tanuki",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "uepQRMpfbZJAY3wE",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Tengu",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
         "_id": "0wzDPkI2wF5fOax9",
         "color": null,
         "description": "",
@@ -468,6 +908,61 @@
         "flags": {},
         "folder": "RenzLUEAqPuVD50i",
         "name": "Timewracked",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "XogEeEEFgLttvzRp",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Tripkee",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "Rq1RbgN0ycXoECi8",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Undead Slayer",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "rkimsQjHmpHEx00d",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "xDDEN7Q1D4SMWkMq",
+        "name": "Undine",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "AJkCnWRXFAUszY52",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": null,
+        "name": "Vehicles",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "w5kG7lBSwJ5ZRFIU",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Venture-Gossip",
         "sort": 0,
         "sorting": "a",
         "type": "Item"
@@ -495,6 +990,17 @@
         "type": "Item"
     },
     {
+        "_id": "ca0YCoXA2qPtvOwf",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "pcrYSK7qHYMo6YmC",
+        "name": "Witch",
+        "sort": 0,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
         "_id": "csVjiZojfkVx6Oqc",
         "color": null,
         "description": "",
@@ -517,12 +1023,45 @@
         "type": "Item"
     },
     {
+        "_id": "mApYr7csdxE76Pm7",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "pcrYSK7qHYMo6YmC",
+        "name": "Barbarian",
+        "sort": 100000,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
         "_id": "3Xr4i27d0hSRO1dK",
         "color": null,
         "description": "",
         "flags": {},
         "folder": "RenzLUEAqPuVD50i",
         "name": "Draconic Acolyte",
+        "sort": 100000,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "k2hONFD7eKFtDmLz",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "xDDEN7Q1D4SMWkMq",
+        "name": "Faultspawn",
+        "sort": 100000,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "uzB55l7cLru7MQzL",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Nagaji",
         "sort": 100000,
         "sorting": "a",
         "type": "Item"
@@ -535,6 +1074,28 @@
         "folder": null,
         "name": "Spells",
         "sort": 100000,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "jd6nMs9azZDAnq0O",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "rNNBdDwRx7hiA7HV",
+        "name": "Anadi",
+        "sort": 200000,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "MC8XIGbjOtqV1Pak",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "xDDEN7Q1D4SMWkMq",
+        "name": "Ardande",
+        "sort": 200000,
         "sorting": "a",
         "type": "Item"
     },
@@ -704,17 +1265,6 @@
         "type": "Item"
     },
     {
-        "_id": "oly6OvEwWFQuUrXD",
-        "color": null,
-        "description": "",
-        "flags": {},
-        "folder": null,
-        "name": "Piloting",
-        "sort": 1000000,
-        "sorting": "a",
-        "type": "Item"
-    },
-    {
         "_id": "C3XTl2S0bnWPegXO",
         "color": null,
         "description": "",
@@ -792,12 +1342,12 @@
         "type": "Item"
     },
     {
-        "_id": "DjrR6yk8vvSyxJXS",
+        "_id": "xDDEN7Q1D4SMWkMq",
         "color": null,
         "description": "",
         "flags": {},
-        "folder": "RenzLUEAqPuVD50i",
-        "name": "Exorcist",
+        "folder": null,
+        "name": "Heritage",
         "sort": 1400000,
         "sorting": "a",
         "type": "Item"
@@ -1162,6 +1712,17 @@
         "folder": "RenzLUEAqPuVD50i",
         "name": "Bullet Dancer",
         "sort": 4700000,
+        "sorting": "a",
+        "type": "Item"
+    },
+    {
+        "_id": "Kw6dzHmPRyd1GyLt",
+        "color": null,
+        "description": "",
+        "flags": {},
+        "folder": "RenzLUEAqPuVD50i",
+        "name": "Worm Caller",
+        "sort": 4800000,
         "sorting": "a",
         "type": "Item"
     }
