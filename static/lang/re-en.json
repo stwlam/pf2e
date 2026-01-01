@@ -5687,6 +5687,7 @@
                 "VersatileTrait": "Select a versatile damage type.",
                 "Weakness": "Select a weakness.",
                 "Weapon": "Select a weapon.",
+                "WeaponDamageDice": "Select a number of weapon damage dice.",
                 "WeaponGroup": "Select a weapon group.",
                 "WeaponOrUnarmed": "Select a weapon or unarmed strike."
             },
