@@ -42,17 +42,17 @@
                 "value": 10
             },
             {
+                "itemType": "feat",
                 "key": "ItemAlteration",
                 "mode": "add",
+                "predicate": [
+                    "item:slug:fledgling-flight"
+                ],
                 "property": "description",
-                "itemType": "feat",
                 "value": [
                     {
                         "text": "{item|description}"
                     }
-                ],
-                "predicate": [
-                    "item:slug:fledgling-flight"
                 ]
             }
         ],

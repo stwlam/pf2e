@@ -1,0 +1,97 @@
+{
+    "_id": "dgVD3FkQRbUbJNN2",
+    "folder": "8jfPBREYZgOrDOWn",
+    "img": "systems/pf2e/icons/default-icons/hazard.svg",
+    "items": [
+        {
+            "_id": "OnXHTmF4xdwx2axb",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "The Pain of Devotion",
+            "sort": 0,
+            "system": {
+                "actionType": {
+                    "value": "reaction"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p><strong>Trigger</strong> Hunted by Chains is disabled</p><hr /><p><strong>Effect</strong> The chains rattle ominously, dealing @Damage[(2d6+2)[void]] damage to all creatures in the haunt (@Check[will|dc:18|basic] save). The haunt then rolls initiative.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "unholy"
+                    ]
+                }
+            },
+            "type": "action"
+        }
+    ],
+    "name": "Ascending the Chain",
+    "system": {
+        "attributes": {
+            "ac": {
+                "value": null
+            },
+            "emitsSound": "encounter",
+            "hardness": 0,
+            "hp": {
+                "details": "",
+                "max": 0,
+                "temp": 0,
+                "value": 0
+            },
+            "immunities": [],
+            "resistances": [],
+            "stealth": {
+                "details": "<p>(trained)</p>",
+                "value": 16
+            },
+            "weaknesses": []
+        },
+        "details": {
+            "description": "<p>The PCs appear on a gigantic wall of hooked chains dangling in a gray swirling mist. The chains radiate life-chilling energy Cries of innocence and condemnation echo through the mist in Elven. A plane of light 10 feet above eddies and swirls as it dully reflects the PCs below, but the reflections warp and alter the PCs to have sallow complexions like the undead.</p>",
+            "disable": "<p>A PC that has ascended to the plane of light (@Check[athletics|dc:15] check to Climb; on a critical failure, the PC falls 10 feet before being seized by a chain) can attempt a @Check[thievery|dc:20] check to disrupt the plane or a @Check[arcana|dc:20], @Check[occultism|dc:20] or @Check[religion|dc:20] check to ritually disrupt the haunting. Each success reduces the haunt's actions by one. When the haunt has no more actions, it is disabled and the PCs all return to area <strong>B3</strong>.</p>",
+            "isComplex": true,
+            "level": {
+                "value": 2
+            },
+            "publication": {
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Society Scenario #7-08: The Haunted Corridor"
+            },
+            "reset": "<p>The haunt resets the next time the <em>Soulshackle</em> traps creatures in the library.</p>",
+            "routine": "<p>(three actions) The chains rattle and sigh ominously around two different random creatures trapped in the haunt, dealing @Damage[(2d6+2)[void]] damage (@Check[will|dc:18|basic] save).</p>"
+        },
+        "saves": {
+            "fortitude": {
+                "value": 0
+            },
+            "reflex": {
+                "value": 0
+            },
+            "will": {
+                "value": 0
+            }
+        },
+        "traits": {
+            "rarity": "common",
+            "size": {
+                "value": "lg"
+            },
+            "value": [
+                "haunt"
+            ]
+        }
+    },
+    "type": "hazard"
+}

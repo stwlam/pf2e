@@ -1,0 +1,97 @@
+{
+    "_id": "YOoLTw1foHA5g9Ng",
+    "folder": "8jfPBREYZgOrDOWn",
+    "img": "systems/pf2e/icons/default-icons/hazard.svg",
+    "items": [
+        {
+            "_id": "DZs5p7js1GEsHi69",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Chains of Undeath",
+            "sort": 0,
+            "system": {
+                "actionType": {
+                    "value": "reaction"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p><strong>Trigger</strong> Talhindir's Autumn is disabled</p><hr /><p><strong>Effect</strong> A spectral image of Duty's Soulshackle appears in a display nook, snaking out chains of dark energy toward each creature. Each living creature in the haunt must attempt a @Check[will|dc:16] save or be @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1} The haunt then rolls initiative.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "mental"
+                    ]
+                }
+            },
+            "type": "action"
+        }
+    ],
+    "name": "Hunted by Chains",
+    "system": {
+        "attributes": {
+            "ac": {
+                "value": null
+            },
+            "emitsSound": "encounter",
+            "hardness": 0,
+            "hp": {
+                "details": "",
+                "max": 0,
+                "temp": 0,
+                "value": 0
+            },
+            "immunities": [],
+            "resistances": [],
+            "stealth": {
+                "details": "<p>(trained)</p>",
+                "value": 11
+            },
+            "weaknesses": []
+        },
+        "details": {
+            "description": "<p>Shadowy chains reach out to ensnare creatures trapped in the mindscape.</p>",
+            "disable": "<p>@Check[acrobatics|dc:17] to avoid the chains, or @Check[arcana|dc:17], @Check[occultism|dc:17], or @Check[religion|dc:17] to ritually disrupt the haunting. Each success reduces the haunt's actions by one. When the haunt has no more actions, it is disabled and the Scaling the Chain haunt triggers.</p>",
+            "isComplex": true,
+            "level": {
+                "value": -1
+            },
+            "publication": {
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Society Scenario #7-08: The Haunted Corridor"
+            },
+            "reset": "<p>The haunt resets the next time the <em>Soulshackle</em> traps creatures in the library.</p>",
+            "routine": "<p>(two actions) Spectral chains snake out to wrap around three different random creatures trapped in the haunt, who must each succeed at a @Check[reflex|dc:16] save or have the @UUID[Compendium.pf2e.conditionitems.Item.Restrained] condition until it [[/act escape dc=16]]{Escapes}. Each round that a creature starts its turn @UUID[Compendium.pf2e.conditionitems.Item.Grabbed], it takes @Damage[2d4[force]]{2d4 nonlethal force} damage. Spectral scars form on any creature knocked @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] by this haunt.</p>"
+        },
+        "saves": {
+            "fortitude": {
+                "value": 0
+            },
+            "reflex": {
+                "value": 0
+            },
+            "will": {
+                "value": 0
+            }
+        },
+        "traits": {
+            "rarity": "common",
+            "size": {
+                "value": "lg"
+            },
+            "value": [
+                "haunt"
+            ]
+        }
+    },
+    "type": "hazard"
+}

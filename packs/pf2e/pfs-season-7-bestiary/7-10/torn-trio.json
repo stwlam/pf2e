@@ -1,6 +1,6 @@
 {
-    "_id": "olc4TteO0olHUkCi",
-    "folder": "qY2Irz9JNcTK9OY0",
+    "_id": "nBkr40GmiqL2EQOx",
+    "folder": "Cn5DYP4YZkKh8I9g",
     "img": "systems/pf2e/icons/default-icons/npc.svg",
     "items": [
         {
@@ -9,6 +9,8 @@
             "name": "Limb",
             "sort": 100000,
             "system": {
+                "action": "strike",
+                "area": null,
                 "attackEffects": {
                     "value": [
                         "improved-grab"
@@ -58,7 +60,7 @@
                 },
                 "category": "defensive",
                 "description": {
-                    "value": "<p>A torn quartet ordinarily has four severed limbs tethered to a central point by near-incorporeal ropes. A limb is essentially cut away from the central point and rendered nonfunctional each time the torn quartet loses 60 Hit Points (so at 180 Hit Points, the torn quartet has three functional limbs, at 120 Hit Points, it has two functional limbs, and so on). Each functioning limb can @UUID[Compendium.pf2e.actionspf2e.Item.Grapple] separate creatures within reach, or multiple functioning limbs can Grapple the same creature; for each additional limb used to Grapple a creature, the @UUID[Compendium.pf2e.actionspf2e.Item.Escape] DC increases by 2.</p>"
+                    "value": "<p>A torn trio ordinarily has three severed limbs tethered to a central point by near-incorporeal ropes. A limb is essentially cut away from the central point and rendered nonfunctional each time the torn quartet loses 60 Hit Points (so at 120 Hit Points, the torn quartet has two functional limbs, at 60 Hit Points, it has one functional limb). Each functioning limb can @UUID[Compendium.pf2e.actionspf2e.Item.Grapple] separate creatures within reach, or multiple functioning limbs can Grapple the same creature; for each additional limb used to Grapple a creature, the @UUID[Compendium.pf2e.actionspf2e.Item.Escape] DC increases by 2.</p>"
                 },
                 "publication": {
                     "license": "OGL",
@@ -76,7 +78,7 @@
         {
             "_id": "7zBy716qoQu0GqBE",
             "img": "systems/pf2e/icons/actions/Reaction.webp",
-            "name": "Reactive Strike",
+            "name": "Reactive Strike (See Split Reactions)",
             "sort": 300000,
             "system": {
                 "actionType": {
@@ -116,7 +118,7 @@
                 },
                 "category": "defensive",
                 "description": {
-                    "value": "<p>A torn quartet can spend 1 minute tearing apart the corpse of a humanoid creature that was killed within the last hour to regain 60 Hit Points and restore one of its nonfunctioning limbs. A torn quartet can't have more than four limbs.</p>"
+                    "value": "<p>A torn trio can spend 1 minute tearing apart the corpse of a humanoid creature that was killed within the last hour to regain 60 Hit Points and restore one of its nonfunctioning limbs. A torn trio can't have more than three limbs.</p>"
                 },
                 "publication": {
                     "license": "OGL",
@@ -181,7 +183,7 @@
                 },
                 "category": "offensive",
                 "description": {
-                    "value": "<p>The torn quartet makes a number of limb Strikes up to its number of functioning limbs, each against a different target. These attacks count toward the torn quartet's multiple attack penalty, but the multiple attack penalty doesn't increase until after the torn quartet makes all its attacks.</p>"
+                    "value": "<p>The torn trio makes a number of limb Strikes up to its number of functioning limbs, each against a different target. These attacks count toward the torn trio's multiple attack penalty, but the multiple attack penalty doesn't increase until after the torn trio makes all its attacks.</p>"
                 },
                 "publication": {
                     "license": "OGL",
@@ -210,7 +212,7 @@
                 },
                 "category": "offensive",
                 "description": {
-                    "value": "<p>A torn quartet has a number of reactions per round equal to its number of still-functioning limbs, which it can use only to make Reactive Strikes. It can't use more than 1 reaction on the same triggering action, even if a creature leaves several squares within its reach, and the torn quartet must use a different limb for each Reactive Strike it makes. Whenever one of the torn quartet's limbs is rendered nonfunctional, the torn quartet loses one of its reactions.</p>"
+                    "value": "<p>A torn trio has a number of reactions per round equal to its number of still-functioning limbs, which it can use only to make Reactive Strikes. It can't use more than 1 reaction on the same triggering action, even if a creature leaves several squares within its reach, and the torn trio must use a different limb for each Reactive Strike it makes. Whenever one of the torn trio's limbs is rendered nonfunctional, the torn trio loses one of its reactions.</p>"
                 },
                 "publication": {
                     "license": "OGL",
@@ -239,7 +241,7 @@
                 },
                 "category": "offensive",
                 "description": {
-                    "value": "<p><strong>Requirements</strong> The torn quartet has a creature grappled or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] by at least two limbs</p><hr /><p><strong>Effect</strong> The creature takes @Damage[5d6[slashing]] damage for each limb currently grabbing or restraining it (maximum 15d6), with a @Check[fortitude|dc:30|basic] save. On a critical failure, the creature also loses a random body part, and one of the torn quartet's limbs is now no longer grabbing or restraining it.</p>"
+                    "value": "<p><strong>Requirements</strong> The torn trio has a creature grappled or @UUID[Compendium.pf2e.conditionitems.Item.Restrained] by at least two limbs</p><hr /><p><strong>Effect</strong> The creature takes @Damage[(5d6+2)[slashing]] damage for each limb currently grabbing or restraining it (maximum 15d6), with a @Check[fortitude|dc:30|basic] save. On a critical failure, the creature also loses a random body part, and one of the torn trio's limbs is now no longer grabbing or restraining it.</p>"
                 },
                 "publication": {
                     "license": "OGL",
@@ -255,7 +257,10 @@
             "type": "action"
         }
     ],
-    "name": "Torn Quartet",
+    "name": "Torn Trio",
+    "prototypeToken": {
+        "name": "Torn Quartet"
+    },
     "system": {
         "abilities": {
             "cha": {
@@ -280,16 +285,17 @@
         "attributes": {
             "ac": {
                 "details": "",
-                "value": 33
+                "value": 35
             },
+            "adjustment": "weak",
             "allSaves": {
                 "value": ""
             },
             "hp": {
                 "details": "void healing",
-                "max": 240,
+                "max": 200,
                 "temp": 0,
-                "value": 240
+                "value": 180
             },
             "immunities": [
                 {
@@ -330,12 +336,12 @@
                 {
                     "exceptions": [],
                     "type": "slashing",
-                    "value": 10
+                    "value": 5
                 }
             ]
         },
         "details": {
-            "blurb": "",
+            "blurb": "Variant weak torn quartet",
             "languages": {
                 "details": "can't speak any language",
                 "value": [
@@ -351,7 +357,7 @@
             "publication": {
                 "license": "ORC",
                 "remaster": true,
-                "title": "Pathfinder Lost Omens Shining Kingdoms"
+                "title": "Pathfinder Society Scenario 7-10: Shattered Blades"
             }
         },
         "initiative": {

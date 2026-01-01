@@ -1,0 +1,46 @@
+{
+    "_id": "vaqiHzEewOKDx6rP",
+    "img": "icons/skills/melee/shield-damaged-broken-gold.webp",
+    "name": "Effect: To Shreds (AC Penalty)",
+    "system": {
+        "description": {
+            "value": "<p>You take a –2 circumstance penalty to your AC.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Society Scenario 7-10: Shattered Blades"
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "selector": [
+                    "ac"
+                ],
+                "type": "circumstance",
+                "value": -2
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

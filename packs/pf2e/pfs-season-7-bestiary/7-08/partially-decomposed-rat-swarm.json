@@ -1,0 +1,327 @@
+{
+    "_id": "msI6SowkplLrJ6O1",
+    "folder": "8jfPBREYZgOrDOWn",
+    "img": "systems/pf2e/icons/default-icons/npc.svg",
+    "items": [
+        {
+            "_id": "wnyeoxJq6nJPx1Re",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Slow",
+            "sort": 100000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "interaction",
+                "description": {
+                    "value": "<p>A partially decomposed rat swarm is permanently @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} and can't use reactions.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [
+                    {
+                        "inMemoryOnly": true,
+                        "key": "GrantItem",
+                        "uuid": "Compendium.pf2e.conditionitems.Item.Slowed"
+                    }
+                ],
+                "slug": null,
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "qdYjcExtbkx2HCQg",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x"
+            },
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "name": "Void Healing",
+            "sort": 200000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Monster Core"
+                },
+                "rules": [
+                    {
+                        "key": "ActiveEffectLike",
+                        "mode": "override",
+                        "path": "system.attributes.hp.negativeHealing",
+                        "value": true
+                    }
+                ],
+                "slug": "void-healing",
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "Xq6hkgKiPBNei8df",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Swarming Bites",
+            "sort": 300000,
+            "system": {
+                "actionType": {
+                    "value": "action"
+                },
+                "actions": {
+                    "value": 1
+                },
+                "category": "offensive",
+                "description": {
+                    "value": "<p>Each enemy in the swarm's space takes @Damage[1d6[piercing]] damage and must attempt a @Check[reflex|dc:17|basic] save. A creature that fails its save is exposed to zombie plague.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "BsKuf0AAqQmzH3he",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Zombie Plague",
+            "sort": 400000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "offensive",
+                "description": {
+                    "value": "<p>The sickened and @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] conditions from zombie plague can't end or be reduced until the disease is cured.</p>\n<p><strong>Saving Throw</strong> @Check[fortitude|dc:14]</p>\n<p><strong>Stage 1</strong> carrier with no ill effect (1d4 hours),</p>\n<p><strong>Stage 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.Sickened]{Sickened 1} (1 day),</p>\n<p><strong>Stage 3</strong> sickened 1 and @UUID[Compendium.pf2e.conditionitems.Item.Slowed]{Slowed 1} (1 day),</p>\n<p><strong>Stage 4</strong> unconscious (1 day),</p>\n<p><strong>Stage 5</strong> dead</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "disease",
+                        "divine",
+                        "void"
+                    ]
+                }
+            },
+            "type": "action"
+        }
+    ],
+    "name": "Partially Decomposed Rat Swarm",
+    "system": {
+        "abilities": {
+            "cha": {
+                "mod": -3
+            },
+            "con": {
+                "mod": 1
+            },
+            "dex": {
+                "mod": 3
+            },
+            "int": {
+                "mod": -5
+            },
+            "str": {
+                "mod": -2
+            },
+            "wis": {
+                "mod": 1
+            }
+        },
+        "attributes": {
+            "ac": {
+                "details": "",
+                "value": 14
+            },
+            "allSaves": {
+                "value": ""
+            },
+            "hp": {
+                "details": "negative healing",
+                "max": 14,
+                "temp": 0,
+                "value": 14
+            },
+            "immunities": [
+                {
+                    "exceptions": [],
+                    "type": "death-effects"
+                },
+                {
+                    "exceptions": [],
+                    "type": "disease"
+                },
+                {
+                    "exceptions": [],
+                    "type": "paralyzed"
+                },
+                {
+                    "exceptions": [],
+                    "type": "poison"
+                },
+                {
+                    "exceptions": [],
+                    "type": "precision"
+                },
+                {
+                    "exceptions": [],
+                    "type": "unconscious"
+                }
+            ],
+            "resistances": [
+                {
+                    "doubleVs": [],
+                    "exceptions": [
+                        "bludgeoning"
+                    ],
+                    "type": "physical",
+                    "value": 6
+                }
+            ],
+            "speed": {
+                "otherSpeeds": [
+                    {
+                        "type": "climb",
+                        "value": 10
+                    }
+                ],
+                "value": 30
+            },
+            "weaknesses": [
+                {
+                    "exceptions": [],
+                    "type": "area-damage",
+                    "value": 3
+                },
+                {
+                    "exceptions": [],
+                    "type": "vitality",
+                    "value": 5
+                },
+                {
+                    "exceptions": [],
+                    "type": "splash-damage",
+                    "value": 3
+                }
+            ]
+        },
+        "details": {
+            "blurb": "",
+            "languages": {
+                "details": "",
+                "value": []
+            },
+            "level": {
+                "value": 1
+            },
+            "privateNotes": "",
+            "publicNotes": "",
+            "publication": {
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Society Scenario #7-08: The Haunted Corridor"
+            }
+        },
+        "initiative": {
+            "statistic": "perception"
+        },
+        "perception": {
+            "details": "",
+            "mod": 5,
+            "senses": [
+                {
+                    "type": "darkvision"
+                }
+            ]
+        },
+        "resources": {},
+        "saves": {
+            "fortitude": {
+                "saveDetail": "",
+                "value": 2
+            },
+            "reflex": {
+                "saveDetail": "",
+                "value": 7
+            },
+            "will": {
+                "saveDetail": "",
+                "value": 4
+            }
+        },
+        "skills": {
+            "acrobatics": {
+                "base": 8,
+                "special": []
+            },
+            "athletics": {
+                "base": 4,
+                "special": [
+                    {
+                        "base": 6,
+                        "label": "to Climb or Swim",
+                        "predicate": [
+                            {
+                                "or": [
+                                    "action:swim",
+                                    "action:climb"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "stealth": {
+                "base": 6,
+                "special": []
+            }
+        },
+        "traits": {
+            "rarity": "common",
+            "size": {
+                "value": "lg"
+            },
+            "value": [
+                "mindless",
+                "swarm",
+                "undead",
+                "unholy"
+            ]
+        }
+    },
+    "type": "npc"
+}

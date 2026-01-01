@@ -1,0 +1,138 @@
+{
+    "_id": "L9IH9MTc1lxty0DC",
+    "folder": "8jfPBREYZgOrDOWn",
+    "img": "systems/pf2e/icons/default-icons/hazard.svg",
+    "items": [
+        {
+            "_id": "IXxD7yCqmDTGKr4z",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Accusations",
+            "sort": 0,
+            "system": {
+                "actionType": {
+                    "value": "reaction"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p><strong>Trigger</strong> The PCs all enter the room</p><hr /><p><strong>Effect</strong> Accusations of crimes against the crown are whispered throughout the room in Elven. Each living creature in the room must attempt a @Check[will|dc:16] save or be @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1}. The haunt then rolls initiative.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "auditory",
+                        "mental"
+                    ]
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "eCADU7m2g9CZMt8i",
+            "img": "systems/pf2e/icons/default-icons/melee.svg",
+            "name": "Vengeful Judgment",
+            "sort": 0,
+            "system": {
+                "action": "strike",
+                "area": null,
+                "attackEffects": {
+                    "value": []
+                },
+                "bonus": {
+                    "value": 8
+                },
+                "damageRolls": {
+                    "mCCWB182oa99uvA5": {
+                        "damage": "1d6+2",
+                        "damageType": "force"
+                    }
+                },
+                "description": {
+                    "value": "<p>Plus @UUID[Compendium.pf2e.conditionitems.Item.Prone] on a critical hit</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "range": null,
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "nonlethal",
+                        "reach-20"
+                    ]
+                }
+            },
+            "type": "melee"
+        }
+    ],
+    "name": "Talhindir's Autumn",
+    "system": {
+        "attributes": {
+            "ac": {
+                "value": null
+            },
+            "emitsSound": "encounter",
+            "hardness": 0,
+            "hp": {
+                "details": "",
+                "max": 0,
+                "temp": 0,
+                "value": 0
+            },
+            "immunities": [],
+            "resistances": [],
+            "stealth": {
+                "details": "<p>(trained); @Check[occultism|dc:13] or @Check[religion|dc:13] to notice odd whispers.</p>",
+                "value": 12
+            },
+            "weaknesses": []
+        },
+        "details": {
+            "description": "<p>All lights in the room snap on, just as Lyari remembers the day of her death. A susurrus of accusations and a guilty verdict fill the air. Ghostly elven warriors disappear and reappear in a disorienting and implacable advance.</p>",
+            "disable": "<p>@Check[athletics|dc:18] to stand against the force of the verdict, or @Check[arcana|dc:18], @Check[occultism|dc:18], or @Check[religion|dc:18] to ritually disrupt the haunting. Each success reduces the haunt's actions by one When the haunt has no more actions, it is disabled and the Hunted by Chains haunt triggers.</p>",
+            "isComplex": true,
+            "level": {
+                "value": 0
+            },
+            "publication": {
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Society Scenario #7-08: The Haunted Corridor"
+            },
+            "reset": "<p>The haunt resets the next time the <em>Soulshackle</em> traps creatures in the library.</p>",
+            "routine": "<p>(two actions) The haunt makes vengeful judgment Strikes against three different random creatures trapped in this haunt. A spectral pool of blood forms beneath any creature knocked @UUID[Compendium.pf2e.conditionitems.Item.Unconscious] by this haunt.</p>"
+        },
+        "saves": {
+            "fortitude": {
+                "value": 0
+            },
+            "reflex": {
+                "value": 0
+            },
+            "will": {
+                "value": 0
+            }
+        },
+        "traits": {
+            "rarity": "common",
+            "size": {
+                "value": "lg"
+            },
+            "value": [
+                "haunt"
+            ]
+        }
+    },
+    "type": "hazard"
+}

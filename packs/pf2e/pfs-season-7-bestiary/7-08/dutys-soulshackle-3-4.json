@@ -1,0 +1,179 @@
+{
+    "_id": "3yXwNq9gRbZGjNTk",
+    "folder": "8jfPBREYZgOrDOWn",
+    "img": "systems/pf2e/icons/default-icons/hazard.svg",
+    "items": [
+        {
+            "_id": "nkoTyUCfCvVnSYUq",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Chained by Duty",
+            "sort": 0,
+            "system": {
+                "actionType": {
+                    "value": "reaction"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p><strong>Trigger</strong> Lyari proposes how to free herself from <em>Duty's Soulshackle</em>.</p><hr /><p><strong>Effect</strong> <em>Duty's Soulshackle</em> quivers in rage before unleashing more spectral chains. The haunt then rolls initiative.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "PMq6dV0yzrSd6xx3",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Call to Serve",
+            "sort": 0,
+            "system": {
+                "actionType": {
+                    "value": "action"
+                },
+                "actions": {
+                    "value": 1
+                },
+                "category": "offensive",
+                "description": {
+                    "value": "<p><em>Duty's Soulshackle</em> creates a @UUID[Compendium.pf2e.pfs-season-7-bestiary.Actor.Shriveled Leaf of Talhindir] within 10 feet of itself. It then cannot use this action for [[/gmr 1d6 #rounds]]{1d6 rounds}.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "s55PFg7RWxyaEgTg",
+            "img": "systems/pf2e/icons/default-icons/melee.svg",
+            "name": "Velstrac Chains",
+            "sort": 0,
+            "system": {
+                "action": "strike",
+                "area": null,
+                "attackEffects": {
+                    "value": []
+                },
+                "bonus": {
+                    "value": 12
+                },
+                "damageRolls": {
+                    "W6Ot5pCyHTM9EWyP": {
+                        "damage": "1d10+6",
+                        "damageType": "void"
+                    }
+                },
+                "description": {
+                    "value": ""
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "range": {
+                    "increment": null,
+                    "max": 30
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "magical"
+                    ]
+                }
+            },
+            "type": "melee"
+        }
+    ],
+    "name": "Duty's Soulshackle (3-4)",
+    "prototypeToken": {
+        "name": "Duty's Soulshackle"
+    },
+    "system": {
+        "attributes": {
+            "ac": {
+                "value": 13
+            },
+            "emitsSound": "encounter",
+            "hardness": 6,
+            "hp": {
+                "details": "",
+                "max": 30,
+                "temp": 0,
+                "value": 30
+            },
+            "immunities": [
+                {
+                    "exceptions": [],
+                    "type": "critical-hits"
+                },
+                {
+                    "exceptions": [],
+                    "type": "precision"
+                }
+            ],
+            "resistances": [],
+            "stealth": {
+                "details": "<p>(expert); noticing the staff has a DC of 0.</p>",
+                "value": 20
+            },
+            "weaknesses": []
+        },
+        "details": {
+            "description": "<p>A length of humanoid spine is held into a staff by the hooked chain embedded in and entwined around it. Additional spectral chains of pure shadowstuff hold it aloft and sinuously surround it.</p>",
+            "disable": "<p>@Check[arcana|dc:23], @Check[occultism|dc:23], or @Check[religion|dc:23] (trained) to disrupt the spectral energies channeled by the intelligent item. Each success reduces the haunt's actions by one. When the haunt has no more actions, it is disabled.</p>",
+            "isComplex": true,
+            "level": {
+                "value": 3
+            },
+            "publication": {
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Society Scenario #7-08: The Haunted Corridor"
+            },
+            "reset": "",
+            "routine": "<p>(three actions) On its initiative, Duty's Soulshackle first uses Call to Serve if it's able to and spends any remaining actions making velstrac chains Strikes against its enemies.</p>"
+        },
+        "saves": {
+            "fortitude": {
+                "value": 0
+            },
+            "reflex": {
+                "value": 0
+            },
+            "will": {
+                "value": 0
+            }
+        },
+        "traits": {
+            "rarity": "unique",
+            "size": {
+                "value": "lg"
+            },
+            "value": [
+                "haunt",
+                "void"
+            ]
+        }
+    },
+    "type": "hazard"
+}

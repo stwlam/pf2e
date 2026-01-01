@@ -1,0 +1,703 @@
+{
+    "_id": "vngxFO3AQdnBivra",
+    "folder": "8jfPBREYZgOrDOWn",
+    "img": "systems/pf2e/icons/default-icons/npc.svg",
+    "items": [
+        {
+            "_id": "MYehNbs3vmOO1Am4",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.FVjTuBCIefAgloUU"
+            },
+            "img": "icons/weapons/staves/staff-simple.webp",
+            "name": "Duty's Soulshackle",
+            "sort": 100000,
+            "system": {
+                "ammo": null,
+                "baseItem": "staff",
+                "bonus": {
+                    "value": 0
+                },
+                "bonusDamage": {
+                    "value": 0
+                },
+                "bulk": {
+                    "value": 1
+                },
+                "category": "simple",
+                "containerId": null,
+                "damage": {
+                    "damageType": "bludgeoning",
+                    "dice": 1,
+                    "die": "d6"
+                },
+                "description": {
+                    "value": "<p>This long piece of wood can aid in walking and deliver a mighty blow.</p>"
+                },
+                "equipped": {
+                    "carryType": "worn",
+                    "handsHeld": 0,
+                    "invested": null
+                },
+                "expend": null,
+                "grade": null,
+                "group": "club",
+                "hardness": 0,
+                "hp": {
+                    "max": 0,
+                    "value": 0
+                },
+                "level": {
+                    "value": 0
+                },
+                "material": {
+                    "grade": null,
+                    "type": null
+                },
+                "price": {
+                    "value": {}
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "quantity": 1,
+                "range": null,
+                "reload": {
+                    "value": null
+                },
+                "rules": [],
+                "runes": {
+                    "potency": 0,
+                    "property": [],
+                    "striking": 0
+                },
+                "size": "med",
+                "slug": "staff",
+                "splashDamage": {
+                    "value": 0
+                },
+                "traits": {
+                    "rarity": "unique",
+                    "value": [
+                        "magical",
+                        "two-hand-d8"
+                    ]
+                },
+                "usage": {
+                    "value": "held-in-one-hand"
+                }
+            },
+            "type": "weapon"
+        },
+        {
+            "_id": "cISRUzJuD47gP9NF",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.qCEOZ6109Yo34tRx"
+            },
+            "img": "icons/sundries/books/book-tooled-brass-brown.webp",
+            "name": "Books",
+            "sort": 200000,
+            "system": {
+                "baseItem": null,
+                "bulk": {
+                    "value": 0.1
+                },
+                "containerId": null,
+                "description": {
+                    "value": ""
+                },
+                "equipped": {
+                    "carryType": "worn",
+                    "invested": null
+                },
+                "hardness": 0,
+                "hp": {
+                    "max": 0,
+                    "value": 0
+                },
+                "level": {
+                    "value": 0
+                },
+                "material": {
+                    "grade": null,
+                    "type": null
+                },
+                "price": {
+                    "value": {
+                        "gp": 1
+                    }
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "quantity": 1,
+                "rules": [],
+                "size": "med",
+                "slug": "formula-book-blank",
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                },
+                "usage": {
+                    "value": "held-in-one-hand"
+                }
+            },
+            "type": "equipment"
+        },
+        {
+            "_id": "Xm3MjataWAQOWy06",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.equipment-srd.Item.QJb8S927Yj81EgHH"
+            },
+            "img": "icons/tools/scribal/ink-quill-red.webp",
+            "name": "Writing Set",
+            "sort": 300000,
+            "system": {
+                "baseItem": null,
+                "bulk": {
+                    "value": 0.1
+                },
+                "containerId": null,
+                "description": {
+                    "value": "<p>Using a writing set, you can draft correspondence and scribe scrolls. A set includes stationery, including a variety of paper and parchment, as well as ink, a quill or inkpen, sealing wax, and a simple seal. If you've written a large amount, you can refill your kit with extra ink and paper.</p>"
+                },
+                "equipped": {
+                    "carryType": "worn",
+                    "invested": null
+                },
+                "hardness": 0,
+                "hp": {
+                    "max": 0,
+                    "value": 0
+                },
+                "level": {
+                    "value": 0
+                },
+                "material": {
+                    "grade": null,
+                    "type": null
+                },
+                "price": {
+                    "value": {
+                        "gp": 1
+                    }
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Player Core"
+                },
+                "quantity": 1,
+                "rules": [],
+                "size": "med",
+                "slug": "writing-set",
+                "traits": {
+                    "rarity": "common",
+                    "value": []
+                },
+                "usage": {
+                    "value": "held-in-two-hands"
+                }
+            },
+            "type": "equipment"
+        },
+        {
+            "_id": "OyBM0lFUQ8cJ66g8",
+            "flags": {
+                "pf2e": {
+                    "linkedWeapon": "MYehNbs3vmOO1Am4"
+                }
+            },
+            "img": "systems/pf2e/icons/default-icons/melee.svg",
+            "name": "Duty's Soulshackle",
+            "sort": 400000,
+            "system": {
+                "action": "strike",
+                "area": null,
+                "attackEffects": {
+                    "value": []
+                },
+                "bonus": {
+                    "value": 14
+                },
+                "damageRolls": {
+                    "1p9Wk7fw5AnVVYxx": {
+                        "damage": "1d6+5",
+                        "damageType": "bludgeoning"
+                    },
+                    "fohUPR8orO188lHZ": {
+                        "damage": "1d6",
+                        "damageType": "void"
+                    }
+                },
+                "description": {
+                    "value": ""
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "range": null,
+                "rules": [],
+                "slug": "staff",
+                "traits": {
+                    "value": [
+                        "magical",
+                        "two-hand-d8"
+                    ]
+                }
+            },
+            "type": "melee"
+        },
+        {
+            "_id": "aVh5EzRlTBz0XCWW",
+            "img": "systems/pf2e/icons/default-icons/melee.svg",
+            "name": "Jaws",
+            "sort": 500000,
+            "system": {
+                "action": "strike",
+                "area": null,
+                "attackEffects": {
+                    "value": []
+                },
+                "bonus": {
+                    "value": 12
+                },
+                "damageRolls": {
+                    "GPtB8DRVd7EESMAS": {
+                        "damage": "2d8+4",
+                        "damageType": "piercing"
+                    }
+                },
+                "description": {
+                    "value": ""
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "range": null,
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "finesse"
+                    ]
+                }
+            },
+            "type": "melee"
+        },
+        {
+            "_id": "ObvfT7H6CJFgUwak",
+            "img": "systems/pf2e/icons/default-icons/melee.svg",
+            "name": "Claw",
+            "sort": 600000,
+            "system": {
+                "action": "strike",
+                "area": null,
+                "attackEffects": {
+                    "value": [
+                        "grab"
+                    ]
+                },
+                "bonus": {
+                    "value": 12
+                },
+                "damageRolls": {
+                    "dqxgcy10xkEhWUIz": {
+                        "damage": "2d6+2",
+                        "damageType": "slashing"
+                    }
+                },
+                "description": {
+                    "value": ""
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "range": null,
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "agile",
+                        "finesse"
+                    ]
+                }
+            },
+            "type": "melee"
+        },
+        {
+            "_id": "ijL1KOz9fwNu0dRj",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x"
+            },
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "name": "Void Healing",
+            "sort": 700000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Monster Core"
+                },
+                "rules": [
+                    {
+                        "key": "ActiveEffectLike",
+                        "mode": "override",
+                        "path": "system.attributes.hp.negativeHealing",
+                        "value": true
+                    }
+                ],
+                "slug": "void-healing",
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "IVyafoUtJ07Mw5lo",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Consume Flesh",
+            "sort": 800000,
+            "system": {
+                "actionType": {
+                    "value": "action"
+                },
+                "actions": {
+                    "value": 1
+                },
+                "category": "offensive",
+                "description": {
+                    "value": "<p><strong>Requirements</strong> Lyari is adjacent to the corpse of a creature that died within the last hour</p><hr /><p><strong>Effect</strong> Lyari devours a chunk of the corpse and regains @Damage[1d6[healing]] Hit Points. She can regain Hit Points from any given corpse only once.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "manipulate"
+                    ]
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "dKVpzI2Gex2xr8no",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Nihilistic Truthsayer",
+            "sort": 900000,
+            "system": {
+                "actionType": {
+                    "value": "action"
+                },
+                "actions": {
+                    "value": 2
+                },
+                "category": "offensive",
+                "description": {
+                    "value": "<p>Lyari's solitary time in the depths and unique perspective on existence makes her shockingly accepting of terrible universal truths that others don't want to hear. She calmly lays into an enemy within 30 feet, reminding them of existential frailty, presumed insecurities, and inevitable failures in a logical and level manner. The target must attempt a @Check[will|dc:19] save. On a failure, they are @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} (@UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 3} and @UUID[Compendium.pf2e.conditionitems.Item.Fleeing] for 1 round on a critical failure). Regardless of the result of its save, the target is temporarily immune for 1 hour.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "auditory",
+                        "emotion",
+                        "fear",
+                        "mental"
+                    ]
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "1FwfoQZutgMZuZ7A",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Swift Leap",
+            "sort": 1000000,
+            "system": {
+                "actionType": {
+                    "value": "action"
+                },
+                "actions": {
+                    "value": 1
+                },
+                "category": "offensive",
+                "description": {
+                    "value": "<p>Lyari jumps up to half her Speed. This movement doesn't trigger reactions.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "move"
+                    ]
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "8TPmCaPZA4UVvbUU",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.Tkd8sH4pwFIPzqTr"
+            },
+            "img": "systems/pf2e/icons/actions/OneAction.webp",
+            "name": "Grab",
+            "sort": 1100000,
+            "system": {
+                "actionType": {
+                    "value": "action"
+                },
+                "actions": {
+                    "value": 1
+                },
+                "category": "offensive",
+                "description": {
+                    "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.Grab]</p>"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Monster Core"
+                },
+                "rules": [],
+                "slug": "grab",
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "a95o9NAIxUiz6qwC",
+            "img": "systems/pf2e/icons/default-icons/lore.svg",
+            "name": "Elven Lore",
+            "sort": 1200000,
+            "system": {
+                "description": {
+                    "value": ""
+                },
+                "mod": {
+                    "value": 17
+                },
+                "proficient": {
+                    "value": 0
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {}
+            },
+            "type": "lore"
+        },
+        {
+            "_id": "hbrVcX03l1hUrzRc",
+            "img": "systems/pf2e/icons/default-icons/lore.svg",
+            "name": "Library Lore",
+            "sort": 1300000,
+            "system": {
+                "description": {
+                    "value": ""
+                },
+                "mod": {
+                    "value": 20
+                },
+                "proficient": {
+                    "value": 0
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {}
+            },
+            "type": "lore"
+        }
+    ],
+    "name": "Lyari Zinfeld (3-4)",
+    "prototypeToken": {
+        "name": "Lyari Zinfeld"
+    },
+    "system": {
+        "abilities": {
+            "cha": {
+                "mod": 2
+            },
+            "con": {
+                "mod": 0
+            },
+            "dex": {
+                "mod": 2
+            },
+            "int": {
+                "mod": 4
+            },
+            "str": {
+                "mod": 0
+            },
+            "wis": {
+                "mod": 3
+            }
+        },
+        "attributes": {
+            "ac": {
+                "details": "",
+                "value": 17
+            },
+            "allSaves": {
+                "value": ""
+            },
+            "hp": {
+                "details": "void healing",
+                "max": 37,
+                "temp": 0,
+                "value": 37
+            },
+            "immunities": [
+                {
+                    "exceptions": [],
+                    "type": "bleed"
+                },
+                {
+                    "exceptions": [],
+                    "type": "death-effects"
+                },
+                {
+                    "exceptions": [],
+                    "type": "disease"
+                },
+                {
+                    "exceptions": [],
+                    "type": "paralyzed"
+                },
+                {
+                    "exceptions": [],
+                    "type": "poison"
+                },
+                {
+                    "exceptions": [],
+                    "type": "unconscious"
+                }
+            ],
+            "speed": {
+                "otherSpeeds": [],
+                "value": 25
+            }
+        },
+        "details": {
+            "blurb": "",
+            "languages": {
+                "details": "",
+                "value": [
+                    "common",
+                    "chthonian",
+                    "draconic",
+                    "elven",
+                    "fey",
+                    "necril",
+                    "shadowtongue"
+                ]
+            },
+            "level": {
+                "value": 3
+            },
+            "privateNotes": "",
+            "publicNotes": "",
+            "publication": {
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Society Scenario #7-08: The Haunted Corridor"
+            }
+        },
+        "initiative": {
+            "statistic": "perception"
+        },
+        "perception": {
+            "details": "",
+            "mod": 11,
+            "senses": [
+                {
+                    "type": "darkvision"
+                }
+            ]
+        },
+        "resources": {},
+        "saves": {
+            "fortitude": {
+                "saveDetail": "",
+                "value": 6
+            },
+            "reflex": {
+                "saveDetail": "",
+                "value": 7
+            },
+            "will": {
+                "saveDetail": "",
+                "value": 11
+            }
+        },
+        "skills": {
+            "nature": {
+                "base": 13
+            },
+            "occultism": {
+                "base": 14
+            },
+            "religion": {
+                "base": 13
+            }
+        },
+        "traits": {
+            "rarity": "unique",
+            "size": {
+                "value": "med"
+            },
+            "value": [
+                "ghoul",
+                "undead",
+                "unholy"
+            ]
+        }
+    },
+    "type": "npc"
+}

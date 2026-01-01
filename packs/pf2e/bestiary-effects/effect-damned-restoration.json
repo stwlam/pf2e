@@ -1,0 +1,46 @@
+{
+    "_id": "F4fWxN5WREaoWz19",
+    "img": "icons/magic/death/projectile-skull-flaming-yellow.webp",
+    "name": "Effect: Damned Restoration",
+    "system": {
+        "description": {
+            "value": "<p>You gain a +2 status bonus to damage rolls.</p>"
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+        },
+        "fromSpell": false,
+        "level": {
+            "value": 1
+        },
+        "publication": {
+            "license": "ORC",
+            "remaster": true,
+            "title": "Pathfinder Society Scenario #7-09: The Chitterwood Walks, Part 1: Scrambling the Tribes"
+        },
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "selector": [
+                    "damage"
+                ],
+                "type": "status",
+                "value": 2
+            }
+        ],
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "value": []
+        }
+    },
+    "type": "effect"
+}

@@ -1,0 +1,101 @@
+{
+    "_id": "rYvk68DT7JbSHf01",
+    "folder": "8jfPBREYZgOrDOWn",
+    "img": "systems/pf2e/icons/default-icons/hazard.svg",
+    "items": [
+        {
+            "_id": "Zc4aoZHHPsmz8zUP",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "The Falling Tears",
+            "sort": 0,
+            "system": {
+                "actionType": {
+                    "value": "reaction"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p><strong>Trigger</strong> A creature moves within 10 feet of the carving of Viore Ciobanu</p><hr /><p><strong>Effect</strong> The fungus statues weep blood, and their cries deal @Damage[(2d6+5)[mental]] damage to living creatures within the room (@Check[will|dc:17|basic|options:inflicts:frightened] save). On a failed save, creatures are also @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 1} (or @UUID[Compendium.pf2e.conditionitems.Item.Frightened]{Frightened 2} on a critical failure)</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "auditory",
+                        "emotion",
+                        "fear",
+                        "mental",
+                        "occult"
+                    ]
+                }
+            },
+            "type": "action"
+        }
+    ],
+    "name": "Talhindir's Grief",
+    "system": {
+        "attributes": {
+            "ac": {
+                "value": null
+            },
+            "emitsSound": "encounter",
+            "hardness": 0,
+            "hp": {
+                "details": "",
+                "max": 0,
+                "temp": 0,
+                "value": 0
+            },
+            "immunities": [],
+            "resistances": [],
+            "stealth": {
+                "details": "<p>(expert)</p>",
+                "value": 4
+            },
+            "weaknesses": []
+        },
+        "details": {
+            "description": "<p>Gentle crying rises to become overwhelming wails. The fungal carvings begin to weep blood that pools around the pillars</p>",
+            "disable": "<p>@Check[performance|dc:17] (trained) to overpower the frightening cries with a greater sound or @Check[occultism|dc:15] or @Check[religion|dc:15] (trained) to ritually disrupt the haunting.</p>",
+            "isComplex": false,
+            "level": {
+                "value": 1
+            },
+            "publication": {
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Society Scenario #7-08: The Haunted Corridor"
+            },
+            "reset": "<p>If the haunt is not dispersed, it resets after 1 day.</p>",
+            "routine": ""
+        },
+        "saves": {
+            "fortitude": {
+                "value": 0
+            },
+            "reflex": {
+                "value": 0
+            },
+            "will": {
+                "value": 0
+            }
+        },
+        "traits": {
+            "rarity": "common",
+            "size": {
+                "value": "lg"
+            },
+            "value": [
+                "haunt"
+            ]
+        }
+    },
+    "type": "hazard"
+}

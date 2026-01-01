@@ -1,0 +1,335 @@
+{
+    "_id": "gCD8rOahd9F9ZSJO",
+    "folder": "8jfPBREYZgOrDOWn",
+    "img": "systems/pf2e/icons/default-icons/npc.svg",
+    "items": [
+        {
+            "_id": "M0O8rEQtmGSkUrVI",
+            "img": "systems/pf2e/icons/default-icons/melee.svg",
+            "name": "Withered Touch",
+            "sort": 100000,
+            "system": {
+                "action": "strike",
+                "area": null,
+                "attackEffects": {
+                    "value": []
+                },
+                "bonus": {
+                    "value": 12
+                },
+                "damageRolls": {
+                    "DRggtjB0Ql4cpGeB": {
+                        "damage": "1d6+3",
+                        "damageType": "void"
+                    }
+                },
+                "description": {
+                    "value": ""
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "range": null,
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "finesse",
+                        "magical",
+                        "unarmed"
+                    ]
+                }
+            },
+            "type": "melee"
+        },
+        {
+            "_id": "wAnVScy4XBMbtkLm",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Light Vulnerability",
+            "sort": 200000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p>Attacks against the Leaf of Talhindir are treated as magical if made by a creature who is in magical light or with an object that is in magical light (such as from the @UUID[Compendium.pf2e.spells-srd.Item.Light] spell).</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "qtjjmBc0D5XleSqw",
+            "_stats": {
+                "compendiumSource": "Compendium.pf2e.bestiary-ability-glossary-srd.Item.TTCw5NusiSSkJU1x"
+            },
+            "img": "systems/pf2e/icons/actions/Passive.webp",
+            "name": "Void Healing",
+            "sort": 300000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p>@Localize[PF2E.NPC.Abilities.Glossary.NegativeHealing]</p>"
+                },
+                "publication": {
+                    "license": "ORC",
+                    "remaster": true,
+                    "title": "Pathfinder Monster Core"
+                },
+                "rules": [
+                    {
+                        "key": "ActiveEffectLike",
+                        "mode": "override",
+                        "path": "system.attributes.hp.negativeHealing",
+                        "value": true
+                    }
+                ],
+                "slug": "void-healing",
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "6aRy2QDkaxrKWSn2",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Slink in Shadows",
+            "sort": 400000,
+            "system": {
+                "actionType": {
+                    "value": "passive"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "offensive",
+                "description": {
+                    "value": "<p>The Leaf of Talhindir can [[/act hide]] or end its [[/act sneak]] in a creature's or object's shadow.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "WsuruTWS3hKjcRAs",
+            "img": "systems/pf2e/icons/default-icons/action.svg",
+            "name": "Weight of Darkness",
+            "sort": 500000,
+            "system": {
+                "actionType": {
+                    "value": "action"
+                },
+                "actions": {
+                    "value": 1
+                },
+                "category": "offensive",
+                "description": {
+                    "value": "<p><strong>Requirements</strong> The Leaf of Talhindir made a successful Strike against a living creature with its withered touch on its previous action</p><hr /><p><strong>Effect</strong> The Leaf of Talhindir chains the soul of the creature. They must attempt a @Check[will|dc:17|options:inflicts:enfeebled] save. On a failure, the creature is @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 1}. This is cumulative with other enfeebled conditions from other Leaves of Talhindir or shadows, to a maximum of @UUID[Compendium.pf2e.conditionitems.Item.Enfeebled]{Enfeebled 4}. The enfeebled value from Weight of Darkness decreases by 1 every minute.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": [
+                        "divine"
+                    ]
+                }
+            },
+            "type": "action"
+        }
+    ],
+    "name": "Shriveled Leaf of Talhindir",
+    "system": {
+        "abilities": {
+            "cha": {
+                "mod": 2
+            },
+            "con": {
+                "mod": -1
+            },
+            "dex": {
+                "mod": 3
+            },
+            "int": {
+                "mod": -1
+            },
+            "str": {
+                "mod": -4
+            },
+            "wis": {
+                "mod": 2
+            }
+        },
+        "attributes": {
+            "ac": {
+                "details": "",
+                "value": 17
+            },
+            "adjustment": null,
+            "allSaves": {
+                "value": ""
+            },
+            "hp": {
+                "details": "void healing",
+                "max": 19,
+                "temp": 0,
+                "value": 19
+            },
+            "immunities": [
+                {
+                    "exceptions": [],
+                    "type": "bleed"
+                },
+                {
+                    "exceptions": [],
+                    "type": "death-effects"
+                },
+                {
+                    "exceptions": [],
+                    "type": "disease"
+                },
+                {
+                    "exceptions": [],
+                    "type": "paralyzed"
+                },
+                {
+                    "exceptions": [],
+                    "type": "poison"
+                },
+                {
+                    "exceptions": [],
+                    "type": "precision"
+                },
+                {
+                    "exceptions": [],
+                    "type": "unconscious"
+                }
+            ],
+            "resistances": [
+                {
+                    "doubleVs": [
+                        "non-magical"
+                    ],
+                    "exceptions": [
+                        "force",
+                        "ghost-touch",
+                        "spirit",
+                        "vitality"
+                    ],
+                    "type": "all-damage",
+                    "value": 3
+                }
+            ],
+            "speed": {
+                "otherSpeeds": [
+                    {
+                        "type": "fly",
+                        "value": 30
+                    }
+                ],
+                "value": null
+            }
+        },
+        "details": {
+            "blurb": "",
+            "languages": {
+                "details": "",
+                "value": [
+                    "necril"
+                ]
+            },
+            "level": {
+                "value": 2
+            },
+            "privateNotes": "",
+            "publicNotes": "",
+            "publication": {
+                "license": "ORC",
+                "remaster": true,
+                "title": "Pathfinder Society Scenario #7-08: The Haunted Corridor"
+            }
+        },
+        "initiative": {
+            "statistic": "perception"
+        },
+        "perception": {
+            "details": "",
+            "mod": 7,
+            "senses": [
+                {
+                    "type": "darkvision"
+                }
+            ]
+        },
+        "resources": {},
+        "saves": {
+            "fortitude": {
+                "saveDetail": "",
+                "value": 5
+            },
+            "reflex": {
+                "saveDetail": "",
+                "value": 11
+            },
+            "will": {
+                "saveDetail": "",
+                "value": 9
+            }
+        },
+        "skills": {
+            "acrobatics": {
+                "base": 7
+            },
+            "stealth": {
+                "base": 10
+            }
+        },
+        "traits": {
+            "rarity": "common",
+            "size": {
+                "value": "med"
+            },
+            "value": [
+                "incorporeal",
+                "undead",
+                "unholy"
+            ]
+        }
+    },
+    "type": "npc"
+}
