@@ -7432,8 +7432,7 @@
                 "AttacksFromSuppressed": "attacks from suppressed targets",
                 "PrimalSpells": "primal spells",
                 "Radiation": "radiation",
-                "RadiationPoison": "radiation poison",
-                "Suppressed": "vs. suppressed"
+                "RadiationPoison": "radiation poison"
             }
         },
         "NPC": {
@@ -7974,8 +7973,16 @@
             },
             "Soldier": {
                 "FightingStyle": {
+                    "ActionHero": {
+                        "AreaAddendum": "When you Auto-Fire, the size of the cone is equal to the weapon's full range increment, rather than half.",
+                        "PrimaryTargetAddendum": "When using the Auto-Fire action, you can designate a target anywhere in the cone to be your primary target, rather than the creature closest to you.",
+                        "RangedStrikeNote": "When you successfully make a ranged Strike with an automatic weapon, you @UUID[Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF]{Suppress} the target until the start of your next turn."
+                    },
                     "ArmorStorm": {
                         "Note": "When you successfully Disarm, Grapple, Reposition, Shove, or Trip a creature, it becomes @UUID[Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF]{Suppressed} until the start of your next turn."
+                    },
+                    "Bombard": {
+                        "Note": "When you attack with an area weapon, you can select a number of allies within the area equal to half your Constitution modifier. The selected allies are unaffected by the attack. In addition, enemies who succeed (but not critically succeed) on their save against an area attack you make are still @UUID[Compendium.sf2e.conditions.Item.enA7BxAjBb7ns1iF]{Suppressed} until the start of your next turn."
                     },
                     "Prompt": "Select a fighting style."
                 },

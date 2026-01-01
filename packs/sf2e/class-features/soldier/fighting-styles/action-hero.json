@@ -25,7 +25,51 @@
             "remaster": true,
             "title": "Starfinder Player Core"
         },
-        "rules": [],
+        "rules": [
+            {
+                "key": "Note",
+                "outcome": [
+                    "success",
+                    "criticalSuccess"
+                ],
+                "predicate": [
+                    "item:trait:automatic"
+                ],
+                "selector": [
+                    "ranged-strike-attack-roll"
+                ],
+                "text": "SF2E.SpecificRule.Soldier.FightingStyle.ActionHero.Note",
+                "title": "{item|name}"
+            },
+            {
+                "itemType": "action",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:slug:auto-fire"
+                ],
+                "property": "description",
+                "value": [
+                    {
+                        "text": "SF2E.SpecificRule.Soldier.FightingStyle.ActionHero.AreaNote"
+                    }
+                ]
+            },
+            {
+                "itemType": "feat",
+                "key": "ItemAlteration",
+                "mode": "add",
+                "predicate": [
+                    "item:slug:primary-target"
+                ],
+                "property": "description",
+                "value": [
+                    {
+                        "text": "SF2E.SpecificRule.Soldier.FightingStyle.ActionHero.AreaNote"
+                    }
+                ]
+            }
+        ],
         "subfeatures": {
             "proficiencies": {},
             "senses": {},

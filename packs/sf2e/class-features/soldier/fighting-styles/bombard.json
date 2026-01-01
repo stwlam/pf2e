@@ -25,7 +25,17 @@
             "remaster": true,
             "title": "Starfinder Player Core"
         },
-        "rules": [],
+        "rules": [
+            {
+                "key": "Note",
+                "selector": [
+                    "area-fire-damage",
+                    "auto-fire-damage"
+                ],
+                "text": "SF2E.SpecificRule.Soldier.FightingStyle.Bombard.Note",
+                "title": "{item|name}"
+            }
+        ],
         "subfeatures": {
             "proficiencies": {},
             "senses": {},
