@@ -174,11 +174,13 @@ const armorCategories: Record<ArmorCategory, string> = {
 };
 
 const armorGroups: Record<ArmorGroup, string> = {
-    composite: "PF2E.ArmorGroupComposite",
+    ceramic: "PF2E.ArmorGroupCeramic",
     chain: "PF2E.ArmorGroupChain",
     cloth: "PF2E.ArmorGroupCloth",
+    composite: "PF2E.ArmorGroupComposite",
     leather: "PF2E.ArmorGroupLeather",
     plate: "PF2E.ArmorGroupPlate",
+    polymer: "PF2E.ArmorGroupPolymer",
     skeletal: "PF2E.ArmorGroupSkeletal",
     wood: "PF2E.ArmorGroupWood",
 };
@@ -227,9 +229,21 @@ const weaponGroups: Record<WeaponGroup, string> = {
     ...meleeWeaponGroups,
     bomb: "PF2E.WeaponGroupBomb",
     bow: "PF2E.WeaponGroupBow",
+    corrosive: "PF2E.WeaponGroupCorrosive",
     crossbow: "PF2E.WeaponGroupCrossbow",
+    cryo: "PF2E.WeaponGroupCryo",
     firearm: "PF2E.WeaponGroupFirearm",
+    flame: "PF2E.WeaponGroupFlame",
+    grenade: "PF2E.WeaponGroupGrenade",
+    laser: "PF2E.WeaponGroupLaser",
+    mental: "PF2E.WeaponGroupMental",
+    plasma: "PF2E.WeaponGroupPlasma",
+    poison: "PF2E.WeaponGroupPoison",
+    projectile: "PF2E.WeaponGroupProjectile",
+    shock: "PF2E.WeaponGroupShock",
     sling: "PF2E.WeaponGroupSling",
+    sniper: "PF2E.WeaponGroupSniper",
+    sonic: "PF2E.WeaponGroupSonic",
 };
 
 // Creature and Equipment Sizes

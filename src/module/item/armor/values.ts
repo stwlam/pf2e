@@ -1,5 +1,15 @@
 const ARMOR_CATEGORIES = ["unarmored", "light", "medium", "heavy", "light-barding", "heavy-barding"] as const;
-const ARMOR_GROUPS = ["chain", "cloth", "composite", "leather", "plate", "skeletal", "wood"] as const;
+const ARMOR_GROUPS = [
+    "ceramic",
+    "chain",
+    "cloth",
+    "composite",
+    "leather",
+    "plate",
+    "polymer",
+    "skeletal",
+    "wood",
+] as const;
 const ARMOR_PROPERTY_RUNE_TYPES = new Set([
     "acidResistant",
     "advancing",

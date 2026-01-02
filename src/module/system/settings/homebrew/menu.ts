@@ -1,4 +1,4 @@
-import { LANGUAGES_BY_RARITY } from "@actor/creature/values.ts";
+import { DEFAULT_COMMON_LANGUAGE, LANGUAGES_BY_RARITY } from "@actor/creature/values.ts";
 import { resetActors } from "@actor/helpers.ts";
 import { ItemSheetPF2e } from "@item/base/sheet/sheet.ts";
 import { MigrationBase } from "@module/migration/base.ts";
@@ -141,7 +141,7 @@ class HomebrewElements extends SettingsMenuPF2e {
                 name: "PF2E.Settings.Homebrew.Languages.Rarities.Name",
                 type: LanguageSettings,
                 default: {
-                    common: "taldane",
+                    common: DEFAULT_COMMON_LANGUAGE,
                     uncommon: [...LANGUAGES_BY_RARITY.uncommon],
                     rare: [...LANGUAGES_BY_RARITY.rare],
                     secret: [...LANGUAGES_BY_RARITY.secret],
