@@ -139,7 +139,21 @@
                     "remaster": false,
                     "title": ""
                 },
-                "rules": [],
+                "rules": [
+                    {
+                        "key": "RollOption",
+                        "option": "fungal-empowerment",
+                        "toggleable": true
+                    },
+                    {
+                        "inMemoryOnly": true,
+                        "key": "GrantItem",
+                        "predicate": [
+                            "fungal-empowerment"
+                        ],
+                        "uuid": "Compendium.pf2e.conditionitems.Item.Quickened"
+                    }
+                ],
                 "slug": null,
                 "traits": {
                     "value": []
