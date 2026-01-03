@@ -1,0 +1,132 @@
+{
+    "_id": "JgNhb5TnOEFs6RKF",
+    "folder": "mTcfQZPRnwXVq7pb",
+    "img": "systems/sf2e/icons/default-icons/hazard.svg",
+    "items": [
+        {
+            "_id": "90P6DBQgg10eWUPj",
+            "img": "systems/sf2e/icons/default-icons/action.svg",
+            "name": "Swing",
+            "sort": 0,
+            "system": {
+                "actionType": {
+                    "value": "reaction"
+                },
+                "actions": {
+                    "value": null
+                },
+                "category": "defensive",
+                "description": {
+                    "value": "<p><strong>Trigger</strong> A creature enters the designated 10-foot square area</p><hr /><p><strong>Effect</strong> The log swings along its course, making a log Strike against the triggering creature.</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "action"
+        },
+        {
+            "_id": "DRLjv0ssKCJQeBEY",
+            "img": "systems/sf2e/icons/default-icons/melee.svg",
+            "name": "Log",
+            "sort": 0,
+            "system": {
+                "action": "strike",
+                "area": null,
+                "attackEffects": {
+                    "value": []
+                },
+                "bonus": {
+                    "value": 11
+                },
+                "damageRolls": {
+                    "qmNTPJzH6YIgFfRC": {
+                        "damage": "2d4+3",
+                        "damageType": "bludgeoning"
+                    }
+                },
+                "description": {
+                    "value": "<p>Plus knocked @UUID[Compendium.sf2e.conditions.Item.Prone]</p>"
+                },
+                "publication": {
+                    "license": "OGL",
+                    "remaster": false,
+                    "title": ""
+                },
+                "range": null,
+                "rules": [],
+                "slug": null,
+                "traits": {
+                    "value": []
+                }
+            },
+            "type": "melee"
+        }
+    ],
+    "name": "Swinging Log Trap",
+    "system": {
+        "attributes": {
+            "ac": {
+                "value": null
+            },
+            "emitsSound": "encounter",
+            "hardness": 0,
+            "hp": {
+                "details": "",
+                "max": 0,
+                "temp": 0,
+                "value": 0
+            },
+            "immunities": [],
+            "resistances": [],
+            "stealth": {
+                "details": "",
+                "value": 6
+            },
+            "weaknesses": []
+        },
+        "details": {
+            "description": "<p>A log hung up in the trees swings down in a wide arc when a creature enters the designated @Template[square|distance:10] area.</p>",
+            "disable": "<p>@Check[survival|dc:14] or @Check[thievery|dc:14] to safely sever the triggering pulleys and ropes.</p>",
+            "isComplex": false,
+            "level": {
+                "value": 0
+            },
+            "publication": {
+                "license": "ORC",
+                "remaster": true,
+                "title": "Starfinder Society Scenario #1-11: Friends of the Forest"
+            },
+            "reset": "",
+            "routine": ""
+        },
+        "saves": {
+            "fortitude": {
+                "value": 0
+            },
+            "reflex": {
+                "value": 0
+            },
+            "will": {
+                "value": 0
+            }
+        },
+        "traits": {
+            "rarity": "uncommon",
+            "size": {
+                "value": "lg"
+            },
+            "value": [
+                "mechanical"
+            ]
+        }
+    },
+    "type": "hazard"
+}

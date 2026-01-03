@@ -254,6 +254,7 @@ const creatureTraits = {
     rakshasa: "PF2E.TraitRakshasa",
     reflection: "PF2E.TraitReflection",
     robot: "PF2E.TraitRobot",
+    ryphorian: "PF2E.TraitRyphorian",
     sahkil: "PF2E.TraitSahkil",
     "sea-devil": "PF2E.TraitSeaDevil",
     sedacthy: "PF2E.TraitSedacthy",
