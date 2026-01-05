@@ -31,6 +31,7 @@
         },
         "rules": [
             {
+                "adjustName": false,
                 "choices": {
                     "filter": [
                         "item:ancestry:goblin"

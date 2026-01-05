@@ -29,7 +29,41 @@
             "remaster": true,
             "title": "Pathfinder Player Core 2"
         },
-        "rules": [],
+        "rules": [
+            {
+                "key": "FlatModifier",
+                "predicate": [
+                    "item:magical",
+                    {
+                        "or": [
+                            "item:trait:{actor|flags.pf2e.dragonblood.tradition}",
+                            "spellcasting:{actor|flags.pf2e.dragonblood.tradition}"
+                        ]
+                    }
+                ],
+                "selector": [
+                    "ac",
+                    "saving-throw"
+                ],
+                "slug": "traditional-resistances",
+                "type": "status",
+                "value": 1
+            },
+            {
+                "key": "AdjustModifier",
+                "mode": "upgrade",
+                "predicate": [
+                    {
+                        "or": [
+                            "item:trait:sleep",
+                            "inflicts:paralysis"
+                        ]
+                    }
+                ],
+                "slug": "traditional-resistances",
+                "value": 2
+            }
+        ],
         "traits": {
             "rarity": "common",
             "value": [
