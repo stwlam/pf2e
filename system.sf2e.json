@@ -409,7 +409,7 @@
             "banner": "systems/sf2e/assets/compendium-banner/green.webp",
             "system": "sf2e",
             "ownership": {
-                "PLAYER": "LIMITED",
+                "PLAYER": "OBSERVER",
                 "ASSISTANT": "OWNER"
             },
             "flags": {}
