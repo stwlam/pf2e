@@ -772,6 +772,7 @@
                 "DeathVoid": "{item} vs. Death and Void effects",
                 "Fear": "{item} vs. fear"
             },
+            "NoSanctification": "No Sanctification",
             "PreviousAction": {
                 "ClimbLeapStride": "Your previous action was to Climb, Leap, or Stride"
             },

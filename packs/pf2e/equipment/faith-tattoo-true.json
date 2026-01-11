@@ -34,7 +34,64 @@
             "title": "Pathfinder Treasure Vault (Remastered)"
         },
         "quantity": 1,
-        "rules": [],
+        "rules": [
+            {
+                "adjustName": false,
+                "choices": [
+                    {
+                        "label": "PF2E.TraitHoly",
+                        "predicate": [
+                            {
+                                "or": [
+                                    "deity:primary:sanctification:can:holy",
+                                    "deity:primary:sanctification:must:holy"
+                                ]
+                            }
+                        ],
+                        "value": "holy"
+                    },
+                    {
+                        "label": "PF2E.TraitUnholy",
+                        "predicate": [
+                            {
+                                "or": [
+                                    "deity:primary:sanctification:can:unholy",
+                                    "deity:primary:sanctification:must:unholy"
+                                ]
+                            }
+                        ],
+                        "value": "unholy"
+                    },
+                    {
+                        "label": "PF2E.GenericLabel.NoSanctification",
+                        "value": "none"
+                    }
+                ],
+                "flag": "sanctification",
+                "key": "ChoiceSet",
+                "predicate": [
+                    {
+                        "nor": [
+                            "sanctification:holy",
+                            "sanctification:unholy"
+                        ]
+                    }
+                ],
+                "prompt": "PF2E.SpecificRule.Prompt.Sanctification",
+                "rollOption": "faith-tattoo"
+            },
+            {
+                "add": [
+                    "{item|flags.system.rulesSelections.sanctification}"
+                ],
+                "key": "ActorTraits",
+                "predicate": [
+                    {
+                        "not": "faith-tattoo:none"
+                    }
+                ]
+            }
+        ],
         "size": "med",
         "traits": {
             "rarity": "common",
