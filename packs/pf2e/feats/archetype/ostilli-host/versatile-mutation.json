@@ -30,7 +30,276 @@
             "remaster": true,
             "title": "Pathfinder Howl of the Wild"
         },
-        "rules": [],
+        "rules": [
+            {
+                "count": true,
+                "key": "RollOption",
+                "option": "versatile-mutation-taken"
+            },
+            {
+                "choices": [
+                    {
+                        "label": "PF2E.TraitAcid",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:acid"
+                            }
+                        ],
+                        "value": "acid"
+                    },
+                    {
+                        "label": "PF2E.TraitCold",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:cold"
+                            }
+                        ],
+                        "value": "cold"
+                    },
+                    {
+                        "label": "PF2E.TraitElectricity",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:electricity"
+                            }
+                        ],
+                        "value": "electricity"
+                    },
+                    {
+                        "label": "PF2E.TraitFire",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:fire"
+                            }
+                        ],
+                        "value": "fire"
+                    },
+                    {
+                        "label": "PF2E.TraitSonic",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:sonic"
+                            }
+                        ],
+                        "value": "sonic"
+                    }
+                ],
+                "key": "ChoiceSet",
+                "predicate": [
+                    "versatile-mutation-taken:1"
+                ],
+                "priority": 90,
+                "prompt": "PF2E.SpecificRule.Prompt.DamageType",
+                "rollOption": "versatile-mutation"
+            },
+            {
+                "choices": [
+                    {
+                        "label": "PF2E.TraitAcid",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:acid"
+                            }
+                        ],
+                        "value": "acid"
+                    },
+                    {
+                        "label": "PF2E.TraitCold",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:cold"
+                            }
+                        ],
+                        "value": "cold"
+                    },
+                    {
+                        "label": "PF2E.TraitElectricity",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:electricity"
+                            }
+                        ],
+                        "value": "electricity"
+                    },
+                    {
+                        "label": "PF2E.TraitFire",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:fire"
+                            }
+                        ],
+                        "value": "fire"
+                    },
+                    {
+                        "label": "PF2E.TraitSonic",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:sonic"
+                            }
+                        ],
+                        "value": "sonic"
+                    }
+                ],
+                "key": "ChoiceSet",
+                "predicate": [
+                    "versatile-mutation-taken:2"
+                ],
+                "priority": 95,
+                "prompt": "PF2E.SpecificRule.Prompt.DamageType",
+                "rollOption": "versatile-mutation"
+            },
+            {
+                "choices": [
+                    {
+                        "label": "PF2E.TraitAcid",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:acid"
+                            }
+                        ],
+                        "value": "acid"
+                    },
+                    {
+                        "label": "PF2E.TraitCold",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:cold"
+                            }
+                        ],
+                        "value": "cold"
+                    },
+                    {
+                        "label": "PF2E.TraitElectricity",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:electricity"
+                            }
+                        ],
+                        "value": "electricity"
+                    },
+                    {
+                        "label": "PF2E.TraitFire",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:fire"
+                            }
+                        ],
+                        "value": "fire"
+                    },
+                    {
+                        "label": "PF2E.TraitSonic",
+                        "predicate": [
+                            {
+                                "not": "versatile-mutation:sonic"
+                            }
+                        ],
+                        "value": "sonic"
+                    }
+                ],
+                "key": "ChoiceSet",
+                "predicate": [
+                    "versatile-mutation-taken:2"
+                ],
+                "prompt": "PF2E.SpecificRule.Prompt.DamageType",
+                "rollOption": "versatile-mutation"
+            },
+            {
+                "alwaysActive": true,
+                "key": "RollOption",
+                "label": "PF2E.SpecificRule.OstilliHostDedication.VersatileMutation.RollOptionLabel",
+                "option": "versatile-mutation-damage",
+                "suboptions": [
+                    {
+                        "label": "PF2E.TraitAcid",
+                        "predicate": [
+                            {
+                                "gte": [
+                                    "self:level",
+                                    8
+                                ]
+                            },
+                            "versatile-mutation:acid"
+                        ],
+                        "value": "acid"
+                    },
+                    {
+                        "label": "PF2E.TraitBludgeoning",
+                        "value": "bludgeoning"
+                    },
+                    {
+                        "label": "PF2E.TraitCold",
+                        "predicate": [
+                            {
+                                "gte": [
+                                    "self:level",
+                                    8
+                                ]
+                            },
+                            "versatile-mutation:cold"
+                        ],
+                        "value": "cold"
+                    },
+                    {
+                        "label": "PF2E.TraitElectricity",
+                        "predicate": [
+                            {
+                                "gte": [
+                                    "self:level",
+                                    8
+                                ]
+                            },
+                            "versatile-mutation-second:electricity"
+                        ],
+                        "value": "electricity"
+                    },
+                    {
+                        "label": "PF2E.TraitFire",
+                        "predicate": [
+                            {
+                                "gte": [
+                                    "self:level",
+                                    8
+                                ]
+                            },
+                            "versatile-mutation:fire"
+                        ],
+                        "value": "fire"
+                    },
+                    {
+                        "label": "PF2E.TraitPiercing",
+                        "value": "piercing"
+                    },
+                    {
+                        "label": "PF2E.TraitSonic",
+                        "predicate": [
+                            {
+                                "gte": [
+                                    "self:level",
+                                    8
+                                ]
+                            },
+                            "versatile-mutation:sonic"
+                        ],
+                        "value": "sonic"
+                    },
+                    {
+                        "label": "PF2E.TraitSlashing",
+                        "value": "slashing"
+                    }
+                ],
+                "toggleable": true,
+                "value": true
+            },
+            {
+                "key": "DamageAlteration",
+                "mode": "override",
+                "property": "damage-type",
+                "selectors": [
+                    "spit-ambient-magic-inline-damage"
+                ],
+                "value": "{item|flags.pf2e.rulesSelections.versatileMutationDamage}"
+            }
+        ],
         "traits": {
             "rarity": "common",
             "value": [
