@@ -183,12 +183,27 @@ const RARE_LANGUAGES = [
     "yithian",
 ] as const;
 
-const UNCOMMON_SF_LANGUAGES = [
-    "aballonian",
+const COMMON_SF_LANGUAGES = [
+    "akitonian",
     "brethedan",
     "castrovelian",
     "diasporan",
+    "draconic",
     "eoxian",
+    "kasatha",
+    "pact-common",
+    "pahtra",
+    "trinary",
+    "vercite",
+    "vesk",
+] as const;
+
+const UNCOMMON_SF_LANGUAGES = [
+    "aballonian",
+    "aklo",
+    "chthonian",
+    "diabolic",
+    "empyrean",
     "jinsul",
     "kalo",
     "kasatha",
@@ -197,18 +212,24 @@ const UNCOMMON_SF_LANGUAGES = [
     "kucharn",
     "lashunta",
     "morandomandranan",
+    "muan",
+    "necril",
     "orbian",
-    "pahtra",
+    "orcish",
+    "petran",
     "prelurian",
+    "pyric",
     "sarcesian",
     "sarcesian-signed",
+    "shadowtongue",
     "shirren",
     "shobhad",
+    "sussuran",
+    "talican",
+    "thalassic",
     "triaxian",
-    "trinary",
-    "vercite",
-    "vesk",
     "vlaka",
+    "ysoki",
 ] as const;
 
 const LANGUAGES_BY_RARITY =
@@ -231,7 +252,7 @@ const DEFAULT_COMMON_LANGUAGE = SYSTEM_ID === "pf2e" ? "taldane" : "pact-common"
 const LANGUAGES: Language[] =
     SYSTEM_ID === "pf2e"
         ? ["common", ...COMMON_LANGUAGES, ...UNCOMMON_LANGUAGES, ...RARE_LANGUAGES, "wildsong"]
-        : ["common", "pact-common", ...UNCOMMON_SF_LANGUAGES];
+        : ["common", ...COMMON_SF_LANGUAGES, ...UNCOMMON_SF_LANGUAGES];
 LANGUAGES.sort();
 
 const LANGUAGE_RARITIES = ["common", "uncommon", "rare", "secret"] as const;
