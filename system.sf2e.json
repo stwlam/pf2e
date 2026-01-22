@@ -9,6 +9,7 @@
     "changelog": "https://github.com/foundryvtt/pf2e/blob/v13-dev/CHANGELOG.md",
     "url": "https://github.com/foundryvtt/pf2e",
     "bugs": "https://github.com/foundryvtt/pf2e/issues",
+    "background": "systems/sf2e/assets/system-banners/03.webp",
     "socket": true,
     "primaryTokenAttribute": "attributes.hp",
     "compatibility": {
